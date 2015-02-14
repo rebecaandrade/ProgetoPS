@@ -2,45 +2,72 @@
   margin: 0%;
   padding: 0%;
   border:0%;
+  z-index: 0;
+  text-decoration: none;
+  border-radius: 0px;
 }
 
-html,body{
-  width:100%;
-  height:100%;
-  overflow:hidden;  
+html{
+
 }
 
 body{
-  background-color: blue;
+  background-color: #002f67;
+  font-family:'Open Sans', sans-serif;
+  overflow:hidden;
+}
+
+h1{
+  font-weight:bold;
+  font-size: 48pt;
+}
+h2{
+  font-size: 30pt;
+  color: #73c04a;
+  text-transform:uppercase;
+  margin-top: 0.5em;
+}
+h3{
+  font-weight:normal;
+  font-size: 18pt;
+  margin-top: 1.5em;
+}
+h4{
+  font-weight:normal;
+  font-size: 18pt;
+  font-style: italic;
+  text-align: center;
+  font-weight: bold;
 }
 
 #header{
-  //background-color: purple;
-  width:100%;
-  height:30%;
+  width:80%;
+  height:25%;
   position: relative;
   top: 0%;
   left: 0%;
+  margin-left:auto;
+  margin-right:auto;
   margin-top: 4%;
+  margin-bottom:4%;
+}
+
+#header img{
+  max-width:100%;
+  max-height:100%;
 }
 
 #logo{
-  background-image: url("../images/logo_medium.png");
-  background-size: 100%;
-  background-repeat: no-repeat;
-  //background-color: red;
   height:100%;
-  width:22%;
+  width:25%;
   display:block;
   float: left;
   margin-right:3%;
-  margin-left:20%;
 }
 
 #text-logo{
-  //background-color: green;
   height:100%;
-  width:40%;
+  width:70%;
   display: block;
   float: left;
   text-align: center;
@@ -48,31 +75,95 @@ body{
 
 #title-logo{
   color: white;
-  //background-color: white;
-  margin-top:10%;
-  max-height:35%;
+  height:35%;
   max-width:100%;
+  margin-top: 2.5em;
 }
 
 #subtitle-logo{
-  color: green;
-  //background-color: green;
   max-width:100%;
-  max-height:25%;
+  height:25%;
 }
-
+.subtitle-url{
+  color: white;
+}
 .icon{
-  height: 45px;
-  width:  45px;
+  max-height: 3em;
+  max-width:  3em;
+  z-index: 1;
+  display: inline-block;
 }
-/*---------------------------------------*/
+/*------------------------*/
+//Página de Login
 #login-field{
-  height:30%;
-  width: 40%;
+  height:25%;
+  width: 35%;
+  padding: 2em;
   position: relative;
-  top: 15%;
+  top: 10%;
   left: 0%;
   margin:0 auto;
   background-color: white;
   border-radius: 10px;
+}
+
+#login-field input{
+  height:2em;
+  width: 50%;
+  padding-left: 2em;
+  border:2px solid #73c04a;
+  border-radius: 10px;
+  font-weight:500;
+  font-size: 11pt;
+}
+
+#login-user img{
+  position: relative;
+  top: 0%;
+  left: 0em;
+  margin: auto 0%;
+}
+
+#login-user input{
+  position:absolute;
+  top: 18%;
+  left: 3.5em;
+  margin: auto 0%;
+}
+
+#login-password img{
+  position: relative;
+  top: 0%;
+  left: 0em;
+  margin: auto 0%;
+}
+
+#login-password input{
+  position:absolute;
+  top: 40%;
+  left: 3.5em;
+  margin: auto 0%;
+}
+
+.collum{
+  height:70%;
+  width: 20%;
+  display: inline-block;
+  color: #ffffff;
+  margin-top:4%;
+}
+
+#email-body{
+  height: 40%;
+  width: 55%;
+  margin:0 auto;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 2em;
+}
+
+textarea{
+  border:1px solid black;
+  border-radius:10px;
+
 }

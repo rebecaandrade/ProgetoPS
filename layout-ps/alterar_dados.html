@@ -1,7 +1,7 @@
 <html>
   <meta charset="UTF-8">
   <head>
-    <title>Login</title>
+    <title>Cadastro</title>
     <script src="./javascript/sweetalert/lib/sweet-alert.min.js"></script>
     <link rel="stylesheet" type="text/css" href="./javascript/sweetalert/lib/sweet-alert.css">
     <link rel="stylesheet" type="text/css" href="./css/layout.css">
@@ -17,27 +17,37 @@
           <h1>Processo Seletivo</h1>
         </div>
         <div id="subtitle-logo">
-          <span class="subtitle-url"><h3>http://www.cjr.org.br/site/</h3></span>
+          <h2>ALTERAR DADOS</h2>
         </div>
       </div>
     </div>
-    <div id="body">
+    <div class="collum">
+      <p>
+        Nome:
+      </p>
+      <input type="text" name="nome" value="">
+      <p>
+        Adicionar foto:
+      </p>
+      <input type="text" name="foto" value="">
     </div>
-
-    <div id="login-field">
-      <div id="login-user">
-        <img src="./images/icon_user.png" class="icon"/>
-        <input type="text" name="login" placeholder="USUÁRIO" value="">
-      </div>
-      <div id="login-password">
-        <img src="./images/icon_password.png" class="icon"/>
-        <input type="password" name="password" placeholder="SENHA" value="">
-        <p>
-          <a href="#">Esqueci minha senha</a>
-        </p>
-      </div>
+    <div class="collum">
+      <p>
+        Email:
+      </p>
+      <input type="text" name="email" value="">
+      <p>
+        Curso:
+      </p>
+      <input type="text" name="curso" value="">
+      <p>
+        Semestre:
+      </p>
+      <input type="text" name="semestre" value="">
+      <p>
+        Telefone:
+      </p>
+      <input type="text" name="telefone" value="">
     </div>
-
-
   </body>
 </html>
