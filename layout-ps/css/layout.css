@@ -5,6 +5,7 @@
   z-index: 0;
   text-decoration: none;
   border-radius: 0px;
+  box-shadow: none;
 }
 
 html{
@@ -30,7 +31,6 @@ h2{
 h3{
   font-weight:normal;
   font-size: 18pt;
-  margin-top: 1.5em;
 }
 h4{
   font-weight:normal;
@@ -87,14 +87,97 @@ h4{
 .subtitle-url{
   color: white;
 }
+
+#header-small{
+  width:80%;
+  height:20%;
+  position: relative;
+  top: 0%;
+  left: 0%;
+  margin-left: 2%;
+  margin-top: 2%;
+  margin-bottom:2%;
+}
+
+#header-small img{
+  max-width:100%;
+  max-height:100%;
+}
+
+#logo-small{
+  height:100%;
+  width:20%;
+  display:block;
+  float: left;
+  margin-right:2%;
+}
+
+#text-logo-small{
+  height:100%;
+  width:50%;
+  display: block;
+  float: left;
+  text-align: left;
+}
+
+#title-logo-small{
+  color: white;
+  height:35%;
+  max-width:100%;
+  margin-top: 2.5em;
+}
+
+#subtitle-logo-small{
+  max-width:100%;
+  height:25%;
+}
+
 .icon{
   max-height: 3em;
   max-width:  3em;
   z-index: 1;
   display: inline-block;
 }
+
+input[type=radio]{
+  display: none;
+}
+
+label{
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  padding-left: 1.5em;
+  margin-right: 15px;
+}
+
+label:before{
+  content:"";
+  display: inline-block;
+
+  width: 1.5em;
+  height: 1.5em;
+
+  margin-right: 10px;
+  position:absolute;
+  left: 0px;
+  bottom: 1px;
+
+  background-color: #ffffff;
+  border-radius: 1.5em;
+}
+
+input[type=radio]:checked + label:before {
+    content: "\2022";
+    color: #000000;
+    font-size: 30px;
+    text-align: center;
+    line-height: 18px;
+}
+
+
 /*------------------------*/
-//Página de Login
+/*Login*/
 #login-field{
   height:25%;
   width: 35%;
@@ -144,6 +227,52 @@ h4{
   left: 3.5em;
   margin: auto 0%;
 }
+/*Pós-Login*/
+#post-login-body{
+  width: 50%;
+  height: 50%;
+  margin:0 auto;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+#post-login-body img{
+  max-width: 6em;
+  max-height: 6em;
+}
+/*Tela Usuário*/
+#profile-body{
+  width: 50%;
+  height: 50%;
+  float: left;
+  background-color: #ffffff;
+  border-radius: 10px;
+  margin: 1em;
+}
+
+#profile-nav{
+  float: left;
+  width: 25%;
+  height: 50%;
+  border-radius: 10px;
+  margin: 1em;
+}
+
+#profile-nav-top{
+  border-radius: 10px 10px 0px 0px;
+  width: 100%;
+  height: auto;
+}
+
+#profile-nav-top img{
+  max-height: 100%;
+  max-width: 100%;
+}
+
+#profile-nav-body{
+  background-color: #ffffff;
+  width: 100%;
+  height:auto;
+}
 
 .collum{
   height:70%;
@@ -152,18 +281,19 @@ h4{
   color: #ffffff;
   margin-top:4%;
 }
-
+/*Fale Conosco*/
 #email-body{
   height: 40%;
   width: 55%;
   margin:0 auto;
   background-color: #ffffff;
   border-radius: 10px;
-  padding: 2em;
+  padding: 1em 2em 2em 2em;
 }
 
 textarea{
   border:1px solid black;
   border-radius:10px;
-
+  max-width:100%;
+  max-height:100%;
 }
