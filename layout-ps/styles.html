@@ -10,10 +10,129 @@
         margin:0 auto;
         //background-color: #ffffff;
       }
+      /*Radio -Com imagens-*/
+      input[type="radio"]{
+        display: none;
+      }
+      input[type="radio"] + label[for="radio2"] span {
+        display: inline-block;
+        width: 19px;
+        height: 19px;
+        background: url("./images/check_radio_sheet.png") left top no-repeat;
+        cursor: pointer;
+      }
+      input[type="radio"]:checked + label[for="radio2"] span{
+        background: url("./images/check_radio_sheet.png") -19px top no-repeat;
+      }
+
+      /*Radio -Sem imagens-*/
+      .radio {
+      display: inline-block;
+      cursor: pointer;
+      position: relative;
+      padding-left: 25px;
+      margin-right: 15px;
+      font-size: 13px;
+      }
+
+      label[for="radio"] label{
+        background-color: #ffffff;
+        padding: 5px 10px 5px 20px;
+        position: relative;
+        bottom: -1px;
+        left: -27px;
+        z-index: -1;
+      }
+
+      input[type=radio]{
+        display: none;
+      }
+
+      .radio:before {
+        content: "";
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        background-color: #73c04a;
+        border-radius: 15px;
+      }
+
+      input[type=radio]:checked + label[for="radio"] .radio:before {
+        content: "\2022";
+        color: #ffffff;
+        font-size: 50px;
+        text-align: center;
+        line-height: 31px;
+      }
+
+      #caixa{
+        width: 75px;
+        height: 176px;
+        position: relative;
+        top: 0%;
+        right: 0%;
+      }
+
+      #quadrado-cima{
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        top: 0%;
+        left: 25px;
+        background-color: #73c04a;
+      }
+
+      #quadrado-meio{
+        width: 25px;
+        height: 50px;
+        position: absolute;
+        top: 62px;
+        left: 50px;
+        background-color: #ffffff;
+        transform: skewY(-45deg);
+      }
+
+      #quadrado-baixo{
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        top: 124px;
+        left: 0%;
+        background-color: #73c04a;
+      }
+
     </style>
   </head>
   <body>
+
     <div id="test">
+      <p>
+        Modelos:
+      </p>
+      <div id="caixa">
+        <div id="quadrado-cima">
+        </div>
+        <div id="quadrado-meio">
+        </div>
+        <div id="quadrado-baixo">
+        </div>
+      </div>
+      <p>
+        Personalizações
+      </p>
+      <input type="radio" id="radio2" name="name" value="">
+      <label for="radio2"><span></span>Utilizando imagens</label>
+      <br />
+      <br />
+      <input type="radio" id="radio" name="name" value="">
+      <label for="radio"><span class="radio">
+      </span><label>Sem utilizar imagens</label></label>
+      <br />
+      <br />
+      <br />
       <p>
         Há seis tipos de títulos:
       </p>
@@ -23,10 +142,6 @@
       <h4>Estilo h4</h4>
       <h5>Estilo h5</h5>
       <h6>Estilo h6</h6>
-      <p>
-        Personalizações
-      </p>
-      <input type="radio" name="name" value=""><label for="name" class="input-radio">Selecionar</label>
     </div>
   </body>
 </html>
