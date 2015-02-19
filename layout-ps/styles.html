@@ -108,13 +108,60 @@
 	transform: translateY(-50px) rotateX(0);
 	transition: transform 2s;
       }
-       
+
       #caixa:hover #quadrado-baixo{
       	transform: translateY(0) rotateX(180deg);
       }
       #caixa:hover #quadrado-cima{
       	transform: skewX(0) translateY(0) translateX(0) rotateX(-180deg);
         height: 50px;
+      }
+
+      #nav-dropdown{
+        position: relative;
+        top: 0%;
+        left: 0%;
+        width: 100px;
+        height: 20px;
+        background-color: #ffffff;
+        transition: height 0.5s;
+        text-align: center;
+      }
+      #nav-dropdown p{
+        display: inline-block;
+
+      }
+      #nav-dropdown span{
+        position: absolute;
+        top: 0%;
+        right: 0%;
+        display: inline-block;
+        width: 25%;
+        height: 100%;
+        background-color: #DDD;
+      }
+
+      #nav-dropdown span:hover + ul{
+        display: inherit;
+      }
+
+      #nav-dropdown:hover{
+        height: 40px;
+      }
+
+      ul{
+        display:none;
+        list-style: none;
+      }
+
+      ul li{
+        width: 90%;
+      }
+
+      img{
+        max-width: 70%;
+        max-height: 70%;
+        margin: 5px 5px 0px 5px;
       }
 
     </style>
@@ -132,6 +179,13 @@
         </div>
         <div id="quadrado-baixo">
         </div>
+      </div>
+
+      <div id="nav-dropdown">
+        <p>Sair</p><span><img src="./images/options_nav.png" alt="" /></span>
+        <ul>
+          <li>Home</li>
+        </ul>
       </div>
       <p>
         Personalizações

@@ -58,6 +58,15 @@ h5{
   color: #ffffff;
 }
 
+p{
+  font-weight: lighter;
+}
+
+img{
+  max-width: 100%;
+  max-height: 100%;
+}
+
 #header{
   width: 70%;
   height: 25%;
@@ -76,11 +85,6 @@ h5{
   display:block;
   float: left;
   margin-right: 4.5%;
-}
-
-#logo img{
-  max-width:100%;
-  max-height:100%;
 }
 
 #text-logo{
@@ -110,7 +114,10 @@ h5{
 }
 
 #header-small{
-  width: 56%;
+  /*Deixar espaço de respiro para o layout se adaptar
+  pois muito justo, o simples aparecer da barra de rolagem
+  pode arruinar seu layout*/
+  width: 58%;
   height: 18%;
   position: relative;
   top: 0%;
@@ -128,11 +135,6 @@ h5{
   display: block;
   float: left;
   margin-right: 4%;
-}
-
-#logo-small img{
-  max-width: 100%;
-  max-height: 100%;
 }
 
 #text-logo-small{
@@ -167,9 +169,20 @@ h5{
   display: inline-block;
 }
 
-.collum {
-    width: calc(100% / 2);
-    padding: 0 10px;
+.collum-2 {
+    width: 49.9999%;
+    display: inline-block;
+    float: left;
+    box-sizing: border-box;
+    padding:0% 10%;
+    color: #ffffff;
+}
+
+.collum-3 {
+    width: 33.3333%;
+    box-sizing: border-box;
+    padding:0% 7%;
+    color: #ffffff;
 }
 
 /*Customização Radio Button*/
@@ -273,15 +286,14 @@ input[type=radio]:checked + label .radio:before {
   background-color: green;
 }
 /*Cadastro*/
-.collum-one, .collum-two{
-  height: 70%;
-  float: left;
+.collum-3{
+  height: 50%;
   display: block;
   color: #ffffff;
-  margin-left: 10%;
+  float:left;
 }
 
-.collum input[type=text]{
+.collum-3 input[type=text]{
   height: 2.5em;
   width: 100%;
   margin-top: 0.3em;
@@ -293,8 +305,8 @@ input[type=radio]:checked + label .radio:before {
 }
 
 .foto-perfil{
-  width: 5  0%;
-  height: 0%;
+  width: 40%;
+  height: 50%;
   position: relative;
   top: 0%;
   left: 0%;
@@ -303,8 +315,6 @@ input[type=radio]:checked + label .radio:before {
   position: absolute;
   top: 0%;
   left: 0%;
-  max-width: 100%;
-  max-height: 100%;
 }
 .foto-perfil img:first-child{
   z-index: 1;
@@ -319,10 +329,7 @@ input[type=radio]:checked + label .radio:before {
   background-color: #ffffff;
   border-radius: 10px;
 }
-#post-login-body img{
-  max-width: 90%;
-  max-height: 90%;
-}
+
 .post-login-option{
   height: 80%;
   width: 50%;
@@ -337,7 +344,7 @@ input[type=radio]:checked + label .radio:before {
 /*Tela Usuário*/
 #profile-body{
   width: 50%;
-  height: 50%;
+  height: 45%;
   float: left;
   background-color: #ffffff;
   border-radius: 10px;
@@ -348,21 +355,39 @@ input[type=radio]:checked + label .radio:before {
 #profile-body .foto-perfil{
   border: 3px solid black;
   width: 35%;
-  height:100%;
+  height: 90%;
   float: left;
+}
+
+.foto-perfil span{
+  display: block;
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  background-color: black;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 18pt;
+  font-weight: normal;
+  text-overflow: ellipsis;
 }
 
 #profile-data{
+  width: 60%;
+  height: 80%;
   float: left;
   margin-left: 1em;
+  /*background-color: black;*/
+  line-height: 16pt;
 }
 
 #profile-nav{
-  float: left;
   width: 25%;
-  height: 60%;
+  height: 53%;
   border-radius: 10px;
   margin: 0em 1em 1em 1em;
+  float: left;
 }
 
 #profile-nav-top{
@@ -371,16 +396,23 @@ input[type=radio]:checked + label .radio:before {
   height: auto;
 }
 
-#profile-nav-top img{
-  max-height: 100%;
-  max-width: 100%;
-}
-
 #profile-nav-body{
   background-color: #ffffff;
   width: 100%;
   height: 72%;
   border-radius: 0px 0px 10px 10px;
+}
+
+.profile-icon-nav{
+  height: 50%;
+  width: 40%;
+  background-color: black;
+  display:inline-block;
+}
+
+.profile-icon-nav img{
+  max-width: 100%;
+  max-height: 100%;
 }
 /*FeedBack*/
 #feedback-message{
@@ -478,4 +510,113 @@ textarea{
 #action-ps img{
   max-width: 40%;
   max-height: 40%;
+}
+
+/*Visualizar Candidatos*/
+#list-user{
+  border-collapse: collapse;
+  width: 60%;
+  height: auto;
+  margin:0 auto;
+}
+
+#list-user thead{
+  /*Thead não aceita padding*/
+  background-color: black;
+  border-collapse: collapse;
+  color: #ffffff;
+}
+
+#list-user th{
+  padding: 0.3em;
+  text-align: center;
+}
+
+#list-user tbody{
+  background-color: #ffffff;
+  color: #000000;
+  text-align: center;
+}
+
+#list-user td{
+  padding: 0.5em;
+  text-align: center;
+  width: 60%;
+}
+
+/*Visualizar Administradores*/
+#list-admin{
+  border-collapse: collapse;
+  width: 60%;
+  height: auto;
+  margin:0 auto;
+}
+
+#list-admin thead{
+  /*Thead não aceita padding*/
+  background-color: black;
+  border-collapse: collapse;
+  color: #ffffff;
+}
+
+#list-admin th{
+  padding: 0.3em;
+  text-align: center;
+}
+
+#list-admin th:first-child{
+  -moz-border-radius:10px;
+  -webkit-border--radius:10px;
+  border-radius:10px;
+}
+
+#list-admin tbody{
+  background-color: #ffffff;
+  color: #000000;
+  text-align: center;
+}
+
+#list-admin td{
+  padding: 0.5em;
+  text-align: center;
+  width: 60%;
+  text-overflow: ellipsis;
+}
+
+td img{
+  height: auto;
+  width: 40%;
+}
+
+/*Tela Administrador*/
+#body-admin{
+  width: 64%;
+  height: 60%;
+  margin:0 auto;
+}
+
+#body-admin-info{
+  width: 100%;
+  height: 54.9999%;
+  background-color: #ffffff;
+  border-radius: 10px 10px 0px 0px;
+  box-sizing: border-box;
+  padding: 1em;
+}
+
+#body-admin-nav{
+  width: 100%;
+  height: 45.9999%;
+  background-color: #000000;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.admin-nav{
+  height: 60%;
+  width: 30%;
+  display: inline-block;
+  font-size: 18pt;
+  text-align: center;
+  font-weight: bold;
+  color: #ffffff;
 }
