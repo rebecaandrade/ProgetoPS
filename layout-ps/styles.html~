@@ -85,7 +85,7 @@
         left: 25px;
         background-color: #73c04a;
 	transform: skewX(-45deg) translateY(49px) translateX(37px) rotateX(0);
-	transition: transform 2s, height 2s;
+	transition: transform 2s;
       }
 
       #quadrado-meio{
