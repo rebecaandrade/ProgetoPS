@@ -1,3 +1,9 @@
+<div id="subtitle-logo">
+  <span class="subtitle-url"><h2>Presença nas Atividades</h2></span>
+</div>
+</div>
+</div>
+
 <h5><span class="h8">Selecione os horários que participará da palestras institucional:</span></h5>
 <br />
 

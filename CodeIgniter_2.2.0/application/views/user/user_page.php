@@ -1,3 +1,9 @@
+<div id="subtitle-logo-small">
+  <span class="subtitle-url"><h4>INFORMAÇÕES GERAIS</h4></span>
+</div>
+</div>
+</div>
+
 <script charset="utf-8">
       swal("Bem vindo ao sistema");
     </script>

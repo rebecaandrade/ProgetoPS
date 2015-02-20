@@ -3,6 +3,7 @@
         </div>
       </div>
     </div>
+    
     <div class="collum">
       <p>
         Nome:

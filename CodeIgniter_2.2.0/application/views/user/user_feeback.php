@@ -1,3 +1,9 @@
+<div id="subtitle-logo-small">
+          <h4>Feedback</h4>
+        </div>
+      </div>
+    </div>
+
 <div id="feedback-message">
   <p>asdasdasd</p>
 </div>
