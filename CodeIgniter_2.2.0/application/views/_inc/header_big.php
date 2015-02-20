@@ -18,8 +18,3 @@
     <div id="title-logo">
       <h1>Processo Seletivo</h1>
     </div>
-    <div id="subtitle-logo">
-      <span class="subtitle-url"><h5><a href="http://www.cjr.org.br/site/">http://www.cjr.org.br/site/  </a></h5></span>
-    </div>
-  </div>
-</div>

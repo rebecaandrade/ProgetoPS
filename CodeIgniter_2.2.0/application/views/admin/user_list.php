@@ -1,3 +1,8 @@
+<div id="subtitle-logo-small">
+  <span class="subtitle-url"><h4>Lista de Candidatos</h4></span>
+</div>
+</div>
+</div>
 
 <table id="list-user">
   <thead>
