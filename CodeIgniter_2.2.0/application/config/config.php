@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= '';
+$config['base_url']	= 'http://localhost/sistemaps/';
 
 /*
 |--------------------------------------------------------------------------
@@ -69,7 +69,7 @@ $config['url_suffix'] = '';
 | than english.
 |
 */
-$config['language']	= 'portuguese-br';
+$config['language']	= 'english';
 
 /*
 |--------------------------------------------------------------------------
@@ -224,7 +224,7 @@ $config['cache_path'] = '';
 | MUST set an encryption key.  See the user guide for info.
 |
 */
-$config['encryption_key'] = '1376115799AC1416B5D846AE21BB2';
+$config['encryption_key'] = 'sistemapsnessaporrapartiufazerocristianochorardefelecidadecomnossaexcelencia';
 
 /*
 |--------------------------------------------------------------------------
