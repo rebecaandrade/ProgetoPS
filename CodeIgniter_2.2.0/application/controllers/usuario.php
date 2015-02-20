@@ -6,8 +6,11 @@ class Usuario extends CI_Controller {
    		parent::__construct();
    		$this->load->model('usuario_model');
 	}
-
+	public function index(){
+		redirect('usuario/listar');
+	}
 	public function listar(){
-        $dados = $this->usuario_model->buscar_usuarios();
-        $this->load->view('usuario/lista_participante', $dados);
+        $dados['users'] = $this->usuario_model->buscar_usuarios();
+        $this->load->view('admin/user_list', $dados);
     }
+}
