@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://localhost/sistemaps/';
+$config['base_url']	= 'http://localhost/sistemaps/CodeIgniter_2.2.0';
 
 /*
 |--------------------------------------------------------------------------
