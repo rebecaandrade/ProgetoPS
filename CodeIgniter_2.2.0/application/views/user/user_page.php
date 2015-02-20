@@ -1,19 +1,6 @@
 <script charset="utf-8">
 swal("Bem vindo ao sistema");
 </script>
-<div id="header-small">
-<div id="logo-small">
-<img src="./images/logo.png"/>
-</div>
-<div id="text-logo-small">
-<div id="title-logo-small">
-<h3>Processo Seletivo</h3>
-</div>
-<div id="subtitle-logo-small">
-<span class="subtitle-url"><h4>INFORMAÇÕES GERAIS</h4></span>
-</div>
-</div>
-</div>
 <div id="profile-body">
 <div class="foto-perfil">
 <img src="./images/photo_profile.png" alt="" />
