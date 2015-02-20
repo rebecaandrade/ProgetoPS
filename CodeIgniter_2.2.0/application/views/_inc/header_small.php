@@ -1,4 +1,4 @@
-<?php
+
 <html>
 <!DOCTYPE html>
 <meta charset="UTF-8">
@@ -11,7 +11,7 @@
 </head>
 <body>
 <div id="header-small">
-<div id="logo-small">
+  <div id="logo-small">
 <img src="./images/logo.png"/>
 </div>
 <div id="text-logo-small">
@@ -21,6 +21,5 @@
 <div id="subtitle-logo-small">
 <span class="subtitle-url"><h4>INFORMAÇÕES GERAIS</h4></span>
 </div>
+  </div>
 </div>
-</div>
- ?>

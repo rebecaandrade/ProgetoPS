@@ -1,4 +1,4 @@
-<?php
+
 <div id="post-login-body">
 <div class="post-login-option">
 <img src="./images/submission_post.png" alt="" /><p>
@@ -11,4 +11,3 @@ Perfil
 </p>
 </div>
 </div>
- ?>

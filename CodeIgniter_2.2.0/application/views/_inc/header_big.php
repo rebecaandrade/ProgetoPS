@@ -1,4 +1,4 @@
-<?php
+
 <html>
 <!DOCTYPE html>
 <meta charset="UTF-8">
@@ -23,4 +23,3 @@
     </div>
   </div>
 </div>
- ?>

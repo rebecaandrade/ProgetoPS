@@ -1,4 +1,4 @@
-<?php
+
   <div id="login-field">
     <div id="login-user">
       <img src="./media/images/icon_user.png" class="icon"/>
@@ -12,4 +12,3 @@
       </div>
     </div>
   </div>
- ?>
