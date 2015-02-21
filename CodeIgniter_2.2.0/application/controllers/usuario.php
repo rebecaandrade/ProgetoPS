@@ -37,6 +37,8 @@ class Usuario extends CI_Controller {
     	redirect('usuario/list_users');
     }
     public function create_user(){
+    	echo "cheguei aki =P";
+    	die;
     	//$this->load->view()
     }
     public function edit_account(){
