@@ -11,18 +11,10 @@
 <body>
 <div id="header-small">
   <div id="logo-small">
-<<<<<<< HEAD
-    <img src="./images/logo.png"/>
-  </div>
-  <div id="text-logo-small">
-    <div id="title-logo-small">
-      <h3>Processo Seletivo</h3>
-    </div>
-=======
 <img src="<?php echo base_url();?>assets/images/logo.png"/>
 </div>
 <div id="text-logo-small">
 <div id="title-logo-small">
 <h3>Processo Seletivo</h3>
 </div>
->>>>>>> 339209d339e2ff9a27e3f8a8d847a08bd5d47d00
+
