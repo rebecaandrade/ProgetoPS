@@ -27,7 +27,7 @@ class Usuario extends CI_Controller {
 			redirect('usuario/home');
 		}
 		else{
-			redirect('usuario/login');
+			redirect('access/login');
 		}
 		//redirect('usuario/lista');//só enquanto as paradas de login ainda nao estao prontas
 		//$this->load->view('user/user_page'); //ignora esses bagaço aki, to testando umas paradas
@@ -43,36 +43,6 @@ class Usuario extends CI_Controller {
 	}
 	public function load_home_user(){
 		$this->load->view('user/user_page');
-	}
-	public function login(){
-		$this->load->view('login');
-	}
-	public function logar(){
-		$login = $_POST['login'];
-		$password = md5($_POST['password']);
-		$user = $this->usuario_model->get_user($login,$password);
-		if(!$user){
-			$mensagem = array(
-							'mensagem' =>'Usuário ou senha inválidos.'
-						);
-			$this->session->set_userdata($mensagem);
-			redirect('usuario/login');
-		}
-		else{
-			$newdata = array(
-				'login_id' => $user->id_login,
-				'login_perfil' => $user->perfil,
-				'email' => $user->email,
-				'nome' => $user->nome,
-				'usuario' => $user->usuario, 
-				);
-			$this->session->set_userdata($newdata);
-			redirect('usuario/home');
-		}
-	}
-	public function deslogar(){
-		$this->session->sess_destroy();
-		redirect('usuario/login');
 	}
 	public function list_users(){
         $dados['users'] = $this->usuario_model->retrieve_users();
