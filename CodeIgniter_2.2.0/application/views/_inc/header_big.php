@@ -3,6 +3,7 @@
 <meta charset="UTF-8">
 <head>
   <title>Login</title>
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
   <script src="<?php echo base_url();?>assets/javascript/sweetalert/lib/sweet-alert.min.js"></script>
   <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/javascript/sweetalert/lib/sweet-alert.css">
   <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/layout.css">
