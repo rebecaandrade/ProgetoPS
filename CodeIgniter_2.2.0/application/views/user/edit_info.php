@@ -7,7 +7,7 @@
     <?php echo form_open('usuario/update_account');?>
 	    <div class="collum">
 	    	<label> Nome: <input type="text" name="nome" value="<?php echo $user->nome?>"> </label>
-			<label> Adicionar foto: <input type="text" name="foto" value="<?php if($user->foto)echo $user->foto?>"> </label>
+			<label> Adicionar foto: <input type="file" name="foto" value="<?php if($user->foto)echo $user->foto?>"> </label>
 	    </div>
 	    <div class="collum">
 	    	<label> Email: <input type="text" name="email" value="<?php echo $user->email?>"> </label><br>

@@ -37,9 +37,10 @@ class Usuario extends CI_Controller {
     	redirect('usuario/list_users');
     }
     public function create_user(){
-    	echo "cheguei aki =P";
-    	die;
-    	//$this->load->view()
+    	$this->load->view('access/form');
+    }
+    public function insert_new_user(){
+
     }
     public function edit_account(){
     	$dados['user'] = $this->usuario_model->search_user($this->session->userdata('login_id'));

@@ -1,3 +1,4 @@
+<?php echo $this->load->view('_inc/header_big')?>
 <div id="subtitle-logo">
           <h2>CADASTRO</h2>
         </div>
@@ -36,3 +37,4 @@
       <input type="radio" name="name" value="">2 vezes<br />
       <input type="radio" name="name" value="">3 ou mais<br />
     </div>
+<?php echo $this->load->view('_inc/footer')?>
