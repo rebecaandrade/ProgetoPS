@@ -43,13 +43,26 @@ class Access extends CI_Controller {
 		$this->load->view('recovery_password');
 	}
 	public function recovery(){
+
 		$email = $this->input->post('email-recovery');
+		$user = $this->access_model->get_email($email);
+
+		if($user){
+			$password = random_string('alnum', 9);
+			$this->access_model->update_password($user->usuario,md5($password));
 			
-			$to      =  $email;
-			$subject = 'Recuperação de senha';
-			$message = '';
+			$to      =  $user->email;
+			$subject = '[Processo Seletivo CJR] Alteração de senha';
+			$message = "Olá, $user->nome! \r\n \r\nSeu acesso foi alterado para: \r\n \r\n $password \r\n";
 			$message = wordwrap($message, 70);
 			$headers = 'From: donotreply@cjr.org.br';/* Ver qual email que deve mandar */
 			mail($to,$subject,$message,$headers);
+			/*setar mensagem de sucesso"Um email foi enviado com sua nova senha"*/
+			redirect('access/login');
+		}
+		else{
+			/*mensagem de fracasso "Email não cadastrado"*/
+			redirect('access/password_recovery');
+		}
 	}
 }
