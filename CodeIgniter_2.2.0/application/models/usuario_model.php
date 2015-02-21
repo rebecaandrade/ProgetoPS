@@ -2,16 +2,6 @@
 
 class Usuario_model extends CI_Model {
 
-<<<<<<< HEAD
-	public function buscar_usuarios(){
-		$this->db->where('perfil','1');
-		return $this->db->get('tb_login')->result();
-	}
-	public function deletar_usuario($id){
-		$this->db->where('id_login',$id);
-		return $this->db->delete('tb_login');
-	}
-=======
 	public function retrieve_users(){
 		$this->db->where('perfil','1');
 		return $this->db->get('tb_login')->result();
@@ -38,5 +28,4 @@ class Usuario_model extends CI_Model {
 		var_dump($dados);
 		die;
 	}
->>>>>>> 339209d339e2ff9a27e3f8a8d847a08bd5d47d00
 }
