@@ -320,6 +320,16 @@ input[type=radio]:checked + label .radio:before {
   z-index: 1;
 }
 
+/*Recuperar senha*/
+#body-recovery{
+  width: 30%;
+  height: 50%;
+  margin: 0 auto;
+}
+
+#body-recovery input[type="text"]{
+  width: 90%;
+}
 /*Pós-Login*/
 #post-login-body{
   width: 50%;
