@@ -1,3 +1,5 @@
+<?php echo $this->load->view('_inc/header_small') ?>
+
 <div id="subtitle-logo-small">
   <span class="subtitle-url"><h4>Lista de Candidatos</h4></span>
 </div>
@@ -5,38 +7,26 @@
 </div>
 
 <table id="list-user">
-  <thead>
-    <th>
-      Nome:
-    </th>
-    <th>
-      Email:
-    </th>
-    <th>
-    </th>
-    <th>
-    </th>
-    <th>
-      FeedBack
-    </th>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        Rebeca Baldomir
-      </td>
-      <td>
-        contato@cjr.org.br
-      </td>
-      <td>
-        Horário
-      </td>
-      <td>
-        Informações
-      </td>
-      <td>
-        <img src="./images/button_light_accept.png" alt="" />
-      </td>
-    </tr>
-  </tbody>
+    <thead>
+        <tr>
+            <th> Nome </th>
+            <th> Email </th>
+            <th> FeedBack </th>
+       </tr>
+    </thead>
+    <tbody>
+    <?php if(isset($users)){
+        foreach ($users as $user) { ?> 
+            <tr>
+                <td><?php echo $user->nome ;?> </td>
+                <td> <?php echo $user->email ;?></td>
+                <td> <?php echo $user->email ;?></td>
+                <td> <img src="<?php echo base_url();?>assets/images/button_light_accept.png" alt="" /></td>
+                <td><a href="#">Horário</a></td>
+                <td><a href="#">Informações</a></td>
+                <td><a href="<?php echo base_url();?>index.php/usuario/deletar?id=<?php echo $user->id_login?>">deletar</a></td>
+            </tr>
+    <?php }} ?>
+    </tbody>
 </table>
+<?php echo $this->load->view('_inc/footer') ?>
