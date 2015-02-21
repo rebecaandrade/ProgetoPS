@@ -6,6 +6,11 @@ class Usuario_model extends CI_Model {
 		$this->db->where('perfil','1');
 		return $this->db->get('tb_login')->result();
 	}
+	public function procura_usuario($login,$senha){
+		$this->db->where('usuario',$login);
+		$this->db->where('senha',$senha);
+		return $this->db->get('tb_login')->row();
+	}
 	public function deletar_usuario($id){
 		$this->db->where('id_login',$id);
 		return $this->db->delete('tb_login');
