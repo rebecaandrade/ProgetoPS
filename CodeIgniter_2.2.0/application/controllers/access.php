@@ -39,4 +39,17 @@ class Access extends CI_Controller {
 		$this->session->sess_destroy();
 		redirect('access/login');
 	}
+	public function password_recovery(){
+		$this->load->view('recovery_password');
+	}
+	public function recovery(){
+		$email = $this->input->post('email-recovery');
+			
+			$to      =  $email;
+			$subject = 'Recuperação de senha';
+			$message = '';
+			$message = wordwrap($message, 70);
+			$headers = 'From: donotreply@cjr.org.br';/* Ver qual email que deve mandar */
+			mail($to,$subject,$message,$headers);
+	}
 }

@@ -10,7 +10,7 @@
 	    	<img src="<?php echo base_url();?>assets/images/icon_password.png" class="icon"/>
 	    	<input type="password" name="password" placeholder="SENHA" value="">
 	    	<input type="submit" value="Entrar">
-	    	<a href="#">Esqueci minha senha</a>
+	    	<a href="<?php echo base_url(); ?>index.php/access/password_recovery">Esqueci minha senha</a>
 	    	<div id="icon-cadastro"> </div>
 	    </div>
 	</div>	
