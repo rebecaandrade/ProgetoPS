@@ -18,14 +18,14 @@ class Usuario extends CI_Controller {
 	}
 	public function home(){
 		if($this->session->userdata('login_perfil') == 1){
-			redirect('usuario/carrega_home_candidato');
+			redirect('usuario/load_home_user');
 		}
 		elseif($this->session->userdata('login_perfil') == 2){
-			redirect('usuario/carrega_home_administrador');
+			redirect('usuario/load_home_admin');
 		}
-		else redirect('usuario/carrega_home_superadministrador');
+		else redirect('usuario/load_home_superadmin');
 	}
-	public function carrega_home_candidato(){
+	public function load_home_user(){
 		$this->load->view('user/user_page');
 	}
 	public function login(){
@@ -33,9 +33,9 @@ class Usuario extends CI_Controller {
 	}
 	public function logar(){
 		$login = $_POST['login'];
-		$senha = md5($_POST['password']);
-		$usuario = $this->usuario_model->procura_usuario($login,$senha);
-		if(!$usuario){
+		$password = md5($_POST['password']);
+		$user = $this->usuario_model->get_user($login,$password);
+		if(!$user){
 			$mensagem = array(
 							'mensagem' =>'Usuário ou senha inválidos.'
 						);
@@ -44,11 +44,11 @@ class Usuario extends CI_Controller {
 		}
 		else{
 			$newdata = array(
-				'login_id' => $usuario->id_login,
-				'login_perfil' => $usuario->perfil,
-				'email' => $usuario->email,
-				'nome' => $usuario->nome,
-				'usuario' => $usuario->usuario, 
+				'login_id' => $user->id_login,
+				'login_perfil' => $user->perfil,
+				'email' => $user->email,
+				'nome' => $user->nome,
+				'usuario' => $user->usuario, 
 				);
 			$this->session->set_userdata($newdata);
 			redirect('usuario/home');
@@ -58,30 +58,30 @@ class Usuario extends CI_Controller {
 		$this->session->sess_destroy();
 		redirect('usuario/login');
 	}
-	public function lista(){
-        $dados['users'] = $this->usuario_model->buscar_usuarios();
+	public function list_users(){
+        $dados['users'] = $this->usuario_model->retrieve_users();
         $this->load->view('admin/user_list', $dados);
     }
-    public function deletar(){
-    	$this->usuario_model->deletar_usuario($_GET['id']);
-    	redirect('usuario/lista');
+    public function delete(){
+    	$this->usuario_model->delete_user($_GET['id']);
+    	redirect('usuario/list_users');
     }
-    public function cadastra_usuario(){
+    public function create_user(){
     	//$this->load->view()
     }
-    public function edita_cadastro(){
-    	$dados['user'] = $this->usuario_model->pesquisa_usuario($this->session->user_data('login_id'));
+    public function edit_account(){
+    	$dados['user'] = $this->usuario_model->search_user($this->session->userdata('login_id'));
     	$this->load->view('user/edit_info',$dados);
     }
-    public function atualizar_cadastro(){
+    public function update_account(){
     	$id = $this->session->user_data('login_id');
     	if($_POST['nome'] == NULL || $_POST['email'] == NULL || $_POST['semestre'] == NULL ||
     		$_POST['curso'] == NULL || $_POST['telefone'] == NULL){
     		$this->session->set_userdata('mensagem','erro ao atualizar cadastro, tente novamente');
-    		redirect('usuario/edita_cadastro');
+    		redirect('usuario/edit_account');
     	}
-    	else if($this->usuario_model->verifica_senha($id,$_POST['senha'])){
-    		$this->usuario_model->atualiza_usuario($id,$_POST);
+    	else if($this->usuario_model->verify_password($id,$_POST['password'])){
+    		$this->usuario_model->update_user($id,$_POST);
     		$this->session->set_userdata('mensagem','cadastro atualizado com sucesso');
     		redirect('usuario/home');
     	}

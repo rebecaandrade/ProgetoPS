@@ -4,7 +4,7 @@
 </div>
     	</div>
     </div>
-    <?php echo form_open('usuario/atualizar_cadastro');?>
+    <?php echo form_open('usuario/update_account');?>
 	    <div class="collum">
 	    	<label> Nome: <input type="text" name="nome" value="<?php echo $user->nome?>"> </label>
 			<label> Adicionar foto: <input type="text" name="foto" value="<?php if($user->foto)echo $user->foto?>"> </label>
@@ -14,7 +14,7 @@
 	    	<label> Curso: <input type="text" name="curso" value="<?php echo $user->curso?>"> </label>
 	    	<label> Semestre: <input type="text" name="semestre" value="<?php echo $user->semestre?>"> </label>
 	    	<label> Telefone: <input type="text" name="telefone" value="<?php echo $user->telefone?>"> </label>
-	    	<label> Confirmação de Senha: <input type="password" name="senha" value=""> </label>
+	    	<label> Confirmação de Senha: <input type="password" name="password" value=""> </label>
 	    	<input type='submit' value='Atualizar'>
 	    </div>
     <?php echo form_close();?>
