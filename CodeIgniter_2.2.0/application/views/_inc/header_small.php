@@ -11,9 +11,9 @@
 <body>
 <div id="header-small">
   <div id="logo-small">
-<img src="./images/logo.png"/>
-</div>
-<div id="text-logo-small">
-<div id="title-logo-small">
-<h3>Processo Seletivo</h3>
-</div>
+    <img src="./images/logo.png"/>
+  </div>
+  <div id="text-logo-small">
+    <div id="title-logo-small">
+      <h3>Processo Seletivo</h3>
+    </div>
