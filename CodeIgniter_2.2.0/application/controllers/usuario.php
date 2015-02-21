@@ -44,7 +44,7 @@ class Usuario extends CI_Controller {
     	$this->load->view('user/edit_info',$dados);
     }
     public function update_account(){
-    	$id = $this->session->user_data('login_id');
+    	$id = $this->session->userdata('login_id');
     	if($_POST['nome'] == NULL || $_POST['email'] == NULL || $_POST['semestre'] == NULL ||
     		$_POST['curso'] == NULL || $_POST['telefone'] == NULL){
     		$this->session->set_userdata('mensagem','erro ao atualizar cadastro, tente novamente');

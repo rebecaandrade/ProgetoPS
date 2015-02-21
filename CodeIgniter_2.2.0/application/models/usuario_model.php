@@ -26,11 +26,13 @@ class Usuario_model extends CI_Model {
 	}
 	public function update_user($id,$dados){
 		$this->db->where('id_login',$id);
+		unset($dados['password']);
 		$dados['id_login'] = $id;
 		$dados['apresentacao'] = $this->db->get('tb_login')->row()->apresentacao;
 		$dados['dinamica'] = $this->db->get('tb_login')->row()->dinamica;
 		$dados['senha'] = $this->db->get('tb_login')->row()->senha;
 		$dados['perfil'] = $this->db->get('tb_login')->row()->perfil;
+		$dados['usuario'] = $this->db->get('tb_login')->row()->usuario;
 		return $this->db->update('tb_login',$dados);
 	}
 }
