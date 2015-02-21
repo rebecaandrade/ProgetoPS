@@ -2,16 +2,6 @@
 
 class Usuario_model extends CI_Model {
 
-<<<<<<< HEAD
-	public function buscar_usuarios(){
-		$this->db->where('perfil','1');
-		return $this->db->get('tb_login')->result();
-	}
-	public function deletar_usuario($id){
-		$this->db->where('id_login',$id);
-		return $this->db->delete('tb_login');
-	}
-=======
 	public function retrieve_users(){
 		$this->db->where('perfil','1');
 		return $this->db->get('tb_login')->result();
@@ -30,13 +20,19 @@ class Usuario_model extends CI_Model {
 		return $this->db->get('tb_login')->row();
 	}
 	public function verify_password($id,$senha){
-		$this->db->where('login_id',$id);
-		$pswrd = $this->db->get('senha');
+		$this->db->where('id_login',$id);
+		$pswrd = $this->db->get('tb_login')->row()->senha;
 		return md5($senha) == $pswrd;
 	}
 	public function update_user($id,$dados){
-		var_dump($dados);
-		die;
+		$this->db->where('id_login',$id);
+		unset($dados['password']);
+		$dados['id_login'] = $id;
+		$dados['apresentacao'] = $this->db->get('tb_login')->row()->apresentacao;
+		$dados['dinamica'] = $this->db->get('tb_login')->row()->dinamica;
+		$dados['senha'] = $this->db->get('tb_login')->row()->senha;
+		$dados['perfil'] = $this->db->get('tb_login')->row()->perfil;
+		$dados['usuario'] = $this->db->get('tb_login')->row()->usuario;
+		return $this->db->update('tb_login',$dados);
 	}
->>>>>>> 339209d339e2ff9a27e3f8a8d847a08bd5d47d00
 }
