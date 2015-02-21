@@ -10,4 +10,8 @@ class Usuario_model extends CI_Model {
 		$this->db->where('id_login',$id);
 		return $this->db->delete('tb_login');
 	}
+	public function pesquisa_usuario($id){
+		$this->db->where('id_login',$id);
+		return $this->db->get('tb_login')->row();
+	}
 }
