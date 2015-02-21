@@ -12,7 +12,7 @@
 	    	<input type="password" name="password" placeholder="SENHA" value="">
 	    	<input type="submit" value="Entrar">
 	    	<a href="<?php echo base_url(); ?>index.php/access/password_recovery">Esqueci minha senha</a>
-	    	<div id="icon-cadastro"> </div>
+	    	<div id="icon-cadastro"><a href="<?php echo base_url(); ?>index.php/usuario/create_user">cadastro</a> </div>
 	    </div>
 	</div>	
 <?php echo form_close() ?>
