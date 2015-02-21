@@ -20,12 +20,17 @@ class Usuario_model extends CI_Model {
 		return $this->db->get('tb_login')->row();
 	}
 	public function verify_password($id,$senha){
-		$this->db->where('login_id',$id);
-		$pswrd = $this->db->get('senha');
+		$this->db->where('id_login',$id);
+		$pswrd = $this->db->get('tb_login')->row()->senha;
 		return md5($senha) == $pswrd;
 	}
 	public function update_user($id,$dados){
-		var_dump($dados);
-		die;
+		$this->db->where('id_login',$id);
+		$dados['id_login'] = $id;
+		$dados['apresentacao'] = $this->db->get('tb_login')->row()->apresentacao;
+		$dados['dinamica'] = $this->db->get('tb_login')->row()->dinamica;
+		$dados['senha'] = $this->db->get('tb_login')->row()->senha;
+		$dados['perfil'] = $this->db->get('tb_login')->row()->perfil;
+		return $this->db->update('tb_login',$dados);
 	}
 }
