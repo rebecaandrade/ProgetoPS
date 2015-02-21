@@ -1,18 +1,17 @@
+
 <div id="subtitle-logo">
-   <span class="subtitle-url"><h5><a href="http://www.cjr.org.br/site/">http://www.cjr.org.br/site/  </a></h5></span>
- </div>
+    <span class="subtitle-url"><h5><a href="http://www.cjr.org.br/site/">http://www.cjr.org.br/site/  </a></h5></span>
+</div>
 </div>
 </div>
 
 <div id="post-login-body">
-     <div class="post-login-option">
-       <img src="./images/submission_post.png" alt="" /><p>
-         Inscreva-se
-       </p>
-     </div>
-     <div class="post-login-option">
-       <img src="./images/profile_post.png" alt="" /><p>
-         Perfil
-       </p>
-     </div>
-   </div>
+    <div class="post-login-option">
+        <img src="<?php echo base_url();?>assets/images/submission_post.png" alt="" />
+        <p> Inscreva-se </p>
+    </div>
+    <div class="post-login-option">
+        <img src="<?php echo base_url();?>assets/images/profile_post.png" alt="" />
+        <p> Perfil </p>
+    </div>
+</div>

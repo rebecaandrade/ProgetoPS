@@ -21,9 +21,10 @@
                 <td><?php echo $user->nome ;?> </td>
                 <td> <?php echo $user->email ;?></td>
                 <td> <?php echo $user->email ;?></td>
-                <td> <img src="./images/button_light_accept.png" alt="" /></td>
+                <td> <img src="<?php echo base_url();?>assets/images/button_light_accept.png" alt="" /></td>
                 <td><a href="#">Horário</a></td>
-                <td><a href="#">Informações</a></td> 
+                <td><a href="#">Informações</a></td>
+                <td><a href="<?php echo base_url();?>index.php/usuario/deletar?id=<?php echo $user->id_login?>">deletar</a></td>
             </tr>
     <?php }} ?>
     </tbody>
