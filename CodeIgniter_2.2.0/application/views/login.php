@@ -1,6 +1,6 @@
 <?php echo $this->load->view('_inc/header_big')?>
 
-<?php echo form_open('usuario/logar') ?>
+<?php echo form_open('access/sign_in') ?>
 	<div id="login-field">
 		<div id="login-user">
 	    	<img src="<?php echo base_url();?>assets/images/icon_user.png" class="icon"/>
