@@ -12,11 +12,12 @@ body{
   background-color: #002f67;
   font-family: 'Open Sans', sans-serif;
   overflow-x: hidden;
+  font-size: 62,5%; /*1em = 10px*/
 }
 
 h1{
   font-weight:bold;
-  font-size: 4em;
+  font-size: 6,4em;
 }
 
 h2{
@@ -67,124 +68,6 @@ img{
   max-height: 100%;
 }
 
-#header{
-  width: 70%;
-  height: 25%;
-  position: relative;
-  top: 0%;
-  left: 0%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 4%;
-  margin-bottom: 4%;
-}
-
-#logo{
-  height: 100%;
-  width: 30%;
-  display:block;
-  float: left;
-  margin-right: 4.5%;
-}
-
-#text-logo{
-  height: 100%;
-  width: 65%;
-  display: block;
-  float: left;
-  text-align: left;
-  color: white;
-}
-
-#title-logo{
-  height: 35%;
-  max-width: 100%;
-  margin-top: 2.5em;
-}
-
-#subtitle-logo{
-  max-width: 100%;
-  height: 25%;
-  margin-top: 1em;
-  text-align: center;
-}
-
-.subtitle-url a{
-  color: #ffffff;
-}
-
-#header-small{
-  /*Deixar espaço de respiro para o layout se adaptar
-  pois muito justo, o simples aparecer da barra de rolagem
-  pode arruinar seu layout*/
-  width: 58%;
-  height: 18%;
-  position: relative;
-  top: 0%;
-  left: 0%;
-  margin-left: 10%;
-  margin-right: 10%;
-  margin-top: 3%;
-  margin-bottom: 2%;
-}
-
-#logo-small{
-  /*background-color: red;*/
-  height: auto;
-  width: 24%;
-  display: block;
-  float: left;
-  margin-right: 4%;
-}
-
-#text-logo-small{
-  /*background-color: green;*/
-  height: 100%;
-  width: 50%;
-  display: block;
-  float: left;
-  text-align: left;
-}
-
-#title-logo-small{
-  /*background-color: black;*/
-  color: white;
-  height: 40%;
-  max-width:100%;
-  margin-top: 1.5em;
-}
-
-#subtitle-logo-small{
-  /*background-color: white;*/
-  max-width:100%;
-  height:25%;
-  text-align:center;
-  margin-top: 0.3em;
-}
-
-.icon{
-  max-height: 4em;
-  max-width:  4em;
-  z-index: 1;
-  display: inline-block;
-}
-
-.collum-2 {
-    width: 49.9999%;
-    display: inline-block;
-    float: left;
-    box-sizing: border-box;
-    padding:0% 10%;
-    color: #ffffff;
-}
-
-.collum-3 {
-    width: 33.3333%;
-    box-sizing: border-box;
-    padding:0% 7%;
-    color: #ffffff;
-}
-
 /*Customização Radio Button*/
 .radio {
   display: inline-block;
@@ -228,498 +111,638 @@ input[type=radio]:checked + label .radio:before {
   text-align: center;
   line-height: 31px;
 }
+/*Para monitores e tablets*/
+@media screen and (min-width: 768px) {}
 
-/*------------------------*/
-/*Login*/
-#login-field{
-  height: 22%;
-  width: 35%;
-  padding: 1.3em;
-  position: relative;
-  top: 10%;
-  left: 0%;
-  margin:0 auto;
-  background-color: white;
-  border-radius: 20px;
-}
+/*Para celulares*/
+@media handheld and (min-width: 768px) {}
 
-#login-user, #login-password{
-  position: relative;
-  top: 0%;
-  left: 0%;
-  height: 50%;
-  width: 70%;
-}
+  /* Smartphones (portrait and landscape) ----------- */
+  @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  /* Styles */
+  }
 
-#login-user img, #login-password img{
-  position: relative;
-  bottom: 0%;
-  left: 0%;
+  /* Smartphones (landscape) ----------- */
+  @media only screen and (min-width : 321px) {
+  /* Styles */
+  }
 
-}
+  /* Smartphones (portrait) ----------- */
+  @media only screen and (max-width : 320px) {
+  /* Styles */
 
-#login-user input, #login-password input{
-  position:absolute;
-  top: 25%;
-  left: 1%;
-  width: 100%;
-  padding: 0.1em 0.5em 0.1em 3.5em;
-  border: 2px solid #73c04a;
-  border-radius: 10px;
-  font-weight: normal ;
-  font-size: 16pt;
-}
+  @media screen and (min-width : 1224px){
+    #header{
+      width: 70%;
+      height: 25%;
+      position: relative;
+      top: 0%;
+      left: 0%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 4%;
+      margin-bottom: 4%;
+    }
 
-#login-password a{
-  position: absolute;
-  top: 75%;
-  right: 0%;
-  color: black;
-}
+    #logo{
+      height: 100%;
+      width: 30%;
+      display:block;
+      float: left;
+      margin-right: 4.5%;
+    }
 
-#icon-cadastro{
-  position: relative;
-  top:0%;
-  left: 0%;
-  height: 20%;
-  width: 20%;
-  background-color: green;
-}
-/*Cadastro*/
-.collum-3{
-  height: 50%;
-  display: block;
-  color: #ffffff;
-  float:left;
-}
+    #text-logo{
+      height: 100%;
+      width: 65%;
+      display: block;
+      float: left;
+      text-align: left;
+      color: white;
+    }
 
-.collum-3 input[type=text]{
-  height: 2.5em;
-  width: 100%;
-  margin-top: 0.3em;
-  margin-bottom: 0.5em;
-  padding-left: 0.5em;
-  padding-right: 0.5em;
-}
-.collum img{
-}
+    #title-logo{
+      height: 35%;
+      max-width: 100%;
+      margin-top: 2.5em;
+    }
 
-.foto-perfil{
-  width: 40%;
-  height: 50%;
-  position: relative;
-  top: 0%;
-  left: 0%;
-}
-.foto-perfil img{
-  position: absolute;
-  top: 0%;
-  left: 0%;
-}
-.foto-perfil img:first-child{
-  z-index: 1;
-}
+    #subtitle-logo{
+      max-width: 100%;
+      height: 25%;
+      margin-top: 1em;
+      text-align: center;
+    }
 
-/*Recuperar senha*/
-#body-recovery{
-  width: 30%;
-  height: 50%;
-  margin: 0 auto;
-}
+    .subtitle-url a{
+      color: #ffffff;
+    }
 
-#body-recovery input[type="text"]{
-  width: 90%;
-}
-/*Pós-Login*/
-#post-login-body{
-  width: 50%;
-  height: 45%;
-  margin:0 auto;
-  padding: 1em;
-  background-color: #ffffff;
-  border-radius: 10px;
-}
+    #header-small{
+      /*Deixar espaço de respiro para o layout se adaptar
+      pois muito justo, o simples aparecer da barra de rolagem
+      pode arruinar seu layout*/
+      width: 58%;
+      height: 18%;
+      position: relative;
+      top: 0%;
+      left: 0%;
+      margin-left: 10%;
+      margin-right: 10%;
+      margin-top: 3%;
+      margin-bottom: 2%;
+    }
 
-.post-login-option{
-  height: 80%;
-  width: 50%;
-  float: left;
-  display: inline;
-  font-size: 36pt;
-  text-align: center;
-  font-weight: bolder;
-  text-transform: uppercase;
-}
+    #logo-small{
+      /*background-color: red;*/
+      height: auto;
+      width: 24%;
+      display: block;
+      float: left;
+      margin-right: 4%;
+    }
 
-/*Tela Usuário*/
-#profile-body{
-  width: 50%;
-  height: 45%;
-  float: left;
-  background-color: #ffffff;
-  border-radius: 10px;
-  margin: 0em 0em 1em 10%;
-  padding: 1em;
-}
+    #text-logo-small{
+      /*background-color: green;*/
+      height: 100%;
+      width: 50%;
+      display: block;
+      float: left;
+      text-align: left;
+    }
 
-#profile-body .foto-perfil{
-  border: 3px solid black;
-  width: 35%;
-  height: 90%;
-  float: left;
-}
+    #title-logo-small{
+      /*background-color: black;*/
+      color: white;
+      height: 40%;
+      max-width:100%;
+      margin-top: 1.5em;
+    }
 
-.foto-perfil span{
-  display: block;
-  position: absolute;
-  bottom: 0%;
-  left: 0%;
-  background-color: black;
-  width: 100%;
-  text-align: center;
-  color: white;
-  font-size: 18pt;
-  font-weight: normal;
-  text-overflow: ellipsis;
-}
+    #subtitle-logo-small{
+      /*background-color: white;*/
+      max-width:100%;
+      height:25%;
+      text-align:center;
+      margin-top: 0.3em;
+    }
 
-#profile-data{
-  width: 60%;
-  height: 80%;
-  float: left;
-  margin-left: 1em;
-  /*background-color: black;*/
-  line-height: 16pt;
-}
+    .icon{
+      max-height: 4em;
+      max-width:  4em;
+      z-index: 1;
+      display: inline-block;
+    }
 
-#profile-nav{
-  width: 25%;
-  height: 53%;
-  border-radius: 10px;
-  margin: 0em 1em 1em 1em;
-  float: left;
-}
+    .collum-2 {
+        width: 49.9999%;
+        display: inline-block;
+        float: left;
+        box-sizing: border-box;
+        padding:0% 10%;
+        color: #ffffff;
+    }
 
-#profile-nav-top{
-  border-radius: 10px 10px 0px 0px;
-  width: 100%;
-  height: auto;
-}
+    .collum-3 {
+        width: 33.3333%;
+        box-sizing: border-box;
+        padding:0% 7%;
+        color: #ffffff;
+    }
 
-#profile-nav-body{
-  background-color: #ffffff;
-  width: 100%;
-  height: 72%;
-  border-radius: 0px 0px 10px 10px;
-}
+    /*------------------------*/
+    /*Login*/
+    #login-field{
+      height: 22%;
+      width: 35%;
+      padding: 1.3em;
+      position: relative;
+      top: 10%;
+      left: 0%;
+      margin:0 auto;
+      background-color: white;
+      border-radius: 20px;
+    }
 
-.profile-icon-nav{
-  height: 50%;
-  width: 40%;
-  background-color: black;
-  display:inline-block;
-}
+    #login-user, #login-password{
+      position: relative;
+      top: 0%;
+      left: 0%;
+      height: 50%;
+      width: 70%;
+    }
 
-.profile-icon-nav img{
-  max-width: 100%;
-  max-height: 100%;
-}
-/*FeedBack*/
-#feedback-message{
-  height: 45%;
-  width: 50%;
-  border-radius: 10px 0px 0px 10px;
-  display: inline-block;
-  float: left;
-  margin-left: auto;
-  padding: 1em;
-  background-color: #ffffff;
-}
+    #login-user img, #login-password img{
+      position: relative;
+      bottom: 0%;
+      left: 0%;
 
-#feedback-nav{
-  height: 50%;
-  width: 20%;
-  background-color: green;
-  border-radius: 0px 10px 10px 0px;
-  display: inline-block;
-  float: left;
-  margin-right: auto;
-  text-align: center;
-}
+    }
 
-#feedback-nav-top{
-  height: auto;
-  width: 100%;
-  background-color: #02c40f;
-  color: #ffffff;
-}
+    #login-user input, #login-password input{
+      position:absolute;
+      top: 25%;
+      left: 1%;
+      width: 100%;
+      padding: 0.1em 0.5em 0.1em 3.5em;
+      border: 2px solid #73c04a;
+      border-radius: 10px;
+      font-weight: normal ;
+      font-size: 16pt;
+    }
 
-/*Fale Conosco*/
-#email-body{
-  height: 40%;
-  width: 50%;
-  margin:0 auto;
-  background-color: #ffffff;
-  border-radius: 10px;
-  padding: 1em 2em 2em 2em;
-}
+    #login-password a{
+      position: absolute;
+      top: 75%;
+      right: 0%;
+      color: black;
+    }
 
-#email-body h5{
-  font-weight: lighter;
-  margin-bottom: 0.3em;
-  font-size: 21pt;
-}
+    #icon-cadastro{
+      position: relative;
+      top:0%;
+      left: 0%;
+      height: 20%;
+      width: 20%;
+      background-color: green;
+    }
+    /*Cadastro*/
+    .collum-3{
+      height: 50%;
+      display: block;
+      color: #ffffff;
+      float:left;
+    }
 
-textarea{
-  border:1px solid black;
-  width:100%;
-  height:65%;
-  margin-bottom: 2%;
-  resize: none;
-  padding: 0.5em;
-}
+    .collum-3 input[type=text]{
+      height: 2.5em;
+      width: 100%;
+      margin-top: 0.3em;
+      margin-bottom: 0.5em;
+      padding-left: 0.5em;
+      padding-right: 0.5em;
+    }
+    .collum img{
+    }
 
-#email-body input[type="submit"]{
-  background-image: url("../images/button_light_accept.png");
-  background-size: 100%;
-  height: 3.5em;
-  width: 3.5em;
-  margin: 0 auto;
-  display: block;
-}
+    .foto-perfil{
+      width: 40%;
+      height: 50%;
+      position: relative;
+      top: 0%;
+      left: 0%;
+    }
+    .foto-perfil img{
+      position: absolute;
+      top: 0%;
+      left: 0%;
+    }
+    .foto-perfil img:first-child{
+      z-index: 1;
+    }
 
-/*Processo Seletivo*/
-.box-ps{
-  width: 20%;
-  height: 20%;
-  margin: 1em;
-  background-color: white;
-  text-align: center;
-  display: inline-block;
-  position: relative;
-  top: 0%;
-  left: 0%;
-}
+    /*Recuperar senha*/
+    #body-recovery{
+      width: 30%;
+      height: 50%;
+      margin: 0 auto;
+    }
 
-.box-ps-closed{
-  width: 20%;
-  height: 20%;
-  margin: 1em;
-  background-color: white;
-  text-align: center;
-  display: inline-block;
-}
+    #body-recovery input[type="text"]{
+      width: 90%;
+    }
+    /*Pós-Login*/
+    #post-login-body{
+      width: 50%;
+      height: 45%;
+      margin:0 auto;
+      padding: 1em;
+      background-color: #ffffff;
+      border-radius: 10px;
+    }
 
-.box-ps-open{
-  width: 15%;
-  height: 25%;
-  margin: 1em;
-  background-color: white;
-  text-align: center;
-  display: inline-block;
-}
+    .post-login-option{
+      height: 80%;
+      width: 50%;
+      float: left;
+      display: inline;
+      font-size: 36pt;
+      text-align: center;
+      font-weight: bolder;
+      text-transform: uppercase;
+    }
 
-.box-ps-open-top{
-  width: 15%;
-  height: 25%;
-  margin: 1em;
-  background-color: white;
-  text-align: center;
-  display: inline-block;
-}
-.box-ps-open-center{
-  width: 15%;
-  height: 25%;
-  margin: 1em;
-  background-color: white;
-  text-align: center;
-  display: inline-block;
-}
-.box-ps-open-bottom{
-  width: 15%;
-  height: 25%;
-  margin: 1em;
-  background-color: white;
-  text-align: center;
-  display: inline-block;
-}
+    /*Tela Usuário*/
+    #profile-body{
+      width: 50%;
+      height: 45%;
+      float: left;
+      background-color: #ffffff;
+      border-radius: 10px;
+      margin: 0em 0em 1em 10%;
+      padding: 1em;
+    }
 
-#caixa{
-  position: relative;
-  top: 0%;
-  right: 0%;
-}
+    #profile-body .foto-perfil{
+      border: 3px solid black;
+      width: 35%;
+      height: 90%;
+      float: left;
+    }
 
-#quadrado-cima{
-  width: 50px;
-  /*height: 50px;*/
-  height: 25px;
-  position: absolute;
-  top: 0%;
-  left: 25px;
-  background-color: #73c04a;
-  transform: skewX(-45deg) translateY(49px) translateX(37px) rotateX(0);
-  transition: transform 2s, height 2s;
-}
+    .foto-perfil span{
+      display: block;
+      position: absolute;
+      bottom: 0%;
+      left: 0%;
+      background-color: black;
+      width: 100%;
+      text-align: center;
+      color: white;
+      font-size: 18pt;
+      font-weight: normal;
+      text-overflow: ellipsis;
+    }
 
-#quadrado-meio{
-  width: 25px;
-  height: 50px;
-  position: absolute;
-  top: 62px;
-  left: 50px;
-  background-color: #ffffff;
-  transform: skewY(-45deg);
-}
+    #profile-data{
+      width: 60%;
+      height: 80%;
+      float: left;
+      margin-left: 1em;
+      /*background-color: black;*/
+      line-height: 16pt;
+    }
 
-#quadrado-baixo{
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  top: 124px;
-  left: 0%;
-  background-color: #73c04a;
-  transform: translateY(-50px) rotateX(0);
-  transition: transform 2s;
-}
+    #profile-nav{
+      width: 25%;
+      height: 53%;
+      border-radius: 10px;
+      margin: 0em 1em 1em 1em;
+      float: left;
+    }
 
-#caixa:hover #quadrado-baixo{
-  transform: translateY(0) rotateX(180deg);
-}
-#caixa:hover #quadrado-cima{
-  transform: skewX(0) translateY(0) translateX(0) rotateX(-180deg);
-  height: 50px;
-}
+    #profile-nav-top{
+      border-radius: 10px 10px 0px 0px;
+      width: 100%;
+      height: auto;
+    }
 
-#action-ps{
-  position: fixed;
-  bottom: 0%;
-  left: 40%;
-  margin: 0 auto;
-  height: 10%;
-  width: 20%;
-  background-color: #ffffff;
-  border-radius: 20px 20px 0px 0px;
-  -webkit-transition: height 2s ease-out;
-  -moz-transition: height 2s ease-out;
-  -o-transition: height 2s ease-out;
-  transition: height 2s ease-out;
-}
+    #profile-nav-body{
+      background-color: #ffffff;
+      width: 100%;
+      height: 72%;
+      border-radius: 0px 0px 10px 10px;
+    }
 
-#action-ps :hover{
-  height: 20%;
-}
+    .profile-icon-nav{
+      height: 50%;
+      width: 40%;
+      background-color: black;
+      display:inline-block;
+    }
 
-#action-ps img{
-  max-width: 40%;
-  max-height: 40%;
-}
+    .profile-icon-nav img{
+      max-width: 100%;
+      max-height: 100%;
+    }
+    /*FeedBack*/
+    #feedback-message{
+      height: 45%;
+      width: 50%;
+      border-radius: 10px 0px 0px 10px;
+      display: inline-block;
+      float: left;
+      margin-left: auto;
+      padding: 1em;
+      background-color: #ffffff;
+    }
 
-/*Visualizar Candidatos*/
-#list-user{
-  border-collapse: collapse;
-  width: 60%;
-  height: auto;
-  margin:0 auto;
-}
+    #feedback-nav{
+      height: 50%;
+      width: 20%;
+      background-color: green;
+      border-radius: 0px 10px 10px 0px;
+      display: inline-block;
+      float: left;
+      margin-right: auto;
+      text-align: center;
+    }
 
-#list-user thead{
-  /*Thead não aceita padding*/
-  background-color: black;
-  border-collapse: collapse;
-  color: #ffffff;
-}
+    #feedback-nav-top{
+      height: auto;
+      width: 100%;
+      background-color: #02c40f;
+      color: #ffffff;
+    }
 
-#list-user th{
-  padding: 0.3em;
-  text-align: center;
-}
+    /*Fale Conosco*/
+    #email-body{
+      height: 40%;
+      width: 50%;
+      margin:0 auto;
+      background-color: #ffffff;
+      border-radius: 10px;
+      padding: 1em 2em 2em 2em;
+    }
 
-#list-user tbody{
-  background-color: #ffffff;
-  color: #000000;
-  text-align: center;
-}
+    #email-body h5{
+      font-weight: lighter;
+      margin-bottom: 0.3em;
+      font-size: 21pt;
+    }
 
-#list-user td{
-  padding: 0.5em;
-  text-align: center;
-  width: 60%;
-}
+    textarea{
+      border:1px solid black;
+      width:100%;
+      height:65%;
+      margin-bottom: 2%;
+      resize: none;
+      padding: 0.5em;
+    }
 
-/*Visualizar Administradores*/
-#list-admin{
-  border-collapse: collapse;
-  width: 60%;
-  height: auto;
-  margin:0 auto;
-}
+    #email-body input[type="submit"]{
+      background-image: url("../images/button_light_accept.png");
+      background-size: 100%;
+      height: 3.5em;
+      width: 3.5em;
+      margin: 0 auto;
+      display: block;
+    }
 
-#list-admin thead{
-  /*Thead não aceita padding*/
-  background-color: black;
-  border-collapse: collapse;
-  color: #ffffff;
-}
+    /*Processo Seletivo*/
+    .box-ps{
+      width: 20%;
+      height: 20%;
+      margin: 1em;
+      background-color: white;
+      text-align: center;
+      display: inline-block;
+      position: relative;
+      top: 0%;
+      left: 0%;
+    }
 
-#list-admin th{
-  padding: 0.3em;
-  text-align: center;
-}
+    .box-ps-closed{
+      width: 20%;
+      height: 20%;
+      margin: 1em;
+      background-color: white;
+      text-align: center;
+      display: inline-block;
+    }
 
-#list-admin th:first-child{
-  -moz-border-radius:10px;
-  -webkit-border--radius:10px;
-  border-radius:10px;
-}
+    .box-ps-open{
+      width: 15%;
+      height: 25%;
+      margin: 1em;
+      background-color: white;
+      text-align: center;
+      display: inline-block;
+    }
 
-#list-admin tbody{
-  background-color: #ffffff;
-  color: #000000;
-  text-align: center;
-}
+    .box-ps-open-top{
+      width: 15%;
+      height: 25%;
+      margin: 1em;
+      background-color: white;
+      text-align: center;
+      display: inline-block;
+    }
+    .box-ps-open-center{
+      width: 15%;
+      height: 25%;
+      margin: 1em;
+      background-color: white;
+      text-align: center;
+      display: inline-block;
+    }
+    .box-ps-open-bottom{
+      width: 15%;
+      height: 25%;
+      margin: 1em;
+      background-color: white;
+      text-align: center;
+      display: inline-block;
+    }
 
-#list-admin td{
-  padding: 0.5em;
-  text-align: center;
-  width: 60%;
-  text-overflow: ellipsis;
-}
+    #caixa{
+      position: relative;
+      top: 0%;
+      right: 0%;
+    }
 
-td img{
-  height: auto;
-  width: 40%;
-}
+    #quadrado-cima{
+      width: 50px;
+      /*height: 50px;*/
+      height: 25px;
+      position: absolute;
+      top: 0%;
+      left: 25px;
+      background-color: #73c04a;
+      transform: skewX(-45deg) translateY(49px) translateX(37px) rotateX(0);
+      transition: transform 2s, height 2s;
+    }
 
-/*Tela Administrador*/
-#body-admin{
-  width: 64%;
-  height: 60%;
-  margin:0 auto;
-}
+    #quadrado-meio{
+      width: 25px;
+      height: 50px;
+      position: absolute;
+      top: 62px;
+      left: 50px;
+      background-color: #ffffff;
+      transform: skewY(-45deg);
+    }
 
-#body-admin-info{
-  width: 100%;
-  height: 54.9999%;
-  background-color: #ffffff;
-  border-radius: 10px 10px 0px 0px;
-  box-sizing: border-box;
-  padding: 1em;
-}
+    #quadrado-baixo{
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      top: 124px;
+      left: 0%;
+      background-color: #73c04a;
+      transform: translateY(-50px) rotateX(0);
+      transition: transform 2s;
+    }
 
-#body-admin-nav{
-  width: 100%;
-  height: 45.9999%;
-  background-color: #000000;
-  border-radius: 0px 0px 10px 10px;
-}
+    #caixa:hover #quadrado-baixo{
+      transform: translateY(0) rotateX(180deg);
+    }
+    #caixa:hover #quadrado-cima{
+      transform: skewX(0) translateY(0) translateX(0) rotateX(-180deg);
+      height: 50px;
+    }
 
-.admin-nav{
-  height: 60%;
-  width: 30%;
-  display: inline-block;
-  font-size: 18pt;
-  text-align: center;
-  font-weight: bold;
-  color: #ffffff;
-}
+    #action-ps{
+      position: fixed;
+      bottom: 0%;
+      left: 40%;
+      margin: 0 auto;
+      height: 10%;
+      width: 20%;
+      background-color: #ffffff;
+      border-radius: 20px 20px 0px 0px;
+      -webkit-transition: height 2s ease-out;
+      -moz-transition: height 2s ease-out;
+      -o-transition: height 2s ease-out;
+      transition: height 2s ease-out;
+    }
+
+    #action-ps :hover{
+      height: 20%;
+    }
+
+    #action-ps img{
+      max-width: 40%;
+      max-height: 40%;
+    }
+
+    /*Visualizar Candidatos*/
+    #list-user{
+      border-collapse: collapse;
+      width: 60%;
+      height: auto;
+      margin:0 auto;
+    }
+
+    #list-user thead{
+      /*Thead não aceita padding*/
+      background-color: black;
+      border-collapse: collapse;
+      color: #ffffff;
+    }
+
+    #list-user th{
+      padding: 0.3em;
+      text-align: center;
+    }
+
+    #list-user tbody{
+      background-color: #ffffff;
+      color: #000000;
+      text-align: center;
+    }
+
+    #list-user td{
+      padding: 0.5em;
+      text-align: center;
+      width: 60%;
+    }
+
+    /*Visualizar Administradores*/
+    #list-admin{
+      border-collapse: collapse;
+      width: 60%;
+      height: auto;
+      margin:0 auto;
+    }
+
+    #list-admin thead{
+      /*Thead não aceita padding*/
+      background-color: black;
+      border-collapse: collapse;
+      color: #ffffff;
+    }
+
+    #list-admin th{
+      padding: 0.3em;
+      text-align: center;
+    }
+
+    #list-admin th:first-child{
+      -moz-border-radius:10px;
+      -webkit-border--radius:10px;
+      border-radius:10px;
+    }
+
+    #list-admin tbody{
+      background-color: #ffffff;
+      color: #000000;
+      text-align: center;
+    }
+
+    #list-admin td{
+      padding: 0.5em;
+      text-align: center;
+      width: 60%;
+      text-overflow: ellipsis;
+    }
+
+    td img{
+      height: auto;
+      width: 40%;
+    }
+
+    /*Tela Administrador*/
+    #body-admin{
+      width: 64%;
+      height: 60%;
+      margin:0 auto;
+    }
+
+    #body-admin-info{
+      width: 100%;
+      height: 54.9999%;
+      background-color: #ffffff;
+      border-radius: 10px 10px 0px 0px;
+      box-sizing: border-box;
+      padding: 1em;
+    }
+
+    #body-admin-nav{
+      width: 100%;
+      height: 45.9999%;
+      background-color: #000000;
+      border-radius: 0px 0px 10px 10px;
+    }
+
+    .admin-nav{
+      height: 60%;
+      width: 30%;
+      display: inline-block;
+      font-size: 18pt;
+      text-align: center;
+      font-weight: bold;
+      color: #ffffff;
+    }
+  /**/
+  }
