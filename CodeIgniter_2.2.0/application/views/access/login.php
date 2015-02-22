@@ -16,8 +16,16 @@
 	    	<input type="password" name="password" placeholder="SENHA" value="">
 	    	<a href="<?php echo base_url(); ?>index.php/access/password_recovery">Esqueci minha senha</a>
 	    </div>
-			<div id="login-submission"><a href="<?php echo base_url(); ?>index.php/usuario/create_user">
-				cadastro</a></div>
+			<div id="login-submission">
+				<p>
+					Primeira vez aqui?
+				</p>
+				<a href="<?php echo base_url(); ?>index.php/usuario/create_user">
+				<img src="<?php echo base_url();?>assets/images/submission_post.png" alt="" /><p>
+					Cadastre-se
+				</p>
+				</a>
+			</div>
 			<input type="submit" value="ENTRAR">
 			<?php echo form_close() ?>
 	</div>
