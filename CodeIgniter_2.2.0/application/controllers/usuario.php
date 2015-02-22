@@ -40,7 +40,8 @@ class Usuario extends CI_Controller {
     	$this->load->view('access/form');
     }
     public function insert_new_user(){
-
+    	var_dump($_POST);
+    	die;
     }
     public function edit_account(){
     	$dados['user'] = $this->usuario_model->search_user($this->session->userdata('login_id'));
