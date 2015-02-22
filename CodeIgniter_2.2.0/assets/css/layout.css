@@ -111,27 +111,8 @@ input[type=radio]:checked + label .radio:before {
   text-align: center;
   line-height: 31px;
 }
-/*Para monitores e tablets*/
-@media screen and (min-width: 768px) {}
 
-/*Para celulares*/
-@media handheld and (min-width: 768px) {}
-
-  /* Smartphones (portrait and landscape) ----------- */
-  @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-  /* Styles */
-  }
-
-  /* Smartphones (landscape) ----------- */
-  @media only screen and (min-width : 321px) {
-  /* Styles */
-  }
-
-  /* Smartphones (portrait) ----------- */
-  @media only screen and (max-width : 320px) {
-  /* Styles */
-
-  @media screen and (min-width : 1224px){
+@media screen and (min-width : 1224px){
     #header{
       width: 70%;
       height: 25%;
@@ -279,7 +260,7 @@ input[type=radio]:checked + label .radio:before {
 
     }
 
-    #login-user input, #login-password input{
+    #login-user input[type="text"], #login-password input[type="password"]{
       position:absolute;
       top: 25%;
       left: 1%;
@@ -305,6 +286,15 @@ input[type=radio]:checked + label .radio:before {
       height: 20%;
       width: 20%;
       background-color: green;
+    }
+
+    #login-field input[type="submit"]{
+      background-image: url("../images/button_light_accept.png");
+      background-size: 100%;
+      height: 3.5em;
+      width: 3.5em;
+      margin: 0 auto;
+      display: block;
     }
     /*Cadastro*/
     .collum-3{
@@ -745,4 +735,4 @@ input[type=radio]:checked + label .radio:before {
       color: #ffffff;
     }
   /**/
-  }
+}
