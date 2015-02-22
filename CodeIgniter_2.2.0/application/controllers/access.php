@@ -20,7 +20,7 @@ class Access extends CI_Controller {
 							'mensagem' =>'Usuário ou senha inválidos.'
 						);
 			$this->session->set_userdata($mensagem);
-			redirect('usuario/login');
+			redirect('access/login');
 		}
 		else{
 			$newdata = array(

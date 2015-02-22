@@ -21,9 +21,9 @@ class Usuario extends CI_Controller {
 			redirect('usuario/load_home_user');
 		}
 		elseif($this->session->userdata('login_perfil') == 2){
-			redirect('usuario/load_home_admin');
+			redirect('admin/load_home_admin');
 		}
-		else redirect('usuario/load_home_superadmin');
+		else redirect('admin/load_home_superadmin');
 	}
 	public function load_home_user(){
 		$this->load->view('user/user_page');

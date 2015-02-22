@@ -1,3 +1,4 @@
+<?php echo $this->load->view('_inc/header_big')?> 
 <div id="subtitle-logo-small">
           <span class="subtitle-url"><h4>Administrador</h4></span>
         </div>
