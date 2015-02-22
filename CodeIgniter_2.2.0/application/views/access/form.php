@@ -40,10 +40,10 @@
 	 	<p>
 			<h5>Quantas vezes já participou do processo seletivo?</h5>
 	 	</p>
-	 	<input type="radio" name="name" value="">Nenhuma<br />
-	  	<input type="radio" name="name" value="">1 vez<br />
-	  	<input type="radio" name="name" value="">2 vezes<br />
-	  	<input type="radio" name="name" value="">3 ou mais<br />
+	 	<input type="radio" name="num_de_ps" value="">Nenhuma<br />
+	  	<input type="radio" name="num_de_ps" value="">1 vez<br />
+	  	<input type="radio" name="num_de_ps" value="">2 vezes<br />
+	  	<input type="radio" name="num_de_ps" value="">3 ou mais<br />
 	  	<input type="hidden" name="perfil" value="1">
 	  	<input type="submit" value="Cadastrar">
 	</div>
