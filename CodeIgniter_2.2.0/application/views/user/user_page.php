@@ -11,10 +11,10 @@
 </script>
 
 <div id="profile-body">
-	<div class="foto-perfil">
+	<div class="profile-photo">
 		<img src="<?php echo base_url();?>assets/images/photo_profile.png" alt="" />
 		<img src="<?php echo base_url();?>assets/images/foto_usuario.png" alt="" />
-		<span>Rebeca Baldomir</span>
+		<p>Rebeca Baldomir</p>
 	</div>
 	<div id="profile-data">
 	Curso:
