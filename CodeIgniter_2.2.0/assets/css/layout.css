@@ -118,7 +118,7 @@ input[type=radio]:checked + label .radio:before {
 
 @media screen and (min-width : 1224px){
     #container-big{
-      background-color: #DDD;
+      /*background-color: #DDD;*/
       height: 100%;
       width: 81.25%; /*1040px*/ /*1280px*/
       margin: 0% auto;
@@ -761,6 +761,7 @@ input[type=radio]:checked + label .radio:before {
       max-width: 40%;
       max-height: 40%;
     }
+
 /*--------------Entrevista-------------*/
     #body-interview{
       background-color: green;
@@ -770,6 +771,11 @@ input[type=radio]:checked + label .radio:before {
       top: 10%;
       left: 0%;
     }
+
+    #table-interview td, #table-interview th{
+      border: 1px solid black;
+    }
+
 /*--------------Lista de Candidatos-------------*/
     #list-user{
       border-collapse: collapse;
