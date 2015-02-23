@@ -37,4 +37,15 @@ class Usuario_model extends CI_Model {
 		$dados['num_de_ps'] = $data->num_de_ps;
 		return $this->db->update('tb_login',$dados);
 	}
+	public function check_existence_of_user($user){
+		$this->db->where('usuario',$user);
+		return $this->db->get('tb_login')->result();
+	}
+	public function create_new_user($dados){
+		unset($dados['novasenha']);
+		$dados['senha'] = md5($dados['senha']);
+		$this->db->insert('tb_login',$dados);
+		$this->db->where('usuario',$dados['usuario']);
+		return $this->db->get('tb_login')->row()->id_login;
+	}
 }

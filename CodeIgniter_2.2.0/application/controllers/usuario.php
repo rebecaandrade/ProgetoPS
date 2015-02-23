@@ -42,7 +42,7 @@ class Usuario extends CI_Controller {
     public function insert_new_user(){
     	if($_POST['usuario'] == NULL || $_POST['senha'] == NULL || $_POST['novasenha'] == NULL || 
     		$_POST['email'] == NULL || $_POST['curso'] == NULL || $_POST['semestre'] == NULL || 
-    		$_POST['telefone'] == NULL){
+    		$_POST['telefone'] == NULL || $_POST['nome'] == NULL){
     		$this->session->set_userdata('mensagem','Alguns campos obrigatórios não foram preenchidos');
     		redirect('usuario/create_user');
     	}
@@ -50,7 +50,26 @@ class Usuario extends CI_Controller {
     		$this->session->set_userdata('mensagem','Senhas digitadas não são iguais');
     		redirect('usuario/create_user');
     	}
-    	//else
+    	elseif($this->usuario_model->check_existence_of_user($_POST['usuario'])){
+    		$this->session->set_userdata('mensagem','usuario ja existe');
+    		redirect('usuario/create_user');
+    	}
+    	else{ 
+    		$_POST['id_login'] = $this->usuario_model->create_new_user($_POST);
+    		$this->create_new_session($_POST);
+			$this->load->view('user/user_postlogin');
+		}
+
+    }
+    public function create_new_session($dados){
+    	$newdata = array(
+				'login_id' => $dados['id_login'],
+				'login_perfil' => $dados['perfil'],
+				'email' => $dados['email'],
+				'nome' => $dados['nome'],
+				'usuario' => $dados['usuario'], 
+				);
+		$this->session->set_userdata($newdata);
     }
     public function edit_account(){
     	$dados['user'] = $this->usuario_model->search_user($this->session->userdata('login_id'));
