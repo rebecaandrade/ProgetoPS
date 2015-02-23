@@ -384,13 +384,32 @@ input[type=radio]:checked + label .radio:before {
 
     /*Recuperar senha*/
     #body-recovery{
-      width: 30%;
-      height: 50%;
+      width: 40%;
+      height: 20%;
+      position: relative;
+      top: 10%;
+      left: 0%;
       margin: 0 auto;
+      color: #ffffff;
     }
 
     #body-recovery input[type="text"]{
-      width: 90%;
+      height: 2.5em;
+      width: 100%;
+      margin-top: 0.3em;
+      margin-bottom: 0.5em;
+      padding-left: 0.5em;
+      padding-right: 0.5em;
+    }
+
+    #body-recovery input[type="submit"]{
+      background-image: url("../images/button_dark_accept.png");
+      background-size: 100%;
+      background-color: transparent;
+      height: 3.5em;
+      width: 3.5em;
+      margin: 0 auto;
+      display: block;
     }
     /*Pós-Login*/
     #post-login-body{
@@ -473,6 +492,10 @@ input[type=radio]:checked + label .radio:before {
       line-height: 16pt;
       /*background-color: yellow;*/
     }
+    /*Titulos*/
+    #profile-data p:nth-child(odd){
+      font-weight: bold;
+    }
 
     #profile-nav{
       width: 28.984375%; /*371px*/ /*1180px*/
@@ -512,6 +535,12 @@ input[type=radio]:checked + label .radio:before {
       margin: 0 auto;
       display: block;
     }
+
+    .profile-icon-nav:hover{
+      background-color: green;
+      color: green;
+    }
+
     /*FeedBack*/
     #feedback-message{
       height: 45%;
@@ -575,6 +604,36 @@ input[type=radio]:checked + label .radio:before {
       margin: 0 auto;
       display: block;
     }
+/*-----------Editar Informações---------*/
+  .collum-2{
+    height: 50%;
+    display: block;
+    color: #ffffff;
+    float:left;
+  }
+
+  .collum-2 label{
+    font-size: 1.6em;
+  }
+
+  .collum-2 input[type="text"], .collum-2 input[type="password"]{
+    height: 2.5em;
+    width: 100%;
+    margin-top: 0.3em;
+    margin-bottom: 0.5em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .collum-2 input[type="submit"]{
+    background-image: url("../images/button_dark_accept.png");
+    background-color: transparent;
+    background-size: 100%;
+    height: 3.5em;
+    width: 3.5em;
+    margin: 0 auto;
+    display: block;
+  }
 
     /*Processo Seletivo*/
     .box-ps{
@@ -703,7 +762,7 @@ input[type=radio]:checked + label .radio:before {
       max-height: 40%;
     }
 
-    /*Visualizar Candidatos*/
+/*--------------Lista de Candidatos-------------*/
     #list-user{
       border-collapse: collapse;
       width: 60%;
@@ -713,7 +772,7 @@ input[type=radio]:checked + label .radio:before {
 
     #list-user thead{
       /*Thead não aceita padding*/
-      background-color: black;
+      background-color: #333333;
       border-collapse: collapse;
       color: #ffffff;
     }
@@ -721,6 +780,7 @@ input[type=radio]:checked + label .radio:before {
     #list-user th{
       padding: 0.3em;
       text-align: center;
+      border-radius: 10px;
     }
 
     #list-user tbody{
@@ -745,7 +805,7 @@ input[type=radio]:checked + label .radio:before {
 
     #list-admin thead{
       /*Thead não aceita padding*/
-      background-color: black;
+      background-color: #333333;
       border-collapse: collapse;
       color: #ffffff;
     }
@@ -796,20 +856,31 @@ input[type=radio]:checked + label .radio:before {
     }
 
     #body-admin-nav{
-      width: 100%;
-      height: 45.9999%;
+      width: 95%;
+      height: 40.9999%;
       background-color: #000000;
       border-radius: 0px 0px 10px 10px;
+      padding: 2em;
     }
 
     .admin-nav{
-      height: 60%;
-      width: 30%;
+      height: 85%;
+      width: 24.9999%;
       display: inline-block;
       font-size: 18pt;
       text-align: center;
       font-weight: bold;
       color: #ffffff;
+      font-size: 1.4em;
+    }
+    .admin-nav:hover{
+      background-color: green;
+      color: green
+    }
+
+    .admin-nav img{
+      display: block;
+      margin: 0% auto;
     }
   /**/
 }

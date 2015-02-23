@@ -18,14 +18,19 @@
     </thead>
     <tbody>
     <?php if(isset($users)){
-        foreach ($users as $user) { ?> 
+        foreach ($users as $user) { ?>
             <tr>
                 <td><?php echo $user->nome ;?> </td>
                 <td> <?php echo $user->email ;?></td>
                 <td><a href="#">Horário</a></td>
                 <td><a href="#">Informações</a></td>
-                <td> <img src="<?php echo base_url();?>assets/images/button_light_accept.png" alt="" /></td>
-                <td><a href="<?php echo base_url();?>index.php/usuario/delete?id=<?php echo $user->id_login?>">deletar</a></td>
+                <td><img src="<?php echo base_url();?>assets/images/button_light_accept.png" alt="" /></td>
+                <td>
+                <a href="<?php echo base_url();?>index.php/usuario/delete?id=<?php echo $user->id_login?>">
+                  <img src="<?php echo base_url();?>assets/images/button_light_cancel.png" alt="" />
+                 deletar
+                </a>
+                </td>
             </tr>
     <?php }} ?>
     </tbody>

@@ -17,14 +17,25 @@
 		<p>Rebeca Baldomir</p>
 	</div>
 	<div id="profile-data">
-	Curso:
-	<p> Ciência da Computação </p><br />
-	Semestre:
-	<p> 2º Semestre </p><br />
-	Email:
-	<p> danilosantos@cjr.org.br </p><br />
-	Telefone:
-	<p> 3333-3333 </p><br />
+	<p>
+		Curso:
+		</p>
+	<p> Ciência da Computação </p>
+	<p>
+		<br />
+		Semestre:
+	</p>
+	<p> 2º Semestre </p>
+	<p>
+		<br />
+		Email:
+	</p>
+	<p> danilosantos@cjr.org.br </p>
+	<p>
+		<br />
+		Telefone:
+	</p>
+	<p> 3333-3333 </p>
 	</div>
 </div>
 

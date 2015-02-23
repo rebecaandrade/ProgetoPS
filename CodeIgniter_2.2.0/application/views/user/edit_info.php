@@ -15,7 +15,7 @@
 	    	<label> Semestre: <input type="text" name="semestre" value="<?php echo $user->semestre?>"> </label><br>
 	    	<label> Telefone: <input type="text" name="telefone" value="<?php echo $user->telefone?>"> </label><br>
 	    	<label> Confirmação de Senha: <input type="password" name="password" value=""> </label><br>
-	    	<input type='submit' value='Atualizar'>
+	    	<input type='submit' value=''>
 				<img src="<?php echo base_url();?>assets/images/button_dark_cancel.png" class="icon"/>
 	    </div>
     <?php echo form_close();?>
