@@ -36,8 +36,14 @@ class Usuario extends CI_Controller {
     	$this->usuario_model->delete_user($_GET['id']);
     	redirect('usuario/list_users');
     }
+    public function delete_account(){
+    	$this->usuario_model->delete_user($_GET['id']);
+    	$this->session->sess_destroy();
+    	redirect('access/login');
+    }
     public function create_user(){
     	$this->load->view('access/form');
+
     }
     public function insert_new_user(){
     	if($_POST['usuario'] == NULL || $_POST['senha'] == NULL || $_POST['novasenha'] == NULL || 
@@ -55,6 +61,7 @@ class Usuario extends CI_Controller {
     		redirect('usuario/create_user');
     	}
     	else{ 
+    		$_POST['perfil'] = '1';
     		$_POST['id_login'] = $this->usuario_model->create_new_user($_POST);
     		$this->create_new_session($_POST);
 			$this->load->view('user/user_postlogin');
@@ -80,8 +87,7 @@ class Usuario extends CI_Controller {
 				'email' => $user['email'],
 				'nome' => $user['nome'], 
 				);	
-		$this->session->set_userdata($newdata);
-		
+		$this->session->set_userdata($newdata);	
     }
     public function update_account(){
     	$id = $this->session->userdata('login_id');

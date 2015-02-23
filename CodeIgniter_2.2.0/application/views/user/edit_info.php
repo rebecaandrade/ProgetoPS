@@ -16,7 +16,7 @@
 	    	<label> Telefone: <input type="text" name="telefone" value="<?php echo $user->telefone?>"> </label><br>
 	    	<label> Confirmação de Senha: <input type="password" name="password" value=""> </label><br>
 	    	<input type='submit' value='Atualizar'>
-				<img src="<?php echo base_url();?>assets/images/button_dark_cancel.png" class="icon"/>
+				<a href="<?php echo base_url();?>index.php/usuario/delete_account?id=<?php echo $user->id_login?>"><img src="<?php echo base_url();?>assets/images/button_dark_cancel.png" class="icon"/></a>
 	    </div>
     <?php echo form_close();?>
 <?php echo $this->load->view('_inc/footer')?>
