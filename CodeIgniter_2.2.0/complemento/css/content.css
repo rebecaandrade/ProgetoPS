@@ -1,0 +1,407 @@
+/* ----------- Geral ------------ */
+
+hr {
+	border-bottom: 1px solid #18B02B;
+}
+
+a, a:hover {
+	color: #18B02B;
+	cursor: pointer;
+}
+
+.login input[type="text"],
+.login input[type="password"] {
+	width: 270px;
+	height: 35px;
+	border: 2px solid #73C04A;
+	margin-bottom: 10px;
+	border-radius: 0;
+	font-family: 'Josefin Sans';
+	font-size: 20px;
+	color: #5C5C5C;
+}
+
+.login input[type="submit"]{
+	width: 120px;
+	height: 40px;
+	background-color: #002F67;
+	font-family: 'Josefin Sans';
+	font-size: 20px;
+	border-radius: 0;
+}
+
+.login input[type="submit"]:hover{
+	background-color: #73C04A;
+	transition-duration: 0.3s;
+}
+
+.login a {
+	color: #5C5C5C;
+	font-family: 'Josefin Sans';
+	font-size: 20px;
+	text-decoration: none;
+}
+
+.login a:hover {
+	color: #FFFFFF;
+}
+
+input[type="text"], 
+input[type="password"], 
+input[type="search"], 
+input[type="date"],
+input[type="number"],
+input[type="time"],
+input[type="week"],
+textarea, select {
+	padding: 3px 6px !important;
+	width: 100%;
+	height: 28px;
+	border: 1px solid #18B02B;
+	border-radius: 3px;
+}
+
+input[type="date"] {
+	padding: 0;
+	width: 100%;
+	border: 1px solid #18B02B;
+	border-radius: 3px;
+}
+
+input[type="buttom"], input[type="submit"] {
+	padding: 3px 6px;
+	color: #f9f9f9;
+	background: #18B02B;
+	border-radius: 5px;
+}
+
+form textarea {
+	width: 580px;
+	height: 215px;
+	border: 3px solid #73C04A;
+	border-radius: 0;
+	background-color: #F1F1F1;
+	margin-top: 5%;
+	font-family: 'Josefin Sans';
+	font-size: 20px;
+	color: #919191;
+}
+
+form input[type="submit"] {
+	width: 160px;
+	height: 50px;
+	background-color: #73C04A;
+	font-family: 'Josefin Sans';
+	font-size: 25px;
+	border-radius: 0;
+	margin-top: 1%;
+}
+
+form input[type="submit"]:hover {
+	background-color: #00142D;
+	transition-duration: 0.3s;
+}
+
+.corpo h2 {
+	float: left;
+	font-family: 'Josefin Sans';
+	font-size: 55px;
+	color: white;
+	margin-left: 8%;
+	margin-top: 1%;
+	font-weight: lighter;
+	text-shadow: 1px 1px gray;
+}
+
+.formlivros label, .formuser label{
+	display: block;
+	color: white;
+	font-family: 'Josefin Sans';
+	font-size: 25px;
+}
+
+.formlivros input[type="text"] {
+	width: 270px;
+	height: 35px;
+	border: 2px solid #73C04A;
+	margin-bottom: 10px;
+	border-radius: 0;
+	font-family: 'Josefin Sans';
+	font-size: 20px;
+	color: #5C5C5C;
+}
+
+.formlivros form {
+	text-align: right;
+	margin-top: 15%;
+}
+
+.formuser input[type="text"], .formuser input[type="password"]{
+	width: 250px;
+	height: 35px;
+	border: 2px solid #B5DD9F;
+	margin-bottom: 10px;
+	border-radius: 0;
+	font-family: 'Josefin Sans';
+	font-size: 20px;
+	color: #5C5C5C;
+}
+
+.formuser input[type="submit"] {
+	background-color: #00142D;
+	width: 120px;
+	height: 40px;
+	font-family: 'Josefin Sans';
+	font-size: 20px;
+	border-radius: 0;
+}
+
+.formuser input[type="submit"]:hover {
+	background-color: #B5DD9F;
+}
+
+#status {
+	margin-top: 100px;
+	margin-left: 10%;
+}
+
+.formuser {
+	text-align: right;
+	margin-left: 10px;
+}
+
+#paginacao {
+	margin-left: 50%;
+	font-size: 20px;
+}
+
+#paginacao a {
+	color: #CCC;
+	text-decoration: none;
+}
+
+.buttom, .buttom:hover {
+	padding: 6px 12px;
+	color: #f9f9f9;
+	background: #18B02B;
+	border-radius: 5px;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.content-box {
+	margin: 35px auto;
+	padding: 16px;
+	background: #f9f9f9;
+	border: 1px solid #18B02B;
+	border-radius: 5px;
+}
+
+.titulo {
+	margin-bottom: 20px;
+	color: #18B02B;
+	font-size: 26px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.table-list {
+	width: 100%;
+}
+
+.table-list th:last-child, .table-list td:last-child {
+	text-align: right;
+}
+
+.table-list tbody tr:hover {
+	background: #eee;
+}
+
+.table-list td:last-child a {
+	margin: 0 4px;
+}
+
+.table-form td {
+	padding: 5px;
+}
+
+.table-form td:nth-child(4n+3) {
+	padding-left: 30px;
+}
+
+.btn-custom {
+	margin: 10px 0;
+	background-color: #18B02B;
+	border-color: #18B02B;
+	color: #fff;
+}
+.btn-custom:hover,
+.btn-custom:focus,
+.btn-custom:active,
+.btn-custom.active {
+	background-color: #18B02B;
+	border-color: #18B02B;
+	color: #fff;
+}
+.btn-custom.active {
+	background-color: #18B02B;
+  	border-color: #18B02B;
+	color: #fff;
+}
+.btn-custom.disabled:hover,
+.btn-custom.disabled:focus,
+.btn-custom.disabled:active,
+.btn-custom.disabled.active,
+.btn-custom[disabled]:hover,
+.btn-custom[disabled]:focus,
+.btn-custom[disabled]:active,
+.btn-custom[disabled].active,
+fieldset[disabled] .btn-custom:hover,
+fieldset[disabled] .btn-custom:focus,
+fieldset[disabled] .btn-custom:active,
+fieldset[disabled] .btn-custom.active {
+	background-color: #18B02B;
+	border-color: #18B02B;
+}
+
+
+/* ------------ Mensagem geral do sistema ------------- */
+
+.popup-mensagem {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(0,0,0,0.2);
+	text-align: center;
+}
+
+.popup-inner-mensagem {
+	margin: 120px auto;
+	padding: 20px;
+	width: 480px;
+	background: #fff;
+	border: 2px solid #18B02B;
+}
+
+.popup-mensagem .popup-inner-mensagem .popup-mensagem-titulo{
+	margin-bottom: 20px;
+	text-align: center;
+	font-size: 20px;
+}
+
+
+
+/* -------------- Creditos dos professores ------------- */
+
+.aulas td{
+	width: 100px;
+	padding: 5px;
+	text-align:left;
+	padding: 4px;
+}
+
+.aulas th{
+	width: 100px;
+	padding: 5px;
+	text-align:left;
+	padding: 4px;
+}
+
+.data {
+	width: 230px;
+	float: right;
+}
+
+.data input:nth-child(2) {
+	width: 100%;
+}
+
+/* -------------- Produtos - Prateleira ------------- */
+
+th {
+	font-size: 23px;
+}
+
+h6 {
+	padding-top: 30px;
+	color: white;
+	font-family: 'Josefin Sans';
+	font-size: 15px;
+	font-weight: lighter;
+}
+
+#dados {
+	margin-top: 5%;
+	float: left;
+	text-shadow: 1px 1px gray;
+}
+
+.img {
+	background-position: center;
+}
+
+#novo {
+	text-decoration: none;
+	color: white;
+	font-size: 24px;
+	line-height: 2;
+}
+
+#novo:hover {
+	color: #666666;
+}
+
+
+/* -------------- Listas ------------- */
+
+.lista{
+	color: white;
+	font-family: 'Josefin Sans';
+	font-size: 18px;
+	padding: 10px 0px;
+	list-style: none;
+}
+
+.lista p{
+	color: white;
+	font-weight: bold;
+	font-size: 20px;
+	padding: 5px;
+}
+
+.lista table{
+	text-align: center;
+	margin-top: 30px;
+}
+.lista table{
+	border-collapse: collapse;
+}
+.lista td{
+	padding: 15px 10px;
+	margin: 0px 0px;
+	font-weight: bold;
+}
+.lista th{
+	padding: 0px 15px 10px 15px;
+	margin: 0px 0px;
+	font-weight: bold;
+	text-shadow: 1px 1px gray;
+}
+.lista tbody tr:hover{
+	background-color: #1BA22B;
+	transition: 0.3s ease;
+}
+/* -------------- button ------------- */
+.button {
+  font: bold 11px Arial;
+  text-decoration: none;
+  background-color: #26E73E;
+  color: #333333;
+  padding: 2px 6px 2px 6px;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
+}

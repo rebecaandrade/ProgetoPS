@@ -25,7 +25,8 @@
                 <td><a href="#">Horário</a></td>
                 <td><a href="#">Informações</a></td>
                 <td> <img src="<?php echo base_url();?>assets/images/button_light_accept.png" alt="" /></td>
-                <td><a href="<?php echo base_url();?>index.php/usuario/delete?id=<?php echo $user->id_login?>">deletar</a></td>
+                <td><a onclick="if (confirm('Deseja deletar esta usuario? ?')) window.location.replace('<?php echo base_url().'index.php/usuario/delete?id='.$user->id_login ?>')"> deletar </a></td>
+                
             </tr>
     <?php }} ?>
     </tbody>
