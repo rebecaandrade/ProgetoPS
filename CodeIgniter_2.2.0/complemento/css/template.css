@@ -1,0 +1,203 @@
+* {
+	position: relative;
+	margin: 0;
+	border: 0;
+	padding: 0;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	min-height: 100%;
+	background: url('../img/background.jpg');
+	background-size: cover;
+}
+
+#wrapper {
+	margin: 0 auto;
+	padding: 0 10px 0px 10px; 
+	width: 980px;
+}
+
+#header {
+	display: inline-block;
+	width: 100%;
+}
+
+#logo {
+	display: inline-block;
+	margin: 30px -50px;
+	width: 300px;
+}
+
+#banner {
+	float: right;
+}
+
+#menu {
+	position: fixed;
+	z-index: 100;
+	right: 0;
+}
+
+.nav img {
+	float: right;
+	margin-right: 10px;
+	margin-top: 10px;
+	width: 20px;
+	height: 20px;
+}
+
+.nav h3 {
+	color: white;
+	font-family: 'Josefin Sans';
+	font-size: 24px;
+	margin-top: 45px;
+	opacity: 0;
+}
+
+.nav {
+	position: relative;
+	float: left;
+	margin: 0;
+	text-align: center;
+	display: inline-block;
+	width: 140px;
+	height: 40px;
+}
+
+.nav:hover {
+	height: 80px;
+	transition: 0.5s ease;
+}
+
+.nav:hover > h3 {
+	opacity: 100;
+	transition: 1s ease;
+	text-shadow: 1px 1px gray;
+}
+
+.nav:hover > img {
+	opacity: 0;
+	transition: 0.3s ease;
+}
+
+#navhome, #corpohome {
+	background-color: #A3D588;
+}
+
+#navperfil, #corpoperfil {
+	background-color: #73C04A;
+}
+
+#navlivros, #corpolivros {
+	background-color: #00C192;
+}
+
+#navreservas, #corporeservas {
+	background-color: #00A4A4;
+}
+
+#navsugestao, #corposugestao {
+	background-color: #002F67;
+}
+
+#navsair {
+	background-color: black;
+}
+
+#corpofooter {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	height: 80px;
+	text-align: center;
+	background-color: #00142D;
+}
+
+.corpo {
+	height: 550px;
+	right: 0;
+	left: 0;
+	margin-top: 7%;
+}
+
+#content {
+	padding-bottom: 80px;
+}
+
+#containerForm {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 7%;
+	text-align: right;
+	width: 45%;
+}
+
+#containerCad {
+	display: inline-block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 92%;
+	float: right;
+}
+
+#containerUp {
+	display: inline-block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+	float: right;
+}
+
+#containerLiv {
+	display: inline-block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 95%;
+	float: center;
+}
+
+#containerSug {
+	display: inline-block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	float: center;
+}
+
+#nav-loged {
+	float: right;
+	padding: 8px;
+	color: #26E73E;
+	font-size: 16px;
+	vertical-align: middle;
+}
+
+#nav-loged > * {
+	display: inline-block;
+	margin: 0 6px;
+	vertical-align: middle;
+}
+
+label.error {
+    color: red;
+    margin: 0;
+    vertical-align: top;
+    font-size: 10px;
+}  
+
+
+.lista-livro {
+	list-style: none;
+	font-family: 
+}
+
+.login {
+	transform: translateY(-20%);
+}

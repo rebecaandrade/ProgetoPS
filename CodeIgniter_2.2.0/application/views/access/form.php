@@ -42,7 +42,6 @@
 	  	<input type="radio" name="num_de_ps" value="" id="radio_sub_2"><label for="radio_sub_2"><span></span>1 vez</label>
 	  	<input type="radio" name="num_de_ps" value="" id="radio_sub_3"><label for="radio_sub_3"><span></span>2 vezes</label>
 	  	<input type="radio" name="num_de_ps" value="" id="radio_sub_4"><label for="radio_sub_4"><span></span>3 ou mais</label>
-	  	<input type="hidden" name="perfil" value="1">
 	  	<input type="submit" value="">
 	</div>
 

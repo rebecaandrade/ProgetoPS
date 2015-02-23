@@ -15,8 +15,13 @@
 	    	<label> Semestre: <input type="text" name="semestre" value="<?php echo $user->semestre?>"> </label><br>
 	    	<label> Telefone: <input type="text" name="telefone" value="<?php echo $user->telefone?>"> </label><br>
 	    	<label> Confirmação de Senha: <input type="password" name="password" value=""> </label><br>
+<<<<<<< HEAD
 	    	<input type='submit' value=''>
 				<img src="<?php echo base_url();?>assets/images/button_dark_cancel.png" class="icon"/>
+=======
+	    	<input type='submit' value='Atualizar'>
+				<a href="<?php echo base_url();?>index.php/usuario/delete_account?id=<?php echo $user->id_login?>"><img src="<?php echo base_url();?>assets/images/button_dark_cancel.png" class="icon"/></a>
+>>>>>>> dd6d29b2ae91d9ca4ef2c30fd3b35cc9f5d14a92
 	    </div>
     <?php echo form_close();?>
 <?php echo $this->load->view('_inc/footer')?>
