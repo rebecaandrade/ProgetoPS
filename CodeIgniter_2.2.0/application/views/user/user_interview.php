@@ -39,13 +39,16 @@
 
             <tr><!--Checkbox-->
               <td>
-                <input type="radio" name="name" value="">
+                <input type="checkbox" id="checkbox1" name="name" value="">
+                <label for="checkbox1"><span class="checkbox"></span></label>
               </td>
               <td>
-                <input type="radio" name="name" value="">
+                <input type="checkbox" id="checkbox2" name="name" value="">
+                <label for="checkbox2"><span class="checkbox"></span></label>
               </td>
               <td>
-                <input type="radio" name="name" value="">
+                <input type="checkbox" id="checkbox3" name="name" value="">
+                <label for="checkbox3"><span class="checkbox"></span></label>
               </td>
             </tr>
           </tbody>
