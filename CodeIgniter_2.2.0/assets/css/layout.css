@@ -764,16 +764,61 @@ input[type=radio]:checked + label .radio:before {
 
 /*--------------Entrevista-------------*/
     #body-interview{
-      background-color: green;
       width: 100%;
       height: 40%;
       position: relative;
       top: 10%;
       left: 0%;
+      color: #ffffff;
     }
 
-    #table-interview td, #table-interview th{
-      border: 1px solid black;
+    #table-interview{
+      overflow-x: scroll;
+      overflow-y: hidden;
+    }
+
+    #table-interview table{
+      border-collapse: collapse;
+      text-align: left;
+      color: #ffffff;
+    }
+
+    #table-interview table thead tr:first-child th{
+      background-color: #64a641;
+      border-right: 1px solid #ffffff;
+      border-bottom: 1px solid #ffffff;
+      font-weight: normal;
+      font-size: 1em;
+      padding: 0.2em 1em 0.2em 1em;
+    }
+
+    #table-interview table thead tr:last-child th{
+      border-right: 1px solid #ffffff;
+      font-weight: normal;
+      padding: 0.2em 1em 0.2em 1em;
+      background-color: #73c04a;
+      font-size: 1.2em;
+    }
+
+    #table-interview table tbody tr:first-child td{
+      background-color: #ffffff;
+      min-width: 6%;
+      min-height: 8%;
+      border-right: 1px solid black;
+      color: #1a1a1a;
+      font-weight: lighter;
+      text-align: left;
+      padding: 0em 0.4em 0em 0.4em;
+    }
+
+    #table-interview table tbody tr:last-child{
+      background-color: #73c04a;
+      padding: 0.2em 1em 0.2em 1em;
+    }
+
+    #table-interview table tr:last-child input{
+      display: block;
+      margin: 0% auto;
     }
 
 /*--------------Lista de Candidatos-------------*/

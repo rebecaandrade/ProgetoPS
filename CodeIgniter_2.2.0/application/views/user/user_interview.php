@@ -9,26 +9,43 @@
       <div id="table-interview">
         <table>
           <thead>
-            Fevereiro 2015
-          </thead>
-          <thead>
-            <th>
-              Qua 18
-            </th>
-            <th>
-              Qui 19
-            </th>
-            </td>
+            <tr>
+              <th colspan="6">
+                Fevereiro 2015
+              </th>
+            </tr>
+            <tr>
+              <th colspan="3"><!--Adicionar contador PHP para expandir-->
+                Qua 18
+              </th>
+              <th>
+                Qui 19
+              </th>
+            </tr>
+
           </thead>
           <tbody>
             <tr>
               <td>
-                dfdf
+                08:00 - 09:00
+              </td>
+              <td>
+                09:00 - 10:00
+              </td>
+              <td>
+                09:00 - 10:00
               </td>
             </tr>
-            <tr>
+
+            <tr><!--Checkbox-->
               <td>
-                dfdf
+                <input type="radio" name="name" value="">
+              </td>
+              <td>
+                <input type="radio" name="name" value="">
+              </td>
+              <td>
+                <input type="radio" name="name" value="">
               </td>
             </tr>
           </tbody>
