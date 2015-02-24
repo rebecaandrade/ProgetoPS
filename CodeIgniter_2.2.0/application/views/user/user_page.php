@@ -64,9 +64,10 @@
 			<p>Editar Informações</p>
 		</div>
 	</div>
+	<div><img src="<?php echo base_url();?>assets/images/icon_facebook.png" alt="" /><p>Facebook</p></div>
+	<div><img src="<?php echo base_url();?>assets/images/icon_site.png" alt="" /><p>Site</p></div>
 </div>
 
-<div> <img src="" alt="" /><p> Facebook </p> </div>
-<div> <img src="" alt="" /> <p> Site </p> </div>
+
 
 <?php echo $this->load->view('_inc/footer')?>

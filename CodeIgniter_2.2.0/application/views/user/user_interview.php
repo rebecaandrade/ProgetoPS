@@ -5,6 +5,12 @@
       </div>
     </div>
     <div id="body-interview">
+      Testando radio
+      <input type="radio" name="name" id="radio1" value="">
+      <label for="radio1" class="label-radio"><span class="radio"></span>  12h30min</label>
+      <br />
+      <input type="radio" name="name" id="radio2" value="">
+      <label for="radio2" class="label-radio"><span class="radio"></span>  18h00min</label>
       <h5><span class="h8">Marque os dias que tem disponibilidade para a entrevista:</span></h5>
       <div id="table-interview">
         <table>
