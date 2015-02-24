@@ -74,8 +74,7 @@ class Usuario extends CI_Controller {
 				'login_perfil' => $dados['perfil'],
 				'email' => $dados['email'],
 				'nome' => $dados['nome'],
-				'usuario' => $dados['usuario'], 
-				);
+				'usuario' => $dados['usuario'], );
 		$this->session->set_userdata($newdata);
     }
     public function edit_account(){
@@ -85,9 +84,8 @@ class Usuario extends CI_Controller {
     public function session_update($user){
     	$newdata = array(
 				'email' => $user['email'],
-				'nome' => $user['nome'], 
-				);	
-		$this->session->set_userdata($newdata);	
+				'nome' => $user['nome'], 	);
+        $this->session->set_userdata($newdata);
     }
     public function update_account(){
     	$id = $this->session->userdata('login_id');
@@ -103,5 +101,4 @@ class Usuario extends CI_Controller {
     		redirect('usuario/home');
     	}
     }
-    
 }

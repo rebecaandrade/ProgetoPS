@@ -13,7 +13,6 @@ class Access extends CI_Controller {
 		$login = $this->input->post('login');
 		$password = md5($this->input->post('password'));
 		$user = $this->usuario_model->get_user($login,$password);
-		
 		if(!$user){
 			/* setar msg do jeito certo*/
 			$mensagem = array(
@@ -30,7 +29,6 @@ class Access extends CI_Controller {
 				'nome' => $user->nome,
 				'usuario' => $user->usuario, 
 				);
-			
 			$this->session->set_userdata($newdata);
 			redirect('usuario/home');
 		}

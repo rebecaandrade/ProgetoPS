@@ -17,7 +17,7 @@
 	  </p>
 	</div>
 	<div class="admin-nav">
-	  <img src="<?php echo base_url();?>assets/images/list_admin.png" alt="" />
+	  <a href="<?php echo base_url();?>/index.php/admin/list_admins"><img src="<?php echo base_url();?>assets/images/list_admin.png" alt="" /></a>
 	  <p>
 		Administradores
 	  </p>

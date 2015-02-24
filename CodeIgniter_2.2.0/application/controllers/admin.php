@@ -15,4 +15,16 @@ class Admin extends CI_Controller {
 	public function load_home_superadmin(){
 		//não tem a view ainda;
 	}
+	public function list_admins(){
+		if($this->session->userdata('login_perfil')!=3){
+			$this->session->set_userdata('mensagem','Você não tem acesso a esta pagina');
+			redirect('usuario/home');
+		}
+		else{
+			$dados['users'] = $this->admin_model->get_admins();
+			var_dump($dados);
+			die;
+			$this->load->view('admin/admin_list');
+		}
+	}
 }

@@ -1,4 +1,4 @@
-
+<?php echo $this->load->view('_inc/header_small') ?>
 <div id="subtitle-logo">
     <span class="subtitle-url"><h5><a href="http://www.cjr.org.br/site/">http://www.cjr.org.br/site/  </a></h5></span>
 </div>
@@ -15,3 +15,4 @@
         <p> Perfil </p>
     </div>
 </div>
+<?php echo $this->load->view('_inc/footer') ?>
