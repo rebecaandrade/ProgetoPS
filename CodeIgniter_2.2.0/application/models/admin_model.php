@@ -9,4 +9,8 @@ class Admin_model extends CI_Model {
 		$this->db->where('perfil','2');
 		return $this->db->get('tb_login')->result();
 	}
+	public function delete_admin($id){
+		$this->db->where('id_login',$id);
+		return $this->db->delete('tb_login');
+	}
 }

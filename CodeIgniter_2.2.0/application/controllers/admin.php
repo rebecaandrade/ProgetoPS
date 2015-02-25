@@ -25,4 +25,12 @@ class Admin extends CI_Controller {
 			$this->load->view('admin/admin_list',$dados);
 		}
 	}
+	public function delete(){
+		$this->admin_model->delete_admin($_GET['id']);
+		redirect('admin/list_admins');
+	}
+	public function update_admin(){
+		$dados['user'] = $this->admin_model->get_user_information($_GET['id']);
+		$this->load->view('admin');
+	}
 }
