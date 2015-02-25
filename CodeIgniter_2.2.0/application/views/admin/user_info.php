@@ -51,8 +51,44 @@
 			</div>
 			<div id="user-activity-nav-body">
 		</div>
-
+		</div>
 		<div id="user-interview">
+			<div id="table-interview">
+				<table>
+					<thead>
+						<tr>
+							<th colspan="6">
+								Fevereiro 2015
+							</th>
+						</tr>
+						<tr>
+							<th colspan="3"><!--Adicionar contador PHP para expandir-->
+								Qua 18
+							</th>
+							<th>
+								Qui 19
+							</th>
+						</tr>
 
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								08:00 - 09:00
+							</td>
+							<td>
+								09:00 - 10:00
+							</td>
+							<td>
+								09:00 - 10:00
+							</td>
+						</tr>
+
+						<tr><!--Checkbox-->
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
 		</div>
 <?php echo $this->load->view('_inc/footer') ?>

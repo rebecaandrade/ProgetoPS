@@ -116,7 +116,21 @@ input[type=radio]{
 input[type=radio]:checked + .label-radio .radio{
   background-image: url("http://localhost/sistemaps/CodeIgniter_2.2.0/assets/images/checkbox_clicked.png");
 }
-
+@media handheld and (min-width : 1224px){
+  #container-big{
+    /*background-color: #DDD;*/
+    height: 100%;
+    width: 81.25%; /*1040px*/ /*1280px*/
+    margin: 0% auto;
+    overflow: hidden;
+  }
+  #container-small{
+    /*background-color: #DDD;*/
+    height: 100%;
+    width: 92.1875%;
+    margin: 0% auto;
+  }
+}
 @media screen and (min-width : 1224px){
     #container-big{
       /*background-color: #DDD;*/
@@ -939,5 +953,125 @@ input[type=radio]:checked + .label-radio .radio{
       display: block;
       margin: 0% auto;
     }
+
+/*--------------Lista de Admin's-------------*/
+    #user-info{
+      width: 59.375%; /*800px - 2em - 2em*/ /*1180px*/
+      height: 46.625%; /*413 px - 2em - 2em*/ /*800px*/
+      position: relative;
+      top: 10%;
+      left: 0%;
+      float: left;
+      background-color: #ffffff;
+      border-radius: 10px;
+      padding: 2em;
+    }
+
+    .profile-photo{
+      width: 35.9999%;
+      height: 100%;
+      position: relative;
+      top: 0%;
+      left: 0%;
+      border: 3px solid black;
+      float: left;
+      /*background-color: purple;*/
+    }
+
+    .profile-photo p /*Texto da foto*/{
+      position: absolute;
+      bottom: 0%;
+      left: 0%;
+      background-color: black;
+      width: 100%;
+      max-height: 9.9999%;
+      text-align: center;
+      color: white;
+      font-size: 18pt;
+      font-weight: normal;
+      overflow: hidden;
+      -moz-text-overflow: ellipsis;
+      -webkit-text-overflow: ellipsis;
+      -ms-text-overflow: ellipsis;
+      -o-text-overflow: ellipsis;
+    }
+
+    .profile-photo img{
+      position: absolute;
+      top: 0%;
+      left: 0%;
+      height: 89.9999%;
+    }
+    .profile-photo img:first-child{
+      z-index: 1;
+    }
+
+    #profile-data{
+      width: 54.999%;
+      height: 89.9999%;
+      float: left;
+      margin-left: 2em;
+      line-height: 16pt;
+      /*background-color: yellow;*/
+    }
+    /*Titulos*/
+    #profile-data p:nth-child(odd){
+      font-weight: bold;
+    }
+
+    #user-activity{
+      width: 28.984375%; /*371px*/ /*1180px*/
+      height: 52.625%;
+      position: relative;
+      top: 10%;
+      left: 0%;
+      float: left;
+      margin-left: 2em;
+      border-radius: 10px;
+    }
+
+    #user-activity-nav-top{
+      border-radius: 10px 10px 0px 0px;
+      width: 100%;
+      height: auto;
+    }
+
+    #user-activity-nav-body{
+      background-color: #ffffff;
+      width: 100%;
+      height: 72%;
+      border-radius: 0px 0px 10px 10px;
+    }
+
+    #user-interview{
+      width: 62.5%; /*800px - 2em - 2em*/ /*1180px*/
+      height: 15%;
+      clear: both;
+      position: relative;
+      top: 15%;
+      left: 0%;
+      background-color: #DDD;
+    }
+
+    .profile-icon-nav{
+      height: 40%;
+      width: 48.999%;
+      display: inline-block;
+      text-align: center;
+      margin: 1em 0.1em;
+    }
+
+    .profile-icon-nav img{
+      max-width: 100%;
+      max-height: 100%;
+      margin: 0 auto;
+      display: block;
+    }
+
+    .profile-icon-nav:hover{
+      background-color: green;
+      color: green;
+    }
+
   /**/
 }
