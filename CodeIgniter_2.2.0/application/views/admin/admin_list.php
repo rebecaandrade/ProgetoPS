@@ -4,7 +4,6 @@
 </div>
 </div>
 </div>
-<?php echo var_dump($users)?>
 <table id="list-admin">
     <thead>
         <tr>
@@ -13,14 +12,16 @@
         </tr>
     </thead>
   <tbody>
+  <?php if(isset($users)){
+        foreach ($users as $user) { ?>
     <tr>
-      <td> Rebeca Baldomir </td>
+      <td> <?php echo $user->nome ?> </td>
       <td>
-        <img src="<?php echo base_url();?>assets/images/button_light_refresh.png" alt="" />
-        <img src="<?php echo base_url();?>assets/images/button_light_cancel.png" alt="" />
+        <img src="<?php echo base_url();?>assets/images/button_light_fresh.png" alt="" />
         <img src="<?php echo base_url();?>assets/images/button_light_cancel.png" alt="" />
       </td>
     </tr>
+  <?php }} ?>
   </tbody>
 </table>
 <?php echo $this->load->view('_inc/footer') ?>
