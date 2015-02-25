@@ -33,4 +33,8 @@ class Admin extends CI_Controller {
 		$dados['user'] = $this->admin_model->get_user_information($_GET['id']);
 		$this->load->view('admin');
 	}
+	/* Apagar depois somente para carregar a pagina de FeedBack  */
+	public function admin_feedback(){
+		$this->load->view('admin/admin_feedback');
+	}
 }

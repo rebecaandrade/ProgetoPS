@@ -1072,6 +1072,11 @@ input[type=radio]:checked + .label-radio .radio{
       background-color: green;
       color: green;
     }
-
+/*--------------Escrever FeedBack-------------*/
+    #body-admin-feeback{
+      width: 80.084745762711864406779661016949%; /*945px*/ /*1180*/
+      height: 70.5%; /*564px*/ /*1800*/
+      background-color: #ffffff;
+    }
   /**/
 }
