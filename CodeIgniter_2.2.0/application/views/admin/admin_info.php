@@ -10,6 +10,9 @@
 	    	<p><label> Curso: <input type="text" name="curso" value="<?php echo $user->curso?>"> </label><br></p>
 	    	<p><label> Semestre: <input type="text" name="semestre" value="<?php echo $user->semestre?>"> </label><br></p>
 	    	<p><label> Telefone: <input type="text" name="telefone" value="<?php echo $user->telefone?>"> </label><br></p>
+	   		<input type="hidden" name="id" value="<?php echo $user->id_login?>">
+	   		<p><input type="submit" value="Atualizar"></p>
+
 	    <?php echo form_close();?>
     </div>
 <?php echo $this->load->view('_inc/footer')?>

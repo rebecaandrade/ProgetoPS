@@ -29,12 +29,16 @@ class Admin extends CI_Controller {
 		$this->admin_model->delete_admin($_GET['id']);
 		redirect('admin/list_admins');
 	}
-	public function update_admin(){
-		$dados['user'] = $this->admin_model->get_user_information($_GET['id']);
+	public function update_admin($id){
+		$dados['user'] = $this->admin_model->get_user_information($id);
 		$this->load->view('admin/admin_info',$dados);
 	}
 	public function update_admin_account(){
-		die;
+		if($_POST['nome'] == NULL || $_POST['email'] == NULL || $_POST['telefone'] == NULL){
+			$this->session->set_userdata('mensagem','alguns campos obrigatórios não foram preenchidos');
+			$this->update_admin($_POST['id']);
+		}
+		else die;
 	}
 	/* Apagar depois somente para carregar a pagina de FeedBack  */
 	public function admin_feedback(){
