@@ -31,7 +31,10 @@ class Admin extends CI_Controller {
 	}
 	public function update_admin(){
 		$dados['user'] = $this->admin_model->get_user_information($_GET['id']);
-		$this->load->view('admin/admin_info');
+		$this->load->view('admin/admin_info',$dados);
+	}
+	public function update_admin_account(){
+		die;
 	}
 	/* Apagar depois somente para carregar a pagina de FeedBack  */
 	public function admin_feedback(){
