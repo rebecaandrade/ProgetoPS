@@ -14,28 +14,28 @@
 	<div class="profile-photo">
 		<img src="<?php echo base_url();?>assets/images/photo_profile.png" alt="" />
 		<img src="<?php echo base_url();?>assets/images/foto_usuario.png" alt="" />
-		<p>Rebeca Baldomir</p>
+		<p><?php echo $this->session->userdata('nome');?></p>
 	</div>
 	<div id="profile-data">
 	<p>
 		Curso:
 		</p>
-	<p> Ciência da Computação </p>
+	<p> <?php echo $this->session->userdata('curso');?> </p>
 	<p>
 		<br />
 		Semestre:
 	</p>
-	<p> 2º Semestre </p>
+	<p> <?php echo $this->session->userdata('semestre');?> </p>
 	<p>
 		<br />
 		Email:
 	</p>
-	<p> danilosantos@cjr.org.br </p>
+	<p> <?php echo $this->session->userdata('email');?> </p>
 	<p>
 		<br />
 		Telefone:
 	</p>
-	<p> 3333-3333 </p>
+	<p> <?php echo $this->session->userdata('telefone');?> </p>
 	</div>
 </div>
 
@@ -56,7 +56,7 @@
 
 		<div class="profile-icon-nav">
 			<img src="<?php echo base_url();?>assets/images/icon_email.png" alt="" />
-			<p>Fale Conosco</p>
+			<a href="<?php echo base_url();?>index.php/usuario/fale_conosco"><p>Fale Conosco</p></a>
 		</div>
 
 		<div class="profile-icon-nav">

@@ -27,7 +27,11 @@ class Access extends CI_Controller {
 				'login_perfil' => $user->perfil,
 				'email' => $user->email,
 				'nome' => $user->nome,
-				'usuario' => $user->usuario, 
+				'usuario' => $user->usuario,
+				'semestre' => $user->semestre,
+				'curso' => $user->curso,
+				'telefone' => $user->telefone,
+				'foto' => $user->foto 
 				);
 			$this->session->set_userdata($newdata);
 			redirect('usuario/home');
