@@ -1,9 +1,10 @@
+<?php echo $this->load->view('_inc/header_small') ?>
 <div id="subtitle-logo-small">
   <span class="subtitle-url"><h4>Administradores</h4></span>
 </div>
 </div>
 </div>
-
+<?php echo var_dump($users)?>
 <table id="list-admin">
     <thead>
         <tr>
@@ -22,3 +23,4 @@
     </tr>
   </tbody>
 </table>
+<?php echo $this->load->view('_inc/footer') ?>

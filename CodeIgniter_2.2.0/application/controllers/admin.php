@@ -13,7 +13,7 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/user_info',$dados);
 	}
 	public function load_home_superadmin(){
-		//não tem a view ainda;
+		$this->load->view('admin/admin_page');
 	}
 	public function list_admins(){
 		if($this->session->userdata('login_perfil')!=3){
@@ -22,9 +22,7 @@ class Admin extends CI_Controller {
 		}
 		else{
 			$dados['users'] = $this->admin_model->get_admins();
-			var_dump($dados);
-			die;
-			$this->load->view('admin/admin_list');
+			$this->load->view('admin/admin_list',$dados);
 		}
 	}
 }
