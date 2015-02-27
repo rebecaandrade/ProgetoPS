@@ -55,19 +55,21 @@
 		</div>
 
 		<div class="profile-icon-nav">
+			<a href="<?php echo base_url();?>index.php/usuario/fale_conosco">
 			<img src="<?php echo base_url();?>assets/images/icon_email.png" alt="" />
-			<a href="<?php echo base_url();?>index.php/usuario/fale_conosco"><p>Fale Conosco</p></a>
+			<p>Fale Conosco</p></a>
 		</div>
 
 		<div class="profile-icon-nav">
-			<a href="<?php echo base_url();?>index.php/usuario/edit_account"><img src="<?php echo base_url();?>assets/images/icon_edit.png" alt="" /></a>
+			<a href="<?php echo base_url();?>index.php/usuario/edit_account"><img src="<?php echo base_url();?>assets/images/icon_edit.png" alt="" />
 			<p>Editar Informações</p>
+		</a>
 		</div>
 	</div>
-	<div><img src="<?php echo base_url();?>assets/images/icon_facebook.png" alt="" /><p>Facebook</p></div>
-	<div><img src="<?php echo base_url();?>assets/images/icon_site.png" alt="" /><p>Site</p></div>
 </div>
 
+<div id="profile-footer">
+</div>
 
 
 <?php echo $this->load->view('_inc/footer')?>

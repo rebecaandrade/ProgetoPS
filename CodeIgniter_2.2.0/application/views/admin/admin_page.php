@@ -8,6 +8,16 @@
 <div id="body-admin">
   <div id="body-admin-info">
 	<h5>Informações Gerais</h5>
+	<div class="count-activity">
+		<p>
+			Palestra Institucional
+		</p>
+	</div>
+	<div class="count-activity">
+		<p>
+			Palestra Institucional
+		</p>
+	</div>
   </div>
   <div id="body-admin-nav">
 	<div class="admin-nav">
