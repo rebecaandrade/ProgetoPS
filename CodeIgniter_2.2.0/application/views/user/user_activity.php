@@ -7,21 +7,15 @@
 </div>
 
 <h5><span class="h8">Selecione os horários que participará da palestras institucional:</span></h5>
-<br />
-
 <div class="collum-2">
   <h5><span class="h7">Palestra Institucional</span></h5>
   <form class="" action="index.html" method="post">
 
   <input type="radio" id="radio1" name="palestra_12" value="">
-  <label for="radio" class="label-radio"><span class="radio"></span>  18h00min</label>
+  <label for="radio1" class="label-radio"><span class="radio"></span>  12h30min</label>
 
-  <input type="radio" id="radio1" name="palestra_18" value="">
-  <label for="radio" class="label-radio"><span class="radio"></span>  18h00min</label>
-
-	<input type="radio" id="radio2" name="palestra_18" value="">
-	<label for="radio2"><span class="radio">
-	</span><label>18h00min</label></label>
+  <input type="radio" id="radio2" name="palestra_18" value="">
+  <label for="radio2" class="label-radio"><span class="radio"></span>  18h00min</label>
 
   </form>
   <p>
@@ -33,15 +27,11 @@
   <h5><span class="h7">Dinâmica em Grupo</span></h5>
   <form class="" action="index.html" method="post">
 
-	<input type="radio" id="radio3" name="dinamica_12" value="">
-	<label for="radio3"><span class="radio">
-	</span><label>12h30min</label></label>
-	<br />
-	<br />
-	<br />
-	<input type="radio" id="radio4" name="dinamcia_18" value="">
-	<label for="radio4"><span class="radio">
-	</span><label>12h30min</label></label>
+    <input type="radio" id="radio3" name="dinamica_12" value="">
+    <label for="radio3" class="label-radio"><span class="radio"></span>  12h30min</label>
+
+    <input type="radio" id="radio4" name="dinamica_18" value="">
+    <label for="radio4" class="label-radio"><span class="radio"></span>  18h00min</label>
 
   </form>
 

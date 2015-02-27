@@ -14,6 +14,7 @@ body{
   background-color: #002f67;
   font-family: 'Open Sans', sans-serif;
   overflow-x: hidden;
+  overflow-y: hidden;
   font-size: 62.5%; /*1em = 10px*/
 }
 
@@ -580,25 +581,44 @@ input[type=radio]:checked + .label-radio .radio{
       margin: 0 auto;
       display: block;
     }
-    /*Pós-Login*/
+/*--------------Pós-Login-----------*/
     #post-login-body{
       width: 50%;
       height: 45%;
-      margin:0 auto;
-      padding: 1em;
+      margin: 9% /*10em*/ auto 0% auto;
       background-color: #ffffff;
       border-radius: 10px;
     }
 
     .post-login-option{
-      height: 80%;
-      width: 50%;
+      height: 84%;
+      width: 41.3%;
+      padding: 1em;
       float: left;
       display: inline;
-      font-size: 36pt;
+      font-size: 2.4em;
       text-align: center;
       font-weight: bolder;
       text-transform: uppercase;
+    }
+
+    .post-login-option img{
+      max-height: 80%;
+      display: block;
+      margin: 0% auto;
+    }
+
+    .post-login-option:hover{
+      color: #ffffff;
+      background-color: #73c04a;
+    }
+
+    .post-login-option:first-child:hover{
+      border-radius: 10px 0em 0em 10px;
+    }
+
+    .post-login-option:last-child:hover{
+      border-radius: 0px 10px 10px 0em;
     }
 
 /*--------------Tela Usuário-------------*/
@@ -700,34 +720,66 @@ input[type=radio]:checked + .label-radio .radio{
       margin: 0% auto;
     }
 
-/*--------------Feedback-------------*/
-    #feedback-message{
-      height: 45%;
-      width: 50%;
-      border-radius: 10px 0px 0px 10px;
-      display: inline-block;
-      float: left;
-      margin-left: auto;
-      padding: 1em;
+/*--------------Feedback Usuário-------------*/
+    #body-feedback{
+      height: 65%;
+      width: 70%;
+      border-radius: 10px;
+      margin: 5% auto 0% auto;
       background-color: #ffffff;
     }
 
+    #feedback-text{
+      width: 67.6%;
+      height: 79.999%;
+      padding: 1em;
+      border-radius: 10px 0px 0px 0px;
+      overflow-y: scroll;
+      overflow-x: hidden;
+    }
+
+    #feedback-footer{
+      width: 69.9999%;
+      height: 19.999%;
+      border-top: 1px solid #000000;
+      border-radius: 0px 0px 0px 10px;
+    }
+
     #feedback-nav{
-      height: 50%;
-      width: 20%;
-      background-color: green;
-      border-radius: 0px 10px 10px 0px;
-      display: inline-block;
-      float: left;
-      margin-right: auto;
+      width: 29.999%;
+      height: 100%;
+      float: right;
+      position: relative;
+      top: -85%;
+      left: 0%;
+      border-left: 1px solid #000000;
       text-align: center;
     }
 
     #feedback-nav-top{
-      height: auto;
       width: 100%;
-      background-color: #02c40f;
-      color: #ffffff;
+      height: 15.9999%;
+      background-color: #73c04a;
+      display: block;
+      border-radius: 0px 10px 0px 0px;
+      text-transform: uppercase;
+    }
+
+    #feedback-nav-body{
+      width: 100%;
+      height: 83.9999%;
+      display: block;
+      border-radius: 0px 0px 10px 0px;
+    }
+
+    #feedback-nav-body p{
+      margin: 2% 0%;
+      font-size: 2.1em;
+      font-weight: bold;
+    }
+
+    #feedback-nav-body p:hover{
+      background-color: #DDD;
     }
 
 /*--------------Fale Conosco-------------*/
@@ -1019,12 +1071,12 @@ input[type=radio]:checked + .label-radio .radio{
       width: 60%;
     }
 
-    /*Visualizar Administradores*/
+/*-------Visualizar Administradores-----*/
     #list-admin{
       border-collapse: collapse;
       width: 60%;
       height: auto;
-      margin:0 auto;
+      margin: 5% auto 0% auto;
     }
 
     #list-admin thead{
@@ -1206,6 +1258,7 @@ input[type=radio]:checked + .label-radio .radio{
       width: 100%;
       height: 72%;
       border-radius: 0px 0px 10px 10px;
+      text-align: center;
     }
 
     #user-interview{
@@ -1218,14 +1271,11 @@ input[type=radio]:checked + .label-radio .radio{
       background-color: #DDD;
     }
 
-/*-------------- FeedBack-------------*/
+/*--------------Escrever FeedBack-------------*/
     #body-admin-feedback{
-      position: relative;
-      top: 5%;
-      left: 0%;
       width: 73.828125%; /*945px*/ /*1180*/
       height: 70.5%; /*564px*/ /*1800*/
-      margin: 0% auto;
+      margin: 6% auto 0% auto;
     }
 
     #admin-feeback-top{
@@ -1249,7 +1299,7 @@ input[type=radio]:checked + .label-radio .radio{
 
     #admin-feeback-body{
       width: 100%;
-      height: 73.9999%;
+      height: 64.9999%;
       background-color: #ffffff;
     }
 
@@ -1267,7 +1317,7 @@ input[type=radio]:checked + .label-radio .radio{
       border-left: 1px solid #000000;
     }
 
-    #interviwers-button{
+    #interviewers-button{
       width: 100%;
       height: 15.9999%;
       padding: 1em 0em;
@@ -1275,13 +1325,18 @@ input[type=radio]:checked + .label-radio .radio{
       border-bottom: 1px solid #000000;
     }
 
-    #interviwers-button img{
+    #interviewers-button img{
       display: block;
       margin: 0% auto;
       max-height: 60%;
     }
 
-    #interviwers-list{
+    #interviewers-button:hover{
+      color: #ffffff;
+      background-color: #000000;
+    }
+
+    #interviewers-list{
       height: 89.9999%;
       text-align: center;
     }

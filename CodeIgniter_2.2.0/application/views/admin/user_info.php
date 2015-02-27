@@ -26,22 +26,26 @@
 				</p>
 			<p><?php echo $user->curso; ?></p>
 			<p>
-				<br />
 				Semestre:
 			</p>
 			<p><?php echo $user->semestre;?></p>
 			<p>
-				<br />
 				Email:
 			</p>
 			<p><?php echo $user->email;?> </p>
 			<p>
-				<br />
 				Telefone:
 			</p>
 			<p><?php echo $user->telefone; ?></p>
-			<p>Usuario : <?php echo $user->usuario; ?> <br /></p>
-			<p>Número de PS(s) que participou : <?php echo $user->num_de_ps; ?> <br /></p>
+			<p>Usuario: </p>
+			<p>
+				<?php echo $user->usuario; ?>
+			</p>
+			<p>Número de PS(s) que participou :</p>
+			<p>
+				<?php echo $user->num_de_ps; ?>
+			</p>
+
 			</div>
 		</div>
 
@@ -50,6 +54,13 @@
 				<img src="<?php echo base_url();?>assets/images/status_profile_out.png" alt="" />
 			</div>
 			<div id="user-activity-nav-body">
+				<h5>Palestra Institucional</h5>
+				<input type="radio" name="name" id="radio2" value="">
+				<label for="radio2" class="label-radio"><span class="radio"></span>  18h00min</label>
+				<br />
+				<h5>Dinâmica em grupo</h5>
+				<input type="radio" name="name" id="radio2" value="">
+				<label for="radio2" class="label-radio"><span class="radio"></span>  18h00min</label>
 		</div>
 		</div>
 		<div id="user-interview">

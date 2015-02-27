@@ -18,13 +18,13 @@
       </p>
     </div>
     <div id="feedback-body-interviewers">
-      <div id="interviwers-button">
+      <div id="interviewers-button">
         <img src="<?php echo base_url();?>assets/images/profile_post.png" alt="" />
         <p>
           Entrevistadores
         </p>
       </div>
-      <div id="interviwers-list">
+      <div id="interviewers-list">
         <p>
           fgfdg
         </p>
@@ -32,8 +32,8 @@
     </div>
   </div>
   <div id="admin-feeback-footer">
-    <img src="<?php echo base_url();?>assets/images/button_light_cancel.png" alt="" />
-    <img src="<?php echo base_url();?>assets/images/button_light_accept.png" alt="" />
+    <a href="#"><img src="<?php echo base_url();?>assets/images/button_light_cancel.png" alt="" /></a>
+    <a href="#"><img src="<?php echo base_url();?>assets/images/button_light_accept.png" alt="" /></a>
   </div>
 </div>
 
