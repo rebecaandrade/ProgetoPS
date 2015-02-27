@@ -14,7 +14,7 @@
             <th></th>
             <th></th>
             <th>FeedBack</th>
-            <th></th>
+            <th>dsfsdfsd</th>
        </tr>
     </thead>
     <tbody>
@@ -27,7 +27,7 @@
                 <td><a href="<?php echo base_url();?>index.php/admin/check_member?id=<?php echo $user->id_login?>">Informações</a></td>
                 <td> <img src="<?php echo base_url();?>assets/images/button_light_accept.png" alt="" /></td>
                 <td><a onclick="if (confirm('Deseja deletar esta usuario? ?')) window.location.replace('<?php echo base_url().'index.php/usuario/delete?id='.$user->id_login ?>')">
-                   deletar 
+                  <img src="<?php echo base_url();?>assets/images/button_light_cancel.png" alt="" />
                 </a></td>
             </tr>
     <?php }} ?>

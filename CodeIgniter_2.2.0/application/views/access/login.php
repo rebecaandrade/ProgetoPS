@@ -26,7 +26,7 @@
 				</p>
 				</a>
 			</div>
-			<input type="submit" value="ENTRAR">
+			<input type="submit" value="">
 			<?php echo form_close() ?>
 	</div>
 
