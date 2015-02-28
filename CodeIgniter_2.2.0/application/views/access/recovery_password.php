@@ -1,4 +1,4 @@
-<?php echo $this->load->view('_inc/header_big')?>
+<?php echo $this->load->view('_inc/header_large')?>
 </div>
 </div><!-- Não apagar estes div's -->
 
@@ -9,3 +9,5 @@
     	<input type="submit" value="">
     <?php echo form_close() ?>
 </div>
+
+<?php echo $this->load->view('_inc/footer')?>

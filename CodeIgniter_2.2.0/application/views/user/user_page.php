@@ -1,43 +1,49 @@
-<?php echo $this->load->view('_inc/header_small')?>
+<?php echo $this->load->view('_inc/header_thin')?>
 
-<div id="subtitle-logo-small">
-	<span class="subtitle-url"><h4>INFORMAÇÕES GERAIS</h4></span>
-</div>
-</div>
-</div>
-
-<script charset="utf-8">
-	swal("Bem vindo ao sistema");
-</script>
-
-<div id="profile-body">
-	<div class="profile-photo">
-		<img src="<?php echo base_url();?>assets/images/photo_profile.png" alt="" />
-		<img src="<?php echo base_url();?>assets/images/foto_usuario.png" alt="" />
-		<p><?php echo $this->session->userdata('nome');?></p>
-	</div>
-	<div id="profile-data">
-	<p>
-		Curso:
-		</p>
-	<p> <?php echo $this->session->userdata('curso');?> </p>
-	<p>
-		<br />
-		Semestre:
-	</p>
-	<p> <?php echo $this->session->userdata('semestre');?> </p>
-	<p>
-		<br />
-		Email:
-	</p>
-	<p> <?php echo $this->session->userdata('email');?> </p>
-	<p>
-		<br />
-		Telefone:
-	</p>
-	<p> <?php echo $this->session->userdata('telefone');?> </p>
+		<div class="header-text-large-square-2 header-text-uppercase">
+			<h3>informações gerais</h3>
+		</div>
 	</div>
 </div>
+
+	<div id="content" class="content-thin">
+		<div id="profile-id">
+			<div id="profile-id-photo">
+				<div id="profile-id-photo-frame">
+					<img src="<?php echo base_url();?>assets/images/photo_profile.png" />
+					<img src="<?php echo base_url();?>assets/images/foto_usuario.png" />
+				</div>
+				<div id="profile-id-photo-name">
+					<p>
+						<?php echo $this->session->userdata('nome');?>
+					</p>
+				</div>
+			</div>
+			<div id="profile-id-info">
+				<p>
+					Curso:
+					</p>
+				<p> <?php echo $this->session->userdata('curso');?> </p>
+				<p>
+					<br />
+					Semestre:
+				</p>
+				<p> <?php echo $this->session->userdata('semestre');?> </p>
+				<p>
+					<br />
+					Email:
+				</p>
+				<p> <?php echo $this->session->userdata('email');?> </p>
+				<p>
+					<br />
+					Telefone:
+				</p>
+				<p> <?php echo $this->session->userdata('telefone');?> </p>
+			</div>
+		</div>
+	</div>
+
+<!--
 
 <div id="profile-nav">
 	<div id="profile-nav-top">
@@ -70,6 +76,6 @@
 
 <div id="profile-footer">
 </div>
-
+-->
 
 <?php echo $this->load->view('_inc/footer')?>
