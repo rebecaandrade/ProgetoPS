@@ -21,4 +21,10 @@ class Admin_model extends CI_Model {
 		$this->db->where('usuario',$user);
 		return $this->db->get('tb_login')->result();
 	}
+	public function update_admin($dados){
+		$id = $dados['id'];
+		unset($dados['id']);
+		$this->db->where('id_login',$id);
+		$this->db->update('tb_login',$dados);
+	}
 }

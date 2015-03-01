@@ -38,7 +38,11 @@ class Admin extends CI_Controller {
 			$this->session->set_userdata('mensagem','alguns campos obrigatórios não foram preenchidos');
 			$this->update_admin($_POST['id']);
 		}
-		else die;
+		else {
+			$this->admin_model->update_admin($_POST);
+			$this->session->set_userdata('mesnsagem','Atualização realizada com sucesso');
+			redirect('usuario/home');
+		}
 	}
 	public function create_admin(){
 		$this->load->view('admin/admin_create');
