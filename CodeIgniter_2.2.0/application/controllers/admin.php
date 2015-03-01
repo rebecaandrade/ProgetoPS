@@ -40,6 +40,16 @@ class Admin extends CI_Controller {
 		}
 		else die;
 	}
+	public function create_admin(){
+		$this->load->view('admin/admin_create');
+	}
+	public function insert_new_admin(){
+		if($_POST['nome'] == NULL || $_POST['email'] == NULL || $_POST['telefone'] == NULL ||
+			$_POST['usuario'] == NULL || $_POST['senha'] == NULL ||  $_POST['confirmasenha'] == NULL){
+			$this->set_userdata('mensagem','alguns campos obrigatórios não foram preenchidos');
+		redirect('admin/create_admin');
+		}
+	}
 	/* Apagar depois somente para carregar a pagina de FeedBack  */
 	public function admin_feedback(){
 		$this->load->view('admin/admin_feedback');

@@ -1,4 +1,4 @@
-<?php echo $this->load->view('_inc/header_small') ?>
+<?php echo $this->load->view('_inc/header_thin') ?>
 <div id="subtitle-logo-small">
   <span class="subtitle-url"><h4>Administradores</h4></span>
 </div>
@@ -8,7 +8,7 @@
     <thead>
         <tr>
             <th> Nome </th>
-            <th> </th>
+            <th><a href="<?php echo base_url() ?>index.php/admin/create_admin">Novo Admin</a></th>
         </tr>
     </thead>
   <tbody>
