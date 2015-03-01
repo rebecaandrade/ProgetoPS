@@ -46,8 +46,22 @@ class Admin extends CI_Controller {
 	public function insert_new_admin(){
 		if($_POST['nome'] == NULL || $_POST['email'] == NULL || $_POST['telefone'] == NULL ||
 			$_POST['usuario'] == NULL || $_POST['senha'] == NULL ||  $_POST['confirmasenha'] == NULL){
-			$this->set_userdata('mensagem','alguns campos obrigatórios não foram preenchidos');
-		redirect('admin/create_admin');
+			$this->session->set_userdata('mensagem','alguns campos obrigatórios não foram preenchidos');
+			redirect('admin/create_admin');
+		}
+		elseif ($_POST['senha'] != $_POST['confirmasenha']){
+			$this->session->set_userdata('mensagem','Senhas digitadas não são iguais');
+			redirect('admin/create_admin');
+		}
+		elseif ($this->admin_model->check_admin($_POST['usuario'])){
+			$this->session->set_userdata('mensagem','Usuário já existente');
+			redirect('admin/create_admin');
+		}
+		else{
+			$_POST['perfil'] = '2';
+			$this->admin_model->insert_new_admin($_POST);
+			$this->session->set_userdata('mensagem','Admin Cadastrado com sucesso');
+			redirect('admin/list_admins');
 		}
 	}
 	/* Apagar depois somente para carregar a pagina de FeedBack  */
