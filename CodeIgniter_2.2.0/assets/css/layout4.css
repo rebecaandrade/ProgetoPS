@@ -1013,10 +1013,115 @@
   }
 
   #list-user table td{
+    height: 20%;
+    width: 60%;
     padding: 0.5em;
     text-align: center;
-    width: 60%;
+  }
+
+  .box-page-ps{
+    width: 20%;
+    position: relative;
+    top: 0%;
+    right: 0%;
+    background-color: purple;
+  }
+
+  .open{
+    height: auto;
+    margin: 2%;
+  }
+
+  .closed{
     height: 20%;
+  }
+
+  .open .box-page-ps-top{
+    width: 6em;
+    height: 3.1em;
+    position: absolute;
+    top: 5.8em;
+    left: 1.6em;
+    background-color: #73c04a;
+    transform: translateY(0) rotateX(0) skewX(-45deg);
+    transition: transform 1s ease-in-out, height 1s ease-in-out 0.5s;
+  }
+
+  .open .box-page-ps-middle{
+    width: 3em;
+    height: 6em;
+    position: absolute;
+    top: 7.4em;
+    left: 6.05em;
+    background-color: #ffffff;
+    transform: skewY(-45deg);
+    z-index: 1;
+  }
+
+  .open .box-page-ps-bottom{
+    width: 6em;
+    height: 6em;
+    position: absolute;
+    top: 8.9em;
+    left: 0em;
+    background-color: #73c04a;
+    z-index: 2;
+    transform: translateY(0) rotateX(0);
+    transition: transform 1s ease-in-out;
+  }
+
+  .open .box-page-ps-content{
+    width: 6em;
+    height: 6em;
+    position: absolute;
+    top: 8.9em;
+    left: 0em;
+    background-color: #3e5266;
+    z-index: 0;
+    text-align: center;
+    color: #ffffff;
+  }
+
+  .open:hover .box-page-ps-bottom{
+    transform: translateY(6em) rotateX(180deg);
+  }
+
+  .open:hover .box-page-ps-top{
+    transform: translateY(-6em) rotateX(180deg) skewX(0);
+    height: 6em;
+  }
+
+  .closed .box-page-ps-top{
+    display: none;
+  }
+
+  .closed .box-page-ps-middle{
+    display: none;
+  }
+
+  .closed .box-page-ps-bottom{
+    display: none;
+  }
+
+  .closed .box-page-ps-content{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 0em;
+    left: 0em;
+    background-color: #ffffff;
+    text-align: center;
+    color: #1c1c1c;
+  }
+
+  #action-page-ps{
+    position: fixed;
+    bottom: 0%;
+    left: 40%;
+    width: 20%;
+    height: 14%;
+    background-color: #fff;
+    border-radius: 10px 10px 0px 0px;
   }
 
 }

@@ -8,13 +8,41 @@
 
 	<div id="content" class="content-thin">
     <div class="box-page-ps open">
-      <input type="checkbox" name="name" value=""><label for="name">f</label>
-      <h3>StarWars</h3>
-      <h5>1º/2015</h5>
-    </div>
-    <div class="box-page-ps open">
+			<div class="box-page-ps-top">
+
+			</div>
+			<div class="box-page-ps-middle">
+
+			</div>
+			<div class="box-page-ps-content">
+				<input type="checkbox" name="name" value=""><label for="name">f</label>
+	      <h3>StarWars</h3>
+	      <h5>1º/2015</h5>
+			</div>
+			<div class="box-page-ps-bottom">
+
+			</div>
 
     </div>
+
+		<div class="box-page-ps closed">
+			<div class="box-page-ps-top">
+
+			</div>
+			<div class="box-page-ps-middle">
+
+			</div>
+			<div class="box-page-ps-content">
+				<input type="checkbox" name="name" value=""><label for="name">f</label>
+	      <h3>StarWars</h3>
+	      <h5>1º/2015</h5>
+			</div>
+			<div class="box-page-ps-bottom">
+
+			</div>
+
+    </div>
+
     <div id="action-page-ps">
         <img src="" alt="" />
         <img src="./images/open_ps.png" alt="" />

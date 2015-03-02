@@ -79,7 +79,6 @@
 				</p>
 				<p> <?php echo $this->session->userdata('telefone');?> </p>
 			</div>
->>>>>>> 05b850079c0fd5427156cf24d3d643c4c090d56f
 		</div>
 
 	</div>
