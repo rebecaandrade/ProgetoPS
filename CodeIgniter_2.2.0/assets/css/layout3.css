@@ -1,173 +1,99 @@
-/* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0%;
-  padding: 0%;
-  border: 0%;
-  /*font-size: 100%;*/
-  font-size: 62.5%; /*1em = 10px*/
-  font: inherit;
-  vertical-align: baseline;
-  text-decoration: none;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block;
-}
-body {
-  line-height: 1;
-}
-ol, ul {
-  list-style: none;
-}
-blockquote, q {
-  quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-/*---------------------------------------*/
-
-body{
-  background-color: #002f67;
-  font-family: 'Open Sans', sans-serif;
-}
-
-.header-text-uppercase{
-  text-transform: uppercase;
-  font-weight: bolder;
-  color: #73c04a;
-  margin-top: 1%;
-}
-
-@media screen and (min-width: 319px) and (max-width: 480px){
+@media screen  and (min-width: 769px) and (max-width : 1200px){
   .center-large{
-    max-width: 479px;
-    width: 100%;
+    max-width: 1200px;
+    width: 81.25%; /*(1280 px - 240px) / 1280px*/
     margin: 0% auto;
   }
 
   .center-thin{
-    max-width: 479px;
-    width: 100%;
+    max-width: 1200px;
+    width: 92.1875%; /*(1280 px - 50px - 50px) / 1280px*/
     margin: 0% auto;
   }
 
   #header{
     width: 100%;
+    background-color: #DDD;
   }
 
   .header-large{
-    height: 40%;
-    margin-top: 10%;
-    margin-bottom: 10%;
+    height: 11.125%; /*(195px + 110px) / 800 px;*/
+    margin-top: 6.875%; /*55px / 800px */
+    margin-bottom: 6.875%; /*55px / 800px */
   }
 
   .header-thin{
-    height: 30%;
-    margin-top: 7%;
-    margin-bottom: 7%;
+    height: 6.125%; /*(195px + 110px) / 800 px;*/
+    margin-top: 6.875%; /*55px / 800px */
+    margin-bottom: 6.875%; /*55px / 800px */
   }
 
   #header-logo{
-    background-image: url("../images/logo.png");
+    height: 100%;
+    background-image: url("../images//logo.png");
     background-size: contain;
     background-repeat: no-repeat;
+    float: left;
   }
 
   .header-logo-large{
-    height: 60%;
-    width: 50%;
-    margin: 0% auto 6% auto;
+    width: 17.519230769230769230769230769231%; /*(362px - 55px) / 1040px*/
+    margin-right: 3.2884%; /*55px / 1180px*/
   }
 
   .header-logo-thin{
-    height: 50%;
-    width: 35%;
-    margin: 0% auto 6% auto;
+    width: 16.711864406779661016949152542373%; /*(233px - 35.8px) / 1040px*/
+    margin-right: 3.0338983050847457627118644067797%; /*35.8px / 1040px*/
   }
 
   #header-text{
-    height: 40%;
-    width: 100%;
-    text-align: center;
+    height: 100%;
+    width: 65.192307692307692307692307692307%; /*678px / 1040px*/
+    float: left;
     color: #ffffff;
-  }
-
-  .header-text-large{
-  }
-
-  .header-text-thin{
   }
 
   #header-text-large-diamond{
     height: 43.589743589743589743589743589744%; /*(195px - 55px - 55px) / 195px*/
-    width: 100%;
-    font-size: 18pt;
+    width: 60%;
+    font-size: 24pt;
     font-weight: bold;
   }
 
-  .header-text-large-square-2{
+  .header-text-large-square-1, .header-text-large-square-2{
     height: 28.205128205128205128205128205128%; /*55px / 195px*/
-    width: 100%;
-    font-size: 14pt;
+    width: 60%;
+    font-size: 16pt;
     font-weight: normal;
-  }
-
-  .header-text-large-square-2 a{
-    color: #ffffff;
+    text-align: center;
   }
 
   #header-text-thin-diamond{
     height: 43.589743589743589743589743589744%; /*(195px - 55px - 55px) / 195px*/
-    width: 100%;
-    font-size: 18pt;
+    width: 60%;
+    font-size: 24pt;
     font-weight: bold;
   }
 
-  .header-text-thin-square-2{
+  .header-text-thin-square-1, .header-text-thin-square-2{
     height: 28.205128205128205128205128205128%; /*55px / 195px*/
-    width: 100%;
-    font-size: 14pt;
+    width: 60%;
+    font-size: 16pt;
     font-weight: normal;
-  }
-
-  .header-text-thin-square-2 a{
-    color: #ffffff;
+    text-align: center;
   }
 
   #content{
+    background-color: #EEE;
     width: 100%;
   }
 
   .content-large{
-    height: 100%;
+    height: 48.125%;
   }
 
   .content-thin{
-    height: 100%;
+    height: 48.125%;
   }
 
   #login-field{
@@ -417,69 +343,4 @@ body{
     border-radius: 0px 0px 10px 0px;
   }
 
-      @media screen and (orientation: landscape){
-        .center-large{
-          width: 81.25%;
-        }
-
-        .center-thin{
-          width: 92.1875%; /*(1280 px - 50px - 50px) / 1280px*/
-        }
-
-        .header-large{
-          height: 30%;
-          margin-top: 10%;
-          margin-bottom: 10%;
-        }
-
-        .header-thin{
-          height: 30%;
-          margin-top: 7%;
-          margin-bottom: 7%;
-        }
-
-        #header-logo{
-          float: left;
-        }
-
-        .header-logo-large{
-          height: 100%;
-          width: 38%;
-          margin: 0% 5% 0% 0%;
-        }
-
-        .header-logo-thin{
-          height: 100%;
-          width: 35%;
-          margin: 0% 5% 0% auto;
-        }
-
-        #header-text{
-          height: 100%;
-          width: 57%;
-          float: left;
-        }
-
-        .header-text-large{
-        }
-
-        .header-text-thin{
-        }
-
-        #header-text-large-diamond{
-          font-size: 18pt;
-          font-weight: bold;
-        }
-
-        .header-text-large-square-1, .header-text-large-square-2{
-          height: 28.205128205128205128205128205128%; /*55px / 195px*/
-          width: 100%;
-          font-size: 16pt;
-          font-weight: normal;
-        }
-
-        #login-field{
-          height: 70%;
-        }
-      }
 }

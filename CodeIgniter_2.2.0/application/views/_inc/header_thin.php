@@ -5,6 +5,9 @@
   <script src="<?php echo base_url();?>assets/javascript/sweetalert/lib/sweet-alert.min.js"></script>
   <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/javascript/sweetalert/lib/sweet-alert.css">
   <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/layout.css">
+  <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/layout2.css">
+  <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/layout3.css">
+  <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/layout4.css">
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800,700,600,600italic,400italic,300' rel='stylesheet' type='text/css'>
   <script src="<?php echo base_url(); ?>complemento/js/bootstrap.min.js"></script>
   <script src="<?php echo base_url(); ?>complemento/js/jquery.dataTables.min.js"></script>
@@ -16,8 +19,8 @@
     <div id="header-logo" class="header-logo-thin">
     </div>
     <div id="header-text" class="header-text-thin">
-      <div class="header-text-large-square-1">
+      <div class="header-text-thin-square-1">
       </div>
-      <div id="header-text-large-diamond">
+      <div id="header-text-thin-diamond">
         <h3>Processo Seletivo</h3>
       </div>

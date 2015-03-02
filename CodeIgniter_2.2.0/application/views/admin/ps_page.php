@@ -1,5 +1,4 @@
-</div>
-</div>/*Não apagar estes div's*/
+<?php echo $this->load->view('_inc/header_thin') ?>
 
 <div class="box-ps-open">
   <div class="box-ps-open-top">
@@ -95,3 +94,5 @@
     <img src="./images/open_ps.png" alt="" />
     <img src="./images/close_ps.png" alt="" />
 </div>
+
+<?php echo $this->load->view('_inc/footer') ?>

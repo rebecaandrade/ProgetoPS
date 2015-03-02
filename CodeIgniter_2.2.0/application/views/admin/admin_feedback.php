@@ -1,4 +1,4 @@
-<?php echo $this->load->view('_inc/header_small')?>
+<?php echo $this->load->view('_inc/header_thin')?>
 
 <div id="subtitle-logo-small">
   <span class="subtitle-url"><h4>Preencher FeedBack</h4></span>

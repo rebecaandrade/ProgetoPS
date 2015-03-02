@@ -1,12 +1,52 @@
 <?php echo $this->load->view('_inc/header_thin')?>
 
-		<div class="header-text-large-square-2 header-text-uppercase">
+		<div class="header-text-thin-square-2 header-text-uppercase">
 			<h3>informações gerais</h3>
 		</div>
 	</div>
 </div>
 
 	<div id="content" class="content-thin">
+
+		<div id="profile-nav">
+			<div id="profile-nav-top" class="denied">
+				<p>
+					TENTE NOVAMENTE
+				</p>
+				<span><!-- Icone de aprovado --></span>
+			</div>
+			<div id="profile-nav-body">
+				<div class="profile-nav-body-button">
+					<img src="<?php echo base_url();?>assets/images/icon_feedback.png" alt="" />
+					<p>
+						FeedBack
+					</p>
+				</div>
+				<div class="profile-nav-body-button">
+					<img src="<?php echo base_url();?>assets/images/icon_date.png" alt="" />
+					<p>
+						Horário
+					</p>
+				</div>
+				<div class="profile-nav-body-button">
+					<a href="<?php echo base_url();?>index.php/usuario/fale_conosco">
+					<img src="<?php echo base_url();?>assets/images/icon_email.png" alt="" />
+					<p>
+						Fale Conosco
+					</p>
+					</a>
+				</div>
+				<div class="profile-nav-body-button">
+					<a href="<?php echo base_url();?>index.php/usuario/edit_account">
+					<img src="<?php echo base_url();?>assets/images/icon_edit.png" alt="" />
+					<p>
+						Editar Informações
+					</p>
+					</a>
+				</div>
+			</div>
+		</div>
+
 		<div id="profile-id">
 			<div id="profile-id-photo">
 				<div id="profile-id-photo-frame">
@@ -15,7 +55,7 @@
 				</div>
 				<div id="profile-id-photo-name">
 					<p>
-						<?php echo $this->session->userdata('nome');?>
+						<?php echo $this->session->userdata('nome');?> Danilo
 					</p>
 				</div>
 			</div>
@@ -41,41 +81,7 @@
 				<p> <?php echo $this->session->userdata('telefone');?> </p>
 			</div>
 		</div>
+
 	</div>
-
-<!--
-
-<div id="profile-nav">
-	<div id="profile-nav-top">
-		<img src="<?php echo base_url();?>assets/images/status_profile_out.png" alt="" />
-	</div>
-	<div id="profile-nav-body">
-		<div class="profile-icon-nav">
-			<img src="<?php echo base_url();?>assets/images/icon_feedback.png" alt="" />
-			<p>FeedBack</p>
-		</div>
-
-		<div class="profile-icon-nav">
-			<img src="<?php echo base_url();?>assets/images/icon_date.png" alt="" />
-			<p>Horário</p>
-		</div>
-
-		<div class="profile-icon-nav">
-			<a href="<?php echo base_url();?>index.php/usuario/fale_conosco">
-			<img src="<?php echo base_url();?>assets/images/icon_email.png" alt="" />
-			<p>Fale Conosco</p></a>
-		</div>
-
-		<div class="profile-icon-nav">
-			<a href="<?php echo base_url();?>index.php/usuario/edit_account"><img src="<?php echo base_url();?>assets/images/icon_edit.png" alt="" />
-			<p>Editar Informações</p>
-		</a>
-		</div>
-	</div>
-</div>
-
-<div id="profile-footer">
-</div>
--->
 
 <?php echo $this->load->view('_inc/footer')?>

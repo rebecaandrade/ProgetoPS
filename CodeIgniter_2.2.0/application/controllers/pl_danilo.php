@@ -21,6 +21,10 @@ class PL_Danilo extends CI_Controller{
     $this->load->view('user/user_postlogin');
   }
 
+  public function edit_info(){
+    $this->load->view('user/edit_info');
+  }
+
   public function admin_feedback(){
     $this->load->view('admin/admin_feedback');
   }
