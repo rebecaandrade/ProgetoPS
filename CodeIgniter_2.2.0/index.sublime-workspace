@@ -1,0 +1,335 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"ma",
+				"main	main()"
+			],
+			[
+				"_",
+				"_POST"
+			],
+			[
+				"admin",
+				"admin_model"
+			],
+			[
+				"id",
+				"id_login"
+			],
+			[
+				"cre",
+				"create_new_session"
+			],
+			[
+				"pas",
+				"password"
+			],
+			[
+				"usuario",
+				"usuario_model"
+			],
+			[
+				"in",
+				"input"
+			],
+			[
+				"usu",
+				"Usuario"
+			],
+			[
+				"edi",
+				"edita_cadastro"
+			],
+			[
+				"h",
+				"href	Attr"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 288.0,
+		"selected_items":
+		[
+			[
+				"Package Control: i",
+				"Package Control: Install Package"
+			],
+			[
+				"control",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 472.0
+	},
+	"console":
+	{
+		"height": 153.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/Igor/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/Igor/Desktop/teste.c",
+		"/C/Program Files (x86)/mingw-w64/i686-4.9.2-posix-dwarf-rt_v3-rev0/mingw32/i686-w64-mingw32/include/stdio.h",
+		"/C/Users/Igor/Desktop/coisa.c",
+		"/C/Users/Igor/AppData/Local/Temp/Rar$DIa0.883/Breaking Bad S04E09.srt",
+		"/C/Users/Igor/Downloads/Torrents/The.Big.Bang.Theory.S08E16.HDTV.x264-LOL[ettv]/Torrent-Downloaded-From-extratorrent.cc.txt",
+		"/C/wamp/www/SistemaPS/CodeIgniter_2.2.0/complemento/Números mágicos",
+		"/C/wamp/www/SistemaPS/.idea/encodings.xml",
+		"/C/wamp/www/SistemaPS/CodeIgniter_2.2.0/application/config/config.php",
+		"/C/wamp/www/SistemaPS/CodeIgniter_2.2.0/application/controllers/access.php",
+		"/C/wamp/www/SistemaPS/CodeIgniter_2.2.0/application/controllers/usuario.php",
+		"/C/wamp/www/SistemaPS/CodeIgniter_2.2.0/application/models/admin_model.php",
+		"/C/wamp/www/SistemaPS/CodeIgniter_2.2.0/application/views/user/user_postlogin.php",
+		"/C/wamp/www/SistemaPS/CodeIgniter_2.2.0/application/views/admin/user_info.php",
+		"/C/Users/Igor/Documents/CJR/curso AngularJS/first_lass.html",
+		"/C/Users/Igor/Documents/CJR/curso AngularJS/first class.html",
+		"/C/wamp/www/SistemaPS/CodeIgniter_2.2.0/application/controllers/first class.html",
+		"/C/wamp/www/SistemaPS/CodeIgniter_2.2.0/application/views/user/edit_info.php",
+		"/C/wamp/www/grupo4/application/views/usuario/lista_membro.php",
+		"/C/wamp/www/SistemaPS/CodeIgniter_2.2.0/application/views/admin/user_list.php",
+		"/C/wamp/www/grupo4/application/views/usuario/lista_dados.php",
+		"/C/wamp/www/grupo4/application/views/membro/listar_dados.php",
+		"/C/wamp/www/grupo4/application/views/_inc/header.php",
+		"/C/wamp/www/SistemaPS/CodeIgniter_2.2.0/application/views/_inc/header_small.php",
+		"/C/wamp/www/grupo4/complemento/css/bootstrap.css",
+		"/C/wamp/www/SistemaPS/CodeIgniter_2.2.0/application/views/access/form.php",
+		"/C/wamp/www/SistemaPS/CodeIgniter_2.2.0/application/models/usuario_model.php",
+		"/C/wamp/www/SistemaPS/CodeIgniter_2.2.0/application/views/admin/admin_page.php",
+		"/C/wamp/www/SistemaPS/CodeIgniter_2.2.0/application/views/login.php",
+		"/C/wamp/www/SistemaPS/CodeIgniter_2.2.0/application/views/new_user.php",
+		"/C/wamp/www/SistemaPS/CodeIgniter_2.2.0/application/views/user/user_activity.php",
+		"/C/wamp/www/grupo4/application/models/usuario_model.php",
+		"/C/wamp/www/SistemaPS/CodeIgniter_2.2.0/application/views/user/user_page.php",
+		"/C/wamp/www/grupo4/application/controllers/usuario.php",
+		"/C/Users/Igor/Documents/CJR/Projeto PS/projetogenios/application/controllers/professor.php",
+		"/C/wamp/www/grupo4/application/controllers/acesso.php",
+		"/C/Users/Igor/Documents/CJR/Projeto PS/projetogenios/system/libraries/Pagination.php",
+		"/C/wamp/www/grupo4/application/config/mimes.php",
+		"/C/wamp/www/grupo4/application/config/doctypes.php",
+		"/C/wamp/www/grupo4/application/config/hooks.php",
+		"/C/wamp/www/grupo4/application/config/constants.php",
+		"/C/wamp/www/grupo4/application/config/user_agents.php",
+		"/C/wamp/www/grupo4/application/views/administrador/cadastrar_membro.php",
+		"/C/Users/Igor/Documents/CJR/Projeto PS/projetogenios/application/views/professor/cadastro.php",
+		"/C/wamp/www/grupo4/application/views/usuario/cadastro_membro.php",
+		"/C/wamp/www/SistemaPS/layout-ps/css/layout.css",
+		"/C/wamp/www/grupo4/application/views/usuario/login.php",
+		"/C/wamp/www/SistemaPS/CodeIgniter_2.2.0/application/views/admin/admin_list.php",
+		"/C/Users/Igor/Desktop/projetogenios/application/controllers/usuario.php",
+		"/C/wamp/www/SistemaPS/CodeIgniter_2.2.0/application/views/_inc/header_big.php",
+		"/C/wamp/www/grupo4/application/controllers/reserva.php",
+		"/C/wamp/www/SistemaPS/CodeIgniter_2.2.0/application/config/routes.php",
+		"/C/wamp/www/SistemaPS/CodeIgniter_2.2.0/application/views/usuario/lista_participante.php",
+		"/C/wamp/www/grupo4/application/config/autoload.php",
+		"/C/wamp/www/grupo4/application/controllers/sugestao.php",
+		"/C/wamp/www/grupo4/application/config/routes.php",
+		"/C/wamp/www/grupo4/application/config/profiler.php",
+		"/C/wamp/www/grupo4/application/config/migration.php",
+		"/C/wamp/www/grupo4/application/config/database.php",
+		"/C/wamp/www/SistemaPS/CodeIgniter_2.2.0/application/config/database.php",
+		"/C/wamp/www/SistemaPS/CodeIgniter_2.2.0/complemento/bd/Projeto_PS.sql",
+		"/C/wamp/www/grupo4/application/config/config.php",
+		"/C/Users/Igor/Downloads/Resident evil 2/README.TXT",
+		"/C/Users/Igor/Downloads/Resident evil 2/IMPORTANT NOTICE.txt",
+		"/C/Users/Igor/Downloads/Resident evil 2/Leon B_00_Scenario 2nd.RESIDENT2",
+		"/C/Users/Igor/Downloads/Resident evil 2/Leon A_00_Scenario 1st.RESIDENT2",
+		"/C/Users/Igor/AppData/Local/Temp/Rar$DIa0.119/IMPORTANT NOTICE ON LEON SAVE.txt",
+		"/C/Users/Igor/Downloads/Resident evil 2/Regist/DSETUP.DLL",
+		"/C/wamp/www/SistemaPS/CodeIgniter_2.2.0/application/controllers/admin.php",
+		"/C/Users/Igor/AppData/Local/Microsoft/New folder/Playboy USA - Full Year 2014 Collection/Please Read!.txt",
+		"/C/Users/Igor/Downloads/Torrents/The.Walking.Dead.S05E09.HDTV.x264-KILLERS[ettv]/Torrent-Downloaded-From-extratorrent.cc.txt",
+		"/C/Users/Igor/Downloads/Torrents/Resident Evil 6 - Full Crack - Saves OK/READ ME.txt",
+		"/C/Users/Igor/Downloads/Torrents/Resident_EvilL_6_STEAM_RiP-GameWorks/NoDVD/READ ME.txt",
+		"/C/Program Files (x86)/Steam/common/Resident Evil 6/READ ME.txt",
+		"/C/Users/Igor/Downloads/Vikings Season 1 Complete 720p.WEB.DL.sujaidr (pimprg)/vikings.s01e09.all.change.720p.web.dl.x264.sujaidr.srt",
+		"/C/Users/Igor/Downloads/Torrents/God of War - Collection by GhoSt/!!!ЧИТАТЬ.txt",
+		"/C/Users/Igor/Downloads/Captain America - The Winter Soldier (2014)/Captain America The Winter Soldier 2014 DVDRip XviD.srt",
+		"/C/Users/Igor/Downloads/Torrents/3DMGAME-FIFA.15.PC.Ultimate.Team.Edition.with.Up.4.Multi15.Cracked-3DM/readme.txt",
+		"/C/Users/Igor/Downloads/Torrents/3DMGAME-FIFA.15.PC.Ultimate.Team.Edition.with.Up.4.Multi15.Cracked-3DM/FIFA 15/readme.txt",
+		"/C/Users/Igor/Downloads/Torrents/3DMGAME-FIFA.15.PC.Ultimate.Team.Edition.with.Up.4.Multi15.Cracked-3DM/FIFA 15/说明.txt",
+		"/F/Counter strike link download.txt",
+		"/C/Users/Igor/Desktop/parada de texto.txt",
+		"/C/wamp/www/grupo4/application/models/sugestao_model.php",
+		"/H/Documents/2014/filmes.txt",
+		"/H/backup - vinicius/Desktop/Back Up/Originals/Pasta( novas)/Glauber ( Pasta)/Adobe.Photoshop.CS6.v13.0.FINAL.Multilingual.Incl.Patch-PainteR/LEIA.txt",
+		"/C/Users/Igor/Desktop/Crack Amtlib.dll 32bit & 64bit/a-Crack/64-bit/amtlib.dll",
+		"/C/Users/Igor/AppData/Local/Temp/Rar$DIa0.602/INSTALL - SERIAL.txt",
+		"/C/Users/Igor/Desktop/Fight.Club.10th.Anniversary.Edition.1999.1080p.BrRip.x264.YIFY.srt",
+		"/C/Users/Igor/Downloads/10738617_831750070219635_1938926167_n.srt",
+		"/C/Users/Igor/Downloads/Torrents/The Lord of the Rings - The Two Towers (2002)/Lord.Of.The.Rings.The.Two.Towers.2002.720p.BrRip.264.YIFY.srt",
+		"/G/installerdata.xml",
+		"/H/Documents/Prog/jog/FIFA 14/Coomo instalar.txt",
+		"/H/Documents/Prog/jog/FIFA 14/FIFA.14-ULTIMIATE.EDITION-SKIDROWCRACK/SKIDROWCRACK.COM.txt",
+		"/H/Documents/Prog/jog/FIFA 14/FIFA.14-ULTIMIATE.EDITION-SKIDROWCRACK/FIFA 14/__Installer/installerdata.xml",
+		"/H/Documents/Prog/jog/FIFA.13.INTERNAL-RELOADED/EXTREMEZONE.AKA.PIRATEPEDIA.STOLE.THIS.FROM.ZAMUNDA.NET.txt",
+		"/H/Documents/Prog/SOs/Windows.8.1.EN.x64.November.2014-NiKKA/activation.txt",
+		"/C/wamp/www/grupo4/application/models/livro_model.php",
+		"/C/Users/Igor/Downloads/Torrents/Windows 8.1 Pro X64 ESD US-ES-BR-PT Sep 2014/Windows 8.1 Pro VL X64 MULTI-4 ESD Sep 2014.txt",
+		"/C/Users/Igor/Documents/workspace/teste/src/exercicios/E6.class",
+		"/H/PATH CONFIGURATION.txt",
+		"/C/Users/Igor/Documents/aulasJava/exercicios aula 2/E1.java",
+		"/F/Documents/2014/Configuracoes do path.txt",
+		"/C/Users/Igor/Desktop/ESET Smart Security 8 (2015) + Activator  (x64)/ESET Smart Security 8 crack fix [filetie.com]/ESET Smart Security 8 crack fix [filetie.com]/How To Install ---  .txt",
+		"/F/Documents/2014/filmes.txt",
+		"/F/Documents/2014/Setups/Nero.2015.Platinum.v16.0.02900-DVT[rarbg]/I_LOVE_DVT/Serial.txt"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"usuario",
+			"pesquisa_usuario",
+			"atualizar_cadastro",
+			"usuario/list",
+			"carrega_home_superadministrador",
+			"carrega_home_administrador",
+			"carrega_home_candidato",
+			"session",
+			"mydb",
+			"0598",
+			"C:\\Program Files\\Java\\jdk1.8.0_20"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"user",
+			"search_user",
+			"update_account",
+			"load_home_superadmin",
+			"load_home_admin",
+			"load_home_user",
+			"C:\\Program Files\\Java\\jdk1.8.0_25"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 36.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "index.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 230.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

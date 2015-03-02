@@ -1,0 +1,1358 @@
+/*Ajustar line-height para não precisar ficar mudando em
+duas partes do código*/
+*{
+  margin: 0%;
+  padding: 0%;
+  border: 0%;
+  z-index: 0;
+  text-decoration: none;
+  border: 0px;
+  box-shadow: none;
+}
+
+body{
+  background-color: #002f67;
+  font-family: 'Open Sans', sans-serif;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  font-size: 62.5%; /*1em = 10px*/
+}
+
+h1{
+  font-weight:bold;
+  font-size: 6.4em;
+  display: inline-block;
+}
+
+h2{
+  font-size: 3.6em;
+  color: #73c04a;
+  text-transform:uppercase;
+}
+
+h3{
+  font-weight:bolder;
+  font-size: 4.2em;
+}
+
+h4{
+  font-size: 2.6em;
+  color: #73c04a;
+  text-transform:uppercase;
+}
+
+h5{
+  font-weight: normal;
+  font-size: 2.8em;
+}
+
+.h7{
+  display: block;
+  font-weight: bolder;
+  font-size: 21pt;
+  text-transform:uppercase;
+  text-align: center;
+}
+
+.h8{
+  display: block;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 21pt;
+  text-align: center;
+  color: #ffffff;
+}
+
+p{
+  font-weight: lighter;
+  font-size: 1.6em;
+}
+
+img{
+  max-width: 100%;
+  max-height: 100%
+}
+/*Customização Checkbox Button*/
+
+
+.checkbox{
+  display: block;
+  height: 2em;
+  width: 2em;
+  background-image: url("http://localhost/sistemaps/CodeIgniter_2.2.0/assets/images/checkbox_clean.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+input[type="checkbox"]:checked + label .checkbox{
+  background-image: url("http://localhost/sistemaps/CodeIgniter_2.2.0/assets/images/checkbox_clicked.png");
+}
+
+/*Customização Radio Button*/
+input[type=radio]{
+  display: none;
+}
+.radio{
+  margin: 0em 0em -0.6em 0em;
+  display: inline-block;
+  height: 2em;
+  width: 2em;
+  background-image: url("http://localhost/sistemaps/CodeIgniter_2.2.0/assets/images/checkbox_clean.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  overflow: visible;
+  z-index: 1;
+}
+
+.label-radio{
+  display: block;
+  height: 2em;
+  min-width: 2em;
+  max-width: 10em;
+  background-color: #73c04a;
+  font-size: 1.6em;
+  text-align: center;
+}
+
+input[type=radio]:checked + .label-radio .radio{
+  background-image: url("http://localhost/sistemaps/CodeIgniter_2.2.0/assets/images/checkbox_clicked.png");
+}
+
+.profile-icon-nav{
+  height: 42%;
+  width: 43.54%;
+  padding: 1em;
+  display: inline-block;
+  text-align: center;
+  margin: 0em 0.1em;
+}
+
+.profile-icon-nav:nth-child(4):hover{
+  border-radius: 0px 0px 10px 0px;
+}
+
+.profile-icon-nav:nth-child(3):hover{
+  border-radius: 0px 0px 0px 10px;
+}
+
+.profile-icon-nav a:visited, .profile-icon-nav a:active{
+  color: #1c1c1c;
+}
+
+.profile-icon-nav:hover, .profile-icon-nav a:hover{
+  background-color: #73c04a;
+  color: #ffffff;
+}
+
+.profile-icon-nav img{
+  max-width: 100%;
+  max-height:80%;
+  margin: 0 auto;
+  display: block;
+}
+
+@media screen and (min-width : 320px){
+  #container-big{
+    /*background-color: #DDD;*/
+    width: 92.1875%; /*1040px*/ /*1280px*/
+    margin: 0% auto;
+  }
+  #container-small{
+    /*background-color: #DDD;*/
+    height: 100%;
+    width: 92.1875%;
+    margin: 0% auto;
+  }
+
+  #header{
+    width: 100%;
+    height: 60%;
+    position: relative;
+    top: 6.875%;
+    left: 0%;
+  }
+
+  #logo{
+    height: 50.9999%; /*195px*/ /*800px*/
+    width: 100%; /**/ /*1280 - 120px - 120px;*/
+    display:block;
+    margin-right: 5.2884%;
+  }
+
+  #logo img{
+    display:block;
+    margin: 0% auto;
+  }
+
+  #text-logo{
+    height: 49.9999%;
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+  }
+
+  #title-logo{
+    height: 45%;
+    max-width: 100%;
+    margin-top: 6.875%;
+    line-height: 6em;/*Necessario para o titulo caber dentro da div*/
+  }
+
+  #subtitle-logo{
+    width: 100%;
+    height: auto;
+    margin-top: 13%;
+    text-align: center;
+    line-height: 2.8em;
+  }
+
+  .subtitle-url a{
+    color: #ffffff;
+  }
+
+  /*Login*/
+  #login-field{
+    height: 15em; /*227px*/ /*800px*/
+    width: 80%; /*567x*/ /*1040px*/
+    padding: 2em;
+    position: relative;
+    top: 50%; /*Está errado*//*Com top 0 está sobre outro elemento*/
+    left: 0%;
+    margin: 0% auto;
+    background-color: #ffffff;
+    border-radius: 20px;
+  }
+
+  #login-user, #login-password{
+    position: relative;
+    top: 0%;
+    left: 0%;
+    height: 50%;
+    width: 69.9999%;
+    display: inline-block;
+  }
+
+  #login-user img, #login-password img{
+    position: relative;
+    bottom: 0%;
+    left: 0%;
+    width: 6.4em; /*72px - 20 px*/ /*568px - 20 px*/
+    z-index: 1;
+  }
+
+  #login-user input[type="text"], #login-password input[type="password"]{
+    position:absolute;
+    top: 20%;
+    left: 1%;
+    width: 100%;
+    padding: 0.1em 0.5em 0.1em 3.5em;
+    border: 2px solid #73c04a;
+    border-radius: 10px;
+    font-weight: normal ;
+    font-size: 16pt;
+  }
+
+  #login-password a{
+    position: absolute;
+    top: 70%;
+    right: 0%;
+    color: black;
+    font-size: 1.6em;
+  }
+
+  #login-submission{
+    position: relative;
+    top: -150%;
+    left: 72.3%;
+    margin-left: 1em;
+    height: 100%;
+    width: 21.9999%;
+    padding: 1em;
+    border-left: 1px solid black;
+    display: block;
+    text-align: center;
+    line-height: 1.6em;
+  }
+
+  #login-field input[type="submit"]{
+    background-image: url("../images/button_light_accept.png");
+    background-size: 100%;
+    height: 3em;
+    width: 3em;
+    margin: 0 auto;
+    display: block;
+    position: absolute;
+    bottom: 7%;
+    left: 5%;
+    background-color: white;
+    border-radius: 3em;
+  }
+
+}
+
+@media screen and (min-width : 1224px){
+    #container-big{
+      /*background-color: #DDD;*/
+      height: 100%;
+      width: 81.25%; /*1040px*/ /*1280px*/
+      margin: 0% auto;
+      overflow: hidden;
+    }
+    #container-small{
+      /*background-color: #DDD;*/
+      height: 100%;
+      width: 92.1875%;
+      margin: 0% auto;
+    }
+    #header{
+      width: 100%;
+      height: 24.375%;
+      position: relative;
+      top: 6.875%;
+      left: 0%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 0%; /*55px*/ /*800px*/
+      margin-bottom: 0%; /*55px*/ /*800px*/
+    }
+
+    #logo{
+      height: 100%; /*195px*/ /*800px*/
+      width: 22.7%; /**/ /*1280 - 120px - 120px;*/
+      display:block;
+      float: left;
+      margin-left: 7%;
+      margin-right: 5.2884%;
+    }
+
+    #text-logo{
+      height: 100%;
+      width: 55%;
+      display: block;
+      float: left;
+      text-align: left;
+      color: white;
+    }
+
+    #title-logo{
+      height: 45%;
+      max-width: 100%;
+      margin-top: 6.875%;
+      line-height: 6em;/*Necessario para o titulo caber dentro da div*/
+    }
+
+    #subtitle-logo{
+      max-width: 100%;
+      height: auto;
+      margin-top: 0%;
+      text-align: center;
+      line-height: 2.8em;
+    }
+
+    .subtitle-url a{
+      color: #ffffff;
+    }
+
+    #header-small{
+      /*Deixar espaço de respiro para o layout se adaptar
+      pois muito justo, o simples aparecer da barra de rolagem
+      pode arruinar seu layout*/
+      width: 51%;
+      height: 18%;
+      position: relative;
+      top: 6.25%; /*50px*/ /*800px*/
+      left: 0%;
+      margin-bottom: 2%;
+    }
+
+    #logo-small{
+      height: 100%;
+      width: 29.6%;
+      display: block;
+      float: left;
+      margin-right: 5%;
+    }
+
+    #text-logo-small{
+      height: 100%;
+      width: 58%;
+      display: block;
+      float: left;
+      text-align: left;
+    }
+
+    #title-logo-small{
+      color: white;
+      height: 43%;
+      max-width:100%;
+      margin-top: 8.3%; /*35px*/ /*125px*/
+      line-height: 4.2em;
+    }
+
+    #subtitle-logo-small{
+      max-width: 100%;
+      height: 28%;
+      text-align:center;
+      line-height: 2.6em;
+    }
+
+    .icon{
+      max-height: 4em;
+      max-width:  4em;
+      z-index: 1;
+      display: inline-block;
+    }
+
+    .collum-2 {
+        width: 40.9999%;
+        display: inline-block;
+        float: left;
+        box-sizing: border-box;
+        padding:0% 10%;
+        color: #ffffff;
+        position: relative;
+        top: 10%;
+        left: 0%;
+    }
+
+    .collum-3 {
+        width: 33.3333%;
+        box-sizing: border-box;
+        padding:0% 7%;
+        color: #ffffff;
+        position: relative;
+        top: 10%;
+        left: 0%;
+    }
+
+    /*------------------------*/
+    /*Login*/
+    #login-field{
+      height: 28.375%; /*227px*/ /*800px*/
+      width: 44.296875%; /*567x*/ /*1040px*/
+      padding: 2em;
+      position: relative;
+      top: 15%; /*Está errado*//*Com top 0 está sobre outro elemento*/
+      left: 0%;
+      margin: 0% auto;
+      background-color: #ffffff;
+      border-radius: 20px;
+    }
+
+    #login-user, #login-password{
+      position: relative;
+      top: 0%;
+      left: 0%;
+      height: 50%;
+      width: 69.9999%;
+      display: inline-block;
+    }
+
+    #login-user img, #login-password img{
+      position: relative;
+      bottom: 0%;
+      left: 0%;
+      width: 6.4em; /*72px - 20 px*/ /*568px - 20 px*/
+      z-index: 1;
+    }
+
+    #login-user input[type="text"], #login-password input[type="password"]{
+      position:absolute;
+      top: 20%;
+      left: 1%;
+      width: 100%;
+      padding: 0.1em 0.5em 0.1em 3.5em;
+      border: 2px solid #73c04a;
+      border-radius: 10px;
+      font-weight: normal ;
+      font-size: 16pt;
+    }
+
+    #login-password a{
+      position: absolute;
+      top: 70%;
+      right: 0%;
+      color: black;
+      font-size: 1.6em;
+    }
+
+    #login-submission{
+      position: relative;
+      top: -105%;
+      left: 72.3%;
+      margin-left: 1em;
+      height: 100%;
+      width: 21.9999%;
+      padding: 1em;
+      border-left: 1px solid black;
+      display: block;
+      text-align: center;
+      line-height: 1.6em;
+    }
+
+    #login-field input[type="submit"]{
+      background-image: url("../images/button_light_accept.png");
+      background-size: 100%;
+      height: 3em;
+      width: 3em;
+      margin: 0 auto;
+      display: block;
+      position: absolute;
+      bottom: 7%;
+      left: 10%;
+      background-color: white;
+      border-radius: 3em;
+    }
+
+/*--------------Cadastro-------------*/
+    .collum-3{
+      height: 50%;
+      display: block;
+      color: #ffffff;
+      float:left;
+    }
+
+    .collum-3 label{
+      font-size: 1.6em;
+    }
+
+    .collum-3 input[type="text"], .collum-3 input[type="password"]{
+      height: 2.5em;
+      width: 100%;
+      margin-top: 0.3em;
+      margin-bottom: 0.5em;
+      padding-left: 0.5em;
+      padding-right: 0.5em;
+    }
+
+    .collum-3 input[type="submit"]{
+      background-image: url("../images/button_light_accept.png");
+      background-color: transparent;
+      background-size: 100%;
+      height: 3.5em;
+      width: 3.5em;
+      margin: 0 auto;
+      display: block;
+    }
+
+    #submission-photo{
+      width: 100%;
+      height: 65.5%;
+      position: relative;
+      top: 0%;
+      left: 0%;
+    }
+    #submission-photo img{
+      position: absolute;
+      top: 0%;
+      left: 0%;
+    }
+    #submission-photo:first-child{
+      z-index: 1;
+    }
+
+
+    /*Recuperar senha*/
+    #body-recovery{
+      width: 40%;
+      height: 20%;
+      position: relative;
+      top: 10%;
+      left: 0%;
+      margin: 0 auto;
+      color: #ffffff;
+    }
+
+    #body-recovery input[type="text"]{
+      height: 2.5em;
+      width: 100%;
+      margin-top: 0.3em;
+      margin-bottom: 0.5em;
+      padding-left: 0.5em;
+      padding-right: 0.5em;
+    }
+
+    #body-recovery input[type="submit"]{
+      background-image: url("../images/button_dark_accept.png");
+      background-size: 100%;
+      background-color: transparent;
+      height: 3.5em;
+      width: 3.5em;
+      margin: 0 auto;
+      display: block;
+    }
+/*--------------Pós-Login-----------*/
+    #post-login-body{
+      width: 50%;
+      height: 45%;
+      margin: 9% /*10em*/ auto 0% auto;
+      background-color: #ffffff;
+      border-radius: 10px;
+    }
+
+    .post-login-option{
+      height: 84%;
+      width: 41.3%;
+      padding: 1em;
+      float: left;
+      display: inline;
+      font-size: 2.4em;
+      text-align: center;
+      font-weight: bolder;
+      text-transform: uppercase;
+    }
+
+    .post-login-option img{
+      max-height: 80%;
+      display: block;
+      margin: 0% auto;
+    }
+
+    .post-login-option:hover{
+      color: #ffffff;
+      background-color: #73c04a;
+    }
+
+    .post-login-option:first-child:hover{
+      border-radius: 10px 0em 0em 10px;
+    }
+
+    .post-login-option:last-child:hover{
+      border-radius: 0px 10px 10px 0em;
+    }
+
+/*--------------Tela Usuário-------------*/
+    #profile-body{
+      width: 59.375%; /*800px - 2em - 2em*/ /*1180px*/
+      height: 46.625%; /*413 px - 2em - 2em*/ /*800px*/
+      position: relative;
+      top: 10%;
+      left: 0%;
+      float: left;
+      background-color: #ffffff;
+      border-radius: 10px;
+      padding: 2em;
+    }
+
+    .profile-photo{
+      width: 35.9999%;
+      height: 100%;
+      position: relative;
+      top: 0%;
+      left: 0%;
+      border: 3px solid black;
+      float: left;
+      /*background-color: purple;*/
+    }
+
+    .profile-photo p /*Texto da foto*/{
+      position: absolute;
+      bottom: 0%;
+      left: 0%;
+      background-color: black;
+      width: 100%;
+      max-height: 9.9999%;
+      text-align: center;
+      color: white;
+      font-size: 18pt;
+      font-weight: normal;
+      overflow: hidden;
+      -moz-text-overflow: ellipsis;
+      -webkit-text-overflow: ellipsis;
+      -ms-text-overflow: ellipsis;
+      -o-text-overflow: ellipsis;
+    }
+
+    .profile-photo img{
+      position: absolute;
+      top: 0%;
+      left: 0%;
+      height: 89.9999%;
+    }
+    .profile-photo img:first-child{
+      z-index: 1;
+    }
+
+    #profile-data{
+      width: 54.999%;
+      height: 89.9999%;
+      float: left;
+      margin-left: 2em;
+      line-height: 16pt;
+      /*background-color: yellow;*/
+    }
+    /*Titulos*/
+    #profile-data p:nth-child(odd){
+      font-weight: bold;
+    }
+
+    #profile-nav{
+      width: 28.984375%; /*371px*/ /*1180px*/
+      height: 54.625%;
+      position: relative;
+      top: 10%;
+      left: 0%;
+      float: left;
+      margin-left: 2em;
+      border-radius: 10px;
+    }
+
+    #profile-nav-top{
+      border-radius: 10px 10px 0px 0px;
+      width: 100%;
+      height: auto;
+    }
+
+    #profile-nav-body{
+      background-color: #ffffff;
+      width: 100%;
+      height: 72%;
+      border-radius: 0px 0px 10px 10px;
+    }
+
+    #profile-footer{
+      background-color: #DDD;
+      width: 60%;
+      height: 10%;
+      position: relative;
+      top: 65%;
+      left: 0%;
+      margin: 0% auto;
+    }
+
+/*--------------Feedback Usuário-------------*/
+    #body-feedback{
+      height: 65%;
+      width: 70%;
+      border-radius: 10px;
+      margin: 5% auto 0% auto;
+      background-color: #ffffff;
+    }
+
+    #feedback-text{
+      width: 67.6%;
+      height: 79.999%;
+      padding: 1em;
+      border-radius: 10px 0px 0px 0px;
+      overflow-y: scroll;
+      overflow-x: hidden;
+    }
+
+    #feedback-footer{
+      width: 69.9999%;
+      height: 19.999%;
+      border-top: 1px solid #000000;
+      border-radius: 0px 0px 0px 10px;
+    }
+
+    #feedback-nav{
+      width: 29.999%;
+      height: 100%;
+      float: right;
+      position: relative;
+      top: -85%;
+      left: 0%;
+      border-left: 1px solid #000000;
+      text-align: center;
+    }
+
+    #feedback-nav-top{
+      width: 100%;
+      height: 15.9999%;
+      background-color: #73c04a;
+      display: block;
+      border-radius: 0px 10px 0px 0px;
+      text-transform: uppercase;
+    }
+
+    #feedback-nav-body{
+      width: 100%;
+      height: 83.9999%;
+      display: block;
+      border-radius: 0px 0px 10px 0px;
+    }
+
+    #feedback-nav-body p{
+      margin: 2% 0%;
+      font-size: 2.1em;
+      font-weight: bold;
+    }
+
+    #feedback-nav-body p:hover{
+      background-color: #DDD;
+    }
+
+/*--------------Fale Conosco-------------*/
+    #email-body{
+      height: 40%;
+      width: 50%;
+      margin:0 auto;
+      background-color: #ffffff;
+      border-radius: 10px;
+      padding: 1em 2em 2em 2em;
+    }
+
+    #email-body h5{
+      font-weight: lighter;
+      margin-bottom: 0.3em;
+      font-size: 21pt;
+    }
+
+    textarea{
+      border:1px solid black;
+      width:100%;
+      height:65%;
+      margin-bottom: 2%;
+      resize: none;
+      padding: 0.5em;
+    }
+
+    #email-body input[type="submit"]{
+      background-image: url("../images/button_light_accept.png");
+      background-size: 100%;
+      height: 3.5em;
+      width: 3.5em;
+      margin: 0 auto;
+      display: block;
+    }
+/*-----------Editar Informações---------*/
+  .collum-2{
+    height: 50%;
+    display: block;
+    color: #ffffff;
+    float:left;
+  }
+
+  .collum-2 label{
+    font-size: 1.6em;
+  }
+
+  .collum-2 input[type="text"], .collum-2 input[type="password"]{
+    height: 2.5em;
+    width: 100%;
+    margin-top: 0.3em;
+    margin-bottom: 0.5em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .collum-2 input[type="submit"]{
+    background-image: url("../images/button_dark_accept.png");
+    background-color: transparent;
+    background-size: 100%;
+    height: 3.5em;
+    width: 3.5em;
+    margin: 0 auto;
+    display: block;
+  }
+
+    /*Processo Seletivo*/
+    .box-ps{
+      width: 20%;
+      height: 20%;
+      margin: 1em;
+      background-color: white;
+      text-align: center;
+      display: inline-block;
+      position: relative;
+      top: 0%;
+      left: 0%;
+    }
+
+    .box-ps-closed{
+      width: 20%;
+      height: 20%;
+      margin: 1em;
+      background-color: white;
+      text-align: center;
+      display: inline-block;
+    }
+
+    .box-ps-open{
+      width: 15%;
+      height: 25%;
+      margin: 1em;
+      background-color: white;
+      text-align: center;
+      display: inline-block;
+    }
+
+    .box-ps-open-top{
+      width: 15%;
+      height: 25%;
+      margin: 1em;
+      background-color: white;
+      text-align: center;
+      display: inline-block;
+    }
+    .box-ps-open-center{
+      width: 15%;
+      height: 25%;
+      margin: 1em;
+      background-color: white;
+      text-align: center;
+      display: inline-block;
+    }
+    .box-ps-open-bottom{
+      width: 15%;
+      height: 25%;
+      margin: 1em;
+      background-color: white;
+      text-align: center;
+      display: inline-block;
+    }
+
+    #caixa{
+      position: relative;
+      top: 0%;
+      right: 0%;
+    }
+
+    #quadrado-cima{
+      width: 50px;
+      /*height: 50px;*/
+      height: 25px;
+      position: absolute;
+      top: 0%;
+      left: 25px;
+      background-color: #73c04a;
+      transform: skewX(-45deg) translateY(49px) translateX(37px) rotateX(0);
+      transition: transform 2s, height 2s;
+    }
+
+    #quadrado-meio{
+      width: 25px;
+      height: 50px;
+      position: absolute;
+      top: 62px;
+      left: 50px;
+      background-color: #ffffff;
+      transform: skewY(-45deg);
+    }
+
+    #quadrado-baixo{
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      top: 124px;
+      left: 0%;
+      background-color: #73c04a;
+      transform: translateY(-50px) rotateX(0);
+      transition: transform 2s;
+    }
+
+    #caixa:hover #quadrado-baixo{
+      transform: translateY(0) rotateX(180deg);
+    }
+    #caixa:hover #quadrado-cima{
+      transform: skewX(0) translateY(0) translateX(0) rotateX(-180deg);
+      height: 50px;
+    }
+
+    #action-ps{
+      position: fixed;
+      bottom: 0%;
+      left: 40%;
+      margin: 0 auto;
+      height: 10%;
+      width: 20%;
+      background-color: #ffffff;
+      border-radius: 20px 20px 0px 0px;
+      -webkit-transition: height 2s ease-out;
+      -moz-transition: height 2s ease-out;
+      -o-transition: height 2s ease-out;
+      transition: height 2s ease-out;
+    }
+
+    #action-ps :hover{
+      height: 20%;
+    }
+
+    #action-ps img{
+      max-width: 40%;
+      max-height: 40%;
+    }
+
+/*--------------Entrevista-------------*/
+    #body-interview{
+      width: 100%;
+      height: 40%;
+      position: relative;
+      top: 10%;
+      left: 0%;
+      color: #ffffff;
+    }
+
+    #table-interview{
+      overflow-x: scroll;
+      overflow-y: hidden;
+    }
+
+    #table-interview table{
+      border-collapse: collapse;
+      text-align: left;
+      color: #ffffff;
+    }
+
+    #table-interview table thead tr:first-child th{
+      background-color: #64a641;
+      border-right: 1px solid #ffffff;
+      border-bottom: 1px solid #ffffff;
+      font-weight: normal;
+      font-size: 1em;
+      padding: 0.2em 1em 0.2em 1em;
+    }
+
+    #table-interview table thead tr:last-child th{
+      border-right: 1px solid #ffffff;
+      font-weight: normal;
+      padding: 0.2em 1em 0.2em 1em;
+      background-color: #73c04a;
+      font-size: 1.2em;
+    }
+
+    #table-interview table tbody tr:first-child td{
+      background-color: #ffffff;
+      min-width: 6%;
+      min-height: 8%;
+      border-right: 1px solid black;
+      color: #1a1a1a;
+      font-weight: lighter;
+      text-align: left;
+      padding: 0em 0.4em 0em 0.4em;
+    }
+
+    #table-interview table tbody tr:last-child{
+      background-color: #73c04a;
+      padding: 0.2em 1em 0.2em 1em;
+    }
+
+    #table-interview table tr:last-child input{
+      display: block;
+      margin: 0% auto;
+    }
+    /*
+    #table-interview table tbody input[type="checkbox"]:checked + tbody tr:first-child td{
+      background-color: red;
+    }
+    */
+/*--------------Lista de Candidatos-------------*/
+    #list-user{
+      border-collapse: collapse;
+      width: 60%;
+      height: auto;
+      margin:0 auto;
+      position: relative;
+      top: 7%;
+      left: 0%;
+    }
+
+    #list-user thead{
+      /*Thead não aceita padding*/
+      background-color: #333333;
+      border-collapse: collapse;
+      color: #ffffff;
+    }
+
+    #list-user th{
+      padding: 0.3em;
+      text-align: center;
+    }
+
+    #list-user tbody{
+      background-color: #ffffff;
+      color: #000000;
+      text-align: center;
+    }
+
+    #list-user td{
+      padding: 0.5em;
+      text-align: center;
+      width: 60%;
+    }
+
+/*-------Visualizar Administradores-----*/
+    #list-admin{
+      border-collapse: collapse;
+      width: 60%;
+      height: auto;
+      margin: 5% auto 0% auto;
+    }
+
+    #list-admin thead{
+      /*Thead não aceita padding*/
+      background-color: #333333;
+      border-collapse: collapse;
+      color: #ffffff;
+    }
+
+    #list-admin th{
+      padding: 0.3em;
+      text-align: center;
+    }
+
+    #list-admin th:first-child{
+      -moz-border-radius:10px;
+      -webkit-border--radius:10px;
+      border-radius:10px;
+    }
+
+    #list-admin tbody{
+      background-color: #ffffff;
+      color: #000000;
+      text-align: center;
+    }
+
+    #list-admin td{
+      padding: 0.5em;
+      text-align: center;
+      width: 60%;
+      text-overflow: ellipsis;
+    }
+
+    td img{
+      height: auto;
+      width: 40%;
+    }
+
+    /*Tela Administrador*/
+    #body-admin{
+      width: 64%;
+      height: 60%;
+      margin:0 auto;
+      position: relative;
+      top: 7%;
+      left: 0%;
+    }
+
+    #body-admin-info{
+      width: 100%;
+      height: 54.9999%;
+      background-color: #ffffff;
+      border-radius: 10px 10px 0px 0px;
+      box-sizing: border-box;
+      padding: 1em;
+    }
+
+    .count-activity{
+      width: 49.8%;
+      height: 80%;
+      background-color: #DDD;
+      display: inline-block;
+    }
+
+    #body-admin-nav{
+      width: 95%;
+      height: 40.9999%;
+      background-color: #1c1c1c;
+      border-radius: 0px 0px 10px 10px;
+      padding: 2em;
+    }
+
+    .admin-nav{
+      height: 85%;
+      width: 23.9999%;
+      padding: 0.5em;
+      display: inline-block;
+      font-size: 18pt;
+      text-align: center;
+      font-weight: bold;
+      color: #ffffff;
+      font-size: 1.4em;
+    }
+    .admin-nav:hover{
+      background-color: #73c04a;
+      color: #ffffff;
+    }
+
+    .admin-nav img{
+      display: block;
+      margin: 0% auto;
+      max-height: 80%;
+    }
+
+/*--------------Lista de Admin's-------------*/
+    #user-info{
+      width: 59.375%; /*800px - 2em - 2em*/ /*1180px*/
+      height: 46.625%; /*413 px - 2em - 2em*/ /*800px*/
+      position: relative;
+      top: 10%;
+      left: 0%;
+      float: left;
+      background-color: #ffffff;
+      border-radius: 10px;
+      padding: 2em;
+    }
+
+    .profile-photo{
+      width: 35.9999%;
+      height: 100%;
+      position: relative;
+      top: 0%;
+      left: 0%;
+      border: 3px solid black;
+      float: left;
+      /*background-color: purple;*/
+    }
+
+    .profile-photo p /*Texto da foto*/{
+      position: absolute;
+      bottom: 0%;
+      left: 0%;
+      background-color: black;
+      width: 100%;
+      max-height: 9.9999%;
+      text-align: center;
+      color: white;
+      font-size: 18pt;
+      font-weight: normal;
+      overflow: hidden;
+      -moz-text-overflow: ellipsis;
+      -webkit-text-overflow: ellipsis;
+      -ms-text-overflow: ellipsis;
+      -o-text-overflow: ellipsis;
+    }
+
+    .profile-photo img{
+      position: absolute;
+      top: 0%;
+      left: 0%;
+      height: 89.9999%;
+    }
+    .profile-photo img:first-child{
+      z-index: 1;
+    }
+
+    #profile-data{
+      width: 54.999%;
+      height: 89.9999%;
+      float: left;
+      margin-left: 2em;
+      line-height: 16pt;
+      /*background-color: yellow;*/
+    }
+    /*Titulos*/
+    #profile-data p:nth-child(odd){
+      font-weight: bold;
+    }
+
+    #user-activity{
+      width: 28.984375%; /*371px*/ /*1180px*/
+      height: 52.625%;
+      position: relative;
+      top: 10%;
+      left: 0%;
+      float: left;
+      margin-left: 2em;
+      border-radius: 10px;
+    }
+
+    #user-activity-nav-top{
+      border-radius: 10px 10px 0px 0px;
+      width: 100%;
+      height: auto;
+    }
+
+    #user-activity-nav-body{
+      background-color: #ffffff;
+      width: 100%;
+      height: 72%;
+      border-radius: 0px 0px 10px 10px;
+      text-align: center;
+    }
+
+    #user-interview{
+      width: 62.5%; /*800px - 2em - 2em*/ /*1180px*/
+      height: 15%;
+      clear: both;
+      position: relative;
+      top: 15%;
+      left: 0%;
+      background-color: #DDD;
+    }
+
+/*--------------Escrever FeedBack-------------*/
+    #admin-feedback{
+      width: 73.828125%; /*945px*/ /*1180*/
+      height: 70.5%; /*564px*/ /*1800*/
+      margin: 6% auto 0% auto;
+    }
+
+    #admin-feeback-top{
+      width: 94.6%;
+      height: 10.9999%;
+      padding: 1em 1em 1em 4em;
+      background-color: #1c1c1c;
+      border-radius: 10px 10px 0px 0px;
+      color: #ffffff;
+    }
+
+    #admin-feeback-top h5{
+      /*position: relative;
+      top: -90%;
+      left: 10%;*/
+      width: 50%;
+      height: 100%;
+      display: inline-block;
+      text-align: left;
+    }
+
+    #admin-feeback-body{
+      width: 100%;
+      height: 64.9999%;
+      background-color: #ffffff;
+    }
+
+    #feedback-body-text{
+      width: 72.82%;
+      height: 94.2%;
+      padding: 1em;
+      float: left;
+    }
+
+    #feedback-body-interviewers{
+      width: 24.89%;
+      height: 100%;
+      float: left;
+      border-left: 1px solid #000000;
+    }
+
+    #interviewers-button{
+      width: 100%;
+      height: 15.9999%;
+      padding: 1em 0em;
+      text-align: center;
+      border-bottom: 1px solid #000000;
+    }
+
+    #interviewers-button img{
+      display: block;
+      margin: 0% auto;
+      max-height: 60%;
+    }
+
+    #interviewers-button:hover{
+      color: #ffffff;
+      background-color: #000000;
+    }
+
+    #interviewers-list{
+      height: 89.9999%;
+      text-align: center;
+    }
+
+    #interviwers-list p{
+      margin: 0.5em 0em;
+    }
+
+    #admin-feeback-footer{
+      width: 97.9%;
+      height: 8.9999%;
+      padding: 1em;
+      background-color: #ffffff;
+      border-radius: 0px 0px 10px 10px;
+      border-top: 1px solid #000000;
+    }
+
+  /**/
+}

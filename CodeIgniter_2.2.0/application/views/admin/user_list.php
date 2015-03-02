@@ -1,33 +1,41 @@
-<?php echo $this->load->view('_inc/header_small') ?>
+<?php echo $this->load->view('_inc/header_thin') ?>
 
-<div id="subtitle-logo-small">
-  <span class="subtitle-url"><h4>Lista de Candidatos</h4></span>
+<div class="header-text-thin-square-2 header-text-uppercase">
+	<h3>lista de candidatos</h3>
 </div>
 </div>
 </div>
 
-<table id="list-user">
-    <thead>
-        <tr>
-            <th> Nome </th>
-            <th> Email </th>
-            <th></th>
-            <th></th>
-            <th> FeedBack </th>
-       </tr>
-    </thead>
-    <tbody>
-    <?php if(isset($users)){
-        foreach ($users as $user) { ?>
-            <tr>
-                <td><?php echo $user->nome ;?> </td>
-                <td> <?php echo $user->email ;?></td>
-                <td><a href="#">Horário</a></td>
-                <td><a href="<?php echo base_url();?>index.php/admin/check_member?id=<?php echo $user->id_login?>">Informações</a></td>
-                <td> <img src="<?php echo base_url();?>assets/images/button_light_accept.png" alt="" /></td>
-                <td><a onclick="if (confirm('Deseja deletar esta usuario? ?')) window.location.replace('<?php echo base_url().'index.php/usuario/delete?id='.$user->id_login ?>')"> deletar </a></td>
-            </tr>
-    <?php }} ?>
-    </tbody>
-</table>
+  <div id="content" class="content-thin">
+    <div id="list-user">
+      <table>
+          <thead>
+              <tr>
+                  <th>Nome</th>
+                  <th>Email</th>
+                  <th></th>
+                  <th></th>
+                  <th>FeedBack</th>
+                  <th>dsfsdfsd</th>
+             </tr>
+          </thead>
+          <tbody>
+          <?php if(isset($users)){
+              foreach ($users as $user) { ?>
+                  <tr>
+                      <td><?php echo $user->nome ;?> </td>
+                      <td> <?php echo $user->email ;?></td>
+                      <td><a href="#">Horário</a></td>
+                      <td><a href="<?php echo base_url();?>index.php/admin/check_member?id=<?php echo $user->id_login?>">Informações</a></td>
+                      <td> <img src="<?php echo base_url();?>assets/images/button_light_accept.png" alt="" /></td>
+                      <td><a onclick="if (confirm('Deseja deletar esta usuario? ?')) window.location.replace('<?php echo base_url().'index.php/usuario/delete?id='.$user->id_login ?>')">
+                        <img src="<?php echo base_url();?>assets/images/button_light_cancel.png" alt="" />
+                      </a></td>
+                  </tr>
+          <?php }} ?>
+          </tbody>
+      </table>
+    </div>
+  </div>
+
 <?php echo $this->load->view('_inc/footer') ?>

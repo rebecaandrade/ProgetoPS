@@ -1,0 +1,613 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0%;
+	padding: 0%;
+	border: 0%;
+	/*font-size: 100%;*/
+  font-size: 62.5%; /*1em = 10px*/
+	font: inherit;
+	vertical-align: baseline;
+	text-decoration: none;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*---------------------------------------*/
+
+body{
+  background-color: #002f67;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.header-text-uppercase{
+	text-transform: uppercase;
+	font-weight: bolder;
+	color: #73c04a;
+	margin-top: 1%;
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px){
+  .center-large{
+    max-width: 479px;
+    width: 100%;
+    margin: 0% auto;
+  }
+
+	.center-thin{
+		max-width: 479px;
+		width: 100%;
+		margin: 0% auto;
+	}
+
+  #header{
+    width: 100%;
+  }
+
+  .header-large{
+    height: 30%;
+    margin-top: 10%;
+		margin-bottom: 10%;
+  }
+
+  .header-thin{
+		height: 30%;
+		margin-top: 7%;
+		margin-bottom: 7%;
+  }
+
+	#header-logo{
+		background-image: url("./images/logo.png");
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+
+	.header-logo-large{
+		height: 60%;
+		width: 50%;
+		margin: 0% auto 10% auto;
+	}
+
+	.header-logo-thin{
+		height: 50%;
+		width: 35%;
+		margin: 0% auto 6% auto;
+	}
+
+	#header-text{
+		height: 40%;
+		width: 100%;
+		text-align: center;
+		color: #ffffff;
+	}
+
+	.header-text-large{
+	}
+
+	.header-text-thin{
+	}
+
+	#header-text-large-diamond{
+		height: 43.589743589743589743589743589744%; /*(195px - 55px - 55px) / 195px*/
+		width: 100%;
+		font-size: 18pt;
+		font-weight: bold;
+	}
+
+	/*.header-text-large-square-1,*/.header-text-large-square-2{
+		height: 28.205128205128205128205128205128%; /*55px / 195px*/
+		width: 100%;
+		font-size: 14pt;
+		font-weight: normal;
+	}
+
+	@media screen and (orientation: landscape){
+		.center-large{
+			width: 81.25%;
+		}
+
+		.center-thin{
+			width: 92.1875%; /*(1280 px - 50px - 50px) / 1280px*/
+		}
+
+		.header-large{
+			height: 30%;
+			margin-top: 10%;
+			margin-bottom: 10%;
+		}
+
+		.header-thin{
+			height: 30%;
+			margin-top: 7%;
+			margin-bottom: 7%;
+		}
+
+		#header-logo{
+			float: left;
+		}
+
+		.header-logo-large{
+			height: 100%;
+			width: 38%;
+			margin: 0% 5% 0% 0%;
+		}
+
+		.header-logo-thin{
+			height: 100%;
+			width: 35%;
+			margin: 0% 5% 0% auto;
+		}
+
+		#header-text{
+			height: 100%;
+			width: 57%;
+			float: left;
+		}
+
+		.header-text-large{
+		}
+
+		.header-text-thin{
+		}
+
+		#header-text-large-diamond{
+			font-size: 18pt;
+			font-weight: bold;
+		}
+
+		.header-text-large-square-1, .header-text-large-square-2{
+			height: 28.205128205128205128205128205128%; /*55px / 195px*/
+			width: 100%;
+			font-size: 16pt;
+			font-weight: normal;
+		}
+	}
+
+	#content{
+		width: 100%;
+		background-color: #DDD;
+	}
+
+	.content-large{
+		height: 100%;
+	}
+
+	.content-thin{
+		height: 100%;
+	}
+
+	#login-field{
+		background-color: #ffffff;
+		border-radius: 10px;
+		width: 80%;
+		height: 80%;
+		padding: 0.5em;
+		margin: 0% auto;
+		text-align: center;
+	}
+
+	#login-field-signup{
+		width: 100%;
+		height: 20%;
+		border-bottom: 1px solid #000000;
+	}
+
+	#login-field-input{
+		width: 100%;
+		height: 60%;
+	}
+
+	#login-field-input-submit{
+		margin-top: 2%;
+		height: 28%;
+	}
+
+	#login-field-input-user, #login-field-input-password{
+		width: 100%;
+		height: 50%;
+		text-align: right;
+	}
+
+	#login-field-input-user input, #login-field-input-password input{
+		width: 80%;
+		height: 50%;
+		margin-top: 5%;
+		border-radius: 10px;
+		border: 2px solid #73c04a;
+	}
+
+	#login-field-input-password a{
+		color: #1c1c1c;
+		font-size: 10pt;
+		display: block;
+	}
+
+	#login-field-input-submit input[type="submit"]{
+		width: 20%;
+		height: 100%;
+		display: block;
+		margin: 0% auto;
+		border: 0px solid #73c04a;
+		background-image: url("./images/button_light_accept.png");
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-color: transparent;
+	}
+
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px){
+  .center-large{
+    max-width: 768px;
+    width: 81.25%;
+    margin: 0% auto;
+  }
+
+	.center-thin{
+		max-width: 768px;
+		width: 91.25%; /*(1280 px - 50px - 50px) / 1280px*/
+		margin: 0% auto;
+	}
+
+	#header{
+		width: 100%;
+		background-color: #DDD;
+	}
+
+	.header-large{
+		height: 12%;
+		margin-top: 6%;
+		margin-bottom: 6%;
+	}
+
+	.header-thin{
+		height: 12%;
+		margin-top: 6%;
+		margin-bottom: 6%;
+	}
+
+	#header-logo{
+		height: 100%;
+		background-image: url("./images/logo.png");
+		background-size: contain;
+		background-repeat: no-repeat;
+		margin: 0% auto 10% auto;
+		float: left;
+	}
+
+	.header-logo-large{
+		width: 29.519230769230769230769230769231%; /*(362px - 55px) / 1040px*/
+		margin-right: 5.2884615384615384615384615384615%; /*55px / 1040px*/
+	}
+
+	.header-logo-thin{
+		width: 29.519230769230769230769230769231%; /*(362px - 55px) / 1040px*/
+		margin-right: 3.0338983050847457627118644067797%; /*35.8px / 1180px*/
+	}
+
+	#header-text{
+		height: 100%;
+		width: 60%;
+		text-align: center;
+		color: #ffffff;
+		float: left;
+	}
+
+	.header-text-large{
+		width: 65.192307692307692307692307692307%; /*678px / 1040px*/
+	}
+
+	.header-text-thin{
+		width: 34.830508474576271186440677966102%; /*411px / 1180px*/
+	}
+
+	#header-text-large-diamond{
+		height: 43.589743589743589743589743589744%; /*(195px - 55px - 55px) / 195px*/
+		width: 100%;
+		font-size: 28pt;
+		font-weight: bold;
+	}
+
+	.header-text-large-square-1,  .header-text-large-square-2{
+		height: 28.205128205128205128205128205128%; /*55px / 195px*/
+		width: 100%;
+		font-size: 21pt;
+		font-weight: normal;
+	}
+
+	@media screen and (orientation: landscape){
+		.header-large{
+			height: 28%;
+			margin-top: 7%;
+			margin-bottom: 7%;
+		}
+
+		.header-thin{
+			height: 28%;
+			margin-top: 7%;
+			margin-bottom: 7%;
+		}
+
+		#header-logo{
+			height: 100%;
+			width: 35%;
+			margin: 0% 5% 10% auto;
+		}
+
+		#header-text{
+			height: 100%;
+		}
+
+		#header-text-large-diamond{
+			font-size: 22pt;
+		}
+
+		.header-text-large-square-1,  .header-text-large-square-2{
+			font-size: 18pt;
+		}
+	}
+
+  #content{
+    background-color: #EEE;
+    width: 100%;
+    height: 120%;
+  }
+
+  .content-large{
+    height: 50%;
+  }
+
+  .content-thin{
+
+  }
+
+	#login-field{
+		background-color: #ffffff;
+		border-radius: 10px;
+		width: 75%;
+		height: 40%;
+		padding: 1em;
+		margin: 0% auto;
+	}
+
+	#login-field-input{
+		background-color: purple;
+		border-radius: 10px;
+		width: 60%;
+		height: 100%;
+	}
+
+	#login-field-signup{
+		background-color: green;
+		border-radius: 10px;
+		width: 40%;
+		height: 100%
+	}
+}
+
+@media screen  and (min-width: 769px) and (max-width : 1200px){
+  .center-large{
+    max-width: 1200px;
+    width: 81.25%; /*(1280 px - 240px) / 1280px*/
+    margin: 0% auto;
+  }
+
+	.center-thin{
+		max-width: 1200px;
+		width: 92.1875%; /*(1280 px - 50px - 50px) / 1280px*/
+		margin: 0% auto;
+	}
+
+  #header{
+    width: 100%;
+		background-color: #DDD;
+  }
+
+  .header-large{
+    height: 11.125%; /*(195px + 110px) / 800 px;*/
+    margin-top: 6.875%; /*55px / 800px */
+    margin-bottom: 6.875%; /*55px / 800px */
+  }
+
+  .header-thin{
+		height: 6.125%; /*(195px + 110px) / 800 px;*/
+		margin-top: 6.875%; /*55px / 800px */
+		margin-bottom: 6.875%; /*55px / 800px */
+  }
+
+  #header-logo{
+    height: 100%;
+    background-image: url("./images/logo.png");
+    background-size: contain;
+		background-repeat: no-repeat;
+    float: left;
+  }
+
+	.header-logo-large{
+		width: 17.519230769230769230769230769231%; /*(362px - 55px) / 1040px*/
+		margin-right: 3.2884%; /*55px / 1180px*/
+	}
+
+	.header-logo-thin{
+		width: 16.711864406779661016949152542373%; /*(233px - 35.8px) / 1040px*/
+		margin-right: 3.0338983050847457627118644067797%; /*35.8px / 1040px*/
+	}
+
+  #header-text{
+    height: 100%;
+    width: 65.192307692307692307692307692307%; /*678px / 1040px*/
+    float: left;
+		color: #ffffff;
+  }
+
+  #header-text-large-diamond{
+    height: 43.589743589743589743589743589744%; /*(195px - 55px - 55px) / 195px*/
+    width: 60%;
+		font-size: 24pt;
+		font-weight: bold;
+  }
+
+  .header-text-large-square-1, .header-text-large-square-2{
+    height: 28.205128205128205128205128205128%; /*55px / 195px*/
+    width: 60%;
+		font-size: 16pt;
+		font-weight: normal;
+		text-align: center;
+  }
+
+  #content{
+    background-color: #EEE;
+    width: 100%;
+  }
+
+  .content-large{
+    height: 48.125%;
+  }
+
+  .content-thin{
+		height: 48.125%;
+  }
+
+  #login-field{
+    background-color: #DDD;
+    width: 80%;
+    height: 40%;
+    margin: 0% auto;
+  }
+}
+
+@media screen and (min-width: 1201px) and (max-width : 1600px){
+  .center-large{
+    max-width: 1280px;
+    width: 81.25%; /*(1280 px - 240px) / 1280px*/
+    margin: 0% auto;
+  }
+
+	.center-thin{
+		max-width: 1280px;
+		width: 92.1875%; /*(1280 px - 50px - 50px) / 1280px*/
+		margin: 0% auto;
+	}
+
+  #header{
+    width: 100%;
+  }
+
+  .header-large{
+    height: 38.125%; /*(195px + 110px) / 800 px;*/
+    margin-top: 6.875%; /*55px / 800px */
+    margin-bottom: 6.875%; /*55px / 800px */
+  }
+
+  .header-thin{
+    height: 14.4875%; /*(187.5px - 35.8px - 35.8 px)/ 800px*/
+		margin-top: 4.475%;
+		margin-bottom: 4.475%;
+		background-color: #DDD;
+  }
+
+	#content{
+		background-color: #EEE;
+		width: 100%;
+	}
+
+	.content-large{
+		height: 48.125%;
+	}
+
+	.content-thin{
+		height: 76.5625%;
+	}
+
+  #header-logo{
+    height: 100%;
+    background-image: url("./images/logo.png");
+    background-size: contain;
+		background-repeat: no-repeat;
+    float: left;
+  }
+
+	.header-logo-large{
+		width: 29.519230769230769230769230769231%; /*(362px - 55px) / 1040px*/
+		margin-right: 5.2884615384615384615384615384615%; /*55px / 1040px*/
+	}
+
+	.header-logo-thin{
+		width: 18.711864406779661016949152542373%; /*(233px - 35.8px) / 1180px*/
+		margin-right: 3.0338983050847457627118644067797%; /*35.8px / 1180px*/
+		background-color: red;
+	}
+
+  #header-text{
+    height: 100%;
+    float: left;
+    color: #ffffff;
+  }
+
+	.header-text-large{
+		width: 65.192307692307692307692307692307%; /*678px / 1040px*/
+	}
+
+	.header-text-thin{
+		width: 34.830508474576271186440677966102%; /*411px / 1180px*/
+		background-color: purple;
+	}
+
+  #header-text-large-diamond{
+    height: 43.589743589743589743589743589744%; /*(195px - 55px - 55px) / 195px*/
+    width: 100%;
+    font-size: 30pt;
+    font-weight: bold;
+		background-color: green;
+  }
+
+  .header-text-large-square-1, .header-text-large-square-2{
+    height: 28.205128205128205128205128205128%; /*55px / 195px*/
+    width: 100%;
+    font-size: 18pt;
+    font-weight: normal;
+    text-align: center;
+  }
+
+  #login-field{
+    background-color: #000;
+    width: 80%;
+    height: 40%;
+    margin: 0% auto;
+  }
+}
