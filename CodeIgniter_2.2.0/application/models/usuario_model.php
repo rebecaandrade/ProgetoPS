@@ -25,16 +25,8 @@ class Usuario_model extends CI_Model {
 		return md5($senha) == $pswrd;
 	}
 	public function update_user($id,$dados){
-		$this->db->where('id_login',$id);
-		$data = $this->db->get('tb_login')->row();
 		unset($dados['password']);
-		$dados['id_login'] = $id;
-		$dados['apresentacao'] = $data->apresentacao;
-		$dados['dinamica'] = $data->dinamica;
-		$dados['senha'] = $data->senha;
-		$dados['perfil'] = $data->perfil;
-		$dados['usuario'] = $data->usuario;
-		$dados['num_de_ps'] = $data->num_de_ps;
+		$this->db->where('id_login',$id);
 		return $this->db->update('tb_login',$dados);
 	}
 	public function check_existence_of_user($user){

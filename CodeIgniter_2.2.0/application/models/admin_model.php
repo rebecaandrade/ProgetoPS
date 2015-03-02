@@ -13,4 +13,18 @@ class Admin_model extends CI_Model {
 		$this->db->where('id_login',$id);
 		return $this->db->delete('tb_login');
 	}
+	public function insert_new_admin($dados){
+		unset($dados['confirmasenha']);
+		$sucesso = $this->db->insert('tb_login',$dados);
+	}
+	public function check_admin($user){
+		$this->db->where('usuario',$user);
+		return $this->db->get('tb_login')->result();
+	}
+	public function update_admin($dados){
+		$id = $dados['id'];
+		unset($dados['id']);
+		$this->db->where('id_login',$id);
+		$this->db->update('tb_login',$dados);
+	}
 }

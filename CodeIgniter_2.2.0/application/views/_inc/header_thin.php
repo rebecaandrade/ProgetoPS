@@ -16,8 +16,8 @@
 
 <body class="center-thin">
   <div id="header" class="header-thin">
-    <div id="header-logo" class="header-logo-thin">
-    </div>
+    <a href="<?php echo base_url()?>"><div id="header-logo" class="header-logo-thin">
+    </div></a>
     <div id="header-text" class="header-text-thin">
       <div class="header-text-thin-square-1">
       </div>

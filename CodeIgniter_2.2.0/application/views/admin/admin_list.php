@@ -8,7 +8,7 @@
     <thead>
         <tr>
             <th> Nome </th>
-            <th> </th>
+            <th><a href="<?php echo base_url() ?>index.php/admin/create_admin">Novo Admin</a></th>
         </tr>
     </thead>
   <tbody>
