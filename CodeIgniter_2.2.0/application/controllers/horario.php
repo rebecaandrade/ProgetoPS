@@ -31,6 +31,8 @@ class Horario extends CI_Controller {
         		);
         array_push($data['times'],$time);
   	}
+
+  	$this->days_left($data['times']);
     $this->load->view('user/user_interview',$data);
   }
   
@@ -100,5 +102,52 @@ class Horario extends CI_Controller {
   		if($day_name == 'Sunday'){
   			return 'Dom';
   		}
+  }
+  public function days_left($times){
+  	$months_days = array();
+  	var_dump(end($times));
+  	foreach ($times as $time) {
+
+  		
+  		if (!isset($months_days) || $this->not_exists($months_days,$time['month'])){
+  			$new = array(
+  					'month_name' => $time['month_name'],
+  					'month' => $time['month'],
+  					'count' => 1
+  				);
+
+  			array_push($months_days, $new);  		
+  		} 
+  		else{
+  			foreach ($months_days as $month) {
+  				if ($month['month'] == $time['month']){
+  				$month['count']=$month['count'] + 1;
+  				var_dump($month);
+  				}
+			}
+
+  		}
+  				
+  	}
+  	var_dump($months_days);
+  	die;
+  	return $months_days;
+  }
+  public function not_exists($months_days,$month_number){
+  	foreach ($months_days as $month) {
+  		if ($month['month'] == $month_number){
+  			return 0;
+  		}
+  	}
+  	return 1;
+  }
+  public function add_count($months_days,$month_number){
+  	foreach ($months_days as $month) {
+  		if ($month['month'] == $month_number){
+  			$month['count']++;
+  			echo $month['count'];
+  		}
+	}
+  	  	return 0;
   }
 }

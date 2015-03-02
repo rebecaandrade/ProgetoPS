@@ -55,8 +55,10 @@
 		</div>
 
 		<div class="profile-icon-nav">
-			<img src="<?php echo base_url();?>assets/images/icon_email.png" alt="" />
-			<a href="<?php echo base_url();?>index.php/usuario/fale_conosco"><p>Fale Conosco</p></a>
+			<a href="<?php echo base_url();?>index.php/usuario/contact_us">
+				<img src="<?php echo base_url();?>assets/images/icon_email.png" alt="" />
+				<p>Fale Conosco</p>
+			</a>
 		</div>
 
 		<div class="profile-icon-nav">

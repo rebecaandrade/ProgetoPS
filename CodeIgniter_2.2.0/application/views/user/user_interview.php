@@ -7,7 +7,6 @@
       </div>
     </div>
     <div id="body-interview">
-    <?php echo form_open('usuario/update_account');?>
       Testando radio
       <input type="radio" name="name" id="radio1" value="">
       <label for="radio1" class="label-radio"><span class="radio"></span>  12h30min</label>
@@ -31,44 +30,21 @@
               </th>
             </tr>
             <tr>
-              <th colspan="8"><!--Adicionar contador PHP para expandir-->
+              <th>
+                
+              </th>
+              <th><!--Adicionar contador PHP para expandir-->
                 Qua 18
               </th>
-              <th colspan="8">
+              <th>
                 Qui 19
               </th>
             </tr>
 
           </thead>
           <tbody>
-            <tr>
-              <td>
-                08:00 - 09:00
-              </td>
-              <td>
-                09:00 - 10:00
-              </td>
-              <td>
-                09:00 - 10:00
-              </td>
-              <td>
-                10:00 - 11:00
-              </td>
-              <td>
-                11:00 - 12:00
-              </td>
-              <td>
-                14:00 - 15:00
-              </td>
-              <td>
-                15:00 - 16:00
-              </td>
-              <td>
-                17:00 - 18:00
-              </td>
-            </tr>
-
             <tr><!--Checkbox-->
+              <td>8:00 -9:00</td>
               <td>
                 <input type="checkbox" id="checkbox1" name="name" value="">
                 <label for="checkbox1"><span class="checkbox"></span></label>
@@ -82,6 +58,22 @@
                 <label for="checkbox3"><span class="checkbox"></span></label>
               </td>
             </tr>
+            <tr>
+              <td>9:00 - 10:00</td>
+            </tr>
+            <tr>
+              <td>10:00 - 11:00</td>
+            </tr>
+            <tr>
+              <td>11:00 - 12:00</td>
+            </tr>
+            <tr>
+              <td>14:00 - 15:00</td>
+            </tr>
+            <tr>
+              <td>15:00 - 16:00</td>
+            </tr>
+
           </tbody>
         </table>
         <?php echo form_close() ?>

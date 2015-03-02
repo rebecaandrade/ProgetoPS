@@ -6,9 +6,9 @@
     </div>
     <div id="email-body">
       <h5>Digite sua mensagem:</h5>
-      <form class="" action="index.html" method="post">
+      <?php echo form_open('usuario/contact_email') ?>
         <textarea name="email" rows="8" cols="40"></textarea>
         <input type="submit" name="enviar" value="">
-      </form>
+      <?php echo form_close() ?>
     </div>
 <?php echo $this->load->view('_inc/footer') ?>

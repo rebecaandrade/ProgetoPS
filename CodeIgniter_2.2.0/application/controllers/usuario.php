@@ -45,6 +45,23 @@ class Usuario extends CI_Controller {
     	$this->load->view('access/form');
 
     }
+    public function contact_us(){
+        $this->load->view('user/user_email');
+
+    }
+    public function contact_email(){
+            $date = getdate();
+
+            $to      =  'direta@cjr.org.br';
+            $subject = '[Processo Seletivo CJR] Fale conosco de '.$this->session->userdata('nome');
+            $message = "O usuário ".$this->session->userdata('nome')." disse: \r\n \r\n".$this->input->post('email')."\r\n \r\nEnviado em ".$date['mday']."/".$date['mon']."/".$date['year']." as ".$date['hours'].":".$date['minutes']." \r\n";
+            $message = wordwrap($message, 70);
+            $headers = 'From: donotreply@cjr.org.br';/* Ver qual email que deve mandar */
+            mail($to,$subject,$message,$headers);
+            //setar alerta de sucesso
+            redirect('usuario/contact_us');
+
+    }
     public function insert_new_user(){
     	if($_POST['usuario'] == NULL || $_POST['senha'] == NULL || $_POST['novasenha'] == NULL || 
     		$_POST['email'] == NULL || $_POST['curso'] == NULL || $_POST['semestre'] == NULL || 
