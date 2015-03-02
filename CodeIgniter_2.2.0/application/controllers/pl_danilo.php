@@ -52,6 +52,10 @@ class PL_Danilo extends CI_Controller{
   public function user_list(){
     $this->load->view('admin/user_list');
   }
+
+  public function admin_create(){
+    $this->load->view('admin/admin_create');
+  }
 }
 
  ?>

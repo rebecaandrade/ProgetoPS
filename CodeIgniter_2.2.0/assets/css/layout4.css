@@ -731,4 +731,292 @@
     height: 80%;
     background-color: green;
   }
+
+  .admin-create-column-2{
+    width: 20%;
+    height: auto;
+    float: left;
+    background-color: green;
+    margin-left: 20%;
+  }
+
+  .admin-create-column-2 input[type="text"], .admin-create-column-2 input[type="password"]{
+    height: 2.5em;
+    width: 100%;
+    margin-top: 0.3em;
+    margin-bottom: 0.5em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .button-box{
+    height: 15%;
+    width: 100%;
+  }
+
+  .button-box input[type="submit"]{
+    width: 20%;
+    height: 100%;
+    margin: 0% auto;
+    display: block;
+    border: 0px solid #73c04a;
+    background-image: url("../images/button_dark_accept.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: transparent;
+  }
+
+  #admin-feedback{
+    width: 73.828125%; /*945px*/ /*1180*/
+    height: 100%; /*564px*/ /*1800*/
+    margin: 6% auto 0% auto;
+  }
+
+  #admin-feedback-top{
+    width: 90.5%;
+    height: 6.9999%;
+    padding: 1em 1em 1em 4em;
+    background-color: #1c1c1c;
+    border-radius: 10px 10px 0px 0px;
+    color: #ffffff;
+  }
+
+  #admin-feedback-body{
+    width: 100%;
+    height: 64.9999%;
+    background-color: #ffffff;
+
+  }
+
+  #admin-feedback-footer{
+    width: 96.3%;
+    height: 8.9999%;
+    padding: 1em;
+    background-color: #ffffff;
+    border-radius: 0px 0px 10px 10px;
+    border-top: 1px solid #000000;
+  }
+
+  #admin-feedback img{
+    max-height: 100%;
+  }
+
+  #admin-feedback-top h5{
+    width: 50%;
+    height: 100%;
+    display: inline-block;
+    text-align: left;
+  }
+
+  #admin-feedback-body-text{
+    width: 72.82%;
+    height: 89.2%;
+    padding: 1em;
+    float: left;
+    overflow-y: scroll;
+  }
+
+  #admin-feedback-body-interviewers{
+    width: 23.27%;
+    height: 100%;
+    float: left;
+    border-left: 1px solid #000000;
+  }
+
+  #admin-feedback-body-interviewers-button{
+    width: 100%;
+    height: 12.9999%;
+    padding: 0.5em 0em;
+    text-align: center;
+    border-bottom: 1px solid #000000;
+  }
+
+  #admin-feedback-body-interviewers-list{
+    height: 86.9999%;
+    text-align: center;
+  }
+
+  #admin-feedback-body-interviewers-button img{
+    display: block;
+    margin: 0% auto;
+    max-height: 70%;
+  }
+
+  #admin-feedback-body-interviewers-button:hover{
+    color: #ffffff;
+    background-color: #000000;
+  }
+
+  #admin-feedback-body-interviewers-list p{
+    margin: 0.5em 0em;
+  }
+
+  .admin-info-column-2{
+    width: 20%;
+    height: auto;
+    float: left;
+    background-color: green;
+    margin-left: 20%;
+  }
+
+  .admin-info-column-2 input[type="text"], .admin-info-column-2 input[type="password"]{
+    height: 2.5em;
+    width: 100%;
+    margin-top: 0.3em;
+    margin-bottom: 0.5em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .admin-info-column-2 .button-box{
+    height: 15%;
+    width: 100%;
+  }
+
+  .admin-info-column-2 input[type="submit"]{
+    width: 20%;
+    height: 100%;
+    margin: 0% auto;
+    display: block;
+    border: 0px solid #73c04a;
+    background-image: url("../images/button_dark_update.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: transparent;
+  }
+
+  #list-admin table{
+    border-collapse: collapse;
+    width: 60%;
+    height: auto;
+    margin: 5% auto 0% auto;
+  }
+
+  #list-admin table thead{
+    /*Thead não aceita padding*/
+    background-color: #333333;
+    border-collapse: collapse;
+    color: #ffffff;
+  }
+
+  #list-admin table th{
+    padding: 0.3em;
+    text-align: center;
+  }
+
+  #list-admin table th:first-child{
+    -moz-border-radius:10px;
+    -webkit-border--radius:10px;
+    border-radius:10px;
+  }
+
+  #list-admin table tbody{
+    background-color: #ffffff;
+    color: #000000;
+    text-align: center;
+  }
+
+  #list-admin table td{
+    padding: 0.5em;
+    text-align: center;
+    width: 60%;
+    text-overflow: ellipsis;
+  }
+
+  #list-admin table td img{
+    height: auto;
+    width: 40%;
+  }
+
+  #page-admin{
+    width: 64%;
+    height: 80%;
+    margin:0 auto;
+    position: relative;
+    top: 7%;
+    left: 0%;
+  }
+
+  #page-admin-info{
+    width: 100%;
+    height: 54.9999%;
+    background-color: #ffffff;
+    border-radius: 10px 10px 0px 0px;
+    box-sizing: border-box;
+    padding: 1em;
+  }
+
+  #page-admin-nav{
+    width: 100%;
+    height: 44.9999%;
+    background-color: #1c1c1c;
+    border-radius: 0px 0px 10px 10px;
+    box-sizing: border-box;
+    padding: 1em;
+  }
+
+  .count-activity{
+    width: 45.8%;
+    height: 80%;
+    background-color: #DDD;
+    display: inline-block;
+  }
+
+  .page-admin-nav-button{
+    height: 70%;
+    width: 23.9999%;
+    padding: 0.5em;
+    display: inline-block;
+    font-size: 18pt;
+    text-align: center;
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 1.4em;
+  }
+  .page-admin-nav-button:hover{
+    background-color: #73c04a;
+    color: #ffffff;
+  }
+
+  .page-admin-nav-button img{
+    display: block;
+    margin: 0% auto;
+    max-height: 80%;
+  }
+
+  #list-user table{
+    border-collapse: collapse;
+    width: 60%;
+    height: auto;
+    margin:0 auto;
+    position: relative;
+    top: 7%;
+    left: 0%;
+  }
+
+  #list-user table thead{
+    /*Thead não aceita padding*/
+    background-color: #333333;
+    border-collapse: collapse;
+    color: #ffffff;
+  }
+
+  #list-user table th{
+    padding: 0.3em;
+    text-align: center;
+  }
+
+  #list-user table tbody{
+    background-color: #ffffff;
+    color: #000000;
+    text-align: center;
+  }
+
+  #list-user table td{
+    padding: 0.5em;
+    text-align: center;
+    width: 60%;
+    height: 20%;
+  }
+
 }

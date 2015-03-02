@@ -1272,7 +1272,7 @@ input[type=radio]:checked + .label-radio .radio{
     }
 
 /*--------------Escrever FeedBack-------------*/
-    #body-admin-feedback{
+    #admin-feedback{
       width: 73.828125%; /*945px*/ /*1180*/
       height: 70.5%; /*564px*/ /*1800*/
       margin: 6% auto 0% auto;
