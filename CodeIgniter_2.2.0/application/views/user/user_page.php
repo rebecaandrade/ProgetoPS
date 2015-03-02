@@ -29,7 +29,7 @@
 					</p>
 				</div>
 				<div class="profile-nav-body-button">
-					<a href="<?php echo base_url();?>index.php/usuario/fale_conosco">
+					<a href="<?php echo base_url();?>index.php/usuario/contact_us">
 					<img src="<?php echo base_url();?>assets/images/icon_email.png" alt="" />
 					<p>
 						Fale Conosco

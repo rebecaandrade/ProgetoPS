@@ -105,7 +105,6 @@ class Horario extends CI_Controller {
   }
   public function days_left($times){
   	$months_days = array();
-  	var_dump(end($times));
   	foreach ($times as $time) {
 
   		
@@ -122,15 +121,12 @@ class Horario extends CI_Controller {
   			foreach ($months_days as $month) {
   				if ($month['month'] == $time['month']){
   				$month['count']=$month['count'] + 1;
-  				var_dump($month);
   				}
 			}
 
   		}
   				
   	}
-  	var_dump($months_days);
-  	die;
   	return $months_days;
   }
   public function not_exists($months_days,$month_number){
