@@ -1,4 +1,4 @@
-@media screen and (min-width: 1201px) and (max-width : 1600px){
+@media screen and (min-width: 1201px){
   .center-large{
     max-width: 1280px;
     width: 81.25%; /*(1280 px - 240px) / 1280px*/
@@ -153,19 +153,45 @@
   #login-field-input-user input, #login-field-input-password input{
     width: 80%;
     height: 50%;
+    padding-left: 10%;
     margin-top: 3%;
     border-radius: 10px;
     border: 2px solid #73c04a;
+  }
+
+  #login-field-input-user label:before{
+    content: "";
+    display: inline-block;
+    height: 8%;
+    width: 8%;
+    position: absolute;
+    margin: 0.3% 0% 0% -1%;
+    background-image: url('../images/icon_user.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  #login-field-input-password label:before{
+    content: "";
+    display: inline-block;
+    height: 8%;
+    width: 8%;
+    position: absolute;
+    margin: 0.3% 0% 0% -1%;
+    background-image: url('../images/icon_password.png');
+    background-size: contain;
+    background-repeat: no-repeat;
   }
 
   #login-field-input-password a{
     color: #1c1c1c;
     font-size: 10pt;
     display: block;
+    margin-top: 1%;
   }
 
   #login-field-input-submit input[type="submit"]{
-    width: 20%;
+    width: 10%;
     height: 100%;
     display: block;
     margin: 0% auto;

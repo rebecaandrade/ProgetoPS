@@ -14,10 +14,10 @@
 					</div>
 					<div id="login-field-input">
 						<div id="login-field-input-user">
-							<input type="text" name="login" value="" placeholder="USUÁRIO">
+							<label><input type="text" name="login" value="" placeholder="USUÁRIO"></label>
 						</div>
 						<div id="login-field-input-password">
-							<input type="password" name="password" value="" placeholder="SENHA">
+							<label><input type="password" name="password" value="" placeholder="SENHA"></label>
 							<a href="<?php echo base_url(); ?>index.php/access/password_recovery">Esqueci minha senha</a>
 						</div>
 						<div id="login-field-input-submit">

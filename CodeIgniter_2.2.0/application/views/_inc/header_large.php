@@ -12,6 +12,7 @@
   <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/layout4.css">
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800,700,600,600italic,400italic,300' rel='stylesheet' type='text/css'>
 </head>
+
 <body class="center-large">
   <div id="header" class="header-large">
       <div id="header-logo" class="header-logo-large">

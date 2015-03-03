@@ -171,7 +171,7 @@ body{
   }
 
   #login-field{
-    background-color: #eeeeee;
+    background-color: #ffffff;
     border-radius: 10px;
     width: 80%;
     height: 50%;
@@ -209,15 +209,42 @@ body{
   #login-field-input-user input, #login-field-input-password input{
     width: 80%;
     height: 50%;
+    padding-left: 10%;
     margin-top: 7%;
     border-radius: 10px;
     border: 2px solid #73c04a;
+    font-weight: 600;
+  }
+
+  #login-field-input-user label:before{
+    content: "";
+    display: inline-block;
+    height: 18%;
+    width: 18%;
+    position: absolute;
+    margin: 2.3% 0% 0% -11%;
+    background-image: url('../images/icon_user.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  #login-field-input-password label:before{
+    content: "";
+    display: inline-block;
+    height: 18%;
+    width: 18%;
+    position: absolute;
+    margin: 2.3% 0% 0% -11%;
+    background-image: url('../images/icon_password.png');
+    background-size: contain;
+    background-repeat: no-repeat;
   }
 
   #login-field-input-password a{
     color: #1c1c1c;
     font-size: 10pt;
     display: block;
+    margin-top: 1%;
   }
 
   #login-field-input-submit input[type="submit"]{
@@ -291,7 +318,7 @@ body{
   #profile-id-info{
     width: 94%;
     height: 33%;
-    margin-top: 5%;
+    margin-top: 2.8%;
     padding: 0.5em;
     border-top: 1px solid #000000;
   }
@@ -480,6 +507,18 @@ body{
 
         #login-field{
           height: 70%;
+        }
+
+        #login-field-input-user label:before{
+          height: 15%;
+          width: 15%;
+          margin: 2.7% 0% 0% -4%;
+        }
+
+        #login-field-input-password label:before{
+          height: 15%;
+          width: 15%;
+          margin: 2.7% 0% 0% -4%;
         }
       }
 }

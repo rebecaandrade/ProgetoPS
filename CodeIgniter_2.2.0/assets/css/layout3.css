@@ -1,4 +1,4 @@
-@media screen  and (min-width: 769px) and (max-width : 1200px){
+@media screen  and (min-width: 768px) and (max-width : 1200px){
   .center-large{
     max-width: 1200px;
     width: 81.25%; /*(1280 px - 240px) / 1280px*/
@@ -89,18 +89,18 @@
   }
 
   .content-large{
-    height: 48.125%;
+    height: 70%;
   }
 
   .content-thin{
-    height: 48.125%;
+    height: 70%;
   }
 
   #login-field{
-    background-color: #eeeeee;
+    background-color: #ffffff;
     border-radius: 10px;
     width: 80%;
-    height: 50%;
+    height: 40%;
     padding: 0.5em;
     margin: 0% auto;
     text-align: center;
@@ -135,15 +135,41 @@
   #login-field-input-user input, #login-field-input-password input{
     width: 80%;
     height: 50%;
+    padding-left: 10%;
     margin-top: 7%;
     border-radius: 10px;
     border: 2px solid #73c04a;
+  }
+
+  #login-field-input-user label:before{
+    content: "";
+    display: inline-block;
+    height: 9%;
+    width: 9%;
+    position: absolute;
+    margin: 2.2% 0% 0% -3%;
+    background-image: url('../images/icon_user.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  #login-field-input-password label:before{
+    content: "";
+    display: inline-block;
+    height: 9%;
+    width: 9%;
+    position: absolute;
+    margin: 2.2% 0% 0% -3%;
+    background-image: url('../images/icon_password.png');
+    background-size: contain;
+    background-repeat: no-repeat;
   }
 
   #login-field-input-password a{
     color: #1c1c1c;
     font-size: 10pt;
     display: block;
+    margin-top: 1%;
   }
 
   #login-field-input-submit input[type="submit"]{
@@ -342,5 +368,9 @@
   .profile-nav-body-button:nth-child(4):hover{
     border-radius: 0px 0px 10px 0px;
   }
+
+      @media screen and (orientation: landscape){
+
+      }
 
 }
