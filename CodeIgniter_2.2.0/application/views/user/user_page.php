@@ -17,10 +17,10 @@
 			</div>
 			<div id="profile-nav-body">
 				<div class="profile-nav-body-button">
-					<img src="<?php echo base_url();?>assets/images/icon_feedback.png" alt="" />
+					<a href="<?php echo base_url()?>index.php/usuario/feedback"><img src="<?php echo base_url();?>assets/images/icon_feedback.png" alt="" />
 					<p>
 						FeedBack
-					</p>
+					</p></a>
 				</div>
 				<div class="profile-nav-body-button">
 					<img src="<?php echo base_url();?>assets/images/icon_date.png" alt="" />

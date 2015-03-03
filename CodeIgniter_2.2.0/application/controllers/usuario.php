@@ -118,4 +118,8 @@ class Usuario extends CI_Controller {
     		redirect('usuario/home');
     	}
     }
+    public function feedback(){
+        $dados['feeds'] = $this->usuario_model->get_my_feed();
+        $this->load->view('user/user_feedback',$dados);
+    }
 }
