@@ -100,6 +100,9 @@ class Usuario extends CI_Controller {
     }
     public function session_update($user){
     	$newdata = array(
+                'curso' => $user['curso'],
+                'semestre' => $user['semestre'],
+                'telefone' => $user['telefone'],
 				'email' => $user['email'],
 				'nome' => $user['nome'], 	);
         $this->session->set_userdata($newdata);
@@ -117,5 +120,9 @@ class Usuario extends CI_Controller {
     		$this->session->set_userdata('mensagem','cadastro atualizado com sucesso');
     		redirect('usuario/home');
     	}
+    }
+    public function feedback(){
+        $dados['feeds'] = $this->usuario_model->get_my_feed();
+        $this->load->view('user/user_feedback',$dados);
     }
 }
