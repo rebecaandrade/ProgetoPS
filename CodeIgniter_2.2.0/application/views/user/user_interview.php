@@ -16,32 +16,132 @@
          <?php echo form_open('horario/interview') ?>
          <thead>
          </thead>
+         <?php foreach ($weeks as $week) {
+          
+          ?>
          <tbody>
+
            <tr>
                <td>&nbsp</td>
-               <td>25/10</td>
-               <td>25/10</td>
-               <td>25/10</td>
+               <?php foreach ($week as $date) {
+                ?>
+               <td><?php echo $date['day'].'/'.$date['month'] ?></td>
+               <?php }?>
            </tr>
             <tr>
-                <td>08:00</td>
-                <td><input type="checkbox" name="name" value=""></td>
-                <td><input type="checkbox" name="name" value=""></td>
-                <td><input type="checkbox" name="name" value=""></td>
+                <td>08:00 - 9:00</td>
+                <?php foreach ($week as $date) {
+                  if($date['valid_date']){
+                ?>
+                <td><input type="checkbox" name="name" value="">&nbsp</td>
+                <?php 
+                  }else{ ?>
+                    <td>&nbsp</td>
+                  <?php
+                  }
+                }
+                ?>
             </tr>
             <tr>
-                <td>09:00</td>
-                <td><input type="checkbox" name="name" value=""></td>
-                <td><input type="checkbox" name="name" value=""></td>
-                <td><input type="checkbox" name="name" value=""></td>
+                <td>09:00 - 10:00</td>
+                <?php foreach ($week as $date) {
+                  if($date['valid_date']){
+                ?>
+                <td><input type="checkbox" name="name" value="">&nbsp</td>
+                <?php 
+                  }else{ ?>
+                    <td>&nbsp</td>
+                  <?php
+                  }
+                }
+                ?>
             </tr>
             <tr>
-                <td>10:00</td>
-                <td><input type="checkbox" name="name" value=""></td>
-                <td><input type="checkbox" name="name" value=""></td>
-                <td><input type="checkbox" name="name" value=""></td>
+                <td>10:00 - 11:00</td>
+                <?php foreach ($week as $date) {
+                  if($date['valid_date']){
+                ?>
+                <td><input type="checkbox" name="name" value="">&nbsp</td>
+                <?php 
+                  }else{ ?>
+                    <td>&nbsp</td>
+                  <?php
+                  }
+                }
+                ?>
+            </tr>
+            <tr>
+                <td>11:00 - 12:00</td>
+                <?php foreach ($week as $date) {
+                  if($date['valid_date']){
+                ?>
+                <td><input type="checkbox" name="name" value="">&nbsp</td>
+                <?php 
+                  }else{ ?>
+                    <td>&nbsp</td>
+                  <?php
+                  }
+                }
+                ?>
+            </tr>
+            <tr>
+                <td>14:00 - 15:00</td>
+                <?php foreach ($week as $date) {
+                  if($date['valid_date']){
+                ?>
+                <td><input type="checkbox" name="name" value="">&nbsp</td>
+                <?php 
+                  }else{ ?>
+                    <td>&nbsp</td>
+                  <?php
+                  }
+                }
+                ?>
+            </tr>
+            <tr>
+                <td>15:00 - 16:00</td>
+                <?php foreach ($week as $date) {
+                  if($date['valid_date']){
+                ?>
+                <td><input type="checkbox" name="name" value="">&nbsp</td>
+                <?php 
+                  }else{ ?>
+                    <td>&nbsp</td>
+                  <?php
+                  }
+                }
+                ?>
+            </tr>
+            <tr>
+                <td>16:00 - 17:00</td>
+                <?php foreach ($week as $date) {
+                  if($date['valid_date']){
+                ?>
+                <td><input type="checkbox" name="name" value="">&nbsp</td>
+                <?php 
+                  }else{ ?>
+                    <td>&nbsp</td>
+                  <?php
+                  }
+                }
+                ?>
+            </tr>
+            <tr>
+                <td>17:00 - 18:00</td>
+                <?php foreach ($week as $date) {
+                  if($date['valid_date']){
+                ?>
+                <td><input type="checkbox" name="name" value="">&nbsp</td>
+                <?php 
+                  }else{ ?>
+                    <td>&nbsp</td>
+                  <?php
+                  }
+                }
+                ?>
             </tr>
          </tbody>
+         <?php } ?>
        </table>
        <?php echo form_close() ?>
      </div>
