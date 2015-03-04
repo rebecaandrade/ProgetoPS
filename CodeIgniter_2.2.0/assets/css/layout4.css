@@ -25,7 +25,6 @@
     height: 14.4875%; /*(187.5px - 35.8px - 35.8 px)/ 800px*/
     margin-top: 4.475%;
     margin-bottom: 4.475%;
-    background-color: #DDD;
   }
 
   #header-logo{
@@ -41,10 +40,9 @@
     margin-right: 5.2884615384615384615384615384615%; /*55px / 1040px*/
   }
 
-  .header-logo-thin{
-    width: 18.711864406779661016949152542373%; /*(233px - 35.8px) / 1180px*/
+  .header-logo-thin{ /*Conversar com grupo*/
+    width: 12.40625%; /*(233px - 35.8px) / 1180px*/
     margin-right: 3.0338983050847457627118644067797%; /*35.8px / 1180px*/
-    background-color: red;
   }
 
   #header-text{
@@ -58,8 +56,7 @@
   }
 
   .header-text-thin{
-    width: 34.830508474576271186440677966102%; /*411px / 1180px*/
-    background-color: purple;
+    width: 27.559322033898305084745762711864%; /*396px / 1180px*/
   }
 
   #header-text-large-diamond{
@@ -86,7 +83,6 @@
     width: 100%;
     font-size: 26pt;
     font-weight: bold;
-    background-color: green;
   }
 
   .header-text-thin-square-1, .header-text-thin-square-2{
@@ -99,7 +95,6 @@
 
   #content{
     width: 100%;
-    background-color: #DDD;
   }
 
   .content-large{
@@ -108,7 +103,6 @@
 
   .content-thin{
     height: 76.5625%;
-    background-color: #EEE;
   }
 
   #login-field{
@@ -151,12 +145,14 @@
   }
 
   #login-field-input-user input, #login-field-input-password input{
-    width: 80%;
     height: 50%;
+    width: 80%;
     padding-left: 10%;
     margin-top: 3%;
     border-radius: 10px;
     border: 2px solid #73c04a;
+    font-weight: 600;
+    color: #1c1c1c;
   }
 
   #login-field-input-user label:before{
@@ -213,13 +209,14 @@
   #profile-id-photo{
     width: 35%;
     height: 100%;
-    background-color: #000;
+    background-color: red;
     float: left;
+    margin-right: 3%;:
   }
 
   #profile-id-photo-frame{
-    width: 100%;
-    height: 86.4%;
+    width: 95%;
+    height: 77%;
     position: relative;
     top: 0%;
     left: 0%;
@@ -227,11 +224,12 @@
   }
 
   #profile-id-photo-name{
-    width: 100%;
+    width: 98.6%;;
     height: 10%;
     color: #ffffff;
     text-align: center;
     font-weight: bold;
+    background-color: #000000;
   }
 
   #profile-id-photo-frame img{
@@ -252,11 +250,11 @@
     position: absolute;
     top: 0%;
     left: 0%;
-    z-index: -1;
+    z-index: 0;
   }
 
   #profile-id-info{
-    width: 40%;
+    width: 55%;
     height: 85%;
     padding: 0.5em;
     background-color: #DDD;
@@ -279,7 +277,7 @@
   }
 
   #profile-nav-top{
-    width: 94%;
+    width: 95.5%;
     height: 15%;
     padding: 0.5em;
     border-radius: 10px 10px 0px 0px;
@@ -351,9 +349,9 @@
   }
 
   .profile-nav-body-button{
-    height: 47%;
-    width: 49%;
-    padding: 2% 0% 0% 0%;
+    height: 39.5%;
+    width: 50%;
+    padding: 4% 0%;
     float: left;
   }
 
@@ -366,6 +364,7 @@
 
   .profile-nav-body-button p{
     font-size: 12pt;
+    margin-top: 5%;
   }
 
   .profile-nav-body-button a{
@@ -602,17 +601,30 @@
     width: 20.9999%;
     height: auto;
     float: left;
-    background-color: green;
     margin-left: 10%;
+    color: #ffffff;
+    font-wieght: lighter;
   }
 
-  .form-column-3 input[type="text"], .edit-info-column-3 input[type="password"]{
+  .form-column-3 input[type="text"], .form-column-3 input[type="password"]{
     height: 2.5em;
     width: 100%;
     margin-top: 0.3em;
     margin-bottom: 0.5em;
     padding-left: 0.5em;
     padding-right: 0.5em;
+  }
+
+  .form-column-3 input[type="submit"]{
+    width: 20%;
+    height: 20%;
+    display: block;
+    margin: 0% auto;
+    border: 0px solid #73c04a;
+    background-image: url("../images/button_dark_accept.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: transparent;
   }
 
   .formcolumn-3 img{
@@ -624,16 +636,15 @@
     width: 100%;
     height: 80%;
     float: left;
-    background-color: purple;
   }
 
   #form-photo-frame{
     width: 100%;
-    height: 69.3%;
+    height: 92.3%;
     position: relative;
     top: 0%;
     left: 0%;
-    background-color: green;
+
   }
 
   #form-photo-name{

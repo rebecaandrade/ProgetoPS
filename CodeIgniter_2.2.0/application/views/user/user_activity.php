@@ -1,7 +1,9 @@
 <?php echo $this->load->view('_inc/header_large') ?>
 
         <div class="header-text-large-square-2 header-text-uppercase">
-          <h3>presença nas atividades</h3>
+          <p>
+            presença nas atividades
+          </p>
         </div>
       </div>
     </div>

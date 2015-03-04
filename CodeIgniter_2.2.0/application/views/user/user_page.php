@@ -7,13 +7,12 @@
 </div>
 
 	<div id="content" class="content-thin">
-
 		<div id="profile-nav">
-			<div id="profile-nav-top" class="denied">
+			<div id="profile-nav-top" class="none">
 				<p>
 					TENTE NOVAMENTE
 				</p>
-				<span><!-- Icone de aprovado --></span>
+				<span><!--Icone de aprovado--></span>
 			</div>
 			<div id="profile-nav-body">
 				<div class="profile-nav-body-button">
@@ -46,6 +45,7 @@
 				</div>
 			</div>
 		</div>
+
 		<div id="profile-id">
 			<div id="profile-id-photo">
 				<div id="profile-id-photo-frame">
@@ -54,9 +54,10 @@
 				</div>
 				<div id="profile-id-photo-name">
 					<p>
-						<?php echo $this->session->userdata('nome');?> Danilo
+						<?php echo $this->session->userdata('nome');?>
 					</p>
 				</div>
+
 			</div>
 			<div id="profile-id-info">
 				<p>

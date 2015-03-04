@@ -62,6 +62,10 @@ body{
   margin-top: 1%;
 }
 
+h3{
+  font-size: 16pt;
+}
+
 @media screen and (min-width: 319px) and (max-width: 480px){
   .center-large{
     max-width: 479px;
@@ -494,14 +498,14 @@ body{
         }
 
         #header-text-large-diamond{
-          font-size: 18pt;
+          font-size: 16pt;
           font-weight: bold;
         }
 
         .header-text-large-square-1, .header-text-large-square-2{
           height: 28.205128205128205128205128205128%; /*55px / 195px*/
           width: 100%;
-          font-size: 16pt;
+          font-size: 14pt;
           font-weight: normal;
         }
 
@@ -520,5 +524,27 @@ body{
           width: 15%;
           margin: 2.7% 0% 0% -4%;
         }
+
+        #profile-nav{
+          width: 84%;
+          height: 35%;
+          margin: 0% auto 5% auto;
+          text-align: center;
+        }
+
+        #profile-nav-top{
+          width: 95.4%;
+          height: 15%;
+          padding: 0.5em;
+          border-radius: 10px 10px 0px 0px;
+          font-weight: bold;
+          color: #ffffff;
+        }
+
+        #profile-nav-body{
+          width: 100%;
+          height: 80%;
+        }
+
       }
 }

@@ -21,5 +21,7 @@
         <div class="header-text-large-square-1">
         </div>
         <div id="header-text-large-diamond">
-          <h3>Processo Seletivo</h3>
+          <p>
+            Processo Seletivo
+          </p>
         </div>

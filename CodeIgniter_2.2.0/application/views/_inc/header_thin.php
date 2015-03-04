@@ -22,5 +22,7 @@
       <div class="header-text-thin-square-1">
       </div>
       <div id="header-text-thin-diamond">
-        <h3>Processo Seletivo</h3>
+        <p>
+          Processo Seletivo
+        </p>
       </div>

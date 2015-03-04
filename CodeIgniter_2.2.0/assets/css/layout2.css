@@ -76,6 +76,10 @@
     font-weight: normal;
   }
 
+  .header-text-large-square-1 a,  .header-text-large-square-2 a{
+    color: #ffffff;
+  }
+
   #header-text-thin-diamond{
     height: 43.589743589743589743589743589744%; /*(195px - 55px - 55px) / 195px*/
     width: 100%;

@@ -1,7 +1,7 @@
 <?php echo $this->load->view('_inc/header_large')?>
 
 <div class="header-text-large-square-2">
-					<a href="http://www.cjr.org.br"><h3>www.cjr.org.br</h3></a>
+					<a href="http://www.cjr.org.br"><h3>www.cjr.org.br/site</h3></a>
 				</div>
 			</div>
 		</div>
