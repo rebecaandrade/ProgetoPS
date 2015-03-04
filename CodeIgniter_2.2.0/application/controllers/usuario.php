@@ -100,6 +100,9 @@ class Usuario extends CI_Controller {
     }
     public function session_update($user){
     	$newdata = array(
+                'curso' => $user['curso'],
+                'semestre' => $user['semestre'],
+                'telefone' => $user['telefone'],
 				'email' => $user['email'],
 				'nome' => $user['nome'], 	);
         $this->session->set_userdata($newdata);

@@ -56,7 +56,7 @@
 				</div>
 				<div id="profile-id-photo-name">
 					<p>
-						<?php echo $this->session->userdata('nome');?> Danilo
+						<?php echo $this->session->userdata('nome');?>
 					</p>
 				</div>
 			</div>
