@@ -12,6 +12,7 @@ class Horario extends CI_Controller {
   	$times = array();
   	
   	foreach ($dates as $date) {
+  		//Mudar para aceitar formato date 
   		$date = explode("/",$date->data);
   		$day = $date[0] + 0;
         $month = $date[1] + 0;
@@ -29,7 +30,18 @@ class Horario extends CI_Controller {
   	$data['weeks'] = $this->generate_weeks($times);
     $this->load->view('user/user_interview',$data);
   }
-  
+  public function save_interview_hours(){
+  	$results = $this->input->post('result');
+  	
+  	$interviews = array();
+
+  	foreach ($results as $result) {
+  		$interview = explode("/",$result);
+  		array_push($interviews, $interview);
+  	}
+  	//$this->horario_model->save_hours($interviews);
+  	die;
+  }
   public function load_user_activity(){
     $this->load->view('user/user_activity');
   }
@@ -43,32 +55,30 @@ class Horario extends CI_Controller {
   	
 
   	$weeks = array();
-  	$aux = 0;
   	
-  	  	for ($j=0; $j < $length ; $j++) { 
+  	for ($j=0; $j < $length ; $j++) { 
+ 		$jd = $start + $j;
+  		$date = JDToGregorian($jd);
+  		$date = explode("/",$date);
+  		
+  		$day = $date[1] + 0;
+        $month = $date[0] + 0;
+        $year = $date[2] + 0;
+        $day_name = $this->dayofweek(JDDayOfWeek($jd,0));
 
-	 		$jd = $start + $j;
-	  		$date = JDToGregorian($jd);
-	  		$date = explode("/",$date);
-	  		
-	  		$day = $date[1] + 0;
-	        $month = $date[0] + 0;
-	        $year = $date[2] + 0;
-	        $day_name = $this->dayofweek(JDDayOfWeek($jd,0));
-
-	  		$time = array(
-	  					'day' =>  $day,
-	  					'month' => $month,
-	  					'year' => $year,
-	  					'jd' => $jd,
-	  					'day_name' => $day_name,
-	  					'valid_date' => FALSE
-	  			);
-	  		if ($this->jd_exists($times,$jd)){
-	  			$time['valid_date'] = TRUE;
-	  		}
-	  		$aux++;
-	  		array_push($weeks, $time); 
+  		$time = array(
+  					'day' =>  $day,
+  					'month' => $month,
+  					'year' => $year,
+					'jd' => $jd,
+					'day_name' => $day_name,
+					'valid_date' => FALSE
+  				);
+	  	if ($this->jd_exists($times,$jd)){
+	  		$time['valid_date'] = TRUE;
+	  	}
+	  
+		array_push($weeks, $time); 
 	  	}
 	$weeks = $this->divide_weeks($weeks);
   	return $weeks;
