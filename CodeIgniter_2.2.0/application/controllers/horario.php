@@ -28,6 +28,7 @@ class Horario extends CI_Controller {
         array_push($times,$time);
   	}
   	$data['weeks'] = $this->generate_weeks($times);
+
     $this->load->view('user/user_interview',$data);
   }
   public function save_interview_hours(){

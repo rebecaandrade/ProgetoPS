@@ -13,7 +13,7 @@
 			</div>
 			<div id="profile-nav-body">
 				<div class="profile-nav-body-button">
-					<a href="<?php echo base_url()?>index.php/usuario/feedback"><img src="<?php echo base_url();?>assets/images/icon_feedback.png" alt="" />
+					<a href="<?php echo base_url()?>index.php/feedback/load_feedback"><img src="<?php echo base_url();?>assets/images/icon_feedback.png" alt="" />
 					<p>
 						FeedBack
 					</p></a>
