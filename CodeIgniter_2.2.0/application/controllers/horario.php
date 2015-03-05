@@ -7,12 +7,13 @@ class Horario extends CI_Controller {
   }
 
   public function load_user_interview(){
+  	
   	$dates = $this->horario_model->dates_interviews();
-
+  	$hours = $this->horario_model->marked_hours($this->session->userdata('login_id'));
   	$times = array();
   	
   	foreach ($dates as $date) {
-  		//Mudar para aceitar formato date 
+        $id = $date->id_data; 
   		$date = explode("-",$date->data);
   		$day = $date[2] + 0;
         $month = $date[1] + 0;
@@ -20,11 +21,22 @@ class Horario extends CI_Controller {
 
         $jd = GregorianToJD($month, $day, $year);
         $week_day = JDDayOfWeek($jd,0);
-
+        $marked = array();
+        if(isset($hours)){
+	        foreach ($hours as $hour) {
+	        	if($hour->tb_datas_validas_id_data == $id){
+	        		$tempo = explode(":",$hour->tempo);
+	        		$marked[$tempo[0]] = 1;
+	        	}
+	        }
+	    }
         $time = array( 
                 'jd' => $jd,
-                'week_day' => $week_day
+                'week_day' => $week_day,
+                'hours' => $marked,
+                'id_date' => $id
         		);
+
         array_push($times,$time);
   	}
   	$data['weeks'] = $this->generate_weeks($times);
@@ -41,7 +53,7 @@ class Horario extends CI_Controller {
   		array_push($interviews, $interview);
   	}
   	$this->horario_model->save_hours($interviews);
-  	die;
+  	redirect('usuario/home');
   }
   public function load_user_activity(){
     $this->load->view('user/user_activity');
@@ -73,10 +85,12 @@ class Horario extends CI_Controller {
   					'year' => $year,
 					'jd' => $jd,
 					'day_name' => $day_name,
-					'valid_date' => FALSE
+					'id_date' => NULL,
   				);
-	  	if ($this->jd_exists($times,$jd)){
-	  		$time['valid_date'] = TRUE;
+  		$valid = $this->jd_exists($times,$jd);
+	  	if (isset($valid)){
+	  		$time['id_date'] = $valid['id_date'];
+	  		$time['hours'] = $valid['hours'];
 	  	}
 	  
 		array_push($weeks, $time); 
@@ -99,10 +113,10 @@ class Horario extends CI_Controller {
   public function jd_exists($times,$jd){
   	foreach ($times as $time) {
   		if ($time['jd'] == $jd){
-  			return TRUE;
+  			return $time;
   		}
   	}
-  	return FALSE;
+  	return NULL;
   }
   public function biggest_jd($times){
   	$biggest = NULL;

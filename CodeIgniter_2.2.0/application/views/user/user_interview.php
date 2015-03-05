@@ -39,9 +39,14 @@
             <tr>
                 <td>08:00 - 9:00</td>
                 <?php foreach ($week as $date) {
-                  if($date['valid_date']){
+                  if($date['id_date']){
                 ?>
-                <td><input type="checkbox" name="result[]" value=<?php echo $date['year'].'-'.$date['month'].'-'.$date['day'].'/8' ?>>&nbsp</td>
+                <td><input type="checkbox" name="result[]" value=<?php echo $date['year'].'-'.$date['month'].'-'.$date['day'].'/8'.'/'.$date['id_date'] ?> 
+                <?php if (isset($date['hours']['08'])) {
+                  echo "checked";
+                } 
+                ?>
+                >&nbsp</td>
                 <?php
                   }else{ ?>
                     <td>&nbsp</td>
@@ -53,9 +58,14 @@
             <tr>
                 <td>09:00 - 10:00</td>
                 <?php foreach ($week as $date) {
-                  if($date['valid_date']){
+                  if($date['id_date']){
                 ?>
-                <td><input type="checkbox" name="result[]" value=<?php echo $date['year'].'-'.$date['month'].'-'.$date['day'].'/9' ?>>&nbsp</td>
+                <td><input type="checkbox" name="result[]" value=<?php echo $date['year'].'-'.$date['month'].'-'.$date['day'].'/9'.'/'.$date['id_date'] ?>
+                <?php if (isset($date['hours']['09'])) {
+                  echo "checked";
+                } 
+                ?>
+                >&nbsp</td>
                 <?php
                   }else{ ?>
                     <td>&nbsp</td>
@@ -67,9 +77,14 @@
             <tr>
                 <td>10:00 - 11:00</td>
                 <?php foreach ($week as $date) {
-                  if($date['valid_date']){
+                  if($date['id_date']){
                 ?>
-                <td><input type="checkbox" name="result[]" value=<?php echo $date['year'].'-'.$date['month'].'-'.$date['day'].'/10' ?>>&nbsp</td>
+                <td><input type="checkbox" name="result[]" value=<?php echo $date['year'].'-'.$date['month'].'-'.$date['day'].'/10'.'/'.$date['id_date'] ?>
+                <?php if (isset($date['hours']['10'])) {
+                  echo "checked";
+                } 
+                ?>
+                >&nbsp</td>
                 <?php
                   }else{ ?>
                     <td>&nbsp</td>
@@ -81,9 +96,14 @@
             <tr>
                 <td>11:00 - 12:00</td>
                 <?php foreach ($week as $date) {
-                  if($date['valid_date']){
+                  if($date['id_date']){
                 ?>
-                <td><input type="checkbox" name="result[]" value=<?php echo $date['year'].'-'.$date['month'].'-'.$date['day'].'/11' ?>>&nbsp</td>
+                <td><input type="checkbox" name="result[]" value=<?php echo $date['year'].'-'.$date['month'].'-'.$date['day'].'/11'.'/'.$date['id_date'] ?>
+                <?php if (isset($date['hours']['11'])) {
+                  echo "checked";
+                } 
+                ?>
+                >&nbsp</td>
                 <?php
                   }else{ ?>
                     <td>&nbsp</td>
@@ -95,9 +115,14 @@
             <tr>
                 <td>14:00 - 15:00</td>
                 <?php foreach ($week as $date) {
-                  if($date['valid_date']){
+                  if($date['id_date']){
                 ?>
-                <td><input type="checkbox" name="result[]" value=<?php echo $date['year'].'-'.$date['month'].'-'.$date['day'].'/14' ?>>&nbsp</td>
+                <td><input type="checkbox" name="result[]" value=<?php echo $date['year'].'-'.$date['month'].'-'.$date['day'].'/14'.'/'.$date['id_date'] ?>
+                <?php if (isset($date['hours']['14'])) {
+                  echo "checked";
+                } 
+                ?>
+                >&nbsp</td>
                 <?php
                   }else{ ?>
                     <td>&nbsp</td>
@@ -109,9 +134,14 @@
             <tr>
                 <td>15:00 - 16:00</td>
                 <?php foreach ($week as $date) {
-                  if($date['valid_date']){
+                  if($date['id_date']){
                 ?>
-                <td><input type="checkbox" name="result[]" value=<?php echo $date['year'].'-'.$date['month'].'-'.$date['day'].'/15' ?>>&nbsp</td>
+                <td><input type="checkbox" name="result[]" value=<?php echo $date['year'].'-'.$date['month'].'-'.$date['day'].'/15'.'/'.$date['id_date'] ?>
+                <?php if (isset($date['hours']['15'])) {
+                  echo "checked";
+                } 
+                ?>
+                >&nbsp</td>
                 <?php
                   }else{ ?>
                     <td>&nbsp</td>
@@ -123,9 +153,14 @@
             <tr>
                 <td>16:00 - 17:00</td>
                 <?php foreach ($week as $date) {
-                  if($date['valid_date']){
+                  if($date['id_date']){
                 ?>
-                <td><input type="checkbox" name="result[]" value=<?php echo $date['year'].'-'.$date['month'].'-'.$date['day'].'/16' ?>>&nbsp</td>
+                <td><input type="checkbox" name="result[]" value=<?php echo $date['year'].'-'.$date['month'].'-'.$date['day'].'/16'.'/'.$date['id_date'] ?>
+                <?php if (isset($date['hours']['16'])) {
+                  echo "checked";
+                } 
+                ?>
+                >&nbsp</td>
                 <?php
                   }else{ ?>
                     <td>&nbsp</td>
@@ -137,9 +172,14 @@
             <tr>
                 <td>17:00 - 18:00</td>
                 <?php foreach ($week as $date) {
-                  if($date['valid_date']){
+                  if($date['id_date']){
                 ?>
-                <td><input type="checkbox" name="result[]" value=<?php echo $date['year'].'-'.$date['month'].'-'.$date['day'].'/17' ?>>&nbsp</td>
+                <td><input type="checkbox" name="result[]" value=<?php echo $date['year'].'-'.$date['month'].'-'.$date['day'].'/17'.'/'.$date['id_date'] ?>
+                <?php if (isset($date['hours']['17'])) {
+                  echo "checked";
+                } 
+                ?>
+                >&nbsp</td>
                 <?php
                   }else{ ?>
                     <td>&nbsp</td>
