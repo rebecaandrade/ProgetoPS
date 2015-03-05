@@ -5,7 +5,6 @@ class Horario extends CI_Controller {
        parent::__construct();
        $this->load->model('horario_model');
   }
-
   public function load_user_interview(){
   	
   	$dates = $this->horario_model->dates_interviews();

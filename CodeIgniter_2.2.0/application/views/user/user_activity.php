@@ -13,9 +13,9 @@
       <div class="activity-column-2">
         <h5>Palestra Institucional</h5>
 
-        <label class="radio"><input type="radio" id="radio1" name="palestra_12" value="">12h30min</label><br />
+        <label class="radio"><input type="radio" id="radio1" name="palestra" value="12">12h30min</label><br />
         <br />
-        <label class="radio"><input type="radio" id="radio2" name="palestra_18" value="">18h00min</label>
+        <label class="radio"><input type="radio" id="radio2" name="palestra" value="18">18h00min</label>
 
         <p>
       	Não poderá comparecer em<br /> nenhum destes horários?
@@ -25,9 +25,9 @@
       <div class="activity-column-2">
         <h5>Dinâmica em Grupo</h5>
 
-          <label><input type="radio" id="radio3" name="dinamica_12" value="">12h30min</label><br />
+          <label><input type="radio" id="radio3" name="dinamica" value="12">12h30min</label><br />
 
-          <label><input type="radio" id="radio4" name="dinamica_18" value="">18h00min</label>
+          <label><input type="radio" id="radio4" name="dinamica" value="18">18h00min</label>
       </div>
 
     <a href="#"><h3>Prefiro responder posteriormente</h3></a>
