@@ -11,11 +11,11 @@
       <h3>Selecione os horários que participará da palestras institucional:</h3>
 
       <div class="activity-column-2">
-        <h5><span class="h7">Palestra Institucional</span></h5>
+        <h5>Palestra Institucional</h5>
 
-        <label><input type="radio" id="radio1" name="palestra_12" value="">12h30min</label><br />
-
-        <label><input type="radio" id="radio2" name="palestra_18" value="">18h00min</label>
+        <label class="radio"><input type="radio" id="radio1" name="palestra_12" value="">12h30min</label><br />
+        <br />
+        <label class="radio"><input type="radio" id="radio2" name="palestra_18" value="">18h00min</label>
 
         <p>
       	Não poderá comparecer em<br /> nenhum destes horários?

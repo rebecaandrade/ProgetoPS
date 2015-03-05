@@ -1,4 +1,4 @@
-@media screen  and (min-width: 768px) and (max-width : 1200px){
+@media screen and (min-width: 768px) and (max-width: 1200px){
   .center-large{
     max-width: 1200px;
     width: 81.25%; /*(1280 px - 240px) / 1280px*/
@@ -13,7 +13,6 @@
 
   #header{
     width: 100%;
-    background-color: #DDD;
   }
 
   .header-large{
@@ -23,9 +22,9 @@
   }
 
   .header-thin{
-    height: 6.125%; /*(195px + 110px) / 800 px;*/
-    margin-top: 6.875%; /*55px / 800px */
-    margin-bottom: 6.875%; /*55px / 800px */
+    height: 13.125%; /*(195px + 110px) / 800 px;*/
+    margin-top: 4.875%; /*55px / 800px */
+    margin-bottom: 4.875%; /*55px / 800px */
   }
 
   #header-logo{
@@ -37,13 +36,13 @@
   }
 
   .header-logo-large{
-    width: 17.519230769230769230769230769231%; /*(362px - 55px) / 1040px*/
-    margin-right: 3.2884%; /*55px / 1180px*/
+    width: 26.519%; /*(362px - 55px) / 1040px*/
+    margin-right: 4.288%; /*55px / 1180px*/
   }
 
   .header-logo-thin{
-    width: 16.711864406779661016949152542373%; /*(233px - 35.8px) / 1040px*/
-    margin-right: 3.0338983050847457627118644067797%; /*35.8px / 1040px*/
+    width: 27.712%; /*(233px - 35.8px) / 1040px*/
+    margin-right: 5.034%; /*35.8px / 1040px*/
   }
 
   #header-text{
@@ -55,14 +54,14 @@
 
   #header-text-large-diamond{
     height: 43.589743589743589743589743589744%; /*(195px - 55px - 55px) / 195px*/
-    width: 60%;
-    font-size: 24pt;
+    width: 75%;
+    font-size: 26pt;
     font-weight: bold;
   }
 
   .header-text-large-square-1, .header-text-large-square-2{
     height: 28.205128205128205128205128205128%; /*55px / 195px*/
-    width: 60%;
+    width: 75%;
     font-size: 16pt;
     font-weight: normal;
     text-align: center;
@@ -70,17 +69,21 @@
 
   #header-text-thin-diamond{
     height: 43.589743589743589743589743589744%; /*(195px - 55px - 55px) / 195px*/
-    width: 60%;
-    font-size: 24pt;
+    width: 75%;
+    font-size: 28pt;
     font-weight: bold;
   }
 
   .header-text-thin-square-1, .header-text-thin-square-2{
     height: 28.205128205128205128205128205128%; /*55px / 195px*/
-    width: 60%;
-    font-size: 16pt;
+    width: 75%;
+    font-size: 18pt;
     font-weight: normal;
     text-align: center;
+  }
+
+  .header-text-large-square-1 a, .header-text-large-square-2 a, .header-text-thin-square-1 a, .header-text-thin-square-2 a{
+    color: #ffffff;
   }
 
   #content{
@@ -260,7 +263,7 @@
   }
 
   #profile-nav-top{
-    width: 94%;
+    width: 95%;
     height: 18%;
     padding: 0.5em;
     border-radius: 10px 10px 0px 0px;

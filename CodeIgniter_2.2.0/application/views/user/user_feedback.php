@@ -1,7 +1,7 @@
 <?php echo $this->load->view('_inc/header_thin') ?>
 
       <div class="header-text-thin-square-2 header-text-uppercase">
-        <h3>feedback</h3>
+        <p>feedback</p>
       </div>
     </div>
   </div>
@@ -17,7 +17,7 @@
           d
         </div>
       </div>
-      
+
       <div id="feedback-nav">
         <div id="feedback-nav-top">
           <p>

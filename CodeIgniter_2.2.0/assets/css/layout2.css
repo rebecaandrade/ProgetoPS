@@ -1,4 +1,4 @@
-@media screen and (min-width: 481px) and (max-width: 767px){
+@media screen and (min-width: 481px) and (max-width: 766px){
   .center-large{
     max-width: 768px;
     width: 81.25%;
@@ -271,7 +271,7 @@
   }
 
   #profile-nav-top{
-    width: 96.8%;
+    width: 96.5%;
     height: 15%;
     padding: 0.5em;
     border-radius: 10px 10px 0px 0px;
@@ -295,11 +295,19 @@
 
   /*profile-nav-top*/.aproved{
     background-color: #83d955;
-
   }
 
   /*profile-nav-top*/.aproved span{
     background-image: url("../images/icon_aproved.png");
+  }
+
+  .aproved:before{
+      content: "aprovado";
+      text-transform: uppercase;
+      font-size: 16pt;
+      position: relative;
+      top: 10%;
+      left: -1%;
   }
 
   /*profile-nav-top*/.avaliation{
@@ -310,17 +318,30 @@
     display: none;
   }
 
-  /*profile-nav-top*/.avaliation p{
-    max-width: 100%;
-    width: 100%;
+  .avaliation:before{
+      content: "em avaliação";
+      text-transform: uppercase;
+      font-size: 16pt;
+      position: relative;
+      top: 10%;
+      left: 7%;
   }
 
   /*profile-nav-top*/.denied{
-    background-color: #bf4b4b;
+    background-color: #ed1c24;
   }
 
   /*profile-nav-top*/.denied span{
     background-image: url("../images/icon_denied.png");
+  }
+
+  .denied:before{
+      content: "tente novamente";
+      text-transform: uppercase;
+      font-size: 16pt;
+      position: relative;
+      top: 0%;
+      left: -15%;
   }
 
   /*profile-nav-top*/.none{
@@ -394,9 +415,17 @@
         }
 
         #header-logo{
-          height: 100%;
-          width: 35%;
           margin: 0% 5% 10% auto;
+        }
+
+        .header-logo-large{
+          width: 29.519230769230769230769230769231%; /*(362px - 55px) / 1040px*/
+          margin-right: 5.2884615384615384615384615384615%; /*55px / 1040px*/
+        }
+
+        .header-logo-thin{
+          width: 29.519230769230769230769230769231%; /*(362px - 55px) / 1040px*/
+          margin-right: 3.0338983050847457627118644067797%; /*35.8px / 1180px*/
         }
 
         #header-text{
@@ -409,6 +438,14 @@
 
         .header-text-large-square-1,  .header-text-large-square-2{
           font-size: 18pt;
+        }
+
+        #header-text-thin-diamond{
+          font-size: 24pt;
+        }
+
+        .header-text-thin-square-1,  .header-text-thin-square-2{
+          font-size: 16pt;
         }
       }
 

@@ -1,17 +1,14 @@
 <?php echo $this->load->view('_inc/header_thin')?>
 
 		<div class="header-text-thin-square-2 header-text-uppercase">
-			<h3>informações gerais</h3>
+			<p>informações gerais</p>
 		</div>
 	</div>
 </div>
 
 	<div id="content" class="content-thin">
 		<div id="profile-nav">
-			<div id="profile-nav-top" class="none">
-				<p>
-					TENTE NOVAMENTE
-				</p>
+			<div id="profile-nav-top" class="aproved">
 				<span><!--Icone de aprovado--></span>
 			</div>
 			<div id="profile-nav-body">
