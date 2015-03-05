@@ -10,13 +10,13 @@ class PS extends CI_Controller {
 /// Carregando páginas
     public function lista(){
     	$this->load->model('PS_model');
-    	$dados['tb_PS'] = $this->PS_model->searchPS();	
+    	$dados['tb_PS'] = $this->PS_model->search_ps();	
     	$this->load->view('admin/user_list', $dados);
     }
 /// Serviços
     public function cadastrar(){
         $this->load->model('PS_model');
-        if($this->PS_model->getStatus()){
+        if($this->PS_model->current_ps()){
         	$dados = array(
         		'nome' => $this->input->post('nome'),
         		'data_abertura' => $this->input->post('data_abertura'),	
@@ -34,7 +34,7 @@ class PS extends CI_Controller {
     public function excluir($id){
     	$this->load->model('PS_model');
     	try{
-        	$this->PS_model->closePS($id);
+        	$this->PS_model->close_ps($id);
         } catch(Exception $e){
         	$this->session->set_userdata('mensagem', $e->getMessage());
         }
@@ -44,7 +44,7 @@ class PS extends CI_Controller {
     public function selecionar($id){
     	$this->load->model('PS_model');
     	try{
-    		$this->PS_model->showPS($id);
+    		$this->PS_model->show_ps($id);
     	} catch(Exception $e){
     		$this->session->set_userdata('mensagem', $e->getMessage());
     	}
