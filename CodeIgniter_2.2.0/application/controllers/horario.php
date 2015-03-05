@@ -8,7 +8,7 @@ class Horario extends CI_Controller {
   public function load_user_interview(){
   	
   	$dates = $this->horario_model->dates_interviews();
-  	$hours = $this->horario_model->marked_hours($this->session->userdata('login_id'));
+  	$hours = $this->horario_model->marked_hours($this->session->userdata('login_id'),3);
   	$times = array();
   	
   	foreach ($dates as $date) {
@@ -52,10 +52,25 @@ class Horario extends CI_Controller {
   		array_push($interviews, $interview);
   	}
   	$this->horario_model->save_hours($interviews);
-  	redirect('usuario/home');
+  	redirect('horario/load_user_interview');
   }
   public function load_user_activity(){
-    $this->load->view('user/user_activity');
+    $data['palestra'] = $this->horario_model->dates_palestras()[0];
+    $data['palestra_hours'] = $this->horario_model->palestra_hours();
+    $data['palestra_marked'] = $this->horario_model->marked_hours($this->session->userdata('login_id'),1);
+
+    $data['dinamica'] = $this->horario_model->dates_dinamicas()[0];
+    $data['dinamica_hours'] = $this->horario_model->dinamica_hours();
+    $data['dinamica_marked'] = $this->horario_model->marked_hours($this->session->userdata('login_id'),2);
+
+    $this->load->view('user/user_activity',$data);
+  }
+  public function save_palestra_dinamica_hours(){
+  	$palestra = $this->input->post('palestra');
+  	$dinamica = $this->input->post('dinamica');
+
+  	$this->horario_model->save_hours_palestra_dinamica($palestra,$dinamica);
+  	redirect('horario/load_user_activity');
   }
 
   //-------------------Funções auxiliares-----------------------//
