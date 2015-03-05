@@ -13,10 +13,10 @@ class Horario extends CI_Controller {
   	
   	foreach ($dates as $date) {
   		//Mudar para aceitar formato date 
-  		$date = explode("/",$date->data);
-  		$day = $date[0] + 0;
+  		$date = explode("-",$date->data);
+  		$day = $date[2] + 0;
         $month = $date[1] + 0;
-        $year = $date[2] + 0;
+        $year = $date[0] + 0;
 
         $jd = GregorianToJD($month, $day, $year);
         $week_day = JDDayOfWeek($jd,0);
@@ -40,7 +40,7 @@ class Horario extends CI_Controller {
   		$interview = explode("/",$result);
   		array_push($interviews, $interview);
   	}
-  	//$this->horario_model->save_hours($interviews);
+  	$this->horario_model->save_hours($interviews);
   	die;
   }
   public function load_user_activity(){

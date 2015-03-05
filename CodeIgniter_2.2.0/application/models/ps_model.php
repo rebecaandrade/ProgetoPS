@@ -27,6 +27,11 @@ class PS_Model extends CI_Model{
 		$this->db->where('id',$id);
 	    return $this->db->delete('tb_PS');
 	}
+	///Retorna PS atual
+	public function current_ps(){
+		$this->db->where('status_ps',TRUE);
+		return $this->db->get('tb_ps')->row()->id;
+	}
 	///Listar
 	public function searchPS(){
 		return $this->db->get('tb_PS')->result();

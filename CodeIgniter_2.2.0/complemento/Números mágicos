@@ -9,7 +9,7 @@ Numeros magicos:
 		2-dinamica
 		3-entrevista
 	status feed (ta_login_x_tb_ps):
-	0 - Ps fechado
-	1 - reprovado
-	2 - Em avaliação
-	3- 	Aprovado
+		0 - Ps fechado
+		1 - reprovado
+		2 - Em avaliação
+		3- 	Aprovado
