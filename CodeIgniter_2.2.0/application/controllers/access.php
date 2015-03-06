@@ -56,11 +56,15 @@ class Access extends CI_Controller {
 			$message = wordwrap($message, 70);
 			$headers = 'From: donotreply@cjr.org.br';/* Ver qual email que deve mandar */
 			mail($to,$subject,$message,$headers);
-			/*setar mensagem de sucesso"Um email foi enviado com sua nova senha"*/
+			$this->session->set_userdata('mensagem','Email enviado com sucesso!');
+			$this->session->set_userdata('subtitulo_mensagem','');
+			$this->session->set_userdata('tipo_mensagem','success');		
 			redirect('access/login');
 		}
 		else{
-			/*mensagem de fracasso "Email não cadastrado"*/
+			$this->session->set_userdata('mensagem','Email não cadastrado!');
+			$this->session->set_userdata('subtitulo_mensagem','');
+			$this->session->set_userdata('tipo_mensagem','error');
 			redirect('access/password_recovery');
 		}
 	}

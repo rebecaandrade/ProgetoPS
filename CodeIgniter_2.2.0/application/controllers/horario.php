@@ -70,6 +70,8 @@ class Horario extends CI_Controller {
   	$dinamica = $this->input->post('dinamica');
 
   	$this->horario_model->save_hours_palestra_dinamica($palestra,$dinamica);
+  	$this->session->set_userdata('mensagem','Horário salvo com sucesso!');
+  	$this->session->set_userdata('tipo_mensagem','success');
   	redirect('horario/load_user_activity');
   }
 
