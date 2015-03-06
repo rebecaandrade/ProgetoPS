@@ -40,9 +40,11 @@ class Usuario_model extends CI_Model {
 		$this->db->where('usuario',$dados['usuario']);
 		return $this->db->get('tb_login')->row()->id_login;
 	}
-	public function get_my_feed(){
-		$id = $this->session->userdata('login_id');
-		$this->db->where('tb_login_id_login',$id);
-		return $this->db->get('ta_login_x_tb_PS')->result();
+	public function inscribed_on_current_ps(){
+		$id_login = $this->session->userdata('login_id');
+		$id_ps = $this->db->where(array('status_ps !=' => 0))->get('tb_PS')
+		->row()->id;
+		return $this->db->where(array('tb_login_id_login' => $id_login,'tb_ps_id' => $id_ps))
+		->get('ta_login_x_tb_PS')->row();
 	}
 }

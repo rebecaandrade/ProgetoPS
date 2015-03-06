@@ -25,4 +25,7 @@ class Feedback extends CI_Controller {
 		$dados['semestres'] = $semestre;
 		$this->load->view('user/user_feedback',$dados);
 	}
+	public function show_feed(){
+		$this->load->view('admin/admin_feedback');
+	}
 }

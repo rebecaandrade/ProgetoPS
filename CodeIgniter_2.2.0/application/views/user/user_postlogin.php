@@ -12,7 +12,7 @@
         <p>Inscreva-se</p>
     </div>
     <div class="postlogin-field-button">
-			<a href="<?php echo base_url();?>index.php/usuario/home">
+			<a href="<?php echo base_url();?>index.php/usuario/home/">
 				<img src="<?php echo base_url();?>assets/images/profile_post.png" alt="" />
 	        <p>Perfil</p>
 			</a>

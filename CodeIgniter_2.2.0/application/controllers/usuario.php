@@ -18,7 +18,13 @@ class Usuario extends CI_Controller {
 	}
 	public function home(){
 		if($this->session->userdata('login_perfil') == 1){
-			redirect('usuario/load_home_user');
+            if(!$this->usuario_model->inscribed_on_current_ps() && $this->session->userdata('inscription_status') != 1){
+                $this->session->set_userdata('inscription_status','1');
+                $this->load->view('user/user_postlogin');
+            }
+			else{
+                redirect('usuario/load_home_user');
+            }
 		}
 		elseif($this->session->userdata('login_perfil') == 2){
 			redirect('admin/load_home_admin');
@@ -30,7 +36,7 @@ class Usuario extends CI_Controller {
             redirect('access/login');
 	}
 	public function load_home_user(){
-		$this->load->view('user/user_page');
+            $this->load->view('user/user_page');
 	}
 	public function list_users(){
         $dados['users'] = $this->usuario_model->retrieve_users();
