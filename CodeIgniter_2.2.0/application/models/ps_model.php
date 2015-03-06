@@ -20,7 +20,7 @@ class PS_Model extends CI_Model{
 	///Fechar PS
 	public function close_ps($id){
 		$this->db->where('id',$id);
-	    return $this->db->delete('tb_PS');
+	    return $this->db->delete('tb_ps');
 	}
 	///Retorna id do PS atual
 	public function current_ps(){
@@ -29,12 +29,18 @@ class PS_Model extends CI_Model{
 	}
 	///Listar
 	public function search_ps(){
-		return $this->db->get('tb_PS')->result();
+		return $this->db->get('tb_ps')->result();
 
 	}
 	///Selecionar (visualizar) PS
 	public function show_ps($id){
 		$this->db->where('id',$id);
-		return $this->db->get('tb_PS')->result();
+		return $this->db->get('tb_ps')->result();
+	}
+
+	public function date_id($data){
+		foreach($data['tb_ps'] as $dado) {
+            echo $dado->id;
+        }
 	}
 }
