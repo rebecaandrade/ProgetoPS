@@ -23,9 +23,16 @@ class Feedback_model extends CI_Model {
 		->join('ta_login_x_tb_PS t','t.tb_login_id_login = l.id_login')
 		->join('tb_PS ps','t.tb_PS_id = ps.id')
 		->where('l.id_login',$id)->get()->result();
-
-		die(var_dump($dados));
-
-
+		foreach ($dados as $dado ) {
+			$dates[] = $dado->data_abertura;
+		}
+		return $dates;
+	}
+	public function get_passed_feed($date){
+		$id_login = $this->session->userdata('login_id');
+		$id_ps = $this->db->where('data_abertura',$date)->get('tb_PS')
+		->row()->id;
+		return $this->db->where(array('tb_login_id_login'=>$id_login,'tb_ps_id' => $id_ps))
+		->get('ta_login_x_tb_PS')->row();
 	}
 }
