@@ -7,7 +7,8 @@ confirmar = function(mensagem,subtitulo){
 		confirmButtonColor: "#DD6B55",
 		confirmButtonText: "sim!",
 		cancelButtonText: "Não!",
-		closeOnConfirm: false 
+		closeOnConfirm: false,
+		allowOutsideClick : true 
 	});
 }
 horario = function(mensagem,subtitulo,url,url_2){
@@ -18,7 +19,8 @@ horario = function(mensagem,subtitulo,url,url_2){
 		showCancelButton: true,
 		confirmButtonText: "Horário da entrevista.",
 		cancelButtonText: "Horário das atividades.",
-		closeOnConfirm: false 
+		closeOnConfirm: false, 
+		allowOutsideClick : true
 	},
 	function(isConfirm){
 		if (isConfirm) {
