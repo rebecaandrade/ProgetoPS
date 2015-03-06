@@ -23,7 +23,11 @@ class Usuario extends CI_Controller {
 		elseif($this->session->userdata('login_perfil') == 2){
 			redirect('admin/load_home_admin');
 		}
-		else redirect('admin/load_home_superadmin');
+		elseif($this->session->userdata('login_perfil') == 3){
+            redirect('admin/load_home_superadmin');
+        }
+        else
+            redirect('access/login');
 	}
 	public function load_home_user(){
 		$this->load->view('user/user_page');
