@@ -15,8 +15,8 @@
 
 <body class="center-large">
   <div id="header" class="header-large">
-      <div id="header-logo" class="header-logo-large">
-      </div>
+      <a href="<?php echo base_url()?>"><div id="header-logo" class="header-logo-large">
+      </div></a>
       <div id="header-text" class="header-text-large">
         <div class="header-text-large-square-1">
         </div>
