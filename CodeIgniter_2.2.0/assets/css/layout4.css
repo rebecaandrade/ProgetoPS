@@ -110,6 +110,8 @@
     border-radius: 10px;
     width: 52.596153846153846153846153846154%; /*567px - 10px - 10px / 1040px*/
     height: 60%; /*227px - 10px - 10 px / 800px*/
+    min-width: 52.596153846153846153846153846154%; /*567px - 10px - 10px / 1040px*/
+    min-height: 60%; /*227px - 10px - 10 px / 800px*/
     padding: 1em;
     margin: 0% auto;
     text-align: center;
@@ -120,6 +122,10 @@
     height: 100%;
     border-left: 1px solid #000000;
     float: right;
+  }
+
+  #login-field-signup{
+    max-height: 80%;
   }
 
   #login-field-signup a{
@@ -145,8 +151,8 @@
   }
 
   #login-field-input-user input, #login-field-input-password input{
-    height: 50%;
-    width: 80%;
+    height: 55%;
+    width: 95%;
     padding-left: 10%;
     margin-top: 3%;
     border-radius: 10px;
@@ -158,10 +164,10 @@
   #login-field-input-user label:before{
     content: "";
     display: inline-block;
-    height: 8%;
-    width: 8%;
+    height: 9%;
+    width: 9%;
     position: absolute;
-    margin: 0.3% 0% 0% -1%;
+    margin: 0.1% 0% 0% -1.5%;
     background-image: url('../images/icon_user.png');
     background-size: contain;
     background-repeat: no-repeat;
@@ -170,10 +176,10 @@
   #login-field-input-password label:before{
     content: "";
     display: inline-block;
-    height: 8%;
-    width: 8%;
+    height: 9%;
+    width: 9%;
     position: absolute;
-    margin: 0.3% 0% 0% -1%;
+    margin: 0.1% 0% 0% -1.5%;
     background-image: url('../images/icon_password.png');
     background-size: contain;
     background-repeat: no-repeat;
@@ -200,7 +206,7 @@
 
   #profile-id{
     width: 60%;
-    height: 75%;
+    height: 80%;
     padding: 1em;
     background-color: #ffffff;
     border-radius: 10px;
@@ -214,8 +220,8 @@
   }
 
   #profile-id-photo-frame{
-    width: 95%;
-    height: 86%;
+    width: 100%;
+    height: 84%;
     position: relative;
     top: 0%;
     left: 0%;
@@ -223,12 +229,13 @@
   }
 
   #profile-id-photo-name{
-    width: 98.6%;;
-    height: 10%;
+    width: 100%;
+    height: 13%;
+    background-color: #000000;
     color: #ffffff;
     text-align: center;
     font-weight: bold;
-    background-color: #000000;
+    font-size: 1.4em;
   }
 
   #profile-id-photo-frame img{
@@ -253,10 +260,9 @@
   }
 
   #profile-id-info{
-    width: 55%;
+    width: 50%;
     height: 85%;
     padding: 0.5em;
-    background-color: #DDD;
     position: relative;
     top: 0%;
     left: 0%;
@@ -269,15 +275,15 @@
 
   #profile-nav{
     width: 30%;
-    height: 93%;
+    height: 80%;
     margin: 0%;
     text-align: center;
     float: right;
   }
 
   #profile-nav-top{
-    width: 95.5%;
-    height: 15%;
+    width: 100%;
+    height: 20%;
     padding: 0.5em;
     border-radius: 10px 10px 0px 0px;
     font-weight: bold;
@@ -369,11 +375,11 @@
     background-color: #ffffff;
     border-radius: 0px 0px 10px 10px;
     width: 100%;
-    height: 70%;
+    height: 80%;
   }
 
   .profile-nav-body-button{
-    height: 39.5%;
+    height: 50%;
     width: 50%;
     padding: 4% 0%;
     float: left;
@@ -463,14 +469,18 @@
   }
 
   .postlogin-field-button{
-    height: 91.7%;
-    width: 45.77%;
+    height: 100%;
+    width: 50%;
     padding: 2%;
     float: left;
     text-align: center;
     text-transform: uppercase;
     font-weight: bold;
     font-size: 24pt;
+    color: #1c1c1c;
+  }
+
+  .postlogin-field-button a{
     color: #1c1c1c;
   }
 
@@ -485,7 +495,7 @@
     border-left: 3px solid #1c1c1c;
   }
 
-  .postlogin-field-button:hover{
+  .postlogin-field-button:hover, .postlogin-field-button:hover a{
     background-color: #73c04a;
     color: #ffffff;
   }
@@ -541,9 +551,9 @@
   .edit-info-column-3{
     width: 20.9999%;
     height: auto;
-    float: left;
-    background-color: green;
     margin-left: 10%;
+    float: left;
+    color: #ffffff;
   }
 
   .edit-info-column-3 input[type="text"], .edit-info-column-3 input[type="password"]{
@@ -564,16 +574,14 @@
     width: 100%;
     height: 80%;
     float: left;
-    background-color: purple;
   }
 
   #edit-info-photo-frame{
     width: 100%;
-    height: 69.3%;
+    height: 92.1%;
     position: relative;
     top: 0%;
     left: 0%;
-    background-color: green;
   }
 
   #edit-info-photo-name{
@@ -603,22 +611,6 @@
     top: 0%;
     left: 0%;
     z-index: 0;
-  }
-
-  .button-box{
-    height: 10%;
-    width: 100%;
-  }
-
-  .button-box input[type="submit"]{
-    width: 20%;
-    height: 100%;
-    display: inline-block;
-    border: 0px solid #73c04a;
-    background-image: url("../images/button_dark_accept.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-color: green;
   }
 
   .form-column-3{
@@ -698,22 +690,6 @@
     top: 0%;
     left: 0%;
     z-index: 0;
-  }
-
-  .button-box{
-    height: 10%;
-    width: 100%;
-  }
-
-  .button-box input[type="submit"]{
-    width: 20%;
-    height: 100%;
-    display: inline-block;
-    border: 0px solid #73c04a;
-    background-image: url("../images/button_dark_accept.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-color: green;
   }
 
   #recovery-field{
@@ -811,23 +787,6 @@
     margin-bottom: 0.5em;
     padding-left: 0.5em;
     padding-right: 0.5em;
-  }
-
-  .button-box{
-    height: 15%;
-    width: 100%;
-  }
-
-  .button-box input[type="submit"]{
-    width: 20%;
-    height: 100%;
-    margin: 0% auto;
-    display: block;
-    border: 0px solid #73c04a;
-    background-image: url("../images/button_dark_accept.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-color: transparent;
   }
 
   #admin-feedback{
@@ -1186,6 +1145,39 @@
     height: 14%;
     background-color: #fff;
     border-radius: 10px 10px 0px 0px;
+  }
+
+  #form-ps{
+      width: 100%;
+      height: 100%;
+  }
+
+  #form-ps-information{
+      height: 90%;
+      width: 30%;
+      float: left;
+      color: #ffffff;
+      text-align: center;
+  }
+
+  #form-ps-information input[type="text"]{
+    height: 2.5em;
+    width: 80%;
+    margin-top: 0.3em;
+    margin-bottom: 0.5em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  #form-ps-dates{
+      height: 90%;
+      width: 70%;
+      float: left;
+      color: #ffffff
+  }
+
+  #form-ps-dates label{
+     display: inline-block;
   }
 
 }

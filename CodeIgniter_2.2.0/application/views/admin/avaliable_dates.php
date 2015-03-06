@@ -1,7 +1,7 @@
 <?php echo $this->load->view('_inc/header_large')?>
 
 		<div class="header-text-large-square-2 header-text-uppercase">
-				<h3>cadastrar datas</h3>
+				<p>cadastrar datas</p>
 			</div>
 		</div>
 	</div>

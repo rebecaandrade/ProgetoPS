@@ -10,7 +10,16 @@
 				<div id="login-field">
 					<?php echo form_open('access/sign_in') ?>
 					<div id="login-field-signup">
-						<a href="<?php echo base_url(); ?>index.php/usuario/create_user">Cadastre-se</a>
+
+						<a href="<?php echo base_url(); ?>index.php/usuario/create_user">
+							<p>
+								Novo por<br /> aqui?
+							</p>
+							<img src="<?php echo base_url(); ?>/assets/images/" alt="" />
+						<p>
+							Cadastre-se
+						</p>
+						</a>
 					</div>
 					<div id="login-field-input">
 						<div id="login-field-input-user">

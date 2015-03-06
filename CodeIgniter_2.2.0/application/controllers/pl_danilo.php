@@ -56,6 +56,14 @@ class PL_Danilo extends CI_Controller{
   public function admin_create(){
     $this->load->view('admin/admin_create');
   }
+
+  public function form_ps(){
+    $this->load->view('admin/form_ps');
+  }
+
+  public function avaliable_dates(){
+    $this->load->view('admin/avaliable_dates');
+  }
 }
 
  ?>
