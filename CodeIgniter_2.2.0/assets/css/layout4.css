@@ -732,15 +732,16 @@
   #feedback{
     width: 80%;
     height: 80%;
-    background-color: #fff;
     margin: 0% auto;
   }
 
   #feedback-text{
-    width: 70%;
+    width: 60%;
     height: 100%;
     background-color: purple;
-    float: left;
+    position: relative;
+    top: 0%;
+    left: 0%;
   }
 
   #feedback-text-message{
@@ -755,8 +756,11 @@
   }
 
   #feedback-nav{
-    width: 20%;
+    width: 30%;
     height: 100%;
+    position: relative;
+    top: 0%;
+    left: 0%;
     background-color: green;
   }
 
