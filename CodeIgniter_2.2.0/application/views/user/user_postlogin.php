@@ -8,8 +8,10 @@
 <div id="content" class="content-large">
   <div id="postlogin-field">
     <div class="postlogin-field-button">
-      <img src="<?php echo base_url();?>assets/images/submission_post.png" alt="" />
-        <p>Inscreva-se</p>
+    	<a onclick="if (confirm('Deseja inscrever-se no PS atual ?')) window.location.replace('<?php echo base_url().'index.php/ps/inscribe_in_current_ps' ?>')">
+      	<img src="<?php echo base_url();?>assets/images/submission_post.png" alt="" />
+        	<p>Inscreva-se</p>
+        	</a>
     </div>
     <div class="postlogin-field-button">
 			<a href="<?php echo base_url();?>index.php/usuario/home/">
