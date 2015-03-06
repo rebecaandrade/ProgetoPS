@@ -1,3 +1,5 @@
+	<script src="<?php echo base_url(); ?>complemento/js/alerts.js"></script>
+	
 	<?php if ($this->session->userdata('mensagem')) {?>
 		<script>
 			var titulo = <?php echo json_encode($this->session->userdata('mensagem'));?> ;
