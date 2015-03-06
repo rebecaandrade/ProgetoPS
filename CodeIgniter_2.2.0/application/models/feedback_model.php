@@ -35,4 +35,10 @@ class Feedback_model extends CI_Model {
 		return $this->db->where(array('tb_login_id_login'=>$id_login,'tb_ps_id' => $id_ps))
 		->get('ta_login_x_tb_PS')->row();
 	}
+	public function get_this_feed($id_login){
+		$id_ps = $this->db->where(array('status_ps !='=> 0))
+		->get('tb_PS')->row()->id;
+		$this->db->where(array('tb_login_id_login' => $id_login,'tb_ps_id' => $id_ps));
+		return $this->db->get('ta_login_x_tb_PS')->row();
+	}
 }

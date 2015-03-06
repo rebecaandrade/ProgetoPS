@@ -12,6 +12,8 @@ class Usuario_model extends CI_Model {
 		return $this->db->get('tb_login')->row();
 	}
 	public function delete_user($id){
+		$this->db->where('tb_login_id_login',$id);
+		$this->db->delete('ta_login_x_tb_PS');
 		$this->db->where('id_login',$id);
 		return $this->db->delete('tb_login');
 	}

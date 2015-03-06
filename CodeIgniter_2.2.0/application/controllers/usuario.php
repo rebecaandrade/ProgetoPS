@@ -87,11 +87,11 @@ class Usuario extends CI_Controller {
     		$this->session->set_userdata('mensagem','usuario ja existe');
     		redirect('usuario/create_user');
     	}
-    	else{ 
+    	else{
     		$_POST['perfil'] = '1';
     		$_POST['id_login'] = $this->usuario_model->create_new_user($_POST);
     		$this->create_new_session($_POST);
-			$this->load->view('user/user_postlogin');
+			redirect('usuario/home');
 		}
 
     }
@@ -101,7 +101,11 @@ class Usuario extends CI_Controller {
 				'login_perfil' => $dados['perfil'],
 				'email' => $dados['email'],
 				'nome' => $dados['nome'],
-				'usuario' => $dados['usuario'], );
+				'usuario' => $dados['usuario'],
+                'semestre' => $dados['semestre'],
+                'email' => $dados['email'],
+                'curso' => $dados['curso'],
+                'telefone' => $dados['telefone'],);
 		$this->session->set_userdata($newdata);
     }
     public function edit_account(){
