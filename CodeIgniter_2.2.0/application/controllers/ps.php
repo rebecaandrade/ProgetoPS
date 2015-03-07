@@ -53,4 +53,12 @@ class PS extends CI_Controller {
     public function adicionar_data_valida(){
         
     }
+    public function inscribe_in_current_ps(){
+        $dados = array('tb_login_id_login' => $this->session->userdata('login_id'),
+                'status_feed' => '2',
+                'entrevistado' => '0');
+        $this->ps_model->inscribe_user_in_current_ps($dados);
+        $this->session->set_userdata('mensagem','Você foi inscrito com sucesso');
+        redirect('usuario/home');
+    }
 }

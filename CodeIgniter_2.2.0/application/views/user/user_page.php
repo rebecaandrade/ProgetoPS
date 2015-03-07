@@ -19,7 +19,7 @@
 					</p></a>
 				</div>
 				<div class="profile-nav-body-button">
-					<a href="<?php echo base_url()?>index.php/horario/load_user_interview">
+					<a onclick="horario('Qual horário você deseja editar?','','<?php echo base_url()?>index.php/horario/load_user_interview','<?php echo base_url()?>index.php/horario/load_user_activity')" >
 					<img src="<?php echo base_url();?>assets/images/icon_date.png" alt="" />
 					<p>
 						Horário

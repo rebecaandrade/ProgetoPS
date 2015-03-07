@@ -4,6 +4,7 @@ class Feedback extends CI_Controller {
 	public function __construct() {
 		parent::__construct();
 		$this->load->model('feedback_model');
+		$this->load->model('admin_model');
 	}
 	public function load_feedback($option){
 		if($option == 0){
@@ -26,6 +27,8 @@ class Feedback extends CI_Controller {
 		$this->load->view('user/user_feedback',$dados);
 	}
 	public function show_feed(){
-		$this->load->view('admin/admin_feedback');
+		$dados['feed'] = $this->feedback_model->get_this_feed($_GET['id']);
+		$dados['user'] = $this->admin_model->get_user_information($_GET['id']);
+		$this->load->view('admin/admin_feedback',$dados);
 	}
 }
