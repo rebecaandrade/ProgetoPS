@@ -53,7 +53,7 @@
 		<span></span>2 vezes</label><br />
 	  <input type="radio" name="num_de_ps" value="" id="radio_sub_4"><label for="radio_sub_4">
 		<span></span>3 ou mais</label><br /><br />
-	  <input type="submit" value="">
+	  <input class="button b-light-accept" type="submit" value="">
 
 		</div>
 

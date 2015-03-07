@@ -1,6 +1,6 @@
 <?php echo $this->load->view('_inc/header_thin') ?>
 <div id="subtitle-logo-small">
-		  <span class="subtitle-url"><h4>Informação Candidato</h4></span>
+		  <h4>Informação Candidato</h4>
 		</div>
 	  </div>
 	</div>

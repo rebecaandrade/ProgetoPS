@@ -1,6 +1,6 @@
 <?php echo $this->load->view('_inc/header_thin')?>
 <div class="header-text-thin-square-2 header-text-uppercase">
-	<h3>administrador</h3>
+	<p>administrador</p>
 </div>
 </div>
 </div>
@@ -12,10 +12,19 @@
 					<p>
 						Palestra Institucional
 					</p>
+					<p>
+						<span>15</span><span>12:00</span>
+					</p>
+					<p>
+						<span>18</span><span>18:00</span>
+					</p>
 				</div>
 				<div class="count-activity">
 					<p>
 						Palestra Institucional
+					</p>
+					<p>
+						Contador
 					</p>
 				</div>
 			</div>
@@ -36,6 +45,12 @@
 				  <img src="<?php echo base_url();?>assets/images/ps-admin.png" alt="" />
 				  <p>
 					Processo Seletivo
+				  </p>
+				</div>
+				<div class="page-admin-nav-button">
+				  <img src="<?php echo base_url();?>assets/images/ps-admin.png" alt="" />
+				  <p>
+					Alterar Horários
 				  </p>
 				</div>
 			</div>

@@ -15,7 +15,7 @@
 							<p>
 								Novo por<br /> aqui?
 							</p>
-							<img src="<?php echo base_url(); ?>/assets/images/" alt="" />
+							<img src="<?php echo base_url(); ?>/assets/images/form_signup.png" alt="" />
 						<p>
 							Cadastre-se
 						</p>

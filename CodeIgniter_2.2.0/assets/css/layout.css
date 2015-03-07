@@ -252,11 +252,11 @@ input[type=radio]{
   }
 
   .content-large{
-    height: 100%;
+    height: 80%;
   }
 
   .content-thin{
-    height: 100%;
+    height: 80%;
   }
 
   #login-field{
@@ -273,6 +273,11 @@ input[type=radio]{
     width: 100%;
     height: 20%;
     border-bottom: 1px solid #000000;
+  }
+
+  #login-field-signup img{
+    max-width: 80%;
+    max-height: 80%;
   }
 
   #login-field-signup a{
@@ -352,6 +357,115 @@ input[type=radio]{
     background-color: transparent;
   }
 
+  .form-column-3{
+    width: 100%;
+    height: auto;
+    color: #ffffff;
+    font-weight: lighter;
+  }
+
+  .form-column-3 input[type="text"], .form-column-3 input[type="password"]{
+    height: 2.5em;
+    width: 100%;
+    margin-top: 0.3em;
+    margin-bottom: 0.5em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .form-column-3 input[type="submit"]{
+    width: 20%;
+    height: 20%;
+    display: block;
+    margin: 0% auto;
+    border: 0px solid #73c04a;
+    background-image: url("../images/button_dark_accept.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: transparent;
+  }
+
+  .formcolumn-3 img{
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  #form-photo{
+    width: 100%;
+    height: 60%;
+    float: left;
+  }
+
+  #form-photo-frame{
+    width: 100%;
+    height: 90%;
+    position: relative;
+    top: 0%;
+    left: 0%;
+  }
+
+  #form-photo-name{
+    width: 100%;
+    height: 10%;
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  #form-photo-frame img{
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: 0% auto;
+  }
+
+  #form-photo-frame img:first-child{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: 1;
+  }
+
+  #form-photo-frame img:last-child{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: 0;
+  }
+
+  #recovery-field{
+    height: 50%;
+    width: 100%;
+    background-color: #fff;
+    padding: 1em;
+    margin: 0% auto;
+    border-radius: 10px;
+  }
+
+  #recovery-field h3{
+      color: #1c1c1c;
+  }
+
+  #recovery-field input[type="text"]{
+    width: 100%;
+    height: 2em;
+    margin: 3% 0%;
+    border: 1px solid #73c04a;
+    border-radius: 10px;
+  }
+
+  #recovery-field input[type="submit"]{
+    width: 15%;
+    height: 30%;
+    display: block;
+    margin: 0% auto;
+    border: 0px solid #73c04a;
+    background-image: url("../images/button_light_accept.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: transparent;
+  }
+
   #profile-id{
     width: 80%;
     height: 100%;
@@ -363,7 +477,7 @@ input[type=radio]{
 
   #profile-id-photo{
     width: 100%;
-    height: 55%;
+    height: auto;
     position: relative;
     top: 0%;
     left: 0%;
@@ -372,7 +486,8 @@ input[type=radio]{
 
   #profile-id-photo-frame{
     width: 100%;
-    height: 90%;
+    height: 55%;
+    max-height: 55%;
     position: relative;
     top: 0%;
     left: 0%;
@@ -381,7 +496,7 @@ input[type=radio]{
 
   #profile-id-photo-name{
     width: 100%;
-    height: 10%;
+    height: 5%;
     color: #ffffff;
     text-align: center;
     font-weight: bold;
@@ -410,7 +525,7 @@ input[type=radio]{
 
   #profile-id-info{
     width: 100%;
-    height: 33%;
+    height: 40%;
     margin-top: 2.8%;
     padding: 0.5em;
     border-top: 1px solid #000000;

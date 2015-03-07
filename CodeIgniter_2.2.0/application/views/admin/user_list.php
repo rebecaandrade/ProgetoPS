@@ -1,7 +1,7 @@
 <?php echo $this->load->view('_inc/header_thin') ?>
 
 <div class="header-text-thin-square-2 header-text-uppercase">
-	<h3>lista de candidatos</h3>
+	<p>lista de candidatos</p>
 </div>
 </div>
 </div>
@@ -16,7 +16,7 @@
                   <th></th>
                   <th></th>
                   <th>FeedBack</th>
-                  <th>dsfsdfsd</th>
+                  <th>&nbsp</th>
              </tr>
           </thead>
           <tbody>

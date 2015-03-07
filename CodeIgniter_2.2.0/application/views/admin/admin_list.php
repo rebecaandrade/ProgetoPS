@@ -1,6 +1,6 @@
 <?php echo $this->load->view('_inc/header_thin') ?>
     <div class="header-text-thin-square-2 header-text-uppercase">
-      <h3>lista de administradores</h3>
+      <p>lista de administradores</p>
     </div>
   </div>
 </div>
