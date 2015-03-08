@@ -1,10 +1,4 @@
-<?php echo $this->load->view('_inc/header_large')?>
-
-<div class="header-text-large-square-2">
-					<a href="http://www.cjr.org.br"><p>www.cjr.org.br/site</p></a>
-				</div>
-			</div>
-		</div>
+<?php echo $this->load->view('_inc/boot')?>
 
 		<div id="content" class="content-large">
 				<div id="login-field">

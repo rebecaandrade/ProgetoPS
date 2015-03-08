@@ -1,6 +1,7 @@
 <?php echo $this->load->view('_inc/header_thin')?>
+<?php echo $this->load->view('_inc/nav_bar')?>
 <div class="header-text-thin-square-2 header-text-uppercase">
-	<h3>administrador</h3>
+	<p>administrador</p>
 </div>
 </div>
 </div>
@@ -12,11 +13,23 @@
 					<p>
 						Palestra Institucional
 					</p>
+					<span class="counter">
+						<span><?php  ?>count</span><span>12:00</span>
+					</span>
+					<span class="counter">
+						<span><?php  ?>count</span><span>18:00</span>
+					</span>
 				</div>
 				<div class="count-activity">
 					<p>
 						Palestra Institucional
 					</p>
+					<span class="counter">
+						<span><?php  ?>count</span><span>12:00</span>
+					</span>
+					<span class="counter">
+						<span><?php  ?>count</span><span>18:00</span>
+					</span>
 				</div>
 			</div>
 			<div id="page-admin-nav">
@@ -33,11 +46,21 @@
 				  </p>
 				</div>
 				<div class="page-admin-nav-button">
+					<a href="<?php echo base_url();?>index.php/ps/listar">
+				  <img src="<?php echo base_url();?>assets/images/ps-admin.png" alt="" />
+			</a>
+				 <p>
+					Processo Seletivo
+				</p>
+				</div>
+				<?php if($this->session->userdata('login_id') == 3){ ?>
+				<div class="page-admin-nav-button">
 				  <img src="<?php echo base_url();?>assets/images/ps-admin.png" alt="" />
 				  <p>
-					Processo Seletivo
+					Alterar Horários
 				  </p>
 				</div>
+				<?php } ?>
 			</div>
 
 		</div>

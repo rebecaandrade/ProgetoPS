@@ -1,4 +1,5 @@
 <?php echo $this->load->view('_inc/header_large');?>
+<?php echo $this->load->view('_inc/nav_bar')?>
 
 
 <div class="header-text-large-square-2 header-text-uppercase">
@@ -193,11 +194,11 @@
 
          </tbody>
        </table>
-       <div class="button-box">
-           <input class="button b-dark-accept" type="submit" value="">
-       </div>
-       <?php echo form_close() ?>
      </div>
+     <div class="button-box">
+         <input class="button b-dark-accept" type="submit" value="">
+     </div>
+     <?php echo form_close() ?>
      <br>
      <a href="#"><h3>Prefiro responder posteriormente</h3></a>
    </div>

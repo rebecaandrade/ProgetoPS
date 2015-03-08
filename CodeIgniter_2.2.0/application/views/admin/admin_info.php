@@ -1,6 +1,7 @@
 <?php echo $this->load->view('_inc/header_large')?>
+<?php echo $this->load->view('_inc/nav_bar')?>
 		<div class="header-text-large-square-2 header-text-uppercase">
-				<h3>editar administrador</h3>
+				<p>editar administrador</p>
 			</div>
 		</div>
 		</div>
@@ -8,16 +9,16 @@
 		<div id="content" class="content-large">
 			<?php echo form_open('admin/update_admin_account');?>
 		<div class="admin-info-column-2">
-		<label> Nome: <input type="text" name="nome" value="<?php echo $user->nome?>"></label><br />
-		<label> Email: <input type="text" name="email" value="<?php echo $user->email?>"></label><br />
-		<label> Telefone: <input type="text" name="telefone" value="<?php echo $user->telefone?>"></label><br />
-		<label> Curso: <input type="text" name="curso" value="<?php echo $user->curso?>">
+		<label> Nome<input type="text" name="nome" value="<?php echo $user->nome?>"></label><br />
+		<label> Email<input type="text" name="email" value="<?php echo $user->email?>"></label><br />
+		<label> Telefone<input type="text" name="telefone" value="<?php echo $user->telefone?>"></label><br />
+		<label> Curso<input type="text" name="curso" value="<?php echo $user->curso?>">
 		</div>
 		<div class="admin-info-column-2">
-		<label> Semestre: <input type="text" name="semestre" value="<?php echo $user->semestre?>"></label><br />
+		<label> Semestre<input type="text" name="semestre" value="<?php echo $user->semestre?>"></label><br />
 		<input type="hidden" name="id" value="<?php echo $user->id_login?>">
 			<div class="button-box">
-				<input type="submit" value="">
+				<input class="button b-light-update" type="submit" value="">
 			</div>
 		</div>
 		<?php echo form_close() ?>

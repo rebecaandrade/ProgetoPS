@@ -1,9 +1,107 @@
 <?php echo $this->load->view('_inc/header_thin') ?>
-<div id="subtitle-logo-small">
-		  <span class="subtitle-url"><h4>Informação Candidato</h4></span>
+<?php echo $this->load->view('_inc/nav_bar')?>
+<div class="header-text-thin-square-2 header-text-uppercase">
+	<p>Informações Candidato</p>
+</div>
+</div>
+</div>
+<div id="content" class="content-thin">
+	<div id="infouser-nav">
+		<div id="infouser-nav-top" class="aproved">
+			<span><!--Icone de aprovado--></span>
 		</div>
-	  </div>
+		<div id="infouser-nav-body">
+				<h5>Palestra Institucional</h5>
+				<input type="radio" name="name" value="<?php //pega valor no banco ?>" checked>
+				<label class="label-radio">18h00min</label>
+				<br />
+				<h5>Dinâmica em grupo</h5>
+				<input type="radio" name="name" value="<?php //pega valor no banco ?>" >
+				<label class="label-radio"><span class="radio"></span>  18h00min</label>
+		</div>
 	</div>
+
+	<div id="infouser-id">
+		<div id="infouser-id-photo">
+			<div id="infouser-id-photo-frame">
+				<img src="<?php echo base_url();?>assets/images/photo_profile.png" />
+				<img src="<?php echo base_url();?>assets/images/foto_usuario.png" />
+			</div>
+			<div id="infouser-id-photo-name">
+				<p>
+					<?php echo $user->nome; ?>
+				</p>
+			</div>
+
+		</div>
+		<div id="infouser-id-info">
+			<p>
+				Curso:
+				</p>
+			<p> <?php echo $user->curso; ?> </p>
+			<p>
+				<br />
+				Semestre:
+			</p>
+			<p> <?php echo $user->semestre;?> </p>
+			<p>
+				<br />
+				Email:
+			</p>
+			<p> <?php echo $user->email;?> </p>
+			<p>
+				<br />
+				Telefone:
+			</p>
+			<p> <?php echo $user->telefone; ?> </p>
+			<p>
+				<br />
+				Usuario:
+			</p>
+			<p> <?php echo $user->usuario; ?> </p>
+			<p>
+				<br />
+				Número de PS(s) que participou :
+			</p>
+			<p> <?php echo $user->num_de_ps; ?></p>
+		</div>
+	</div>
+	<div id="infouser-interview">
+		<div id="infouser-table-interview">
+			<table>
+				<thead>
+					<tr>
+						<th colspan="3"><!--Adicionar contador PHP para expandir-->
+							Qua 18
+						</th>
+						<th>
+							Qui 19
+						</th>
+					</tr>
+
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							08:00 - 09:00
+						</td>
+						<td>
+							09:00 - 10:00
+						</td>
+						<td>
+							09:00 - 10:00
+						</td>
+					</tr>
+
+					<tr><!--Checkbox-->
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	</div>
+
+</div>
 	<!--
 	<div id="dados" class="lista">
 		<br><br>
@@ -13,14 +111,14 @@
 		<p>Semestre : <?php echo $user->semestre;?> <br /></p>
 		<p>Telefone : <?php echo $user->telefone; ?> <br /></p>
 	 </div>
--->
+--> <!--
 		<div id="user-info">
-			<div class="profile-photo">
-				<img src="<?php echo base_url();?>assets/images/photo_profile.png" alt="" />
+			<div class="infouser-photo">
+				<img src="<?php echo base_url();?>assets/images/photo_infouser.png" alt="" />
 				<img src="<?php echo base_url();?>assets/images/foto_usuario.png" alt="" />
 				<p><?php echo $user->nome; ?> <br /</p>
 			</div>
-			<div id="profile-data">
+			<div id="infouser-data">
 			<p>
 				Curso:
 				</p>
@@ -48,58 +146,6 @@
 
 			</div>
 		</div>
+-->
 
-		<div id="user-activity">
-			<div id="user-activity-nav-top">
-				<img src="<?php echo base_url();?>assets/images/status_profile_out.png" alt="" />
-			</div>
-			<div id="user-activity-nav-body">
-				<h5>Palestra Institucional</h5>
-				<input type="radio" name="name" id="radio2" value="">
-				<label for="radio2" class="label-radio"><span class="radio"></span>  18h00min</label>
-				<br />
-				<h5>Dinâmica em grupo</h5>
-				<input type="radio" name="name" id="radio2" value="">
-				<label for="radio2" class="label-radio"><span class="radio"></span>  18h00min</label>
-		</div>
-		</div>
-		<div id="user-interview">
-			<div id="table-interview">
-				<table>
-					<thead>
-						<tr>
-							<th colspan="6">
-								Fevereiro 2015
-							</th>
-						</tr>
-						<tr>
-							<th colspan="3"><!--Adicionar contador PHP para expandir-->
-								Qua 18
-							</th>
-							<th>
-								Qui 19
-							</th>
-						</tr>
-
-					</thead>
-					<tbody>
-						<tr>
-							<td>
-								08:00 - 09:00
-							</td>
-							<td>
-								09:00 - 10:00
-							</td>
-							<td>
-								09:00 - 10:00
-							</td>
-						</tr>
-
-						<tr><!--Checkbox-->
-						</tr>
-					</tbody>
-				</table>
-			</div>
-		</div>
-		</div>
 <?php echo $this->load->view('_inc/footer') ?>
