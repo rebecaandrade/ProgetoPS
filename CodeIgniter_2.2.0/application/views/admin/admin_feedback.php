@@ -1,11 +1,10 @@
 <?php echo $this->load->view('_inc/header_thin')?>
-<?php echo $this->load->view('_inc/nav_bar')?>
       <div class="header-text-thin-square-2 header-text-uppercase">
-        <h3>preencher feedback</h3>
+        <p>preencher feedback</p>
       </div>
     </div>
   </div>
-
+  <?php echo $this->load->view('_inc/nav_bar')?>
   <div id="content" class="content-thin">
     <div id="admin-feedback">
       <div id="admin-feedback-top">
@@ -26,9 +25,9 @@
             </p>
           </div>
           <div id="admin-feedback-body-interviewers-list">
-            <p>
-              fgfdg
-            </p>
+            <!--<p>
+              Nome Entrevistador
+          </p>-->
           </div>
         </div>
       </div>

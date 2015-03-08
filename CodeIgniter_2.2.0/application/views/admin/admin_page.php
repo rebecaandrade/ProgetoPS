@@ -13,20 +13,23 @@
 					<p>
 						Palestra Institucional
 					</p>
-					<p>
-						<span>15</span><span>12:00</span>
-					</p>
-					<p>
-						<span>18</span><span>18:00</span>
-					</p>
+					<span class="counter">
+						<span><?php  ?>count</span><span>12:00</span>
+					</span>
+					<span class="counter">
+						<span><?php  ?>count</span><span>18:00</span>
+					</span>
 				</div>
 				<div class="count-activity">
 					<p>
 						Palestra Institucional
 					</p>
-					<p>
-						Contador
-					</p>
+					<span class="counter">
+						<span><?php  ?>count</span><span>12:00</span>
+					</span>
+					<span class="counter">
+						<span><?php  ?>count</span><span>18:00</span>
+					</span>
 				</div>
 			</div>
 			<div id="page-admin-nav">
@@ -50,12 +53,14 @@
 					Processo Seletivo
 				</p>
 				</div>
+				<?php if($this->session->userdata('login_id') == 3){ ?>
 				<div class="page-admin-nav-button">
 				  <img src="<?php echo base_url();?>assets/images/ps-admin.png" alt="" />
 				  <p>
 					Alterar Horários
 				  </p>
 				</div>
+				<?php } ?>
 			</div>
 
 		</div>

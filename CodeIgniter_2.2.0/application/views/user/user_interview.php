@@ -194,11 +194,11 @@
 
          </tbody>
        </table>
-       <div class="button-box">
-           <input class="button b-dark-accept" type="submit" value="">
-       </div>
-       <?php echo form_close() ?>
      </div>
+     <div class="button-box">
+         <input class="button b-dark-accept" type="submit" value="">
+     </div>
+     <?php echo form_close() ?>
      <br>
      <a href="#"><h3>Prefiro responder posteriormente</h3></a>
    </div>

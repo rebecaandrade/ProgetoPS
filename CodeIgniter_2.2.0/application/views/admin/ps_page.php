@@ -48,7 +48,7 @@
 	</div>
 	<div class="box-page-ps-bottom"></div>
 </div>
-
+<?php if($this->session->userdata('login_id') == 3){ ?>
     <div id="action-page-ps">
 		<ul>
 			<li><img src="<?php echo base_url()?>assets/images/add_ps.png" alt="" />Abrir Processo Seletivo</li>
@@ -56,5 +56,5 @@
 		</ul>
     </div>
   </div>
-
+<?php } ?>
 <?php echo $this->load->view('_inc/footer') ?>

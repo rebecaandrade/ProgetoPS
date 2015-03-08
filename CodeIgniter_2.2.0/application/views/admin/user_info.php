@@ -11,25 +11,20 @@
 			<span><!--Icone de aprovado--></span>
 		</div>
 		<div id="infouser-nav-body">
-			<div id="user-activity-nav-top">
-				<img src="<?php echo base_url();?>assets/images/status_infouser_out.png" alt="" />
-			</div>
-			<div id="user-activity-nav-body">
 				<h5>Palestra Institucional</h5>
-				<input type="radio" name="name" id="radio2" value="">
-				<label for="radio2" class="label-radio"><span class="radio"></span>  18h00min</label>
+				<input type="radio" name="name" value="<?php //pega valor no banco ?>" checked>
+				<label class="label-radio">18h00min</label>
 				<br />
 				<h5>Dinâmica em grupo</h5>
-				<input type="radio" name="name" id="radio2" value="">
-				<label for="radio2" class="label-radio"><span class="radio"></span>  18h00min</label>
-		</div>
+				<input type="radio" name="name" value="<?php //pega valor no banco ?>" >
+				<label class="label-radio"><span class="radio"></span>  18h00min</label>
 		</div>
 	</div>
 
 	<div id="infouser-id">
 		<div id="infouser-id-photo">
 			<div id="infouser-id-photo-frame">
-				<img src="<?php echo base_url();?>assets/images/photo_infouser.png" />
+				<img src="<?php echo base_url();?>assets/images/photo_profile.png" />
 				<img src="<?php echo base_url();?>assets/images/foto_usuario.png" />
 			</div>
 			<div id="infouser-id-photo-name">
