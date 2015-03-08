@@ -47,16 +47,17 @@
 
   #header-text{
     height: 100%;
-    width: 65%;
     text-align: center;
     color: #ffffff;
     float: left;
   }
 
   .header-text-large{
+      width: 65%
   }
 
   .header-text-thin{
+      width: 65%
   }
 
   #header-text-large-diamond{
@@ -161,10 +162,10 @@
   #login-field-input-user label:before{
     content: "";
     display: inline-block;
-    height: 15%;
-    width: 15%;
+    height: 12%;
+    width: 12%;
     position: absolute;
-    margin: 2.3% 0% 0% -8%;
+    margin: 4.3% 0% 0% -5%;
     background-image: url('../images/icon_user.png');
     background-size: contain;
     background-repeat: no-repeat;
@@ -173,10 +174,10 @@
   #login-field-input-password label:before{
     content: "";
     display: inline-block;
-    height: 15%;
-    width: 15%;
+    height: 12%;
+    width: 12%;
     position: absolute;
-    margin: 2.3% 0% 0% -8%;
+    margin: 4.3% 0% 0% -5%;
     background-image: url('../images/icon_password.png');
     background-size: contain;
     background-repeat: no-repeat;
@@ -663,7 +664,7 @@
 
         .header-logo-large{
           width: 36.519231%; /*(362px - 55px) / 1040px*/
-          margin-right: 5.2884615384615384615384615384615%; /*55px / 1040px*/
+          margin-right: 7.288462%; /*55px / 1040px*/
         }
 
         .header-logo-thin{
@@ -676,7 +677,10 @@
         }
 
         .header-text-large{
-          width: 58%;
+          width: 55%;
+        }
+
+        .header-text-thin{
         }
 
         #header-text-large-diamond{
@@ -693,6 +697,25 @@
 
         .header-text-thin-square-1,  .header-text-thin-square-2{
           font-size: 1.4em;
+        }
+
+        #login-field{
+          width: 80%;
+          height: 60%;
+          padding: 1em;
+        }
+
+        #login-field-input-user input, #login-field-input-password input{
+          width: 90%;
+          height: 50%;
+          padding-left: 9%;
+          margin-top: 3.5%;
+        }
+
+        #login-field-input-user label:before, #login-field-input-password label:before{
+          height: 11%;
+          width: 11%;
+          margin: 0.7% 0% 0% -1%;
         }
 
       }

@@ -59,6 +59,41 @@ body{
   font-family: 'Open Sans', sans-serif;
 }
 
+#navbar{
+    width: 10%;
+    height: 5%;
+    background-color: #ffffff;
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    color: #1c1c1c;
+    padding: 0.5em;
+    transition: height 1s ease 0s;
+}
+
+#navbar li:hover{
+    background-color: green;
+}
+
+#navbar li:last-child{
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease 0s;
+}
+
+#navbar:hover{
+    height: 10%;
+}
+
+#navbar:hover li:last-child{
+    opacity: 1.0;
+    visibility: visible;
+}
+
+#navbar a{
+    color: #1c1c1c;
+}
+
 .header-text-uppercase p{
   text-transform: uppercase;
   font-weight: bolder;

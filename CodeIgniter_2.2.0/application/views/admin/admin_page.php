@@ -1,4 +1,5 @@
 <?php echo $this->load->view('_inc/header_thin')?>
+<?php echo $this->load->view('_inc/nav_bar')?>
 <div class="header-text-thin-square-2 header-text-uppercase">
 	<p>administrador</p>
 </div>
@@ -42,10 +43,12 @@
 				  </p>
 				</div>
 				<div class="page-admin-nav-button">
+					<a href="<?php echo base_url();?>index.php/ps/listar">
 				  <img src="<?php echo base_url();?>assets/images/ps-admin.png" alt="" />
-				  <p>
+			</a>
+				 <p>
 					Processo Seletivo
-				  </p>
+				</p>
 				</div>
 				<div class="page-admin-nav-button">
 				  <img src="<?php echo base_url();?>assets/images/ps-admin.png" alt="" />

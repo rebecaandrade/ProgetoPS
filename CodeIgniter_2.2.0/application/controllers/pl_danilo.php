@@ -64,6 +64,10 @@ class PL_Danilo extends CI_Controller{
   public function avaliable_dates(){
     $this->load->view('admin/avaliable_dates');
   }
+
+  public function boot(){
+    $this->load->view('_inc/log2');
+  }
 }
 
  ?>

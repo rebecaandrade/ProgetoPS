@@ -1,5 +1,5 @@
 <?php echo $this->load->view('_inc/header_large')?>
-
+<?php echo $this->load->view('_inc/nav_bar')?>
 			<div class="header-text-large-square-2 header-text-uppercase">
 				<p>EDITAR INFORMAÇÕES</p>
 			</div>
