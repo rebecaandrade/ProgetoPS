@@ -26,7 +26,10 @@ class Feedback_model extends CI_Model {
 		foreach ($dados as $dado ) {
 			$dates[] = $dado->data_abertura;
 		}
-		return $dates;
+		if(isset($dates))
+			return $dates;
+		else
+			return NULL;
 	}
 	public function get_passed_feed($date){
 		$id_login = $this->session->userdata('login_id');

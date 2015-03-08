@@ -9,9 +9,11 @@
 	<div id="feedback">
 	  <div id="feedback-text">
 		<div id="feedback-text-message">
-		  <p>
-		   <?php echo $feeds->feedback ?>
-		  </p>
+		 	<p>
+		  		<?php if(sizeof($feeds) > 0){?>
+		   			<?php echo $feeds->feedback ?>
+		 		<?php }?>
+		 	</p>
 		</div>
 		<div id="feedback-text-footer">
 		  d
@@ -25,9 +27,10 @@
 		 	</p>
 		</div>
 		<div id="feeback-nav-body">
+			<?php if(isset($semestres)){?>
 		 	<?php foreach($semestres as $date => $semestre){?>
 				<a href="<?php echo base_url()?>index.php/feedback/load_feedback/<?php echo $dates[$date] ?>"><?php echo $semestre ?></a><br>
-			<?php }?>
+			<?php }}?>
 		</div>
 	</div>
 	</div>
