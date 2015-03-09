@@ -11,7 +11,6 @@
 			<div class="box-page-ps-top"></div>
 			<div class="box-page-ps-middle"></div>
 			<div class="box-page-ps-content">
-				<input type="checkbox" name="name" value=""><label for="name">f</label>
 	      <h3>StarWars</h3>
 	      <h5>1º/2015</h5>
 			</div>

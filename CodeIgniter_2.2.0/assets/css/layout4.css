@@ -724,44 +724,61 @@
 
   #feedback{
     width: 80%;
-    height: 80%;
+    height: 90%;
     margin: 0% auto;
   }
 
   #feedback-text{
-    width: 70%;
-    height: 100%;
-    background-color: purple;
-    float: left;
-  }
-
-  #feedback-text-message{
-    width: 100%;
-    height: 80%;
-
-  }
-
-  #feedback-text-footer{
-    width: 100%;
-    height: 20%;
+      width: 80%;
+      height: 100%;
+      float: right;
   }
 
   #feedback-nav{
-    width: 20%;
-    height: 100%;
-    background-color: green;
+      width: 20%;
+      height: 100%;
+      float: right;
+      border-left: 1px solid #000;
+  }
+
+  #feedback-text-message{
+      width: 100%;
+      height: 80%;
+      padding: 1em;
+      background-color: #fff;
+      border-radius: 1em 0em 0em 0em;
+  }
+
+  #feedback-text-footer{
+      width: 100%;
+      height: 20%;
+      background-color: #fff;
+      border-radius: 0em 0em 0em 1em;
+      border-top: 1px solid #000;
   }
 
   #feedback-nav-top{
-    width: 100%;
-    height: 20%;
-    background-color: green;
+      width: 100%;
+      height: 15%;
+      background-color: #73c14a;
+      border-radius: 0em 1em 0em 0em;
+      border-bottom: 1px solid #000;
+      padding-top: 10%;
+      color: #fff;
+      text-align: center;
+      font-size: 1.6em;
   }
 
   #feedback-nav-body{
-    width: 100%;
-    height: 80%;
-    background-color: green;
+      width: 100%;
+      height: 85%;
+      background-color: #fff;
+      border-radius: 0em 0em 1em 0em;
+      text-align: center;
+  }
+
+  #feedback-nav-body p{
+     margin: 0.5em;
   }
 
   .admin-create-column-2{
@@ -1355,8 +1372,8 @@
     top: 5.8em;
     left: 1.6em;
     background-color: #73c04a;
-    transform: translateY(0) rotateX(0) skewX(-45deg);
-    transition: transform 1s ease-in-out, height 1s ease-in-out 0.5s;
+    transform: translateY(0) translateX(0) rotateX(0) skewX(-45deg);
+    transition: transform 1s ease-in-out 0s, height 1s ease-in-out 0s;
   }
 
   .open .box-page-ps-middle{
@@ -1399,7 +1416,7 @@
   }
 
   .open:hover .box-page-ps-top{
-    transform: translateY(-6em) rotateX(180deg) skewX(0);
+    transform: translateY(-6em) translateX(1.5em) rotateX(180deg) skewX(0);
     height: 6em;
   }
 

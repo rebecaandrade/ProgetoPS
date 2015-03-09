@@ -45,14 +45,17 @@
 				<br />
 			Quantas vezes já participou do processo seletivo?
 	 	</p>
-	 	<input type="radio" name="num_de_ps" value="" id="radio_sub_1"><label for="radio_sub_1">
-		<span></span>Nenhuma</label><br />
-	  <input type="radio" name="num_de_ps" value="" id="radio_sub_2"><label for="radio_sub_2">
-		<span></span>1 vez</label><br />
-	  <input type="radio" name="num_de_ps" value="" id="radio_sub_3"><label for="radio_sub_3">
-		<span></span>2 vezes</label><br />
-	  <input type="radio" name="num_de_ps" value="" id="radio_sub_4"><label for="radio_sub_4">
-		<span></span>3 ou mais</label><br /><br />
+	 	<input type="radio" name="num_de_ps" value="" id="radio_sub_1">
+		<label for="radio_sub_1" class="label-radio">Nenhuma</label><br />
+	  <input type="radio" name="num_de_ps" value="" id="radio_sub_2">
+		<label for="radio_sub_2" class="label-radio">
+		1 vez</label><br />
+	  <input type="radio" name="num_de_ps" value="" id="radio_sub_3">
+		<label for="radio_sub_3" class="label-radio">
+			2 vezes</label><br />
+	  <input type="radio" name="num_de_ps" value="" id="radio_sub_4">
+		<label for="radio_sub_4" class="label-radio">
+		3 ou mais</label><br /><br />
 	  <input class="button b-light-accept" type="submit" value="">
 
 		</div>

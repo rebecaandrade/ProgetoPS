@@ -10,7 +10,7 @@
   <div id="postlogin-field">
     <div class="postlogin-field-button">
     	<a onclick="if (confirm('Deseja inscrever-se no PS atual ?')) window.location.replace('<?php echo base_url().'index.php/ps/inscribe_in_current_ps' ?>')">
-      	<img src="<?php echo base_url();?>assets/images/submission_post.png" alt="" />
+      	<img src="<?php echo base_url();?>assets/images/form_signup.png" alt="" />
         	<p>Inscreva-se</p>
         	</a>
     </div>
