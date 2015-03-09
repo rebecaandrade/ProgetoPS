@@ -23,6 +23,7 @@
 		</div>
 		</div>
 	  <div id="feedback-text">
+<<<<<<< HEAD
 		<div id="feedback-text-message">
 		  <p>
 		   <?php echo $feeds->feedback ?>
@@ -32,6 +33,32 @@
 			<p>
 				Deseja marcar um Feedback presencial?
 			</p>
+=======
+
+		<div id="feedback-text-message">
+		 	<p>
+		  		<?php if(sizeof($feeds) > 0){?>
+		   			<?php echo $feeds->feedback ?>
+		 		<?php }?>
+		 	</p>
+		</div>
+		<div id="feedback-text-footer">
+		  d
+		</div>
+		</div>
+		<div id="feedback-nav">
+		<div id="feedback-nav-top">
+			<p>
+			  edição
+		 	</p>
+		</div>
+		<div id="feeback-nav-body">
+
+			<?php if(isset($semestres)){?>
+		 	<?php foreach($semestres as $date => $semestre){?>
+				<a href="<?php echo base_url()?>index.php/feedback/load_feedback/<?php echo $dates[$date] ?>"><?php echo $semestre ?></a><br>
+			<?php }}?>
+>>>>>>> 6368aba79a3e6bf7f1784fee66c02bd985d0234f
 		</div>
 		</div>
 	</div>
