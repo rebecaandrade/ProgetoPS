@@ -30,14 +30,15 @@ class Usuario extends CI_Controller {
             redirect('access/login');
     }
     public function load_home_user(){
-            if(!$this->usuario_model->inscribed_on_current_ps()){
+            if(!$this->usuario_model->inscribed_on_current_ps() && $this->session->userdata('post_login')!=1){
                 $this->load->view('user/user_postlogin');
             }
             else{
-                $this->load->view('user/user_page');
+                $this->load_user_page();
             }
 	}
     public function load_user_page(){
+        $this->session->set_userdata('post_login',1);
         $this->load->view('user/user_page');
     }
 	public function list_users(){
