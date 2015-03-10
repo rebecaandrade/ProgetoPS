@@ -50,7 +50,7 @@
 			<div id="profile-id-photo">
 				<div id="profile-id-photo-frame">
 					<img src="<?php echo base_url();?>assets/images/photo_profile.png" />
-					<img src="<?php echo base_url();?>assets/images/foto_usuario.png" />
+					<img src="<?php if($this->session->userdata('foto')){echo $this->session->userdata('foto');} else{ echo base_url().'assets/images/foto_usuario.png';}?>" />
 				</div>
 				<div id="profile-id-photo-name">
 					<p>

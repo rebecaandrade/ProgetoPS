@@ -151,11 +151,11 @@ class CI_Upload {
 		}
 
 		// Is the upload path valid?
-		if ( ! $this->validate_upload_path())
+		/*if ( ! $this->validate_upload_path())
 		{
 			// errors will already be set by validate_upload_path() so just return FALSE
 			return FALSE;
-		}
+		}*/
 
 		// Was the file able to be uploaded? If not, determine the reason why.
 		if ( ! is_uploaded_file($_FILES[$field]['tmp_name']))

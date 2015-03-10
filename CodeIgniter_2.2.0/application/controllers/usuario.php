@@ -5,6 +5,10 @@ class Usuario extends CI_Controller {
 	public function __construct() {
    		parent::__construct();
    		$this->load->model('usuario_model');
+        $config['upload_path'] = $this->base_img_dir();
+        $config['allowed_types'] = 'gif|jpg|png';
+        $this->load->library('upload', $config);
+        $this->upload->initialize($config);
 	}
 	public function index(){
 		if($this->session->userdata('login_id') != false){
@@ -57,7 +61,6 @@ class Usuario extends CI_Controller {
     }
     public function contact_us(){
         $this->load->view('user/user_email');
-
     }
     public function contact_email(){
             $date = getdate();
@@ -112,27 +115,45 @@ class Usuario extends CI_Controller {
     	$dados['user'] = $this->usuario_model->search_user($this->session->userdata('login_id'));
     	$this->load->view('user/edit_info',$dados);
     }
-    public function session_update($user){
+    public function session_update(){
+        $id = $this->session->userdata('login_id');
+        $user = $this->usuario_model->search_user($id);
     	$newdata = array(
-                'curso' => $user['curso'],
-                'semestre' => $user['semestre'],
-                'telefone' => $user['telefone'],
-				'email' => $user['email'],
-				'nome' => $user['nome'], 	);
+                'curso' => $user->curso,
+                'semestre' => $user->semestre,
+                'telefone' => $user->telefone,
+				'email' => $user->email,
+				'nome' => $user->nome,
+                'foto' => $user->foto,);
         $this->session->set_userdata($newdata);
     }
     public function update_account(){
-    	$id = $this->session->userdata('login_id');
+        $id = $this->session->userdata('login_id');
+        if(isset($_FILES['foto'])){
+            $extensao = strrchr($_FILES['foto']['name'],'.');
+            $_FILES['foto']['name'] = md5(microtime()).'_'.$id.$extensao;
+        }
     	if($_POST['nome'] == NULL || $_POST['email'] == NULL || $_POST['semestre'] == NULL ||
     		$_POST['curso'] == NULL || $_POST['telefone'] == NULL || $_POST['password'] == NULL){
     		$this->session->set_userdata('mensagem','erro ao atualizar cadastro, tente novamente');
     		redirect('usuario/edit_account');
     	}
     	else if($this->usuario_model->verify_password($id,$_POST['password'])){
+            $this->upload->do_upload('foto');
+            $picture = $this->upload->data();
+            if(isset($picture)){
+                $_POST['foto'] = base_url().'complemento/user_pictures/'.$picture['file_name'];
+            }
     		$this->usuario_model->update_user($id,$_POST);
-    		$this->session_update($_POST);
+    		$this->session_update();
     		$this->session->set_userdata('mensagem','cadastro atualizado com sucesso');
     		redirect('usuario/home');
     	}
+    }
+    public function base_img_dir(){
+        return 'C:\wamp\www\SistemaPS\CodeIgniter_2.2.0\complemento\user_pictures';
+    }
+    public function display_picture(){
+        $this->load->view('new_user');
     }
 }

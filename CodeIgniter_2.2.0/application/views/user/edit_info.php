@@ -7,7 +7,7 @@
 	</div>
 
 	<div id="content" class="content-large">
-		<?php echo form_open('usuario/update_account');?>
+		<?php echo form_open_multipart('usuario/update_account');?>
 		<div class="edit-info-column-3">
 			<label>Nome<br /><input type="text" name="nome" value="<?php echo $user->nome?>"></label>
 
@@ -15,10 +15,10 @@
 			<div id="edit-info-photo">
 				<div id="edit-info-photo-frame">
 					<img src="<?php echo base_url();?>assets/images/photo_profile.png" alt="" />
-					<img src="<?php echo base_url();?>assets/images/foto_usuario.png" alt="" />
+					<img src="<?php if($user->foto){echo $user->foto;} else{ echo base_url().'assets/images/foto_usuario.png';}?>" alt="" />
 				</div>
 				<div id="edit-info-photo-name">
-					<input type="file" name="foto" value="<?php if($user->foto)echo $user->foto?>">
+					<input type="file" name="foto">
 				</div>
 			</div>
 		</div>
@@ -49,5 +49,5 @@
 
 		<?php echo form_close();?>
 	</div>
-
 <?php echo $this->load->view('_inc/footer')?>
+
