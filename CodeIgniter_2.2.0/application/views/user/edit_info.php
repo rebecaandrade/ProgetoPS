@@ -37,7 +37,7 @@
 			<label>Confirmação de Senha<br /><input type="password" name="password" value=""> </label><br />
 
 			<div class="button-box">
-				<a onclick="if (confirm('Deseja Excluir seu cadastro ?')) window.location.replace('<?php echo base_url().'index.php/usuario/delete_account?id='.$user->id_login ?>')">
+				<a onclick="confirmar('Deseja Excluir seu cadastro ?', '<?php echo base_url().'index.php/usuario/delete_account?id='.$user->id_login ?>' ) ">
 				<span class="button b-dark-cancel"></span>
 				<p>
 					Deletar<br />Cadastro

@@ -70,8 +70,9 @@ class Usuario extends CI_Controller {
             $message = wordwrap($message, 70);
             $headers = 'From: donotreply@cjr.org.br';/* Ver qual email que deve mandar */
             mail($to,$subject,$message,$headers);
-            //setar alerta de sucesso
-            redirect('usuario/contact_us');
+            $this->session->set_userdata('mensagem','E-mail enviado com sucesso!');
+            $this->session->set_userdata('tipo_mensagem','success');
+            redirect('usuario/home');
 
     }
     public function insert_new_user(){
@@ -79,14 +80,17 @@ class Usuario extends CI_Controller {
     		$_POST['email'] == NULL || $_POST['curso'] == NULL || $_POST['semestre'] == NULL || 
     		$_POST['telefone'] == NULL || $_POST['nome'] == NULL){
     		$this->session->set_userdata('mensagem','Alguns campos obrigatórios não foram preenchidos');
+            $this->session->set_userdata('tipo_mensagem','error');
     		redirect('usuario/create_user');
     	}
     	elseif($_POST['senha'] != $_POST['novasenha']){
     		$this->session->set_userdata('mensagem','Senhas digitadas não são iguais');
-    		redirect('usuario/create_user');
+    		$this->session->set_userdata('tipo_mensagem','error');
+            redirect('usuario/create_user');
     	}
     	elseif($this->usuario_model->check_existence_of_user($_POST['usuario'])){
-    		$this->session->set_userdata('mensagem','usuario ja existe');
+    		$this->session->set_userdata('mensagem','usuario já cadastrado');
+            $this->session->set_userdata('tipo_mensagem','error');
     		redirect('usuario/create_user');
     	}
     	else{
@@ -134,8 +138,12 @@ class Usuario extends CI_Controller {
         $this->upload->initialize($config);
     	if($_POST['nome'] == NULL || $_POST['email'] == NULL || $_POST['semestre'] == NULL ||
     		$_POST['curso'] == NULL || $_POST['telefone'] == NULL || $_POST['password'] == NULL){
-    		$this->session->set_userdata('mensagem','erro ao atualizar cadastro, tente novamente');
-    		redirect('usuario/edit_account');
+    		$this->session->set_userdata('mensagem','Erro ao atualizar cadastro, tente novamente.');
+            $this->session->set_userdata('tipo_mensagem','error');
+            if($_POST['password'] == NULL){
+                $this->session->set_userdata('subtitulo_mensagem','Verifique a confirmação de senha.');
+            }
+            redirect('usuario/edit_account');
     	}
     	else if($this->usuario_model->verify_password($id,$_POST['password'])){
             if(isset($_FILES['foto'])){
@@ -151,9 +159,18 @@ class Usuario extends CI_Controller {
             }
     		$this->usuario_model->update_user($id,$_POST);
     		$this->session_update();
-    		$this->session->set_userdata('mensagem','Cadastro atualizado com sucesso');
+    		$this->session->set_userdata('mensagem','Cadastro atualizado com sucesso!');
+            $this->session->set_userdata('tipo_mensagem','success');
     		redirect('usuario/home');
     	}
+        else{
+            $this->session->set_userdata('mensagem','Erro ao atualizar cadastro, tente novamente.');
+            $this->session->set_userdata('tipo_mensagem','error');
+            if($_POST['password'] == NULL){
+                $this->session->set_userdata('subtitulo_mensagem','Verifique a confirmação de senha.');
+            }
+            redirect('usuario/edit_account');
+        }
     }
     public function base_img_dir(){
         return getcwd().'\complemento\user_pictures';
