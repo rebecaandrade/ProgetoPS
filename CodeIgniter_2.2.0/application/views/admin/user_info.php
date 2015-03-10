@@ -25,7 +25,7 @@
 		<div id="infouser-id-photo">
 			<div id="infouser-id-photo-frame">
 				<img src="<?php echo base_url();?>assets/images/photo_profile.png" />
-				<img src="<?php echo base_url();?>assets/images/foto_usuario.png" />
+				<img src="<?php if($user->foto){echo $user->foto;} else {echo base_url().'assets/images/foto_usuario.png';}?>" />
 			</div>
 			<div id="infouser-id-photo-name">
 				<p>
