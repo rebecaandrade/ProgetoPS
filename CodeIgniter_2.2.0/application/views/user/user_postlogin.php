@@ -9,13 +9,13 @@
 <div id="content" class="content-large">
   <div id="postlogin-field">
     <div class="postlogin-field-button">
-    	<a onclick="if (confirm('Deseja inscrever-se no PS atual ?')) window.location.replace('<?php echo base_url().'index.php/ps/inscribe_in_current_ps' ?>')">
+    	<a onclick="confirmar('Deseja inscrever-se no Processo Seletivo atual ?','<?php echo base_url().'index.php/ps/inscribe_in_current_ps'?>') ">
       	<img src="<?php echo base_url();?>assets/images/form_signup.png" alt="" />
         	<p>Inscreva-se</p>
         	</a>
     </div>
     <div class="postlogin-field-button">
-			<a href="<?php echo base_url();?>index.php/usuario/home/">
+			<a href="<?php echo base_url();?>index.php/usuario/load_user_page/">
 				<img src="<?php echo base_url();?>assets/images/profile_post.png" alt="" />
 	        <p>Perfil</p>
 			</a>

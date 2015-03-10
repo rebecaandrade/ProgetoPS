@@ -43,10 +43,24 @@ class Usuario_model extends CI_Model {
 		return $this->db->get('tb_login')->row()->id_login;
 	}
 	public function inscribed_on_current_ps(){
+		$this->load->model('ps_model');
 		$id_login = $this->session->userdata('login_id');
-		$id_ps = $this->db->where(array('status_ps !=' => 0))->get('tb_PS')
-		->row()->id;
-		return $this->db->where(array('tb_login_id_login' => $id_login,'tb_ps_id' => $id_ps))
-		->get('ta_login_x_tb_PS')->row();
+		$id_ps = $this->ps_model->current_ps();
+		if($id_ps){
+			$this->db->where('tb_login_id_login',$this->session->userdata('login_id'));
+			$this->db->where('tb_PS_id',$id_ps);
+			$result = $this->db->get('ta_login_x_tb_ps')->row();
+			if(empty($result)){
+				return FALSE;
+			}
+			else{
+				$this->session->set_userdata('status_feed',$result->status_feed);
+				return TRUE;
+			}
+		}
+		else{
+			$this->session->set_userdata('status_feed',0);
+			return TRUE;
+		}
 	}
 }

@@ -22,7 +22,7 @@
             <td> <?php echo $user->nome ?> </td>
             <td>
               <a href="<?php echo base_url();?>index.php/admin/update_admin/<?php echo $user->id_login?>"><img src="<?php echo base_url();?>assets/images/button_light_update.png" alt="" /></a>
-              <a onclick="if (confirm('Deseja deletar este usuario?')) window.location.replace('<?php echo base_url().'index.php/admin/delete?id='.$user->id_login ?>')"><img src="<?php echo base_url();?>assets/images/button_light_cancel.png" alt="" /></a>
+              <a onclick="confirmar('Deseja deletar este usuario?', '<?php echo base_url().'index.php/admin/delete?id='.$user->id_login ?>') "><img src="<?php echo base_url();?>assets/images/button_light_cancel.png" alt="" /></a>
             </td>
           </tr>
         <?php }} ?>

@@ -28,7 +28,7 @@
                       <td><a class="open-date" href="#">Horário</a></td>
                       <td><a href="<?php echo base_url();?>index.php/admin/check_member?id=<?php echo $user->id_login?>">Informações</a></td>
                       <td><a href="<?php echo base_url() ?>/index.php/feedback/show_feed?id=<?php echo $user->id_login?>"> <img src="<?php echo base_url();?>assets/images/button_light_accept.png" alt="" /></a></td>
-                      <td><a onclick="if (confirm('Deseja deletar este usuario ?')) window.location.replace('<?php echo base_url().'index.php/usuario/delete?id='.$user->id_login ?>')">
+                      <td><a onclick="confirmar('Deseja deletar este usuario ?', '<?php echo base_url().'index.php/usuario/delete?id='.$user->id_login?>')">
                         <img src="<?php echo base_url();?>assets/images/button_light_cancel.png" alt="" />
                       </a></td>
 					<!--

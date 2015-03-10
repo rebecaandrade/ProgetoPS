@@ -59,6 +59,7 @@ class PS extends CI_Controller {
                 'entrevistado' => '0');
         $this->ps_model->inscribe_user_in_current_ps($dados);
         $this->session->set_userdata('mensagem','Você foi inscrito com sucesso');
+        $this->session->set_userdata('tipo_mensagem','success');
         redirect('usuario/home');
     }
 }

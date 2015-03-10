@@ -1,14 +1,18 @@
-confirmar = function(mensagem,subtitulo){
+confirmar = function(mensagem,url){
 	swal({   
 		title: mensagem,
-		text: subtitulo,
+		text: '',
 		type: "warning",
 		showCancelButton: true,
-		confirmButtonColor: "#DD6B55",
 		confirmButtonText: "sim!",
 		cancelButtonText: "Não!",
 		closeOnConfirm: false,
 		allowOutsideClick : true 
+	},
+	function(isConfirm){
+		if (isConfirm) {
+	   		window.location.href = url;
+	   	}
 	});
 }
 horario = function(mensagem,subtitulo,url,url_2){
