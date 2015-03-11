@@ -1,4 +1,4 @@
-@media screen and (min-width: 481px) and (max-width: 768px){
+@media screen and (min-width: 481px) and (max-width: 767px){
   .center-large{
     max-width: 768px;
     width: 81.25%;
@@ -29,7 +29,7 @@
 
   #header-logo{
     height: 100%;
-    background-image: url("../images//logo.png");
+    background-image: url("../images/logo.png");
     background-size: contain;
     background-repeat: no-repeat;
     float: left;
@@ -651,7 +651,7 @@
 
       @media screen and (orientation: landscape){
         .header-large{
-          height: 28%;
+          height: 25%;
           margin-top: 7%;
           margin-bottom: 7%;
         }
