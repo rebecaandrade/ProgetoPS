@@ -47,22 +47,22 @@
 
   #header-text{
     height: 100%;
-    width: 65.192307692307692307692307692307%; /*678px / 1040px*/
+    width: 65.192308%; /*678px / 1040px*/
     float: left;
     color: #ffffff;
   }
 
   #header-text-large-diamond{
-    height: 43.589743589743589743589743589744%; /*(195px - 55px - 55px) / 195px*/
-    width: 75%;
-    font-size: 26pt;
+    height: 43.589744%; /*(195px - 55px - 55px) / 195px*/
+    width: 90%;
+    font-size: 2.6em;
     font-weight: bold;
   }
 
   .header-text-large-square-1, .header-text-large-square-2{
-    height: 28.205128205128205128205128205128%; /*55px / 195px*/
-    width: 75%;
-    font-size: 16pt;
+    height: 28.205128%; /*55px / 195px*/
+    width: 90%;
+    font-size: 1.6em;
     font-weight: normal;
     text-align: center;
   }
@@ -70,14 +70,14 @@
   #header-text-thin-diamond{
     height: 43.589743589743589743589743589744%; /*(195px - 55px - 55px) / 195px*/
     width: 75%;
-    font-size: 28pt;
+    font-size: 2.4em;
     font-weight: bold;
   }
 
   .header-text-thin-square-1, .header-text-thin-square-2{
-    height: 28.205128205128205128205128205128%; /*55px / 195px*/
+    height: 28.205128%; /*55px / 195px*/
     width: 75%;
-    font-size: 18pt;
+    font-size: 1.6em;
     font-weight: normal;
     text-align: center;
   }
@@ -87,7 +87,6 @@
   }
 
   #content{
-    background-color: #EEE;
     width: 100%;
   }
 
@@ -113,6 +112,11 @@
     width: 100%;
     height: 20%;
     border-bottom: 1px solid #000000;
+  }
+
+  #login-field-signup img{
+    max-width: 80%;
+    max-height: 80%;
   }
 
   #login-field-signup a{
@@ -188,8 +192,8 @@
   }
 
   #profile-id{
-    width: 80%;
-    height: 100%;
+    width: 100%;
+    height: 50%;
     padding: 0.5em;
     margin: 0% auto 10% auto;
     background-color: #ffffff;
@@ -197,17 +201,15 @@
   }
 
   #profile-id-photo{
-    width: 100%;
-    height: 60%;
-    position: relative;
-    top: 0%;
-    left: 0%;
-    background-color: #000;
+    width: 45%;
+    height: 100%;
+    float: left;
+    margin-right: 3%;:
   }
 
   #profile-id-photo-frame{
-    width: 95.5%;
-    height: 86.4%;
+    width: 100%;
+    height: 90%;
     position: relative;
     top: 0%;
     left: 0%;
@@ -217,9 +219,11 @@
   #profile-id-photo-name{
     width: 100%;
     height: 10%;
+    background-color: #000000;
     color: #ffffff;
     text-align: center;
     font-weight: bold;
+    font-size: 1.4em;
   }
 
   #profile-id-photo-frame img{
@@ -240,15 +244,17 @@
     position: absolute;
     top: 0%;
     left: 0%;
-    z-index: -1;
+    z-index: 0;
   }
 
   #profile-id-info{
-    width: 94%;
-    height: 33%;
-    margin-top: 5%;
+    width: 50%;
+    height: 85%;
     padding: 0.5em;
-    border-top: 1px solid #000000;
+    position: relative;
+    top: 0%;
+    left: 0%;
+    display: inline-block;
   }
 
   #profile-id-info p:nth-child(odd){
@@ -263,8 +269,8 @@
   }
 
   #profile-nav-top{
-    width: 95%;
-    height: 18%;
+    width: 100%;
+    height: 30%;
     padding: 0.5em;
     border-radius: 10px 10px 0px 0px;
     font-weight: bold;
@@ -278,8 +284,11 @@
 
   #profile-nav-top span{
     height: 100%;
-    width: 2em;
+    width: 3em;
     display: inline-block;
+    position: relative;
+    top: 0%;
+    right: 20%;
     background-size: contain;
     background-repeat: no-repeat;
     float: right;
@@ -287,11 +296,19 @@
 
   /*profile-nav-top*/.aproved{
     background-color: #83d955;
-
   }
 
   /*profile-nav-top*/.aproved span{
     background-image: url("../images/icon_aproved.png");
+  }
+
+  /*profile-nav-top*/.aproved:before{
+      content: "aprovado";
+      text-transform: uppercase;
+      font-size: 1.6em;
+      position: relative;
+      top: 15%;
+      left: -1%;
   }
 
   /*profile-nav-top*/.avaliation{
@@ -302,24 +319,37 @@
     display: none;
   }
 
-  /*profile-nav-top*/.avaliation p{
-    max-width: 100%;
-    width: 100%;
+  /*profile-nav-top*/.avaliation:before{
+      content: "em avaliação";
+      text-transform: uppercase;
+      font-size: 1.6em;
+      position: relative;
+      top: 10%;
+      left: 7%;
   }
 
   /*profile-nav-top*/.denied{
-    background-color: #bf4b4b;
+    background-color: #ed1c24;
   }
 
   /*profile-nav-top*/.denied span{
     background-image: url("../images/icon_denied.png");
   }
 
+  /*profile-nav-top*/.denied:before{
+      content: "tente novamente";
+      text-transform: uppercase;
+      font-size: 1.6em;
+      position: relative;
+      top: 10%;
+      left: -1%;
+  }
+
   /*profile-nav-top*/.none{
     background-color: #1c1c1c;
   }
 
-  #profile-nav-top .none p{
+  /*profile-nav-top*/#profile-nav-top .none p{
     display: none;
   }
 
@@ -337,7 +367,7 @@
   .profile-nav-body-button{
     width: 25%;
     padding: 2% 0% 0% 0%;
-    height: 94%;
+    height: 100%;
     float: left;
   }
 
@@ -349,7 +379,7 @@
   }
 
   .profile-nav-body-button p{
-    font-size: 8pt;
+    font-size: 1em;
   }
 
   .profile-nav-body-button a{
@@ -372,8 +402,168 @@
     border-radius: 0px 0px 10px 0px;
   }
 
-      @media screen and (orientation: landscape){
+  .edit-info-column-3{
+    width: 100%;
+    height: auto;
+    color: #ffffff;
+    font-size: 1.4em;
+  }
 
+  .edit-info-column-3 input[type="text"], .edit-info-column-3 input[type="password"]{
+    height: 2.5em;
+    width: 100%;
+    margin-top: 0.3em;
+    margin-bottom: 0.5em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    font-size: 0.8em;
+  }
+
+  .edit-info-column-3 img{
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  #edit-info-photo{
+    width: 100%;
+    height: 55%;
+    float: left;
+  }
+
+  #edit-info-photo-frame{
+    width: 100%;
+    height: 92.1%;
+    position: relative;
+    top: 0%;
+    left: 0%;
+  }
+
+  #edit-info-photo-name{
+    width: 100%;
+    height: 10%;
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  #edit-info-photo-frame img{
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: 0% auto;
+  }
+
+  #edit-info-photo-frame img:first-child{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: 1;
+  }
+
+  #edit-info-photo-frame img:last-child{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: 0;
+  }
+
+  #email-field{
+    height: 55%;
+    width: 100%;
+    padding: 0.8em;
+    background-color: #ffffff;
+    margin: 0% auto;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    color: #1c1c1c;
+  }
+
+  #email-field-message{
+    height: 80%;
+    width: 100%;
+  }
+
+  #email-field-message textarea{
+    height: 80%;
+    width: 100%;
+    padding: 0.5em;
+    margin-top: 5%;
+    border: 1px solid #1c1c1c;
+    border-radius: 10px;
+    resize: none;
+    font-family: 'Open Sans';
+    font-size: 10pt;
+  }
+
+  #email-field-footer{
+    height: 20%;
+    width: 100%;
+  }
+
+      @media screen and (orientation: landscape){
+          #header{
+            width: 100%;
+          }
+
+          .header-large{
+            height: 11.125%; /*(195px + 110px) / 800 px;*/
+            margin-top: 6.875%; /*55px / 800px */
+            margin-bottom: 6.875%; /*55px / 800px */
+          }
+
+          .header-thin{
+            height: 13.125%; /*(195px + 110px) / 800 px;*/
+            margin-top: 4.875%; /*55px / 800px */
+            margin-bottom: 4.875%; /*55px / 800px */
+          }
+
+          .header-logo-large{
+            width: 26.519%; /*(362px - 55px) / 1040px*/
+            margin-right: 4.288%; /*55px / 1180px*/
+          }
+
+          .header-logo-thin{
+            width: 16.712%; /*(233px - 35.8px) / 1040px*/
+            margin-right: 4.034%; /*35.8px / 1040px*/
+          }
+
+          #header-text{
+            height: 100%;
+            width: 65.192308%; /*678px / 1040px*/
+          }
+
+          #header-text-large-diamond{
+            width: 90%;
+          }
+
+          .header-text-large-square-1, .header-text-large-square-2{
+            width: 90%;
+          }
+
+          #header-text-thin-diamond{
+            width: 60%;
+          }
+
+          .header-text-thin-square-1, .header-text-thin-square-2{
+            width: 55%;
+          }
+
+          #profile-id{
+            width: 90%;
+            height: 80%;
+          }
+
+          #profile-id-photo{
+            width: 45%;
+            height: 100%;
+          }
+
+          #profile-nav{
+            width: 60%;
+            height: 25%;
+            margin: 0% auto 3% auto;
+          }
       }
 
 }

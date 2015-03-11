@@ -3,7 +3,7 @@
 <meta charset="UTF-8">
 <head>
   <title>Processo Seletivo CJR</title>
-  <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+  <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=3">
   <script src="<?php echo base_url();?>assets/javascript/sweetalert/lib/sweet-alert.min.js"></script>
   <script src="<?php echo base_url();?>assets/javascript/SystemActions.js"></script>
   <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/javascript/sweetalert/lib/sweet-alert.css">
