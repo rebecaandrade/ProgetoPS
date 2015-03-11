@@ -6,7 +6,8 @@ class Admin extends CI_Controller {
    		$this->load->model('admin_model');
 	}
 	public function load_home_admin(){
-		$this->load->view('admin/admin_page');
+		$dados['count'] = $this->admin_model->get_time_counters();
+		$this->load->view('admin/admin_page',$dados);
 	}
 	public function check_member(){
 		$dados['user'] = $this->admin_model->get_user_information($_GET['id']);
