@@ -14,21 +14,21 @@
 						Palestra Institucional
 					</p>
 					<span class="counter">
-						<span><?php  ?>count</span><span>12:00</span>
+						<span><?php echo $count['presentation_tarde'] ?></span><span>12:00</span>
 					</span>
 					<span class="counter">
-						<span><?php  ?>count</span><span>18:00</span>
+						<span><?php echo $count['presentation_noite'] ?></span><span>18:00</span>
 					</span>
 				</div>
 				<div class="count-activity">
 					<p>
-						Palestra Institucional
+						Dinâmica
 					</p>
 					<span class="counter">
-						<span><?php  ?>count</span><span>12:00</span>
+						<span><?php echo $count['dinamic_tarde'] ?></span><span>12:00</span>
 					</span>
 					<span class="counter">
-						<span><?php  ?>count</span><span>18:00</span>
+						<span><?php echo $count['dinamic_noite'] ?></span><span>18:00</span>
 					</span>
 				</div>
 			</div>

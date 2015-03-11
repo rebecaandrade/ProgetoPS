@@ -13,7 +13,8 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/user_info',$dados);
 	}
 	public function load_home_superadmin(){
-		$this->load->view('admin/admin_page');
+		$dados['count'] = $this->admin_model->get_time_counters();
+		$this->load->view('admin/admin_page',$dados);
 	}
 	public function list_admins(){
 		if($this->session->userdata('login_perfil')!=3){
@@ -36,7 +37,7 @@ class Admin extends CI_Controller {
 	}
 	public function update_admin_account(){
 		if($_POST['nome'] == NULL || $_POST['email'] == NULL || $_POST['telefone'] == NULL){
-			$this->session->set_userdata('mensagem','alguns campos obrigatórios não foram preenchidos');
+			$this->session->set_userdata('mensagem','Alguns campos obrigatórios não foram preenchidos');
 			$this->update_admin($_POST['id']);
 		}
 		else {
@@ -51,7 +52,7 @@ class Admin extends CI_Controller {
 	public function insert_new_admin(){
 		if($_POST['nome'] == NULL || $_POST['email'] == NULL || $_POST['telefone'] == NULL ||
 			$_POST['usuario'] == NULL || $_POST['senha'] == NULL ||  $_POST['confirmasenha'] == NULL){
-			$this->session->set_userdata('mensagem','alguns campos obrigatórios não foram preenchidos');
+			$this->session->set_userdata('mensagem','Alguns campos obrigatórios não foram preenchidos');
 			redirect('admin/create_admin');
 		}
 		elseif ($_POST['senha'] != $_POST['confirmasenha']){
@@ -72,5 +73,8 @@ class Admin extends CI_Controller {
 	/* Apagar depois somente para carregar a pagina de FeedBack  */
 	public function admin_feedback(){
 		$this->load->view('admin/admin_feedback');
+	}
+	public function teste_functions(){
+		die(var_dump($this->admin_model->get_time_counters()));
 	}
 }
