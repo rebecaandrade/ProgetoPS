@@ -1,46 +1,59 @@
 <?php echo $this->load->view('_inc/header_thin')?>
 <?php echo $this->load->view('_inc/nav_bar')?>
 
-		<div class="header-text-thin-square-2 header-text-uppercase">
-			<p>informações gerais</p>
-		</div>
-	</div>
+<div class="header-text-thin-square-2 header-text-uppercase">
+	<p>informações gerais</p>
+</div>
+</div>
 </div>
 
-	<div id="content" class="content-thin">
-		<div id="profile-nav">
-			<div id="profile-nav-top" class="aproved">
-				<span><!--Icone de aprovado--></span>
-			</div>
-			<div id="profile-nav-body">
-				<div class="profile-nav-body-button">
-					<a href="<?php echo base_url()?>index.php/feedback/load_feedback/0"><img src="<?php echo base_url();?>assets/images/icon_feedback.png" alt="" />
+<div id="content" class="content-thin">
+	<div id="profile-nav">
+		<div id="profile-nav-top" class="aproved">
+			<span><!--Icone de aprovado--></span>
+		</div>
+		<div id="profile-nav-body">
+			<div class="profile-nav-body-button">
+				<a href="<?php echo base_url()?>index.php/feedback/load_feedback/0"><img src="<?php echo base_url();?>assets/images/icon_feedback.png" alt="" />
 					<p>
 						FeedBack
 					</p></a>
 				</div>
+				<?php
+				$var = $this->session->userdata('status_feed');
+				if($var){?>
 				<div class="profile-nav-body-button">
 					<a onclick="horario('Qual horário você deseja editar?','','<?php echo base_url()?>index.php/horario/load_user_interview','<?php echo base_url()?>index.php/horario/load_user_activity')" >
-					<img src="<?php echo base_url();?>assets/images/icon_date.png" alt="" />
-					<p>
-						Horário
-					</p>
+						<img src="<?php echo base_url();?>assets/images/icon_date.png" alt="" />
+						<p>
+							Horário
+						</p>
 					</a>
 				</div>
+				<?php } else { ?>
+				<div class="profile-nav-body-button">
+					<a	onclick="swal({ title:'Inscreva-se para poder marcar os horários!',type:'info'})">
+						<img src="<?php echo base_url();?>assets/images/icon_date.png" alt="" />
+						<p>
+							Horário
+						</p>
+					</a>
+				</div>
+				<?php } ?>
 				<div class="profile-nav-body-button">
 					<a href="<?php echo base_url();?>index.php/usuario/contact_us">
-					<img src="<?php echo base_url();?>assets/images/icon_email.png" alt="" />
-					<p>
-						Fale Conosco
-					</p>
+						<img src="<?php echo base_url();?>assets/images/icon_email.png" alt="" />
+						<p>
+							Fale Conosco
+						</p>
 					</a>
 				</div>
 				<div class="profile-nav-body-button">
 					<a href="<?php echo base_url();?>index.php/usuario/edit_account">
-					<img src="<?php echo base_url();?>assets/images/icon_edit.png" alt="" />
-					<p>
-						Editar Informações
-					</p>
+						<img src="<?php echo base_url();?>assets/images/icon_edit.png" alt="" />
+						<p>
+							Editar Informações
+						</p>
 					</a>
 				</div>
 			</div>
@@ -62,7 +75,7 @@
 			<div id="profile-id-info">
 				<p>
 					Curso:
-					</p>
+				</p>
 				<p> <?php echo $this->session->userdata('curso');?> </p>
 				<p>
 					<br />
@@ -84,4 +97,4 @@
 
 	</div>
 
-<?php echo $this->load->view('_inc/footer')?>
+	<?php echo $this->load->view('_inc/footer')?>

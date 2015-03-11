@@ -59,7 +59,7 @@ class Usuario_model extends CI_Model {
 			}
 		}
 		else{
-			$this->session->set_userdata('status_feed',0);
+			$this->session->set_userdata('status_feed','0');
 			return TRUE;
 		}
 	}
