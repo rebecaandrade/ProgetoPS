@@ -1,44 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Bootstrap -->
-    <link href="<?php echo base_url()?>/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="<?php echo base_url()?>/assets/bootstrap/html5shiv/dist/html5shiv.js"></script>
-      <script src="<?php echo base_url()?>/assets/bootstrap/js/respond/dest/respond.min.js"></script>
-    <![endif]-->
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="<?php echo base_url()?>/assets/bootstrap/jquery-1.11.2.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="<?php echo base_url()?>/assets/bootstrap/js/bootstrap.min.js"></script>
-    <!-- Include your site components -->
-    <script src="<?php echo base_url();?>assets/javascript/sweetalert/lib/sweet-alert.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/boot.css">
-    <title>Bootstrap 101 Template</title>
-  </head>
-  <body>
-     <h1>Hello, world!</h1>
-     <div class="container">
-         <div class="row">
-             <div id="header" class="col-sm-12 col-xm-12">
-                 <div id="header-logo">
+<html>
+<head>
+    <title></title>
+    <script src="http://deepliquid.com/Jcrop/js/jquery.Jcrop.min.js"></script>
+  <script src="<?php echo basse_url() ?>assets/javascript/Jcrop/jquery.Jcrop.js"></script>
+  <link rel="stylesheet" href="<?php echo basse_url() ?>assets/javascript/Jcrop/css/jquery.Jcrop.css" type="text/css" />
+  <link rel="stylesheet" href="<?php echo basse_url() ?>assets/javascript/Jcrop/demos/demo_files/demos.css" type="text/css" />
+</head>
+<body>
+<div id="outer">
+<div class="jcExample">
+<div class="article">
+<h1>Crop jQuery</h1> <!-- Imagem que vamos inserir --> <img src="demo_files/pool.jpg" id="cropbox" /> <!-- Formulário para realização do crop--> <form action="crop.php" method="post" onsubmit="return checkCoords();"> <input type="hidden" id="x" name="x" /> <input type="hidden" id="y" name="y" /> <input type="hidden" id="w" name="w" /> <input type="hidden" id="h" name="h" /> <input type="submit" value="Crop Image" /> </form> </div> </div> </div>
 
-                 </div>
-                 <div id="header-text" class="col-sm-8">
+Read more: http://www.linhadecodigo.com.br/artigo/3602/crop-jquery-recortando-imagens-com-jcrop.aspx#ixzz3TzTzJ5C7
 
-                 </div>
-             </div>
-         </div>
-     </div>
-     <div class="container-fluid">
-         <div class="row">
-             <div class="col-sm-6 col-md-offset-3">
-                 5
-             </div>
-         </div>
-     </div>

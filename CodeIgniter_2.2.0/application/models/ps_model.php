@@ -25,8 +25,14 @@ class PS_Model extends CI_Model{
 	///Retorna id do PS atual
 	public function current_ps(){
 		$this->db->where('status_ps',TRUE);
-		return $this->db->get('tb_ps')->row()->id;
-	}
+		$ps = $this->db->get('tb_ps')->row();
+		if (!empty($ps)){
+			return $ps->id;
+		}
+		else{
+			return FALSE;
+		}
+	}	
 	///Listar
 	public function search_ps(){
 		return $this->db->get('tb_ps')->result();
@@ -38,8 +44,7 @@ class PS_Model extends CI_Model{
 		return $this->db->get('tb_ps')->result();
 	}
 	public function inscribe_user_in_current_ps($dados){
-		$id_ps = $this->db->where(array('status_ps !='=> 0))
-		->get('tb_PS')->row()->id;
+		$id_ps = $this->current_ps();
 		$dados['tb_PS_id'] = $id_ps;
 		return $this->db->insert('ta_login_x_tb_PS',$dados);
 	}

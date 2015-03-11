@@ -18,6 +18,7 @@ class Admin extends CI_Controller {
 	public function list_admins(){
 		if($this->session->userdata('login_perfil')!=3){
 			$this->session->set_userdata('mensagem','Você não tem acesso a esta pagina');
+			$this->session->set_userdata('tipo_mensagem','error');
 			redirect('usuario/home');
 		}
 		else{

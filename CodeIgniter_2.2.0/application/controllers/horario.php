@@ -52,6 +52,8 @@ class Horario extends CI_Controller {
   		array_push($interviews, $interview);
   	}
   	$this->horario_model->save_hours($interviews);
+    $this->session->set_userdata('mensagem','Horário salvo com sucesso!');
+    $this->session->set_userdata('tipo_mensagem','success');
   	redirect('horario/load_user_interview');
   }
   public function load_user_activity(){

@@ -6,10 +6,11 @@
   </div>
   <?php echo $this->load->view('_inc/nav_bar')?>
   <div id="content" class="content-thin">
-  <?php echo form_open('feedback/set_feed') ?>
+  <?php $id = $user->id_login ?>
+  <?php echo form_open('feedback/set_feed/'.$id) ?>
     <div id="admin-feedback">
       <div id="admin-feedback-top">
-        <img src="<?php echo base_url();?>assets/images/photo_feedback.png" alt="" />
+        <img src="<?php if($user->foto){echo $user->foto;} else { echo base_url().'assets/images/photo_feedback.png';};?>" alt="" />
         <h5><?php echo $user->nome?></h5>
       </div>
       <div id="admin-feedback-body">
@@ -31,11 +32,13 @@
         </div>
       </div>
       <div id="admin-feedback-footer">
-        <a href="#"><img src="<?php echo base_url();?>assets/images/button_light_cancel.png" alt="" /></a>
-        <a href="#"><img src="<?php echo base_url();?>assets/images/button_light_accept.png" alt="" /></a>
+      	<input type="submit" class="button b-light-accept" value=" ">
       </div>
     </div>
     <?php echo form_close()  ?>
   </div>
 
 <?php echo $this->load->view('_inc/footer')?>
+
+
+
