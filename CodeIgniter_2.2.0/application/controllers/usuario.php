@@ -65,8 +65,8 @@ class Usuario extends CI_Controller {
         $this->load->view('user/user_email');
     }
     public function contact_email(){
+        if($this->input->post('email')){
             $date = getdate();
-
             $to      =  'direta@cjr.org.br';
             $subject = '[Processo Seletivo CJR] Fale conosco de '.$this->session->userdata('nome');
             $message = "O usuário ".$this->session->userdata('nome')." disse: \r\n \r\n".$this->input->post('email')."\r\n \r\nEnviado em ".$date['mday']."/".$date['mon']."/".$date['year']." as ".$date['hours'].":".$date['minutes']." \r\n";
@@ -76,16 +76,31 @@ class Usuario extends CI_Controller {
             $this->session->set_userdata('mensagem','E-mail enviado com sucesso!');
             $this->session->set_userdata('tipo_mensagem','success');
             redirect('usuario/home');
-
+        }
+        else{
+            $this->session->set_userdata('mensagem','E-mail não contêm texto');
+            $this->session->set_userdata('tipo_mensagem','error');
+            redirect('usuario/contact_us');
+        }
     }
     public function insert_new_user(){
-    	if($_POST['usuario'] == NULL || $_POST['senha'] == NULL || $_POST['novasenha'] == NULL || 
+        if($_POST['usuario'] == NULL || $_POST['senha'] == NULL || $_POST['novasenha'] == NULL || 
     		$_POST['email'] == NULL || $_POST['curso'] == NULL || $_POST['semestre'] == NULL || 
     		$_POST['telefone'] == NULL || $_POST['nome'] == NULL){
     		$this->session->set_userdata('mensagem','Alguns campos obrigatórios não foram preenchidos');
             $this->session->set_userdata('tipo_mensagem','error');
     		redirect('usuario/create_user');
     	}
+        elseif(!filter_var($_POST['email'],FILTER_VALIDATE_EMAIL)){
+            $this->session->set_userdata('mensagem','E-mail inválido');
+            $this->session->set_userdata('tipo_mensagem','error');
+            redirect('usuario/create_user');
+        }
+        elseif(strlen($_POST['senha']) < 6){
+            $this->session->set_userdata('mensagem','A senha deve ter no mínimo 6 caracteres!');
+            $this->session->set_userdata('tipo_mensagem','error');
+            redirect('usuario/create_user');
+        }
     	elseif($_POST['senha'] != $_POST['novasenha']){
     		$this->session->set_userdata('mensagem','Senhas digitadas não são iguais');
     		$this->session->set_userdata('tipo_mensagem','error');

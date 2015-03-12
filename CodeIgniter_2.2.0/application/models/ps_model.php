@@ -46,6 +46,13 @@ class PS_Model extends CI_Model{
 	public function inscribe_user_in_current_ps($dados){
 		$id_ps = $this->current_ps();
 		$dados['tb_PS_id'] = $id_ps;
+		$this->db->where('id_login',$dados['tb_login_id_login']);
+		$ps_times = $this->db->get('tb_login')->row()->num_de_ps;
+		$update = array(
+					'num_de_ps' => $ps_times + 1
+			);
+		$this->db->where('id_login',$dados['tb_login_id_login']);
+		$this->db->update('tb_login',$update);
 		return $this->db->insert('ta_login_x_tb_PS',$dados);
 	}
 	public function date_id($data){

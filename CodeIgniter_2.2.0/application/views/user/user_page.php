@@ -9,10 +9,26 @@
 
 <div id="content" class="content-thin">
 	<div id="profile-nav">
-		<div id="profile-nav-top" class="aproved">
+		<?php $status_feed = $this->session->userdata('status_feed');
+			if($status_feed == '0') { ?>
+				<div id="profile-nav-top" class="none">
+			<?php } 
+			elseif($status_feed == '1') { ?>
+				<div id="profile-nav-top" class="denied">
+			<?php } elseif($status_feed == '2') { ?>
+				<div id="profile-nav-top" class="avaliation">
+			<?php } elseif($status_feed == '3') { ?>
+				<div id="profile-nav-top" class="aproved">
+			<?php } elseif($status_feed == '5') { ?>
+				<a onclick="confirmar('Deseja inscrever-se no Processo Seletivo atual ?','<?php echo base_url().'index.php/ps/inscribe_in_current_ps'?>')"><div id="profile-nav-top" class="signin">
+			<?php } ?>
 			<span><!--Icone de aprovado--></span>
 		</div>
+			<?php if($status_feed == '5'){ ?>
+				</a>
+			<?php } ?>
 		<div id="profile-nav-body">
+			
 			<div class="profile-nav-body-button">
 				<a href="<?php echo base_url()?>index.php/feedback/load_feedback/0"><img src="<?php echo base_url();?>assets/images/icon_feedback.png" alt="" />
 					<p>
@@ -20,8 +36,7 @@
 					</p></a>
 				</div>
 				<?php
-				$var = $this->session->userdata('status_feed');
-				if($var){?>
+				if($status_feed == '2'){?>
 				<div class="profile-nav-body-button">
 					<a onclick="horario('Qual horário você deseja editar?','','<?php echo base_url()?>index.php/horario/load_user_interview','<?php echo base_url()?>index.php/horario/load_user_activity')" >
 						<img src="<?php echo base_url();?>assets/images/icon_date.png" alt="" />
@@ -30,9 +45,18 @@
 						</p>
 					</a>
 				</div>
-				<?php } else { ?>
+				<?php } elseif($status_feed == '5') { ?>
 				<div class="profile-nav-body-button">
 					<a	onclick="swal({ title:'Inscreva-se para poder marcar os horários!',type:'info'})">
+						<img src="<?php echo base_url();?>assets/images/icon_date.png" alt="" />
+						<p>
+							Horário
+						</p>
+					</a>
+				</div>
+				<?php } else { ?>
+				<div class="profile-nav-body-button">
+					<a	onclick="swal({ title:'Os horários não podem ser alterados',type:'info'})">
 						<img src="<?php echo base_url();?>assets/images/icon_date.png" alt="" />
 						<p>
 							Horário
