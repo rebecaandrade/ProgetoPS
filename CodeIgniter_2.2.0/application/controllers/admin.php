@@ -47,6 +47,7 @@ class Admin extends CI_Controller {
 	}
 	public function check_member(){
 		$dados['user'] = $this->admin_model->get_user_information($_GET['id']);
+		$dados['hours'] = $this->admin_model->get_user_hours($_GET['id']);
 		$this->load->view('admin/user_info',$dados);
 	}
 	public function load_home_superadmin(){

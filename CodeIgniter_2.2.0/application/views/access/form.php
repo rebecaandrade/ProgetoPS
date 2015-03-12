@@ -7,7 +7,7 @@
 	</div>
 
 	<div id="content" class="content-large">
-		<?php echo form_open('usuario/insert_new_user')?>
+		<?php echo form_open_multipart('usuario/insert_new_user')?>
 		<div class="form-column-3">
 			<label>Nome<br /><input type="text" name="nome" value=""></label>
 

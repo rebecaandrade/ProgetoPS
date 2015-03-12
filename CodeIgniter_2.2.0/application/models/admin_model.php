@@ -48,7 +48,7 @@ class Admin_model extends CI_Model {
 	}
 	public function get_user_hours($id){
 		$this->load->model('ps_model');
-		$id_ps = $this->session->userdata('current_ps');
+		$id_ps = $this->ps_model->current_ps();
 		
 		$this->db->where('tb_login_id_login',$id);
 		$this->db->where('tb_ps_id',$id_ps);

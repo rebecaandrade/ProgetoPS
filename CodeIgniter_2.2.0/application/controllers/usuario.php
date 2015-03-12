@@ -99,6 +99,25 @@ class Usuario extends CI_Controller {
     	else{
     		$_POST['perfil'] = '1';
     		$_POST['id_login'] = $this->usuario_model->create_new_user($_POST);
+            $id = $_POST['id_login'];
+            $config['upload_path'] = $this->base_img_dir();
+            $config['allowed_types'] = 'gif|jpg|png';
+            $this->load->library('upload', $config);
+            $this->upload->initialize($config);
+            $dados = NULL;
+            if(isset($_FILES['foto'])){
+                $extensao = strrchr($_FILES['foto']['name'],'.');
+                $_FILES['foto']['name'] = md5(microtime()).'_'.$id.$extensao;
+                $ok = $this->upload->do_upload('foto');
+                $picture = $this->upload->data();
+                if($ok){
+                    $old_picture_name = end(explode('/',$this->session->userdata('foto')));
+                    unlink($this->base_img_dir().'\\'.$old_picture_name);
+                    $dados['foto'] = base_url().'complemento/user_pictures/'.$picture['file_name'];
+                    $this->usuario_model->update_user($id,$dados);
+                    $_POST['foto'] = $dados['foto'];
+                }
+            }
     		$this->create_new_session($_POST);
 			redirect('usuario/home');
 		}
@@ -114,7 +133,8 @@ class Usuario extends CI_Controller {
                 'semestre' => $dados['semestre'],
                 'email' => $dados['email'],
                 'curso' => $dados['curso'],
-                'telefone' => $dados['telefone'],);
+                'telefone' => $dados['telefone'],
+                'foto' => $dados['foto'],);
 		$this->session->set_userdata($newdata);
     }
     public function edit_account(){
@@ -152,13 +172,13 @@ class Usuario extends CI_Controller {
             if(isset($_FILES['foto'])){
                 $extensao = strrchr($_FILES['foto']['name'],'.');
                 $_FILES['foto']['name'] = md5(microtime()).'_'.$id.$extensao;
-            }
-            $ok = $this->upload->do_upload('foto');
-            $picture = $this->upload->data();
-            if($ok){
-                $old_picture_name = end(explode('/',$this->session->userdata('foto')));
-                unlink($this->base_img_dir().'\\'.$old_picture_name);
-                $_POST['foto'] = base_url().'complemento/user_pictures/'.$picture['file_name'];
+                $ok = $this->upload->do_upload('foto');
+                $picture = $this->upload->data();
+                if($ok){
+                    $old_picture_name = end(explode('/',$this->session->userdata('foto')));
+                    unlink($this->base_img_dir().'\\'.$old_picture_name);
+                    $_POST['foto'] = base_url().'complemento/user_pictures/'.$picture['file_name'];
+                }
             }
     		$this->usuario_model->update_user($id,$_POST);
     		$this->session_update();
