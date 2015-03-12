@@ -55,6 +55,7 @@ class Admin_model extends CI_Model {
 
 		$hours= array();
 		$hours['entrevista'] = array();
+		$aux = array();
 		$results = $this->db->get('ta_login_x_tb_horario')->result();
 		foreach ($results as $result) {
 			$this->db->where('id_horario',$result->tb_horario_id_horario);
@@ -66,10 +67,66 @@ class Admin_model extends CI_Model {
 			}else if($date->tipo == 2){
 				$hours['dinamica_hour'] = $query;
 			}else{
-				array_push($hours['entrevista'], $query);
+				$date = explode('-',$query->data);
+				$day = $date[2] + 0;
+        		$month = $date[1] + 0;
+        		$year = $date[0] + 0;
+				$jd = GregorianToJD($month, $day, $year);
+				$week_day = JDDayOfWeek($jd,0);
+				$array = array(
+						'week_day' => $this->week_day($week_day),
+						'date' => $day.'/'.$month,
+						'time' => substr($query->tempo,0,-3),
+						'year' => $year
+					);
+					if(!empty($aux[$jd])){
+						array_push($aux[$jd], $array);
+					}
+					else{
+						$aux[$jd] = array();
+						array_push($aux[$jd], $array);
+					}
 			}
 			
 		}
+		krsort($aux);
+		$aux = array_reverse($aux,TRUE);
+		foreach ($aux as $date) {
+			usort($date,function($a, $b){
+					    	if($a['time'] > $b['time']){
+					    		return TRUE;
+					    	}
+					    	else{
+					    		return FALSE;
+					    	}
+						});
+		}
+		$hours['entrevista'] = $aux;
 		return $hours;
 	}
+	//---------------------------Funções auxiliares -----------------------//
+	
+	public function week_day($day_name){
+  		if($day_name == '0'){
+  			return 'Dom';
+  		}
+  		if($day_name == '1'){
+  			return 'Seg';
+  		}
+  		if($day_name == '2'){
+  			return 'Terç';
+  		}
+  		if($day_name == '3'){
+  			return 'Qua';
+  		}
+  		if($day_name == '4'){
+  			return 'Qui';
+  		}
+  		if($day_name == '5'){
+  			return 'Sex';
+  		}
+  		if($day_name == '6'){
+  			return 'Sáb';
+  		}
+  }
 }
