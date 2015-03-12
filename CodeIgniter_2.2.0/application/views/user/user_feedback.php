@@ -31,7 +31,6 @@
 				<?php if(sizeof($feeds) > 0){?>
 					<?php echo $feeds->feedback ?>
 				<?php }?>
-				f
 			</p>
 		</div>
 		<div id="feedback-text-footer">

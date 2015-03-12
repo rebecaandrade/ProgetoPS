@@ -5,6 +5,7 @@ class Usuario extends CI_Controller {
 	public function __construct() {
    		parent::__construct();
    		$this->load->model('usuario_model');
+        $this->load->model('ps_model');
 	}
 	public function index(){
 		if($this->session->userdata('login_id') != false){
@@ -30,12 +31,14 @@ class Usuario extends CI_Controller {
             redirect('access/login');
     }
     public function load_home_user(){
-            if(!$this->usuario_model->inscribed_on_current_ps() && $this->session->userdata('post_login')!=1){
-                $this->load->view('user/user_postlogin');
-            }
-            else{
-                $this->load_user_page();
-            }
+        $id_ps = $this->ps_model->current_ps();
+        $this->session->set_userdata('current_ps',$id_ps);
+        if(!$this->usuario_model->inscribed_on_current_ps() && $this->session->userdata('post_login')!=1){
+            $this->load->view('user/user_postlogin');
+        }
+        else{
+            $this->load_user_page();
+        }
 	}
     public function load_user_page(){
         $this->session->set_userdata('post_login',1);
@@ -174,5 +177,8 @@ class Usuario extends CI_Controller {
     }
     public function base_img_dir(){
         return getcwd().'\complemento\user_pictures';
+    }
+    public function teste_functions_2(){
+        die(var_dump($this->session->userdata));
     }
 }

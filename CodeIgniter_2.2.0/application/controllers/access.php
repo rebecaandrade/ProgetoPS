@@ -5,6 +5,7 @@ class Access extends CI_Controller {
    		parent::__construct();
    		$this->load->model('access_model');
    		$this->load->model('usuario_model');
+   		$this->load->model('ps_model');
 	}
 	public function login(){
 		$this->load->view('access/login');

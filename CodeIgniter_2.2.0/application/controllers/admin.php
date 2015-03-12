@@ -4,11 +4,13 @@ class Admin extends CI_Controller {
 	public function __construct() {
    		parent::__construct();
    		$this->load->model('admin_model');
+   		$this->load->model('ps_model');
 	}
 	public function load_home_admin(){
 		$this->load->model('ps_model');
 		$this->load->model('horario_model');
 		$id_ps = $this->ps_model->current_ps();
+		$this->session->set_userdata('current_ps',$id_ps);
 
 		if($id_ps){
 			$dados = $this->admin_model->get_time_counters($id_ps);
@@ -45,13 +47,13 @@ class Admin extends CI_Controller {
 	}
 	public function check_member(){
 		$dados['user'] = $this->admin_model->get_user_information($_GET['id']);
-		$dados['hours'] = $this->admin_model->get_user_hours($_GET['id']);
 		$this->load->view('admin/user_info',$dados);
 	}
 	public function load_home_superadmin(){
 		$this->load->model('ps_model');
 		$this->load->model('horario_model');
 		$id_ps = $this->ps_model->current_ps();
+		$this->session->set_userdata('current_ps',$id_ps);
 		if($id_ps){
 			$dados = $this->admin_model->get_time_counters($id_ps);
 		}
@@ -145,6 +147,6 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/admin_feedback');
 	}
 	public function teste_functions(){
-		die(var_dump($this->admin_model->get_time_counters()));
+		die(var_dump($this->session->userdata));
 	}
 }

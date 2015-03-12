@@ -1,10 +1,8 @@
 <?php
 
 class Usuario_model extends CI_Model {
-
 	public function retrieve_users(){
-		$this->db->where(array('status_ps !='=> 0));
-		$id_ps = $this->db->get('tb_PS')->row()->id;
+		$id_ps = $this->session->userdata('current_ps');
 		$this->db->where('tb_PS_id',$id_ps);
 		$feeds = $this->db->get('ta_login_x_tb_PS')->result();
 		$dados;
@@ -53,7 +51,7 @@ class Usuario_model extends CI_Model {
 	public function inscribed_on_current_ps(){
 		$this->load->model('ps_model');
 		$id_login = $this->session->userdata('login_id');
-		$id_ps = $this->ps_model->current_ps();
+		$id_ps = $this->session->userdata('current_ps');
 		if($id_ps){
 			$this->db->where('tb_login_id_login',$this->session->userdata('login_id'));
 			$this->db->where('tb_PS_id',$id_ps);
