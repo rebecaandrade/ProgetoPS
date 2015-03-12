@@ -36,9 +36,11 @@ class Feedback extends CI_Controller {
 	public function set_feed($id){
 		if($this->feedback_model->insert_feed($id,$_POST)){
 			$this->session->set_userdata('mensagem','Feedback adicionado com sucesso');
+			$this->session->set_userdata('tipo_mensagem','success');
 		}
 		else{
 			$this->session->set_userdata('mensagem','Não foi possível adicionar o feed');
+			$this->session->set_userdata('tipo_mensagem','error');
 		}
 		redirect('usuario/list_users');
 	}

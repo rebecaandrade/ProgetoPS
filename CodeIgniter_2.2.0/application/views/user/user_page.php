@@ -19,12 +19,12 @@
 				<div id="profile-nav-top" class="avaliation">
 			<?php } elseif($status_feed == '3') { ?>
 				<div id="profile-nav-top" class="aproved">
-			<?php } elseif($status_feed == '5') { ?>
+			<?php } elseif($status_feed == '4') { ?>
 				<a onclick="confirmar('Deseja inscrever-se no Processo Seletivo atual ?','<?php echo base_url().'index.php/ps/inscribe_in_current_ps'?>')"><div id="profile-nav-top" class="signin">
 			<?php } ?>
 			<span><!--Icone de aprovado--></span>
 		</div>
-			<?php if($status_feed == '5'){ ?>
+			<?php if($status_feed == '4'){ ?>
 				</a>
 			<?php } ?>
 		<div id="profile-nav-body">
@@ -45,7 +45,7 @@
 						</p>
 					</a>
 				</div>
-				<?php } elseif($status_feed == '5') { ?>
+				<?php } elseif($status_feed == '4') { ?>
 				<div class="profile-nav-body-button">
 					<a	onclick="swal({ title:'Inscreva-se para poder marcar os horários!',type:'info'})">
 						<img src="<?php echo base_url();?>assets/images/icon_date.png" alt="" />

@@ -57,7 +57,7 @@ class Usuario_model extends CI_Model {
 			$this->db->where('tb_PS_id',$id_ps);
 			$result = $this->db->get('ta_login_x_tb_ps')->row();
 			if(empty($result)){
-				$this->session->set_userdata('status_feed','5');
+				$this->session->set_userdata('status_feed','4');
 				return FALSE;
 			}
 			else{
