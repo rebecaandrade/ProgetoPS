@@ -3,8 +3,16 @@
 class Usuario_model extends CI_Model {
 
 	public function retrieve_users(){
-		$this->db->where('perfil','1');
-		return $this->db->get('tb_login')->result();
+		$this->db->where(array('status_ps !='=> 0));
+		$id_ps = $this->db->get('tb_PS')->row()->id;
+		$this->db->where('tb_PS_id',$id_ps);
+		$feeds = $this->db->get('ta_login_x_tb_PS')->result();
+		$dados;
+		foreach($feeds as $feed){
+			$this->db->where('id_login',$feed->tb_login_id_login);
+			$dados[] = $this->db->get('tb_login')->row();
+		}
+		return $dados;
 	}
 	public function get_user($login,$senha){
 		$this->db->where('usuario',$login);
