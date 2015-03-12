@@ -14,7 +14,7 @@
 		 	</p>
 		</div>
 		<div id="feedback-nav-body">
-
+			<span class="feedback-nav-before"></span>
 		 	<?php if(isset($semestres)){?>
 		 	<?php foreach($semestres as $date => $semestre){?>
 				<a href="<?php echo base_url()?>index.php/feedback/load_feedback/<?php echo $dates[$date] ?>">
@@ -22,6 +22,7 @@
 				<?php echo $semestre ?>
 				</p></a><br>
 			<?php }}?>
+			<span class="feedback-nav-after"></span>
 		</div>
 		</div>
 	  <div id="feedback-text">
@@ -30,6 +31,7 @@
 				<?php if(sizeof($feeds) > 0){?>
 					<?php echo $feeds->feedback ?>
 				<?php }?>
+				f
 			</p>
 		</div>
 		<div id="feedback-text-footer">

@@ -777,6 +777,10 @@
       text-align: center;
   }
 
+  .feedback-nav-before, .feedback-nav-after{
+      display: none;
+  }
+
   #feedback-nav-body p{
      margin: 0.5em;
   }

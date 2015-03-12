@@ -365,7 +365,7 @@
     position: absolute;
     top: 0%;
     left: 0%;
-    z-index: -1;
+    z-index: 0;
   }
 
   #profile-id-info{
@@ -433,8 +433,25 @@
     display: none;
   }
 
-  .avaliation:before{
+  /*profile-nav-top*/.avaliation:before{
       content: "em avaliação";
+      text-transform: uppercase;
+      font-size: 1.6em;
+      position: relative;
+      top: 10%;
+      left: 7%;
+  }
+
+  /*profile-nav-top*/.signin{
+    background-color: #83d955;
+  }
+
+  /*profile-nav-top*/.signin span{
+    display: none;
+  }
+
+  /*profile-nav-top*/.signin:before{
+      content: "inscreva-se";
       text-transform: uppercase;
       font-size: 1.6em;
       position: relative;
@@ -514,6 +531,93 @@
 
   .profile-nav-body-button:nth-child(4):hover{
     border-radius: 0px 0px 10px 0px;
+  }
+
+  #feedback{
+    width: 100%;
+    height: 100%;
+    margin: 0% auto;
+  }
+
+  #feedback-text{
+      width: 100%;
+      height: 85%;
+  }
+
+  #feedback-nav{
+      width: 100%;
+      height: 15%;
+      border-bottom: 1px solid #1c1c1c;
+  }
+
+  #feedback-text-message{
+      width: 100%;
+      height: 80%;
+      padding: 1em;
+      background-color: #fff;
+      border-radius: 0em 0em 0em 0em;
+  }
+
+  #feedback-text-footer{
+      width: 100%;
+      height: 10%;
+      background-color: #fff;
+      border-radius: 0em 0em 1em 1em;
+      border-top: 1px solid #1c1c1c;
+      text-align: center;
+  }
+
+  #feedback-nav-top{
+      width: 100%;
+      height: 50%;
+      background-color: #73c14a;
+      border-radius: 1em 1em 0em 0em;
+      padding-top: 0.5em;
+      color: #fff;
+      text-align: center;
+      font-size: 1.6em;
+  }
+
+  #feedback-nav-body{
+      width: 100%;
+      height: 50%;
+      background-color: #fff;
+      border-radius: 0em 0em 0em 0em;
+      text-align: center;
+      position: relative;
+      top: 0%;
+      left: 0%;
+  }
+
+  .feedback-nav-before{
+      display: inline-block;
+      position: absolute;
+      top: 0%;
+      left: 0%;
+      background-color: #eee;
+      background-image: url("../images/nav_after_feedback.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      transform: rotate(180deg);
+      height: 100%;
+      width: 4em;
+  }
+
+  .feedback-nav-after{
+      display: inline-block;
+      position: absolute;
+      top: 0%;
+      right: 0%;
+      background-color: #eee;
+      background-image: url("../images/nav_after_feedback.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      height: 100%;
+      width: 4em;
+  }
+
+  #feedback-nav-body p{
+     margin: 0.5em;
   }
 
   #interview{
