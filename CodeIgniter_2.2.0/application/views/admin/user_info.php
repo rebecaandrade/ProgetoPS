@@ -12,12 +12,25 @@
 		</div>
 		<div id="infouser-nav-body">
 				<h5>Palestra Institucional</h5>
-				<input type="radio" name="name" value="<?php //pega valor no banco ?>" checked>
-				<label class="label-radio">18h00min</label>
+				<?php if(isset($hours['palestra_hour'])){ ?>
+				<input type="radio"  value="" checked>
+				<label class="label-radio"><?php echo substr($hours['palestra_hour']->tempo, 0,-3) ?></label>
 				<br />
+				<?php } else { ?>
+				<input type="radio" value="" >
+				<label class="label-radio">Não Marcado</label>
+				<br />
+				<?php } ?>
 				<h5>Dinâmica em grupo</h5>
-				<input type="radio" name="name" value="<?php //pega valor no banco ?>" >
-				<label class="label-radio"><span class="radio"></span>  18h00min</label>
+				<?php if(isset($hours['dinamica_hour'])){ ?>
+				<input type="radio" value="" checked>
+				<label class="label-radio"><?php echo substr($hours['dinamica_hour']->tempo, 0,-3) ?></label>
+				<br />
+				<?php } else { ?>
+				<input type="radio" value="" >
+				<label class="label-radio">Não Marcado</label>
+				<br />
+				<?php } ?>
 		</div>
 	</div>
 
