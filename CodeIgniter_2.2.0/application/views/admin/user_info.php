@@ -84,29 +84,36 @@
 			<table>
 				<thead>
 					<tr>
-						<th colspan="3"><!--Adicionar contador PHP para expandir-->
-							Qua 18
+					<?php foreach ($hours['entrevista'] as $day) {
+							$date = $day[0];
+						?>
+						<th colspan=<?php echo count($day); ?> >
+							<?php echo $date['week_day'].' '.$date['date'] ?>
 						</th>
-						<th>
-							Qui 19
-						</th>
+					<?php } ?>
 					</tr>
 
 				</thead>
 				<tbody>
 					<tr>
+						<?php foreach ($hours['entrevista'] as $day) {
+							  	foreach ($day as $date) {
+					
+							?>
 						<td>
-							08:00 - 09:00
+							<?php echo $date['time'] ?>
 						</td>
-						<td>
-							09:00 - 10:00
-						</td>
-						<td>
-							09:00 - 10:00
-						</td>
+						<?php 	}
+							  } ?>
 					</tr>
+					<tr>
+						<?php foreach ($hours['entrevista'] as $day) {
+							  	foreach ($day as $date) {
 
-					<tr><!--Checkbox-->
+							  ?>
+							  <td>MARCADO <!-- colocar aqui a no lugar de marcado checkbox ou 'X' que ficara embaixo dos horarios --></td>
+							  <?php	} 
+							} ?>
 					</tr>
 				</tbody>
 			</table>
