@@ -47,8 +47,10 @@ class Feedback_model extends CI_Model {
 	public function insert_feed($id,$dados){
 		$this->db->where(array('status_ps !='=> 0));
 		$id_ps = $this->db->get('tb_PS')->row()->id;
-		if(sizeof($this->db->where(array('tb_login_id_login' => $id,'tb_ps_id' => $id_ps))
-			->get('ta_login_x_tb_PS')->row()) > 0){
+		$this->db->where(array('tb_login_id_login' => $id,'tb_ps_id' => $id_ps));
+		$inscribed = $this->db->get('ta_login_x_tb_PS')->row();
+		if(!empty($inscribed)){
+			$this->db->where(array('tb_login_id_login' => $id,'tb_ps_id' => $id_ps));
 			return $this->db->update('ta_login_x_tb_PS',$dados);
 		}
 		else return false;
