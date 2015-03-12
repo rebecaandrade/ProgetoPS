@@ -6,7 +6,37 @@ class Admin extends CI_Controller {
    		$this->load->model('admin_model');
 	}
 	public function load_home_admin(){
-		$dados['count'] = $this->admin_model->get_time_counters();
+		$this->load->model('ps_model');
+		$this->load->model('horario_model');
+		$id_ps = $this->ps_model->current_ps();
+		$dados['horas_palestra'] = $this->horario_model->palestra_hours();
+		$dados['horas_dinamica'] = $this->horario_model->dinamica_hours();
+
+		if($id_ps){
+			$dados = $this->admin_model->get_time_counters($id_ps);
+		}
+		foreach ($dados['palestra'] as $inscrito) {
+			if($inscrito->tempo == $dados['horas_palestra']['palestra_1']){
+				$contador1++;
+			}
+			if($inscrito->tempo == $dados['horas_palestra']['palestra_2']){
+				$contador2++;
+			}
+		}
+		$dados['palestra_inscritos_1'] = $contador1;
+		$dados['palestra_inscritos_2'] = $contador2;
+		foreach ($dados['dinamica'] as $inscrito) {
+			if($inscrito->tempo == $dados['horas_dinamica']['dinamica_1']){
+				$contador1++;
+			}
+			if($inscrito->tempo == $dados['horas_dinamica']['dinamica_2']){
+				$contador2++;
+			}
+		}
+		$dados['dinamica_inscritos_1'] = $contador1;
+		$dados['dinamica_inscritos_2'] = $contador2;
+		var_dump($dados);
+		die;
 		$this->load->view('admin/admin_page',$dados);
 	}
 	public function check_member(){
@@ -14,7 +44,40 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/user_info',$dados);
 	}
 	public function load_home_superadmin(){
-		$dados['count'] = $this->admin_model->get_time_counters();
+		$this->load->model('ps_model');
+		$this->load->model('horario_model');
+		$id_ps = $this->ps_model->current_ps();
+		if($id_ps){
+			$dados = $this->admin_model->get_time_counters($id_ps);
+		}
+		$dados['horas_palestra'] = $this->horario_model->palestra_hours();
+		$dados['horas_dinamica'] = $this->horario_model->dinamica_hours();
+		
+		$contador1 = 0;
+		$contador2 = 0;
+		foreach ($dados['palestra'] as $inscrito) {
+			if($inscrito->tempo == $dados['horas_palestra']['palestra_1']){
+				$contador1++;
+			}
+			if($inscrito->tempo == $dados['horas_palestra']['palestra_2']){
+				$contador2++;
+			}
+		}
+		$dados['palestra_inscritos_1'] = $contador1;
+		$dados['palestra_inscritos_2'] = $contador2;
+
+		$contador1 = 0;
+		$contador2 = 0;
+		foreach ($dados['dinamica'] as $inscrito) {
+			if($inscrito->tempo == $dados['horas_dinamica']['dinamica_1']){
+				$contador1++;
+			}
+			if($inscrito->tempo == $dados['horas_dinamica']['dinamica_2']){
+				$contador2++;
+			}
+		}
+		$dados['dinamica_inscritos_1'] = $contador1;
+		$dados['dinamica_inscritos_2'] = $contador2;
 		$this->load->view('admin/admin_page',$dados);
 	}
 	public function list_admins(){
