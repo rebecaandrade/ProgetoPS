@@ -133,6 +133,7 @@ class Admin extends CI_Controller {
 		}
 		else{
 			$_POST['perfil'] = '2';
+			$_POST['senha'] = md5($_POST['senha']);
 			$this->admin_model->insert_new_admin($_POST);
 			$this->session->set_userdata('mensagem','Admin Cadastrado com sucesso');
 			redirect('admin/list_admins');
