@@ -16,7 +16,8 @@ class Access extends CI_Controller {
 		if(!$user){
 			/* setar msg do jeito certo*/
 			$mensagem = array(
-							'mensagem' =>'Usuário ou senha inválidos.'
+							'mensagem' =>'Usuário ou senha inválidos.',
+							'tipo_mensagem' => 'error'
 						);
 			$this->session->set_userdata($mensagem);
 			redirect('access/login');
