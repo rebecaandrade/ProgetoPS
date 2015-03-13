@@ -90,6 +90,31 @@ class PS extends CI_Controller {
     public function edit_hours(){
         $this->load->view('admin/available_dates');
     }
+    public function update_hours(){
+        $id_ps = $this->ps_model->current_ps();
+        $start = $this->input->post('interview-date-start');
+        $end = $this->input->post('interview-date-end');
+        if($start && $end){
+            $start = explode("-",$start);
+            $end = explode("-",$end);
+            $start_jd = GregorianToJD($start[1], $start[2], $start[0]);
+            $end_jd = GregorianToJD($end[1], $end[2], $end[0]);
+	        if($end_jd < $start_jd){
+	            $this->session->set_userdata('mensagem','Término do periodo de entrevistas deve ocorrer depois do início');
+	            $this->session->set_userdata('tipo_mensagem','error');
+	            redirect('ps/edit_hours');
+	        }
+	        elseif($id_ps){
+	        	$this->ps_update_valid_dates($start_jd,$end_jd,$id_ps);
+	        	$this->session->set_userdata('mensagem','Datas de entrevistas alteradas com sucesso');
+	        	$this->session->set_userdata('subtitulo_mensagem','Os candidatos devem ser avisados da necessidade de remarcar as entrevistas');
+	        	$this->session->set_userdata('tipo_mensagem','success');
+	        	redirect('usuario/home');
+	        }
+        }
+        redirect('ps/edit_hours');
+
+    }
     public function selecionar($id){
         $this->load->model('ps_model');
         try{
@@ -104,6 +129,29 @@ class PS extends CI_Controller {
 
         $weeks = array();
     
+        for ($j=0; $j < $length ; $j++) { 
+            $jd = $start_jd + $j;
+            $date = JDToGregorian($jd);
+            $date = explode("/",$date);
+            
+            $day = $date[1] + 0;
+            $month = $date[0] + 0;
+            $year = $date[2] + 0;
+            $week_day = JDDayOfWeek($jd,0);
+            if($week_day != 0 && $week_day != 6){    
+                $valid_date = array(
+                        'data' => $year.'-'.$month.'-'.$day,
+                        'tipo' => 3,
+                        'tb_ps_id' => $id_ps
+                    );
+                $this->ps_model->insert_valid_date($valid_date);
+            }
+        }
+    }
+    public function ps_update_valid_dates($start_jd,$end_jd,$id_ps){
+        $length = $end_jd - $start_jd + 1;
+        $weeks = array();
+    	$this->ps_model->delete_ps_interviews($id_ps);
         for ($j=0; $j < $length ; $j++) { 
             $jd = $start_jd + $j;
             $date = JDToGregorian($jd);

@@ -76,4 +76,34 @@ class PS_Model extends CI_Model{
 	public function insert_valid_date($valid_date){
 		return $this->db->insert('tb_datas_validas',$valid_date);
 	}
+	public function delete_ps_interviews($id_ps){
+		$this->db->where('tb_ps_id',$id_ps);
+		$this->db->where('tipo',3);
+		$valid_dates = $this->db->get('tb_datas_validas')->result();
+		$valid_dates_ids = array();
+		$hours_ids = array();
+		foreach ($valid_dates as $valid_date) {
+			array_push($valid_dates_ids,$valid_date->id_data);
+			$this->db->where('tb_datas_validas_id_data',$valid_date->id_data);
+			$hours = $this->db->get('tb_horario')->result();
+			if(isset($hours)){	
+				foreach ($hours as $hour) {
+					array_push($hours_ids,$hour->id_horario);
+				}
+			}
+		}
+		if(isset($hours_ids)){
+			foreach ($hours_ids as $hour_id) {
+				$this->db->where('tb_horario_id_horario',$hour_id);
+				$this->db->delete('ta_login_x_tb_horario');
+
+				$this->db->where('id_horario',$hour_id);
+				$this->db->delete('tb_horario');
+			}
+		}
+		foreach ($valid_dates_ids as $valid_date_id) {
+			$this->db->where('id_data',$valid_date_id);
+			$this->db->delete('tb_datas_validas');
+		}
+	}
 }

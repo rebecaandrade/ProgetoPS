@@ -17,20 +17,22 @@
 				<div class="box-page-ps-bottom"></div>
 
 	    </div>
-	<?php } 
-	foreach ($tb_ps as $ps) {
-		if(!$ps->status_ps){
-		?>
-		<div class="box-page-ps closed">
-			<div class="box-page-ps-top"></div>
-			<div class="box-page-ps-middle"></div>
-			<div class="box-page-ps-content">
-	      <h5><?php echo $ps->nome ?></h5>
-	      <p><?php echo $ps->edicao ?></p>
-			</div>
-			<div class="box-page-ps-bottom"></div>
-	    </div>
 	<?php }
+	if(isset($tb_ps)){ 
+		foreach ($tb_ps as $ps) {
+			if(!$ps->status_ps){
+			?>
+			<div class="box-page-ps closed">
+				<div class="box-page-ps-top"></div>
+				<div class="box-page-ps-middle"></div>
+				<div class="box-page-ps-content">
+		      <h5><?php echo $ps->nome ?></h5>
+		      <p><?php echo $ps->edicao ?></p>
+				</div>
+				<div class="box-page-ps-bottom"></div>
+		    </div>
+		<?php }
+		} 
 	} ?>
 <?php if($this->session->userdata('login_perfil') == 3){ ?>
     <div id="action-page-ps">

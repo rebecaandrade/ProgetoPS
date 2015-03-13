@@ -12,5 +12,8 @@
         	<label>Digite a data de início:<br /><input name="interview-date-start" type="date"><br /></label>
         	<label>Digite a data de término:<br /><input name="interview-date-end" type="date"><br /></label>
     </div>
+    <div class="button-box">
+        <input class="button b-dark-accept" type="submit" value="">
+    </div>
     <?php echo form_close() ?>
 <?php echo $this->load->view('_inc/footer')?>
