@@ -65,7 +65,9 @@
           ?>
           </label>
       </div>
-      <input type="submit" value="enviar">
+      <div class="button-box">
+          <input type="submit" class="button b-dark-accept" value="enviar">
+      </div>
       <?php echo form_close() ?>
     <a href="#"><h3>Prefiro responder posteriormente</h3></a>
     </div>

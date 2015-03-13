@@ -11,6 +11,11 @@
         <div id="form-ps">
             <div id="form-ps-information">
                 <label>Nome do Processo Seletivo<br /><input type="text" name="name-ps" value=""></label><br /><br />
+
+				<label>Edição<br /><input type="date" name="date-ps" value=""></label><br /><br />
+
+                <label>Data de Abertura<br /><input type="date" name="date-ps" value=""></label><br /><br />
+
                 <label>Data da Dinâmica<br /><input type="date" name="date-ps-dinamica" value=""></label><br />
                 <label>Primeira hora da Dinâmica<br /><input type="time" name="ps-dinamica-hour-1" value=""></label><br />
                 <label>Segunda hora da Dinâmica<br /><input type="time" name="ps-dinamica-hour-2" value=""></label><br /><br />
