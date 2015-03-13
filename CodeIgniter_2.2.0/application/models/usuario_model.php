@@ -10,7 +10,12 @@ class Usuario_model extends CI_Model {
 			$this->db->where('id_login',$feed->tb_login_id_login);
 			$dados[] = $this->db->get('tb_login')->row();
 		}
-		return $dados;
+		if(isset($dados)){
+			return $dados;
+		}
+		else{
+			return NULL;
+		}
 	}
 	public function get_user($login,$senha){
 		$this->db->where('usuario',$login);

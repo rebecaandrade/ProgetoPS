@@ -13,23 +13,41 @@
 					<p>
 						Palestra Institucional
 					</p>
-					<span class="counter">
-						<span><?php echo $palestra_inscritos_1 ?></span><span><?php echo substr($horas_palestra['palestra_1'],0,-3) ?></span>
-					</span>
-					<span class="counter">
-						<span><?php echo $palestra_inscritos_2 ?></span><span><?php echo substr($horas_palestra['palestra_2'],0,-3) ?></span>
-					</span>
+					<?php if(isset($palestra_inscritos_1) && isset($palestra_inscritos_2)) { ?>
+						<span class="counter">
+							<span><?php echo $palestra_inscritos_1 ?></span><span><?php echo substr($horas_palestra['palestra_1'],0,-3) ?></span>
+						</span>
+						<span class="counter">
+							<span><?php echo $palestra_inscritos_2 ?></span><span><?php echo substr($horas_palestra['palestra_2'],0,-3) ?></span>
+						</span>
+					<?php } else { ?>
+						<span class="counter">
+							<span>0</span><span>Não há PS ativo</span>
+						</span>
+						<span class="counter">
+							<span>0</span><span>Não há PS ativo</span>
+						</span>
+					<?php } ?>
 				</div>
 				<div class="count-activity">
 					<p>
 						Dinâmica
 					</p>
-					<span class="counter">
-						<span><?php echo $dinamica_inscritos_1 ?></span><span><?php echo substr($horas_dinamica['dinamica_1'],0,-3) ?></span>
-					</span>
-					<span class="counter">
-						<span><?php echo $dinamica_inscritos_2 ?></span><span><?php echo substr($horas_dinamica['dinamica_2'],0,-3) ?></span>
-					</span>
+					<?php if(isset($dinamica_inscritos_1) && isset($dinamica_inscritos_2)) { ?>
+						<span class="counter">
+							<span><?php echo $dinamica_inscritos_1 ?></span><span><?php echo substr($horas_dinamica['dinamica_1'],0,-3) ?></span>
+						</span>
+						<span class="counter">
+							<span><?php echo $dinamica_inscritos_2 ?></span><span><?php echo substr($horas_dinamica['dinamica_2'],0,-3) ?></span>
+						</span>
+					<?php } else { ?>
+						<span class="counter">
+							<span>0</span><span>Não há PS ativo</span>
+						</span>
+						<span class="counter">
+							<span>0</span><span>Não há PS ativo</span>
+						</span>
+					<?php } ?>
 				</div>
 			</div>
 			<div id="page-admin-nav">

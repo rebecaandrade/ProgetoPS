@@ -14,35 +14,35 @@ class Admin extends CI_Controller {
 
 		if($id_ps){
 			$dados = $this->admin_model->get_time_counters($id_ps);
-		}
-		$dados['horas_palestra'] = $this->horario_model->palestra_hours();
-		$dados['horas_dinamica'] = $this->horario_model->dinamica_hours();
+			$dados['horas_palestra'] = $this->horario_model->palestra_hours();
+			$dados['horas_dinamica'] = $this->horario_model->dinamica_hours();
 
-		$contador1 = 0;
-		$contador2= 0;
-		foreach ($dados['palestra'] as $inscrito) {
-			if($inscrito->tempo == $dados['horas_palestra']['palestra_1']){
-				$contador1++;
+			$contador1 = 0;
+			$contador2= 0;
+			foreach ($dados['palestra'] as $inscrito) {
+				if($inscrito->tempo == $dados['horas_palestra']['palestra_1']){
+					$contador1++;
+				}
+				if($inscrito->tempo == $dados['horas_palestra']['palestra_2']){
+					$contador2++;
+				}
 			}
-			if($inscrito->tempo == $dados['horas_palestra']['palestra_2']){
-				$contador2++;
-			}
-		}
-		$dados['palestra_inscritos_1'] = $contador1;
-		$dados['palestra_inscritos_2'] = $contador2;
+			$dados['palestra_inscritos_1'] = $contador1;
+			$dados['palestra_inscritos_2'] = $contador2;
 
-		$contador1 = 0;
-		$contador2= 0;
-		foreach ($dados['dinamica'] as $inscrito) {
-			if($inscrito->tempo == $dados['horas_dinamica']['dinamica_1']){
-				$contador1++;
+			$contador1 = 0;
+			$contador2= 0;
+			foreach ($dados['dinamica'] as $inscrito) {
+				if($inscrito->tempo == $dados['horas_dinamica']['dinamica_1']){
+					$contador1++;
+				}
+				if($inscrito->tempo == $dados['horas_dinamica']['dinamica_2']){
+					$contador2++;
+				}
 			}
-			if($inscrito->tempo == $dados['horas_dinamica']['dinamica_2']){
-				$contador2++;
-			}
+			$dados['dinamica_inscritos_1'] = $contador1;
+			$dados['dinamica_inscritos_2'] = $contador2;
 		}
-		$dados['dinamica_inscritos_1'] = $contador1;
-		$dados['dinamica_inscritos_2'] = $contador2;
 		$this->load->view('admin/admin_page',$dados);
 	}
 	public function check_member(){
@@ -55,37 +55,38 @@ class Admin extends CI_Controller {
 		$this->load->model('horario_model');
 		$id_ps = $this->ps_model->current_ps();
 		$this->session->set_userdata('current_ps',$id_ps);
+		$dados = array();
 		if($id_ps){
 			$dados = $this->admin_model->get_time_counters($id_ps);
-		}
-		$dados['horas_palestra'] = $this->horario_model->palestra_hours();
-		$dados['horas_dinamica'] = $this->horario_model->dinamica_hours();
-		
-		$contador1 = 0;
-		$contador2 = 0;
-		foreach ($dados['palestra'] as $inscrito) {
-			if($inscrito->tempo == $dados['horas_palestra']['palestra_1']){
-				$contador1++;
+			$dados['horas_palestra'] = $this->horario_model->palestra_hours();
+			$dados['horas_dinamica'] = $this->horario_model->dinamica_hours();
+			
+			$contador1 = 0;
+			$contador2 = 0;
+			foreach ($dados['palestra'] as $inscrito) {
+				if($inscrito->tempo == $dados['horas_palestra']['palestra_1']){
+					$contador1++;
+				}
+				if($inscrito->tempo == $dados['horas_palestra']['palestra_2']){
+					$contador2++;
+				}
 			}
-			if($inscrito->tempo == $dados['horas_palestra']['palestra_2']){
-				$contador2++;
-			}
-		}
-		$dados['palestra_inscritos_1'] = $contador1;
-		$dados['palestra_inscritos_2'] = $contador2;
+			$dados['palestra_inscritos_1'] = $contador1;
+			$dados['palestra_inscritos_2'] = $contador2;
 
-		$contador1 = 0;
-		$contador2 = 0;
-		foreach ($dados['dinamica'] as $inscrito) {
-			if($inscrito->tempo == $dados['horas_dinamica']['dinamica_1']){
-				$contador1++;
+			$contador1 = 0;
+			$contador2 = 0;
+			foreach ($dados['dinamica'] as $inscrito) {
+				if($inscrito->tempo == $dados['horas_dinamica']['dinamica_1']){
+					$contador1++;
+				}
+				if($inscrito->tempo == $dados['horas_dinamica']['dinamica_2']){
+					$contador2++;
+				}
 			}
-			if($inscrito->tempo == $dados['horas_dinamica']['dinamica_2']){
-				$contador2++;
-			}
+			$dados['dinamica_inscritos_1'] = $contador1;
+			$dados['dinamica_inscritos_2'] = $contador2;
 		}
-		$dados['dinamica_inscritos_1'] = $contador1;
-		$dados['dinamica_inscritos_2'] = $contador2;
 		$this->load->view('admin/admin_page',$dados);
 	}
 	public function list_admins(){
@@ -129,10 +130,12 @@ class Admin extends CI_Controller {
 		}
 		elseif ($_POST['senha'] != $_POST['confirmasenha']){
 			$this->session->set_userdata('mensagem','Senhas digitadas não são iguais');
+			$this->session->set_userdata('tipo_mensagem','error');
 			redirect('admin/create_admin');
 		}
 		elseif ($this->admin_model->check_admin($_POST['usuario'])){
 			$this->session->set_userdata('mensagem','Usuário já existente');
+			$this->session->set_userdata('tipo_mensagem','error');
 			redirect('admin/create_admin');
 		}
 		else{
@@ -140,6 +143,7 @@ class Admin extends CI_Controller {
 			$_POST['senha'] = md5($_POST['senha']);
 			$this->admin_model->insert_new_admin($_POST);
 			$this->session->set_userdata('mensagem','Admin Cadastrado com sucesso');
+			$this->session->set_userdata('tipo_mensagem','success');
 			redirect('admin/list_admins');
 		}
 	}

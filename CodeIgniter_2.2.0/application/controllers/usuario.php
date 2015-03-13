@@ -183,6 +183,11 @@ class Usuario extends CI_Controller {
             }
             redirect('usuario/edit_account');
     	}
+        elseif(!filter_var($_POST['email'],FILTER_VALIDATE_EMAIL)){
+            $this->session->set_userdata('mensagem','E-mail inválido');
+            $this->session->set_userdata('tipo_mensagem','error');
+            redirect('usuario/edit_account');
+        }
     	else if($this->usuario_model->verify_password($id,$_POST['password'])){
             if(isset($_FILES['foto'])){
                 $extensao = strrchr($_FILES['foto']['name'],'.');
