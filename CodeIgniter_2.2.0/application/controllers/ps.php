@@ -16,18 +16,56 @@ class PS extends CI_Controller {
 /// Serviços
     public function cadastrar(){
         $this->load->model('ps_model');
-        if($this->ps_model->current_ps()){
+        var_dump($_POST);
+        if($_POST['name-ps'] == NULL || $_POST['date-ps-dinamica'] == NULL || $_POST['date-ps-palestra'] == NULL 
+            || $_POST['ps-dinamica-hour-1'] == NULL || $_POST['ps-dinamica-hour-2'] == NULL 
+            || $_POST['ps-palestra-hour-1'] == NULL || $_POST['ps-palestra-hour-2'] == NULL){
+
+            $this->session->set_userdata('mensagem','Um campo não foi preenchido');
+            $this->session->set_userdata('tipo_mensagem','error');
+            redirect('ps/open_ps');
+        }
+        else{
+            $start = $this->input->post('interview-date-start');
+            $end = $this->input->post('interview-date-end');
+            if(!$start || !$end){
+                $this->session->set_userdata('mensagem','Insira datas de início e término do period de entrevistas');
+                $this->session->set_userdata('tipo_mensagem','error');
+                redirect('ps/open_ps');
+            }
+            else{
+                $start = explode("-",$start);
+                $end = explode("-",$end);
+                var_dump($start);
+                var_dump($end);
+
+                $start_jd = GregorianToJD($start[1], $start[2], $start[0]);
+                $end_jd = GregorianToJD($end[1], $end[2], $end[0]);
+                var_dump($start_jd);
+                var_dump($end_jd);
+                if($end_jd < $start_jd){
+                    $this->session->set_userdata('mensagem','Término do periodo de entrevistas deve ocorrer depois do início');
+                    $this->session->set_userdata('tipo_mensagem','error');
+                    redirect('ps/open_ps');
+                }
+            }
+            die;
+            $date = getdate();
             $dados = array(
-                'nome' => $this->input->post('nome'),
-                'data_abertura' => $this->input->post('data_abertura'), 
-                'data_dinamica' => $this->input->post('data_dinamica'),
-                'data_apresentacao' => $this->input->post('data_apresentacao'),
-                'primeiro_horario_dinamica' => $this->input->post('primeiro_horario_dinamica'),
-                'segundo_horario_dinamica' => $this->input->post('segundo_horario_dinamica'),
-                'primeiro_horario_apresentacao' => $this->input->post('primeiro_horario_apresentacao'),
-                'segundo_horario_apresentacao' => $this->input->post('segundo_horario_apresentacao'),
+                'nome' => $this->input->post('name-ps'),
+                'data_abertura' => $date['year'].'-'.$date['mon'].'-'.$date['mday'],
+                'data_dinamica' => $this->input->post('date-ps-dinamica'),
+                'data_apresentacao' => $this->input->post('date-ps-palestra'),
+                'primeiro_horario_dinamica' => $this->input->post('ps-dinamica-hour-1'),
+                'segundo_horario_dinamica' => $this->input->post('ps-dinamica-hour-2'),
+                'primeiro_horario_apresentacao' => $this->input->post('ps-palestra-hour-1'),
+                'segundo_horario_apresentacao' => $this->input->post('ps-palestra-hour-2'),
+                'status_ps' => TRUE
                 );
-            redirect('admin/user_list');
+            var_dump($dados);
+            die;
+            //$this->ps_model->new_ps($dados);
+            redirect('ps/listar');
         }
     }
 
@@ -61,5 +99,8 @@ class PS extends CI_Controller {
         $this->session->set_userdata('mensagem','Você foi inscrito com sucesso');
         $this->session->set_userdata('tipo_mensagem','success');
         redirect('usuario/home');
+    }
+    public function open_ps(){
+        $this->load->view('admin/form_ps');
     }
 }

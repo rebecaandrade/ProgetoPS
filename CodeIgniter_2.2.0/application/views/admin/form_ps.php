@@ -7,36 +7,29 @@
 	</div>
 
     <div id="content" class="content-thin">
-        <?php //echo form_open() ?>
+        <?php echo form_open('ps/cadastrar') ?>
         <div id="form-ps">
             <div id="form-ps-information">
                 <label>Nome do Processo Seletivo<br /><input type="text" name="name-ps" value=""></label><br /><br />
-
-                <label>Data de Abertura<br /><input type="date" name="date-ps" value=""></label><br /><br />
-
                 <label>Data da Dinâmica<br /><input type="date" name="date-ps-dinamica" value=""></label><br />
-                <label>Hora da Dinâmica<br /><input type="time" name="date-ps-dinamica-hour" value=""></label><br />
-                <label>Hora da Dinâmica<br /><input type="time" name="date-ps-dinamica-hour" value=""></label><br /><br />
+                <label>Primeira hora da Dinâmica<br /><input type="time" name="ps-dinamica-hour-1" value=""></label><br />
+                <label>Segunda hora da Dinâmica<br /><input type="time" name="ps-dinamica-hour-2" value=""></label><br /><br />
 
-                <label>Data da Apresentação Institucional<br /><input type="date" name="date-ps" value=""></label><br />
-                <label>Hora da Apresentação Institucional<br /><input type="time" name="date-ps-palestra-hour" value=""></label><br />
-                <label>Hora da Apresentação Institucional<br /><input type="time" name="date-ps-palestra-hour" value=""></label><br /><br />
+                <label>Data da Apresentação Institucional<br /><input type="date" name="date-ps-palestra" value=""></label><br />
+                <label>Primeira hora da Apresentação Institucional<br /><input type="time" name="ps-palestra-hour-1" value=""></label><br />
+                <label>Segunda hora da Apresentação Institucional<br /><input type="time" name="ps-palestra-hour-2" value=""></label><br /><br />
             </div>
 
             <div id="form-ps-dates">
-                <h3>Horários para entrevista</h3><br />
-                <?php echo form_open('admin/insert_new_date')?>
-        		<?php for ($i=0; $i < 11; $i++) { ?>
-
-        			<label for="dia">Digite uma data válida:<br /><input name="enterview_date" type="date"><br /></label>
-
-        		<?php }?>
-                <h3></h3>
+                <h3>Periodo de entrevistas</h3><br />
+                <h2>Fins de semana não serão incluidos</h2>
+        			<label>Digite a data de início:<br /><input name="interview-date-start" type="date"><br /></label>
+                    <label>Digite a data de término:<br /><input name="interview-date-end" type="date"><br /></label>
             </div>
             <div class="button-box">
                 <input class="button b-dark-accept" type="submit" value="">
             </div>
-            <?php //echo form_close() ?>
+            <?php echo form_close() ?>
         </div>
 
     </div>

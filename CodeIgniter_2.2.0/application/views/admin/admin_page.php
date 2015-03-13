@@ -53,7 +53,7 @@
 					Processo Seletivo
 				</p>
 				</div>
-				<?php if($this->session->userdata('login_id') == 3){ ?>
+				<?php if($this->session->userdata('login_perfil') == 3){ ?>
 				<div class="page-admin-nav-button">
 				  <img src="<?php echo base_url();?>assets/images/ps-admin.png" alt="" />
 				  <p>

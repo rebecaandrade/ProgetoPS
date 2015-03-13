@@ -47,10 +47,10 @@
 	</div>
 	<div class="box-page-ps-bottom"></div>
 </div>
-<?php if($this->session->userdata('login_id') == 3){ ?>
+<?php if($this->session->userdata('login_perfil') == 3){ ?>
     <div id="action-page-ps">
 		<ul>
-			<li><img src="<?php echo base_url()?>assets/images/add_ps.png" alt="" />Abrir Processo Seletivo</li>
+			<a href="<?php echo base_url()?>index.php/ps/open_ps" ><li><img src="<?php echo base_url()?>assets/images/add_ps.png" alt="" />Abrir Processo Seletivo</li></a>
 			<li><img src="<?php echo base_url()?>assets/images/cancel_ps.png" alt="" />Fechar Processo Seletivo</li>
 		</ul>
     </div>
