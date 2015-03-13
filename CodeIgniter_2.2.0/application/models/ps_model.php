@@ -5,14 +5,27 @@ class PS_Model extends CI_Model{
 	///Abrir PS 
 	public function new_ps($dados){
 
-	$this->db->insert('tb_ps',$dados);
-	return $this->db->insert_id();
-
+		$this->db->insert('tb_ps',$dados);
+		$id_ps = $this->db->insert_id();
+		$palestra = array(
+					'data' =>$dados['data_apresentacao'],
+					'tb_PS_id' => $id_ps
+			);
+		$this->insert_activity($palestra,1);
+		$dinamica = array(
+					'data' =>$dados['data_dinamica'],
+					'tb_ps_id' => $id_ps
+			);
+		$this->insert_activity($dinamica,2);
+		return $id_ps;
 	}
 	///Fechar PS
 	public function close_ps($id){
 		$this->db->where('id',$id);
-	    return $this->db->delete('tb_ps');
+		$ps = array(
+				'status_ps' => FALSE
+			);
+	    return $this->db->update('tb_ps',$ps);
 	}
 	///Retorna id do PS atual
 	public function current_ps(){
@@ -51,5 +64,12 @@ class PS_Model extends CI_Model{
 		foreach($data['tb_ps'] as $dado) {
             echo $dado->id;
         }
+	}
+	public function insert_activity($activity,$tipo){
+		$activity['tipo'] = $tipo;
+		return $this->db->insert('tb_datas_validas',$activity);
+	}
+	public function insert_valid_date($valid_date){
+		return $this->db->insert('tb_datas_validas',$valid_date);
 	}
 }

@@ -10,7 +10,8 @@ class PS extends CI_Controller {
 /// Carregando páginas
     public function listar(){
         $this->load->model('ps_model');
-        $dados['tb_PS'] = $this->ps_model->search_ps(); 
+        $dados['tb_PS'] = $this->ps_model->search_ps();
+        $dados['status_ps'] = $this->ps_model->current_ps(); 
         $this->load->view('admin/ps_page', $dados);
     }
 /// Serviços
@@ -29,27 +30,23 @@ class PS extends CI_Controller {
             $start = $this->input->post('interview-date-start');
             $end = $this->input->post('interview-date-end');
             if(!$start || !$end){
-                $this->session->set_userdata('mensagem','Insira datas de início e término do period de entrevistas');
+                $this->session->set_userdata('mensagem','Insira datas de início e término do periodo de entrevistas(elas podem ser alteradas posteriormente)');
                 $this->session->set_userdata('tipo_mensagem','error');
                 redirect('ps/open_ps');
             }
             else{
                 $start = explode("-",$start);
                 $end = explode("-",$end);
-                var_dump($start);
-                var_dump($end);
 
                 $start_jd = GregorianToJD($start[1], $start[2], $start[0]);
                 $end_jd = GregorianToJD($end[1], $end[2], $end[0]);
-                var_dump($start_jd);
-                var_dump($end_jd);
+
                 if($end_jd < $start_jd){
                     $this->session->set_userdata('mensagem','Término do periodo de entrevistas deve ocorrer depois do início');
                     $this->session->set_userdata('tipo_mensagem','error');
                     redirect('ps/open_ps');
                 }
             }
-            die;
             $date = getdate();
             $dados = array(
                 'nome' => $this->input->post('name-ps'),
@@ -62,21 +59,26 @@ class PS extends CI_Controller {
                 'segundo_horario_apresentacao' => $this->input->post('ps-palestra-hour-2'),
                 'status_ps' => TRUE
                 );
-            var_dump($dados);
-            die;
-            //$this->ps_model->new_ps($dados);
-            redirect('ps/listar');
+                $id_ps = $this->ps_model->new_ps($dados);  
+                $this->ps_valid_dates($start_jd,$end_jd,$id_ps);
+                $this->session->set_userdata('mensagem','PS cadastrado com sucesso');
+                $this->session->set_userdata('tipo_mensagem','success');
+                redirect('ps/listar');
+            
         }
     }
 
-    public function excluir($id){
-        $this->load->model('ps_model');
+    public function excluir(){
+        $id = $this->ps_model->current_ps();
+        $this->session->set_userdata('mensagem','PS fechado com sucesso');
+        $this->session->set_userdata('tipo_mensagem','success');
         try{
             $this->ps_model->close_ps($id);
         } catch(Exception $e){
             $this->session->set_userdata('mensagem', $e->getMessage());
+            $this->session->set_userdata('tipo_mensagem','error');
         }
-        redirect('admin/user_list');
+        redirect('ps/listar');
     }
 
     public function selecionar($id){
@@ -88,8 +90,29 @@ class PS extends CI_Controller {
         }
     }
 
-    public function adicionar_data_valida(){
-        
+    public function ps_valid_dates($start_jd,$end_jd,$id_ps){
+        $length = $end_jd - $start_jd + 1;
+
+        $weeks = array();
+    
+        for ($j=0; $j < $length ; $j++) { 
+            $jd = $start_jd + $j;
+            $date = JDToGregorian($jd);
+            $date = explode("/",$date);
+            
+            $day = $date[1] + 0;
+            $month = $date[0] + 0;
+            $year = $date[2] + 0;
+            $week_day = JDDayOfWeek($jd,0);
+            if($week_day != 0 && $week_day != 6){    
+                $valid_date = array(
+                        'data' => $year.'-'.$month.'-'.$day,
+                        'tipo' => 3,
+                        'tb_ps_id' => $id_ps
+                    );
+                $this->ps_model->insert_valid_date($valid_date);
+            }
+        }
     }
     public function inscribe_in_current_ps(){
         $dados = array('tb_login_id_login' => $this->session->userdata('login_id'),

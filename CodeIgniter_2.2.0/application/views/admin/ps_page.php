@@ -50,8 +50,11 @@
 <?php if($this->session->userdata('login_perfil') == 3){ ?>
     <div id="action-page-ps">
 		<ul>
-			<a href="<?php echo base_url()?>index.php/ps/open_ps" ><li><img src="<?php echo base_url()?>assets/images/add_ps.png" alt="" />Abrir Processo Seletivo</li></a>
-			<li><img src="<?php echo base_url()?>assets/images/cancel_ps.png" alt="" />Fechar Processo Seletivo</li>
+			<?php if($status_ps){ ?>
+					<a href="<?php echo base_url()?>index.php/ps/excluir" ><li><img src="<?php echo base_url()?>assets/images/cancel_ps.png" alt="" />Fechar Processo Seletivo</li></a>
+			<?php } else { ?>
+					<a href="<?php echo base_url()?>index.php/ps/open_ps" ><li><img src="<?php echo base_url()?>assets/images/add_ps.png" alt="" />Abrir Processo Seletivo</li></a>
+			<?php } ?>
 		</ul>
     </div>
   </div>

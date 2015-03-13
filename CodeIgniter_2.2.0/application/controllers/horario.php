@@ -88,14 +88,14 @@ class Horario extends CI_Controller {
   	$weeks = array();
   	
   	for ($j=0; $j < $length ; $j++) { 
- 		$jd = $start + $j;
+ 		  $jd = $start + $j;
   		$date = JDToGregorian($jd);
   		$date = explode("/",$date);
   		
   		$day = $date[1] + 0;
-        $month = $date[0] + 0;
-        $year = $date[2] + 0;
-        $day_name = $this->dayofweek(JDDayOfWeek($jd,0));
+      $month = $date[0] + 0;
+      $year = $date[2] + 0;
+      $day_name = $this->dayofweek(JDDayOfWeek($jd,0));
 
   		$time = array(
   					'day' =>  $day,

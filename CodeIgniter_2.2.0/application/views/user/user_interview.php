@@ -12,7 +12,7 @@
 
 
    <div id="content" class="content-large">
-     <h3>Marque os dias que tem disponibilidade para a entrevista:</h3><br />
+     <h3>Marque os horarios desses dias que você tem disponibilidade para a entrevista:</h3><br />
      <div id="interview">
        <table>
          <?php echo form_open('horario/save_interview_hours') ?>
