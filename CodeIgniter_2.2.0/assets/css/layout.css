@@ -200,8 +200,8 @@ input[type=radio]{
 
 .label-radio{
   display: block;
-  height: 2em;
-  width: 10 em;
+  height: 1.5em;
+  width: 8em;
   background-color: #73c04a;
   font-size: 1.6em;
   text-align: center;
@@ -210,11 +210,12 @@ input[type=radio]{
 }
 
 .label-radio:before{
-    display: inline-block;
+    display: block;
     content: "";
-    width: 2em;
-    height: 2em;
-    margin-left: -3em;
+    width: 1.5em;
+    height: 1.5em;
+    float: left;
+    margin-left: -0.7em;
     background-image: url("http://localhost/sistemaps/CodeIgniter_2.2.0/assets/images/checkbox_clean.png");
     background-size: contain;
 }
@@ -815,7 +816,6 @@ input[type=radio]:checked + .label-radio:before{
       height: 50%;
       background-color: #73c14a;
       border-radius: 1em 1em 0em 0em;
-      border-bottom: 1px solid #000;
       padding-top: 0.5em;
       color: #fff;
       text-align: center;
@@ -828,6 +828,9 @@ input[type=radio]:checked + .label-radio:before{
       background-color: #fff;
       border-radius: 0em 0em 0em 0em;
       text-align: center;
+      position: relative;
+      top: 0%;
+      left: 0%;
   }
 
   .feedback-nav-before{
@@ -835,13 +838,13 @@ input[type=radio]:checked + .label-radio:before{
       position: absolute;
       top: 0%;
       left: 0%;
-      background-color: #1c1;
+      background-color: #eee;
       background-image: url("../images/nav_after_feedback.png");
       background-size: contain;
       background-repeat: no-repeat;
       transform: rotate(180deg);
       height: 100%;
-      width: 4em;
+      width: 15%;
   }
 
   .feedback-nav-after{
@@ -849,12 +852,12 @@ input[type=radio]:checked + .label-radio:before{
       position: absolute;
       top: 0%;
       right: 0%;
-      background-color: #1c1;
+      background-color: #eee;
       background-image: url("../images/nav_after_feedback.png");
       background-size: contain;
       background-repeat: no-repeat;
       height: 100%;
-      width: 4em;
+      width: 15%;
   }
 
   #feedback-nav-body p{

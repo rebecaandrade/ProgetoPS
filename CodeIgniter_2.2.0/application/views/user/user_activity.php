@@ -16,7 +16,7 @@
         <h5>Palestra Institucional</h5>
 
         <?php $palestra_1 = explode(':', $palestra_hours['palestra_1']); ?>
-        <label class="radio"><input type="radio" id="radio1" name="palestra" value=<?php echo $palestra_1[0].':'.$palestra_1[1].'/'.$palestra->id_data.'/'.$palestra->data;
+        <label class="label-radio"><input type="radio" id="radio1" name="palestra" value=<?php echo $palestra_1[0].':'.$palestra_1[1].'/'.$palestra->id_data.'/'.$palestra->data;
           if(!empty($palestra_marked) && $palestra_hours['palestra_1'] == $palestra_marked[0]->tempo){
             echo " checked";
           }
@@ -27,7 +27,7 @@
         </label><br />
         <br />
         <?php $palestra_2 = explode(':', $palestra_hours['palestra_2']); ?>
-        <label class="radio"><input type="radio" id="radio2" name="palestra" value=<?php echo $palestra_2[0].':'.$palestra_2[1].'/'.$palestra->id_data.'/'.$palestra->data;
+        <label class="label-radio"><input type="radio" id="radio2" name="palestra" value=<?php echo $palestra_2[0].':'.$palestra_2[1].'/'.$palestra->id_data.'/'.$palestra->data;
         if(!empty($palestra_marked) && $palestra_hours['palestra_2'] == $palestra_marked[0]->tempo){
             echo " checked";
           }
@@ -45,7 +45,7 @@
       <div class="activity-column-2">
         <h5>Dinâmica em Grupo</h5>
           <?php $dinamica_1 = explode(':', $dinamica_hours['dinamica_1']); ?>
-          <label><input type="radio" id="radio3" name="dinamica" value=<?php echo $dinamica_1[0].':'.$dinamica_1[1].'/'.$dinamica->id_data.'/'.$dinamica->data;
+          <label class="label-radio"><input type="radio" id="radio3" name="dinamica" value=<?php echo $dinamica_1[0].':'.$dinamica_1[1].'/'.$dinamica->id_data.'/'.$dinamica->data;
             if(!empty($dinamica_marked) && $dinamica_hours['dinamica_1'] == $dinamica_marked[0]->tempo){
             echo " checked";
           }
@@ -53,9 +53,9 @@
           <?php
           echo $dinamica_1[0].'h'.$dinamica_1[1].'min';
           ?>
-          </label><br />
+          </label class="label-radio"><br />
           <?php $dinamica_2 = explode(':', $dinamica_hours['dinamica_2']); ?>
-          <label><input type="radio" id="radio4" name="dinamica" value=<?php echo $dinamica_2[0].':'.$dinamica_2[1].'/'.$dinamica->id_data.'/'.$dinamica->data;
+          <label class="label-radio"><input type="radio" id="radio4" name="dinamica" value=<?php echo $dinamica_2[0].':'.$dinamica_2[1].'/'.$dinamica->id_data.'/'.$dinamica->data;
           if(!empty($dinamica_marked) && $dinamica_hours['dinamica_2'] == $dinamica_marked[0]->tempo){
             echo " checked";
           }

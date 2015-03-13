@@ -38,18 +38,20 @@
 
 		<div class="form-column-3">
 
-		 	<label>Senha(Mínimo de 6 caracteres)<br /><input type="password" name="senha" value=""></label>
+		 	<label>Senha<br />(Mínimo de 6 caracteres)<br /><input type="password" name="senha" value=""></label>
 
 		 	<label>Confirme a Senha<br /><input type="password" name="novasenha" value=""></label>
-			<p>
+			<h3>
 				<br />
 			Quantas vezes já participou do processo seletivo?
-	 	</p>
+		</h3><br />
 	 	<input type="radio" name="num_de_ps" value="0" id="radio_sub_1" checked>
 		<label for="radio_sub_1" class="label-radio">Nenhuma</label><br />
 	  <input type="radio" name="num_de_ps" value="1" id="radio_sub_2">
 		<label for="radio_sub_2" class="label-radio">
-		1 vez</label><br />
+		<p>
+			1 vez
+		</p></label><br />
 	  <input type="radio" name="num_de_ps" value="2" id="radio_sub_3">
 		<label for="radio_sub_3" class="label-radio">
 			2 vezes</label><br />
