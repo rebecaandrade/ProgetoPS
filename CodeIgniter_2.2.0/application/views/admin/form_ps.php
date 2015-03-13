@@ -12,15 +12,22 @@
             <div id="form-ps-information">
                 <label>Nome do Processo Seletivo<br /><input type="text" name="name-ps" value=""></label><br /><br />
 
-				<label>Edição<br /><input type="date" name="date-ps" value=""></label><br /><br />
+                <label>Edição<br />
+                <select name="edition">
+                    <option > </option>
+                    <option value="1º/<?php echo $ano ?>">1º/<?php echo $ano ?></option>
+                    <option value="2º/<?php echo $ano ?>">2º/<?php echo $ano ?></option>
+                </select><br /><br />
+                </label>
+
+                <label>Data da Apresentação Institucional<br /><input type="date" name="date-ps-palestra" value=""></label><br />
+                <label>Primeira hora da Apresentação Institucional<br /><input type="time" name="ps-palestra-hour-1" value=""></label><br />
+                <label>Segunda hora da Apresentação Institucional<br /><input type="time" name="ps-palestra-hour-2" value=""></label><br /><br />
 
                 <label>Data da Dinâmica<br /><input type="date" name="date-ps-dinamica" value=""></label><br />
                 <label>Primeira hora da Dinâmica<br /><input type="time" name="ps-dinamica-hour-1" value=""></label><br />
                 <label>Segunda hora da Dinâmica<br /><input type="time" name="ps-dinamica-hour-2" value=""></label><br /><br />
 
-                <label>Data da Apresentação Institucional<br /><input type="date" name="date-ps-palestra" value=""></label><br />
-                <label>Primeira hora da Apresentação Institucional<br /><input type="time" name="ps-palestra-hour-1" value=""></label><br />
-                <label>Segunda hora da Apresentação Institucional<br /><input type="time" name="ps-palestra-hour-2" value=""></label><br /><br />
             </div>
 
             <div id="form-ps-dates">

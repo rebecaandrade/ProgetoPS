@@ -10,8 +10,11 @@ class PS extends CI_Controller {
 /// Carregando páginas
     public function listar(){
         $this->load->model('ps_model');
-        $dados['tb_PS'] = $this->ps_model->search_ps();
-        $dados['status_ps'] = $this->ps_model->current_ps(); 
+        $dados['tb_ps'] = $this->ps_model->search_ps();
+        $dados['status_ps'] = $this->ps_model->current_ps();
+        if($dados['status_ps']){
+            $dados['current_ps'] = $this->ps_model->retrieve_ps($dados['status_ps']) ;
+        }    
         $this->load->view('admin/ps_page', $dados);
     }
 /// Serviços
@@ -20,7 +23,7 @@ class PS extends CI_Controller {
         var_dump($_POST);
         if($_POST['name-ps'] == NULL || $_POST['date-ps-dinamica'] == NULL || $_POST['date-ps-palestra'] == NULL 
             || $_POST['ps-dinamica-hour-1'] == NULL || $_POST['ps-dinamica-hour-2'] == NULL 
-            || $_POST['ps-palestra-hour-1'] == NULL || $_POST['ps-palestra-hour-2'] == NULL){
+            || $_POST['ps-palestra-hour-1'] == NULL || $_POST['ps-palestra-hour-2'] == NULL || $_POST['edition'] == NULL){
 
             $this->session->set_userdata('mensagem','Um campo não foi preenchido');
             $this->session->set_userdata('tipo_mensagem','error');
@@ -57,6 +60,7 @@ class PS extends CI_Controller {
                 'segundo_horario_dinamica' => $this->input->post('ps-dinamica-hour-2'),
                 'primeiro_horario_apresentacao' => $this->input->post('ps-palestra-hour-1'),
                 'segundo_horario_apresentacao' => $this->input->post('ps-palestra-hour-2'),
+                'edicao' => $this->input->post('edition'),
                 'status_ps' => TRUE
                 );
                 $id_ps = $this->ps_model->new_ps($dados);  
@@ -124,6 +128,8 @@ class PS extends CI_Controller {
         redirect('usuario/home');
     }
     public function open_ps(){
-        $this->load->view('admin/form_ps');
+        $date = getdate();
+        $dados['ano'] = $date['year'];
+        $this->load->view('admin/form_ps',$dados);
     }
 }

@@ -43,6 +43,10 @@ class PS_Model extends CI_Model{
 		return $this->db->get('tb_ps')->result();
 
 	}
+	public function retrieve_ps($id){
+		$this->db->where('id',$id);
+		return $this->db->get('tb_ps')->row();
+	}
 	///Selecionar (visualizar) PS
 	public function show_ps($id){
 		$this->db->where('id',$id);
