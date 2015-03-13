@@ -66,7 +66,7 @@ class PL_Danilo extends CI_Controller{
   }
 
   public function jcrop(){
-    $this->load->view('access/form2');
+    $this->load->view('access/jcrop');
   }
 }
 

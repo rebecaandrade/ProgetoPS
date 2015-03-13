@@ -345,6 +345,23 @@
       left: -1%;
   }
 
+  /*profile-nav-top*/.signin{
+    background-color: #83d955;
+  }
+
+  /*profile-nav-top*/.signin span{
+    display: none;
+  }
+
+  /*profile-nav-top*/.signin:before{
+      content: "inscreva-se";
+      text-transform: uppercase;
+      font-size: 1.6em;
+      position: relative;
+      top: 10%;
+      left: 7%;
+  }
+
   /*profile-nav-top*/.none{
     background-color: #1c1c1c;
   }
