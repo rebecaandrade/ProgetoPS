@@ -67,6 +67,7 @@ class PS extends CI_Controller {
                 $this->ps_valid_dates($start_jd,$end_jd,$id_ps);
                 $this->session->set_userdata('mensagem','PS cadastrado com sucesso');
                 $this->session->set_userdata('tipo_mensagem','success');
+                $this->session->set_userdata('current_ps',$id_ps);
                 redirect('ps/listar');
             
         }
@@ -76,15 +77,19 @@ class PS extends CI_Controller {
         $id = $this->ps_model->current_ps();
         $this->session->set_userdata('mensagem','PS fechado com sucesso');
         $this->session->set_userdata('tipo_mensagem','success');
+        $this->session->unset_userdata('current_ps');
         try{
             $this->ps_model->close_ps($id);
         } catch(Exception $e){
             $this->session->set_userdata('mensagem', $e->getMessage());
             $this->session->set_userdata('tipo_mensagem','error');
+            $this->session->set_userdata('current_ps',$id);
         }
         redirect('ps/listar');
     }
-
+    public function edit_hours(){
+        $this->load->view('admin/available_dates');
+    }
     public function selecionar($id){
         $this->load->model('ps_model');
         try{

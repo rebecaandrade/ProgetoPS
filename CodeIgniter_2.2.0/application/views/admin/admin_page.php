@@ -71,12 +71,15 @@
 					Processo Seletivo
 				</p>
 				</div>
-				<?php if($this->session->userdata('login_perfil') == 3){ ?>
+				<?php if($this->session->userdata('login_perfil') == 3 && $this->session->userdata('current_ps')){ ?>
+				
 				<div class="page-admin-nav-button">
-				  <img src="<?php echo base_url();?>assets/images/ps-admin.png" alt="" />
-				  <p>
-					Alterar Horários
-				  </p>
+					<a href="<?php echo base_url();?>index.php/ps/edit_hours">
+						<img src="<?php echo base_url();?>assets/images/ps-admin.png" alt="" />
+					</a>
+					<p>
+					   Alterar Horários
+					</p>
 				</div>
 				<?php } ?>
 			</div>
