@@ -106,4 +106,80 @@ class PS_Model extends CI_Model{
 			$this->db->delete('tb_datas_validas');
 		}
 	}
+	public function unmark_activity($type){
+		$this->db->where('tipo',$type);
+		$valid_id = $this->db->get('tb_datas_validas')->row()->id_data;
+
+		$this->db->where('tb_datas_validas_id_data',$valid_id);
+		$hours = $this->db->get('tb_horario')->result();
+		foreach ($hours as $hour) {
+			$this->db->where('tb_horario_id_horario',$hour->id_horario);
+			$this->db->delete('ta_login_x_tb_horario');
+
+			$this->db->where('id_horario',$hour->id_horario);
+			$this->db->delete('tb_horario');
+		}
+	}
+	public function update_palestra_date($date_palestra){
+		$id_ps = $this->current_ps();
+		$ps_update = array(
+				'data_apresentacao' => $date_palestra
+			);
+		$this->db->where('id',$id_ps);
+		$this->db->update('tb_ps',$ps_update);
+
+		$valid_date_update = array(
+				'data' => $date_palestra
+			);
+		$this->db->where('tipo','1');
+		$this->db->where('tb_ps_id',$id_ps);
+		return $this->db->update('tb_datas_validas',$valid_date_update);
+	}
+	public function update_first_palestra($palestra){
+		$id_ps = $this->current_ps();
+		$ps_update = array(
+				'primeiro_horario_apresentacao' => $palestra
+			);
+		$this->db->where('id',$id_ps);
+		return $this->db->update('tb_ps',$ps_update);
+	}
+	public function update_second_palestra($palestra){
+		$id_ps = $this->current_ps();
+		$ps_update = array(
+				'segundo_horario_apresentacao' => $palestra
+			);
+		$this->db->where('id',$id_ps);
+		return $this->db->update('tb_ps',$ps_update);
+	}
+	public function update_dinamica_date($date_dinamica){
+		$id_ps = $this->current_ps();
+		$ps_update = array(
+				'data_dinamica' => $date_dinamica
+			);
+		$this->db->where('id',$id_ps);
+		$this->db->update('tb_ps',$ps_update);
+
+		$valid_date_update = array(
+				'data' => $date_dinamica
+			);
+		$this->db->where('tipo','1');
+		$this->db->where('tb_ps_id',$id_ps);
+		return $this->db->update('tb_datas_validas',$valid_date_update);
+	}
+	public function update_first_dinamica($dinamica){
+		$id_ps = $this->current_ps();
+		$ps_update = array(
+				'primeiro_horario_dinamica' => $dinamica
+			);
+		$this->db->where('id',$id_ps);
+		return $this->db->update('tb_ps',$ps_update);
+	}
+	public function update_second_dinamica($dinamica){
+		$id_ps = $this->current_ps();
+		$ps_update = array(
+				'segundo_horario_dinamica' => $dinamica
+			);
+		$this->db->where('id',$id_ps);
+		return $this->db->update('tb_ps',$ps_update);
+	}
 }

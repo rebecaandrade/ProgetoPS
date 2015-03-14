@@ -92,8 +92,10 @@ class PS extends CI_Controller {
     }
     public function update_hours(){
         $id_ps = $this->ps_model->current_ps();
-        $start = $this->input->post('interview-date-start');
-        $end = $this->input->post('interview-date-end');
+
+        $this->session->set_userdata('mensagem','Nenhuma data foi alterada.');
+	    $this->session->set_userdata('tipo_mensagem','info');
+	    
         if($start && $end){
             $start = explode("-",$start);
             $end = explode("-",$end);
@@ -101,18 +103,61 @@ class PS extends CI_Controller {
             $end_jd = GregorianToJD($end[1], $end[2], $end[0]);
 	        if($end_jd < $start_jd){
 	            $this->session->set_userdata('mensagem','Término do periodo de entrevistas deve ocorrer depois do início');
+	            $this->session->set_userdata('subtitulo_mensagem','Suas Outras alterações não foram salvas');
 	            $this->session->set_userdata('tipo_mensagem','error');
 	            redirect('ps/edit_hours');
 	        }
 	        elseif($id_ps){
 	        	$this->ps_update_valid_dates($start_jd,$end_jd,$id_ps);
-	        	$this->session->set_userdata('mensagem','Datas de entrevistas alteradas com sucesso');
-	        	$this->session->set_userdata('subtitulo_mensagem','Os candidatos devem ser avisados da necessidade de remarcar as entrevistas');
-	        	$this->session->set_userdata('tipo_mensagem','success');
+	        	$entrevistas_flag = 1;
 	        	redirect('usuario/home');
 	        }
         }
-        redirect('ps/edit_hours');
+
+	    $date_palestra= $this->input->post('date-ps-palestra');
+	    $palestra1 = $this->input->post('ps-palestra-hour-1');
+	    $palestra2 = $this->input->post('ps-palestra-hour-2');
+	    if($date_palestra || $palestra1 || $palestra2){
+	    	$this->ps_model->unmark_activity(1);
+	    	$palestra_flag = 1;
+	    }
+	    if($date_palestra){
+	    	$this->ps_model->update_palestra_date($date_palestra);
+	    }
+	    if($palestra1){
+	    	$this->ps_model->update_first_palestra($palestra1);
+	    }
+	    if($palestra2){
+	    	$this->ps_model->update_second_palestra($palestra2);
+	    }
+
+	    $date_dinamica = $this->input->post('date-ps-dinamica');
+	    $dinamica1 = $this->input->post('ps-dinamica-hour-1');
+	    $dinamica2 = $this->input->post('ps-dinamica-hour-2');
+	   
+	    if($date_dinamica || $dinamica1 || $dinamica2){
+	    	$this->ps_model->unmark_activity(2);
+	    	$dinamica_flag = 1;
+	    }
+	    if($date_dinamica){
+	    	$this->ps_model->update_dinamica_date($date_dinamica);
+	    }
+	    if($dinamica1){
+	    	$this->ps_model->update_first_dinamica($dinamica1);
+	    }
+	    if($dinamica2){
+	    	$this->ps_model->update_second_dinamica($dinamica2);
+	    }
+
+	    if(isset($palestra_flag) || isset($dinamica_flag) || isset($entrevistas_flag)){
+	    	$this->session->set_userdata('mensagem','Informações alteradas com sucesso');
+	        $this->session->set_userdata('subtitulo_mensagem','Os candidatos devem ser avisados da necessidade de remarcar as modalidades que foram alteradas');
+	        $this->session->set_userdata('tipo_mensagem','success');
+	    }
+
+        $start = $this->input->post('interview-date-start');
+        $end = $this->input->post('interview-date-end');
+        redirect('usuario/home');
 
     }
     public function selecionar($id){
