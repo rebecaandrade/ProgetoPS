@@ -34,7 +34,8 @@
 		</div>
 		<div id="feedback-text-footer">
 			<p>
-				Deseja marcar um Feedback presencial?
+				Deseja marcar um Feedback presencial?<br>
+				Entre em contato no <a href="<?php echo base_url().'index.php/usuario/contact_us'?>">Fale Conosco</a>
 			</p>
 		</div>
 		</div>
