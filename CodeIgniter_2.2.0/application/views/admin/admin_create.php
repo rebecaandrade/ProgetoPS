@@ -14,7 +14,7 @@
 		<label> Telefone<input type="text" name="telefone" id="telefone" maxlength="15" ></label><br />
 		</div>
 		<div class="admin-create-column-2">
-		<label>Senha<input type="password" name="senha"></label><br />
+		<label>Senha<br />(Mínimo de 6 caracteres)<input type="password" name="senha"></label><br />
 		<label>Corfirmação de Senha<input type="password" name="confirmasenha"></label><br />
 			<div class="button-box">
 				<input class="button b-dark-accept" type="submit" value="">

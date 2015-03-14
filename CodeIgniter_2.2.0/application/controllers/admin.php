@@ -113,6 +113,16 @@ class Admin extends CI_Controller {
 			$this->session->set_userdata('mensagem','Alguns campos obrigatórios não foram preenchidos');
 			$this->update_admin($_POST['id']);
 		}
+		elseif(!filter_var($_POST['email'],FILTER_VALIDATE_EMAIL)){
+            $this->session->set_userdata('mensagem','E-mail inválido');
+            $this->session->set_userdata('tipo_mensagem','error');
+            $this->update_admin($_POST['id']);
+        }
+		elseif(strlen($_POST['senha']) < 6){
+            $this->session->set_userdata('mensagem','A senha deve ter no mínimo 6 caracteres!');
+            $this->session->set_userdata('tipo_mensagem','error');
+            $this->update_admin($_POST['id']);
+        }
 		else {
 			$this->admin_model->update_admin($_POST);
 			$this->session->set_userdata('mesnsagem','Atualização realizada com sucesso');
@@ -128,6 +138,16 @@ class Admin extends CI_Controller {
 			$this->session->set_userdata('mensagem','Alguns campos obrigatórios não foram preenchidos');
 			redirect('admin/create_admin');
 		}
+		elseif(!filter_var($_POST['email'],FILTER_VALIDATE_EMAIL)){
+            $this->session->set_userdata('mensagem','E-mail inválido');
+            $this->session->set_userdata('tipo_mensagem','error');
+            redirect('admin/create_admin');
+        }
+		elseif(strlen($_POST['senha']) < 6){
+            $this->session->set_userdata('mensagem','A senha deve ter no mínimo 6 caracteres!');
+            $this->session->set_userdata('tipo_mensagem','error');
+            redirect('admin/creat_admin');
+        }
 		elseif ($_POST['senha'] != $_POST['confirmasenha']){
 			$this->session->set_userdata('mensagem','Senhas digitadas não são iguais');
 			$this->session->set_userdata('tipo_mensagem','error');
