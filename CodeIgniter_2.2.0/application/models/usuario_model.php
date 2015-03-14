@@ -55,6 +55,10 @@ class Usuario_model extends CI_Model {
 		$this->db->where('usuario',$user);
 		return $this->db->get('tb_login')->result();
 	}
+	public function check_existence_of_email($email){
+		$this->db->where('email',$email);
+		return $this->db->get('tb_login')->result();
+	}
 	public function create_new_user($dados){
 		unset($dados['novasenha']);
 		$dados['senha'] = md5($dados['senha']);

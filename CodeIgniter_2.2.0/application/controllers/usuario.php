@@ -110,8 +110,13 @@ class Usuario extends CI_Controller {
     		$this->session->set_userdata('tipo_mensagem','error');
             redirect('usuario/create_user');
     	}
+        elseif($this->usuario_model->check_existence_of_email($_POST['email'])){
+            $this->session->set_userdata('mensagem','Email já cadastrado');
+            $this->session->set_userdata('tipo_mensagem','error');
+            redirect('usuario/create_user');
+        }
     	elseif($this->usuario_model->check_existence_of_user($_POST['usuario'])){
-    		$this->session->set_userdata('mensagem','usuario já cadastrado');
+    		$this->session->set_userdata('mensagem','Usuario já cadastrado');
             $this->session->set_userdata('tipo_mensagem','error');
     		redirect('usuario/create_user');
     	}
@@ -120,7 +125,7 @@ class Usuario extends CI_Controller {
     		$_POST['id_login'] = $this->usuario_model->create_new_user($_POST);
             $id = $_POST['id_login'];
             $config['upload_path'] = $this->base_img_dir();
-            $config['allowed_types'] = 'gif|jpg|png';
+            $config['allowed_types'] = 'jpg|png';
             $this->load->library('upload', $config);
             $this->upload->initialize($config);
             $dados = NULL;
@@ -175,7 +180,7 @@ class Usuario extends CI_Controller {
     public function update_account(){
         $id = $this->session->userdata('login_id');
         $config['upload_path'] = $this->base_img_dir();
-        $config['allowed_types'] = 'gif|jpg|png';
+        $config['allowed_types'] = 'jpg|png';
         $this->load->library('upload', $config);
         $this->upload->initialize($config);
     	if($_POST['nome'] == NULL || $_POST['email'] == NULL || $_POST['semestre'] == NULL ||
