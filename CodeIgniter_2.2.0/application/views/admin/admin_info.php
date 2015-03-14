@@ -11,15 +11,13 @@
 		<div class="admin-info-column-2">
 		<label> Nome<input type="text" name="nome" value="<?php echo $user->nome?>"></label><br />
 		<label> Email<input type="text" name="email" value="<?php echo $user->email?>"></label><br />
-		<label> Telefone<input type="text" name="telefone" value="<?php echo $user->telefone?>"></label><br />
-		<label> Curso<input type="text" name="curso" value="<?php echo $user->curso?>">
-		</div>
-		<div class="admin-info-column-2">
-		<label> Semestre<input type="text" name="semestre" value="<?php echo $user->semestre?>"></label><br />
-		<input type="hidden" name="id" value="<?php echo $user->id_login?>">
+		<label> Telefone<input type="text" name="telefone" id="telefone" maxlength="15" value="<?php echo $user->telefone?>"></label><br />
 			<div class="button-box">
 				<input class="button b-light-update" type="submit" value="">
 			</div>
+		</div>
+		<div class="admin-info-column-2">
+		<input type="hidden" name="id" value="<?php echo $user->id_login?>">
 		</div>
 		<?php echo form_close() ?>
 		</div>

@@ -57,7 +57,7 @@
                 </select><br /><br />
             </label>
 			
-			<label>Telefone<br /><input type="text" name="telefone" value="<?php echo $user->telefone?>"></label>
+			<label>Telefone<br /><input type="text" name="telefone" id="telefone" maxlength="14" value="<?php echo $user->telefone?>"></label>
 
 		</div>
 

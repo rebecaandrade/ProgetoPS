@@ -46,7 +46,7 @@
                 </select><br /><br />
             </label>
 
-			<label>Telefone<br /><input type="text" name="telefone" value=""></label>
+			<label>Telefone<br /><input type="text" name="telefone" id="telefone" maxlength="15" value=""></label>
 
 		</div>
 

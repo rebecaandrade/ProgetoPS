@@ -11,7 +11,7 @@
 			<label> Usuário<input type="text" name="usuario"></label><br />
 		<label> Nome<input type="text" name="nome"></label><br />
 		<label> Email<input type="text" name="email"></label><br />
-		<label> Telefone<input type="text" name="telefone"></label><br />
+		<label> Telefone<input type="text" name="telefone" id="telefone" maxlength="15" ></label><br />
 		</div>
 		<div class="admin-create-column-2">
 		<label>Senha<input type="password" name="senha"></label><br />
