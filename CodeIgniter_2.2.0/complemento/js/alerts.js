@@ -37,7 +37,7 @@ horario = function(mensagem,subtitulo,url,url_2){
 }
 candidato = function(url,url_2){
 	swal({   
-		title: 'Quais usuarios deseja visualizar?',
+		title: 'Quais usuários deseja visualizar?',
 		type: "info",
 		showCancelButton: true,
 		confirmButtonText: "inscritos no PS corrente",
