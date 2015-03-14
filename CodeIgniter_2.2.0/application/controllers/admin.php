@@ -212,7 +212,43 @@ class Admin extends CI_Controller {
 	public function admin_feedback(){
 		$this->load->view('admin/admin_feedback');
 	}
+	public function change_password(){
+		$this->load->view('admin/admin_change_password');
+	}
+	public function set_new_password(){
+		if($_POST['senha_old'] == NULL || $_POST['senha'] == NULL || $_POST['novasenha'] == NULL){
+            $this->session->set_userdata('mensagem','Erro ao atualizar senha.');
+            $this->session->set_userdata('tipo_mensagem','error');
+            $this->session->set_userdata('subtitulo_mensagem','Alguns dos campos não foram preenchidos');
+            redirect('admin/change_password');
+        }
+        elseif(!$this->admin_model->verify_password($this->session->userdata('login_id'),$_POST['senha_old'])){
+            $this->session->set_userdata('mensagem','Erro ao atualizar senha.');
+            $this->session->set_userdata('tipo_mensagem','error');
+            $this->session->set_userdata('subtitulo_mensagem','Senha Atual incorreta.');
+            redirect('admin/change_password');
+        }
+        elseif($_POST['senha'] != $_POST['novasenha']){
+            $this->session->set_userdata('mensagem','Erro ao atualizar senha.');
+            $this->session->set_userdata('tipo_mensagem','error');
+            $this->session->set_userdata('subtitulo_mensagem','Novas senhas não são iguais.');
+            redirect('admin/change_password');
+        }
+        elseif(strlen($_POST['senha']) < 6){
+            $this->session->set_userdata('mensagem','Erro ao atualizar senha.');
+            $this->session->set_userdata('tipo_mensagem','error');
+            $this->session->set_userdata('subtitulo_mensagem','Nova senha é muito pequena');
+            redirect('admin/change_password');
+        }
+        else{
+            $dados['senha'] = $_POST['senha'];
+            $this->admin_model->update_password($this->session->userdata('login_id'),$dados);
+            $this->session->set_userdata('mensagem','Senha atualizada com sucesso!');
+            $this->session->set_userdata('tipo_mensagem','success');
+            redirect(base_url());
+        }
+	}
 	public function teste_functions(){
-		die(var_dump($this->session->userdata));
+		$this->load->view('view_teste');
 	}
 }

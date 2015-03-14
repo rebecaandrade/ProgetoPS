@@ -104,6 +104,16 @@ class Admin_model extends CI_Model {
 		$hours['entrevista'] = $aux;
 		return $hours;
 	}
+	public function update_password($id,$dados){
+		$dados['senha'] = md5($dados['senha']);
+		$this->db->where('id_login',$id);
+		return $this->db->update('tb_login',$dados);
+	}
+	public function verify_password($id,$senha){
+		$this->db->where('id_login',$id);
+		$pswrd = $this->db->get('tb_login')->row()->senha;
+		return md5($senha) == $pswrd;
+	}
 	//---------------------------Funções auxiliares -----------------------//
 	
 	public function week_day($day_name){
