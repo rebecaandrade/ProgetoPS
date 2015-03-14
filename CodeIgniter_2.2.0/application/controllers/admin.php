@@ -50,6 +50,10 @@ class Admin extends CI_Controller {
 		$dados['hours'] = $this->admin_model->get_user_hours($_GET['id']);
 		$this->load->view('admin/user_info',$dados);
 	}
+	public function past_check_member(){
+		$dados['user'] = $this->admin_model->get_user_information($_GET['id']);
+		$this->load->view('admin/past_user_info',$dados);
+	}
 	public function load_home_superadmin(){
 		$this->load->model('ps_model');
 		$this->load->model('horario_model');

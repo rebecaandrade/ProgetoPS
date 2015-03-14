@@ -48,6 +48,10 @@ class Usuario extends CI_Controller {
         $dados['users'] = $this->usuario_model->retrieve_users();
         $this->load->view('admin/user_list', $dados);
     }
+    public function past_list_users(){
+        $dados['users'] = $this->usuario_model->retrieve_users();
+        $this->load->view('admin/past_user_list', $dados);
+    }
     public function delete(){
     	$this->usuario_model->delete_user($_GET['id']);
         $this->session->set_userdata('mensagem','Usuario excluido com sucesso');
