@@ -22,6 +22,7 @@
 		foreach ($tb_ps as $ps) {
 			if(!$ps->status_ps){
 			?>
+			<a href="<?php echo base_url(); ?>/index.php/admin/load_past_ps?id=<?php echo $ps->id ?>">
 			<div class="box-page-ps closed">
 				<div class="box-page-ps-top"></div>
 				<div class="box-page-ps-middle"></div>
@@ -31,6 +32,7 @@
 				</div>
 				<div class="box-page-ps-bottom"></div>
 		    </div>
+		    </a>
 		<?php }
 		} 
 	} ?>
