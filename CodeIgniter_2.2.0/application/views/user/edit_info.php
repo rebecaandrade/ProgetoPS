@@ -26,9 +26,38 @@
 		<div class="edit-info-column-3">
 			<br />
 			<label>Email<br /><input type="text" name="email" value="<?php echo $user->email?>"> </label><br />
-			<label>Curso<br /><input type="text" name="curso" value="<?php echo $user->curso?>"> </label><br />
-			<label>Semestre<br /><input type="text" name="semestre" value="<?php echo $user->semestre?>"></label><br />
-			<label>Telefone<br /><input type="text" name="telefone" value="<?php echo $user->telefone?>"></label>
+
+			<label>Curso<br />
+                <select name="curso">
+                    <option > </option>
+                    <?php if($user->curso == 'Ciência da computação(bacharelado)'){ ?>
+                    	<option value="Ciência da computação(bacharelado)" selected >Ciência da computação(bacharelado)</option>
+                    <?php } else { ?>
+                    	<option value="Ciência da computação(bacharelado)" >Ciência da computação(bacharelado)</option>
+                   	<?php } if($user->curso == 'Computação (licenciatura)' ){ ?>
+                    	<option value="Computação (licenciatura)" selected >Computação (licenciatura)</option>
+                    <?php } else { ?>
+                    	<option value="Computação (licenciatura)" selected >Computação (licenciatura)</option>
+                    <?php } ?>
+                </select><br /><br />
+            </label>
+
+			<label>Semestre<br />
+                <select name="semestre">
+                    <option > </option>
+                    <?php 
+                    for ($i=1; $i < 15 ; $i++) { 
+                    	if($i.'º' == $user->semestre){
+                    ?>
+                    		<option value="<?php echo $i?>º" selected ><?php echo $i?>º</option>
+                    <?php }else{ ?>
+                    		<option value="<?php echo $i?>º"><?php echo $i?>º</option>
+                    	<?php }
+                    } ?>
+                </select><br /><br />
+            </label>
+			
+			<label>Telefone<br /><input type="text" name="telefone" id="telefone" maxlength="14" value="<?php echo $user->telefone?>"></label>
 
 		</div>
 
@@ -37,17 +66,17 @@
 			<label>Confirmação de Senha<br /><input type="password" name="password" value=""> </label><br />
 
 			<div class="button-box">
-				<a onclick="confirmar('Deseja Excluir seu cadastro ?', '<?php echo base_url().'index.php/usuario/delete_account?id='.$user->id_login ?>' ) ">
 				<span class="button b-dark-cancel"></span>
 				<p>
-					Deletar<br />Cadastro
+				<br />
 				</p>
 				</a>
 				<input type='submit' value="" class="button b-dark-accept">
 			</div>
-		</div>
 
+		</div>
 		<?php echo form_close();?>
 	</div>
+	<a style="position:absolute;display:block;left:50%;background-color:red" href="<?php echo base_url().'index.php/usuario/change_password' ?>"><img style="width:50px;height:50px;" src="<?php echo base_url().'assets/images/incon_change_password.png' ?>"></a>
 <?php echo $this->load->view('_inc/footer')?>
 

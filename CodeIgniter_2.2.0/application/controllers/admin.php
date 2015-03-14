@@ -113,6 +113,16 @@ class Admin extends CI_Controller {
 			$this->session->set_userdata('mensagem','Alguns campos obrigatórios não foram preenchidos');
 			$this->update_admin($_POST['id']);
 		}
+		elseif(!filter_var($_POST['email'],FILTER_VALIDATE_EMAIL)){
+            $this->session->set_userdata('mensagem','E-mail inválido');
+            $this->session->set_userdata('tipo_mensagem','error');
+            $this->update_admin($_POST['id']);
+        }
+		elseif(strlen($_POST['senha']) < 6){
+            $this->session->set_userdata('mensagem','A senha deve ter no mínimo 6 caracteres!');
+            $this->session->set_userdata('tipo_mensagem','error');
+            $this->update_admin($_POST['id']);
+        }
 		else {
 			$this->admin_model->update_admin($_POST);
 			$this->session->set_userdata('mesnsagem','Atualização realizada com sucesso');
@@ -128,6 +138,16 @@ class Admin extends CI_Controller {
 			$this->session->set_userdata('mensagem','Alguns campos obrigatórios não foram preenchidos');
 			redirect('admin/create_admin');
 		}
+		elseif(!filter_var($_POST['email'],FILTER_VALIDATE_EMAIL)){
+            $this->session->set_userdata('mensagem','E-mail inválido');
+            $this->session->set_userdata('tipo_mensagem','error');
+            redirect('admin/create_admin');
+        }
+		elseif(strlen($_POST['senha']) < 6){
+            $this->session->set_userdata('mensagem','A senha deve ter no mínimo 6 caracteres!');
+            $this->session->set_userdata('tipo_mensagem','error');
+            redirect('admin/creat_admin');
+        }
 		elseif ($_POST['senha'] != $_POST['confirmasenha']){
 			$this->session->set_userdata('mensagem','Senhas digitadas não são iguais');
 			$this->session->set_userdata('tipo_mensagem','error');
@@ -146,6 +166,43 @@ class Admin extends CI_Controller {
 			$this->session->set_userdata('tipo_mensagem','success');
 			redirect('admin/list_admins');
 		}
+	}
+	public function load_past_ps(){
+		$this->load->model('horario_model');
+		$id_ps = $_GET['id'];
+		$this->session->set_userdata('current_ps',$id_ps);
+		if($id_ps){
+			$dados = $this->admin_model->get_time_counters($id_ps);
+			$dados['horas_palestra'] = $this->horario_model->palestra_hours_past_ps($id_ps);
+			$dados['horas_dinamica'] = $this->horario_model->dinamica_hours_past_ps($id_ps);
+
+			$contador1 = 0;
+			$contador2= 0;
+			foreach ($dados['palestra'] as $inscrito) {
+				if($inscrito->tempo == $dados['horas_palestra']['palestra_1']){
+					$contador1++;
+				}
+				if($inscrito->tempo == $dados['horas_palestra']['palestra_2']){
+					$contador2++;
+				}
+			}
+			$dados['palestra_inscritos_1'] = $contador1;
+			$dados['palestra_inscritos_2'] = $contador2;
+
+			$contador1 = 0;
+			$contador2= 0;
+			foreach ($dados['dinamica'] as $inscrito) {
+				if($inscrito->tempo == $dados['horas_dinamica']['dinamica_1']){
+					$contador1++;
+				}
+				if($inscrito->tempo == $dados['horas_dinamica']['dinamica_2']){
+					$contador2++;
+				}
+			}
+			$dados['dinamica_inscritos_1'] = $contador1;
+			$dados['dinamica_inscritos_2'] = $contador2;
+		}
+		$this->load->view('admin/past_ps',$dados);
 	}
 	/* Apagar depois somente para carregar a pagina de FeedBack  */
 	public function admin_feedback(){

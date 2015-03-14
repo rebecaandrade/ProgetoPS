@@ -50,6 +50,8 @@ class Usuario extends CI_Controller {
     }
     public function delete(){
     	$this->usuario_model->delete_user($_GET['id']);
+        $this->session->set_userdata('mensagem','Usuario excluido com sucesso');
+        $this->session->set_userdata('tipo_mensagem','success');
     	redirect('usuario/list_users');
     }
     public function delete_account(){
@@ -65,7 +67,9 @@ class Usuario extends CI_Controller {
         $this->load->view('user/user_email');
     }
     public function contact_email(){
-        if($this->input->post('email')){
+        $mensagem = $this->input->post('email');
+        $mensagem = trim($mensagem);
+        if($mensagem){
             $date = getdate();
             $to      =  'direta@cjr.org.br';
             $subject = '[Processo Seletivo CJR] Fale conosco de '.$this->session->userdata('nome');
@@ -106,8 +110,13 @@ class Usuario extends CI_Controller {
     		$this->session->set_userdata('tipo_mensagem','error');
             redirect('usuario/create_user');
     	}
+        elseif($this->usuario_model->check_existence_of_email($_POST['email'])){
+            $this->session->set_userdata('mensagem','Email já cadastrado');
+            $this->session->set_userdata('tipo_mensagem','error');
+            redirect('usuario/create_user');
+        }
     	elseif($this->usuario_model->check_existence_of_user($_POST['usuario'])){
-    		$this->session->set_userdata('mensagem','usuario já cadastrado');
+    		$this->session->set_userdata('mensagem','Usuario já cadastrado');
             $this->session->set_userdata('tipo_mensagem','error');
     		redirect('usuario/create_user');
     	}
@@ -116,7 +125,7 @@ class Usuario extends CI_Controller {
     		$_POST['id_login'] = $this->usuario_model->create_new_user($_POST);
             $id = $_POST['id_login'];
             $config['upload_path'] = $this->base_img_dir();
-            $config['allowed_types'] = 'gif|jpg|png';
+            $config['allowed_types'] = 'jpg|png';
             $this->load->library('upload', $config);
             $this->upload->initialize($config);
             $dados = NULL;
@@ -171,7 +180,7 @@ class Usuario extends CI_Controller {
     public function update_account(){
         $id = $this->session->userdata('login_id');
         $config['upload_path'] = $this->base_img_dir();
-        $config['allowed_types'] = 'gif|jpg|png';
+        $config['allowed_types'] = 'jpg|png';
         $this->load->library('upload', $config);
         $this->upload->initialize($config);
     	if($_POST['nome'] == NULL || $_POST['email'] == NULL || $_POST['semestre'] == NULL ||
@@ -213,6 +222,42 @@ class Usuario extends CI_Controller {
                 $this->session->set_userdata('subtitulo_mensagem','Verifique a confirmação de senha.');
             }
             redirect('usuario/edit_account');
+        }
+    }
+    public function change_password(){
+        $this->load->view('user/user_change_password');
+    }
+    public function set_new_password(){
+        if($_POST['senha_old'] == NULL || $_POST['senha'] == NULL || $_POST['novasenha'] == NULL){
+            $this->session->set_userdata('mensagem','Erro ao atualizar senha.');
+            $this->session->set_userdata('tipo_mensagem','error');
+            $this->session->set_userdata('subtitulo_mensagem','Alguns dos campos não foram preenchidos');
+            redirect('usuario/change_password');
+        }
+        elseif(!$this->usuario_model->verify_password($this->session->userdata('login_id'),$_POST['senha_old'])){
+            $this->session->set_userdata('mensagem','Erro ao atualizar senha.');
+            $this->session->set_userdata('tipo_mensagem','error');
+            $this->session->set_userdata('subtitulo_mensagem','Senha Atual incorreta.');
+            redirect('usuario/change_password');
+        }
+        elseif($_POST['senha'] != $_POST['novasenha']){
+            $this->session->set_userdata('mensagem','Erro ao atualizar senha.');
+            $this->session->set_userdata('tipo_mensagem','error');
+            $this->session->set_userdata('subtitulo_mensagem','Novas senhas não são iguais.');
+            redirect('usuario/change_password');
+        }
+        elseif(strlen($_POST['senha']) < 6){
+            $this->session->set_userdata('mensagem','Erro ao atualizar senha.');
+            $this->session->set_userdata('tipo_mensagem','error');
+            $this->session->set_userdata('subtitulo_mensagem','Nova senha é muito pequena');
+            redirect('usuario/change_password');
+        }
+        else{
+            $dados['senha'] = $_POST['senha'];
+            $this->usuario_model->update_password($this->session->userdata('login_id'),$dados);
+            $this->session->set_userdata('mensagem','Senha atualizada com sucesso!');
+            $this->session->set_userdata('tipo_mensagem','success');
+            redirect('usuario/home');
         }
     }
     public function base_img_dir(){

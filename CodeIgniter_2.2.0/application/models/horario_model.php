@@ -107,9 +107,27 @@ class Horario_model extends CI_Model {
 			);
 		return $hours;
 	}
+	public function palestra_hours_past_ps($ps_id){
+		$this->db->where('id',$ps_id);
+		$ps = $this->db->get('tb_ps')->row();
+		$hours = array(
+				'palestra_1' => $ps->primeiro_horario_apresentacao,
+				'palestra_2' => $ps->segundo_horario_apresentacao
+			);
+		return $hours;
+	}
 	public function dinamica_hours(){
 		$ps_id = $this->ps_model->current_ps();
 
+		$this->db->where('id',$ps_id);
+		$ps = $this->db->get('tb_ps')->row();
+		$hours = array(
+				'dinamica_1' => $ps->primeiro_horario_dinamica,
+				'dinamica_2' => $ps->segundo_horario_dinamica
+			);
+		return $hours;
+	}
+	public function dinamica_hours_past_ps($ps_id){
 		$this->db->where('id',$ps_id);
 		$ps = $this->db->get('tb_ps')->row();
 		$hours = array(

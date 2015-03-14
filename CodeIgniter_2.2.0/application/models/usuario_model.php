@@ -25,6 +25,15 @@ class Usuario_model extends CI_Model {
 	public function delete_user($id){
 		$this->db->where('tb_login_id_login',$id);
 		$this->db->delete('ta_login_x_tb_PS');
+		$this->db->where('tb_login_id_login',$id);
+		$hoarios = $this->db->get('ta_login_x_tb_horario')->result();
+		$this->db->where('tb_login_id_login',$id);
+		$this->db->delete('ta_login_x_tb_horario');
+		foreach ($hoarios as $key => $horario) {
+			$time_id = $horario->tb_horario_id_horario;
+			$this->db->where('id_horario',$time_id);
+			$this->db->delete('tb_horario');
+		}
 		$this->db->where('id_login',$id);
 		return $this->db->delete('tb_login');
 	}
@@ -44,6 +53,10 @@ class Usuario_model extends CI_Model {
 	}
 	public function check_existence_of_user($user){
 		$this->db->where('usuario',$user);
+		return $this->db->get('tb_login')->result();
+	}
+	public function check_existence_of_email($email){
+		$this->db->where('email',$email);
 		return $this->db->get('tb_login')->result();
 	}
 	public function create_new_user($dados){
@@ -74,5 +87,10 @@ class Usuario_model extends CI_Model {
 			$this->session->set_userdata('status_feed','0');
 			return TRUE;
 		}
+	}
+	public function update_password($id,$dados){
+		$dados['senha'] = md5($dados['senha']);
+		$this->db->where('id_login',$id);
+		return $this->db->update('tb_login',$dados);
 	}
 }

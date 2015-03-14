@@ -36,9 +36,17 @@
                 </select><br /><br />
             </label>
 
-			<label>Semestre<br /><input type="text" name="semestre" value=""></label>
+			<label>Semestre<br />
+                <select name="semestre">
+                    <option > </option>
+                    <?php for ($i=1; $i < 10 ; $i++) { 
+                    ?>
+                    <option value="<?php echo $i?>º"><?php echo $i?>º</option>
+                    <?php } ?>
+                </select><br /><br />
+            </label>
 
-			<label>Telefone<br /><input type="text" name="telefone" value=""></label>
+			<label>Telefone<br /><input type="text" name="telefone" id="telefone" maxlength="15" value=""></label>
 
 		</div>
 

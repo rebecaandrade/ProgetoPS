@@ -22,7 +22,9 @@
             <img src="<?php echo base_url();?>assets/images/profile_post.png" alt="" />
             <p>
               Entrevistadores
-            </p>
+            </p><br>
+            <label> 1º Entrevistador:<br><input type="text" name="entrevistador1" value="<?php if(sizeof($feed) > 0) echo $feed->entrevistador1 ?>"></label><br><br>
+            <label>2º Entrevistador:<br><input type="text" name="entrevistador2" value="<?php if(sizeof($feed) > 0) echo $feed->entrevistador2 ?>"></label>
           </div>
           <div id="admin-feedback-body-interviewers-list">
             <!--<p>

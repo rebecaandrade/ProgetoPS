@@ -18,9 +18,8 @@
 		 	<?php if(isset($semestres)){?>
 		 	<?php foreach($semestres as $date => $semestre){?>
 				<a href="<?php echo base_url()?>index.php/feedback/load_feedback/<?php echo $dates[$date] ?>">
-				<p>
 				<?php echo $semestre ?>
-				</p></a><br>
+				</a><br>
 			<?php }}?>
 			<span class="feedback-nav-after"></span>
 		</div>
@@ -35,7 +34,8 @@
 		</div>
 		<div id="feedback-text-footer">
 			<p>
-				Deseja marcar um Feedback presencial?
+				Deseja marcar um Feedback presencial?<br>
+				Entre em contato no <a href="<?php echo base_url().'index.php/usuario/contact_us'?>">Fale Conosco</a>
 			</p>
 		</div>
 		</div>
