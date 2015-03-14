@@ -66,10 +66,9 @@
 			<label>Confirmação de Senha<br /><input type="password" name="password" value=""> </label><br />
 
 			<div class="button-box">
-				<a onclick="confirmar('Deseja Excluir seu cadastro ?', '<?php echo base_url().'index.php/usuario/delete_account?id='.$user->id_login ?>' ) ">
 				<span class="button b-dark-cancel"></span>
 				<p>
-					Deletar<br />Cadastro
+				<br />
 				</p>
 				</a>
 				<input type='submit' value="" class="button b-dark-accept">

@@ -65,7 +65,9 @@ class Usuario extends CI_Controller {
         $this->load->view('user/user_email');
     }
     public function contact_email(){
-        if($this->input->post('email')){
+        $mensagem = $this->input->post('email');
+        $mensagem = trim($mensagem);
+        if($mensagem){
             $date = getdate();
             $to      =  'direta@cjr.org.br';
             $subject = '[Processo Seletivo CJR] Fale conosco de '.$this->session->userdata('nome');
