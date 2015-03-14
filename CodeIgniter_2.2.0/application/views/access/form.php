@@ -28,7 +28,13 @@
 
 			<label>Email<br /><input type="text" name="email" value=""></label>
 
-			<label>Curso<br /><input type="text" name="curso" value=""></label>
+			<label>Curso<br />
+                <select name="curso">
+                    <option > </option>
+                    <option value="Ciência da computação(bacharelado)">Ciência da computação(bacharelado)</option>
+                    <option value="Computação (licenciatura)">Computação (licenciatura)</option>
+                </select><br /><br />
+            </label>
 
 			<label>Semestre<br /><input type="text" name="semestre" value=""></label>
 
