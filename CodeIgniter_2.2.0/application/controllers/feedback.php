@@ -39,6 +39,9 @@ class Feedback extends CI_Controller {
 		$this->load->view('admin/past_admin_feedback',$dados);
 	}
 	public function set_feed($id){
+		if(strlen($_POST['feedback'] >0)){
+			$_POST['entrevistado'] = 1;
+		}
 		if($this->feedback_model->insert_feed($id,$_POST)){
 			$this->session->set_userdata('mensagem','Feedback adicionado com sucesso');
 			$this->session->set_userdata('tipo_mensagem','success');
