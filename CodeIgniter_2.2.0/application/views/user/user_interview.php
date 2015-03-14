@@ -200,7 +200,6 @@
      </div>
      <?php echo form_close() ?>
      <br>
-     <a href="#"><h3>Prefiro responder posteriormente</h3></a>
    </div>
 
     <?php echo $this->load->view('_inc/footer') ?>

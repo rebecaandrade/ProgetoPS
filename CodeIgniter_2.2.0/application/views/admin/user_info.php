@@ -11,6 +11,8 @@
 			<span><!--Icone de aprovado--></span>
 		</div>
 		<div id="infouser-nav-body">
+				<br />
+				<br />
 				<h5>Palestra Institucional</h5>
 				<?php if(isset($hours['palestra_hour'])){ ?>
 				<input type="radio"  value="" checked>
@@ -98,7 +100,7 @@
 					<tr>
 						<?php foreach ($hours['entrevista'] as $day) {
 							  	foreach ($day as $date) {
-					
+
 							?>
 						<td>
 							<?php echo $date['time'] ?>
@@ -111,8 +113,8 @@
 							  	foreach ($day as $date) {
 
 							  ?>
-							  <td>MARCADO <!-- colocar aqui a no lugar de marcado checkbox ou 'X' que ficara embaixo dos horarios --></td>
-							  <?php	} 
+							  <td><input type="checkbox" name="name" value="" checked></td>
+							  <?php	}
 							} ?>
 					</tr>
 				</tbody>

@@ -10,7 +10,7 @@
 		<div id="feedback-nav">
 		<div id="feedback-nav-top">
 			<p>
-			  edição
+			  EDIÇÃO
 		 	</p>
 		</div>
 		<div id="feedback-nav-body">
