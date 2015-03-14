@@ -25,6 +25,8 @@ class Usuario_model extends CI_Model {
 	public function delete_user($id){
 		$this->db->where('tb_login_id_login',$id);
 		$this->db->delete('ta_login_x_tb_PS');
+		$this->db->where('tb_login_id_login',$id);
+		$this->db->delete('ta_login_x_tb_horario');
 		$this->db->where('id_login',$id);
 		return $this->db->delete('tb_login');
 	}
@@ -74,5 +76,10 @@ class Usuario_model extends CI_Model {
 			$this->session->set_userdata('status_feed','0');
 			return TRUE;
 		}
+	}
+	public function update_password($id,$dados){
+		$dados['senha'] = md5($dados['senha']);
+		$this->db->where('id_login',$id);
+		return $this->db->update('tb_login',$dados);
 	}
 }

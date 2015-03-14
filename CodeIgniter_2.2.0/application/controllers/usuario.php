@@ -215,6 +215,42 @@ class Usuario extends CI_Controller {
             redirect('usuario/edit_account');
         }
     }
+    public function change_password(){
+        $this->load->view('user/user_change_password');
+    }
+    public function set_new_password(){
+        if($_POST['senha_old'] == NULL || $_POST['senha'] == NULL || $_POST['novasenha'] == NULL){
+            $this->session->set_userdata('mensagem','Erro ao atualizar senha.');
+            $this->session->set_userdata('tipo_mensagem','error');
+            $this->session->set_userdata('subtitulo_mensagem','Alguns dos campos não foram preenchidos');
+            redirect('usuario/change_password');
+        }
+        elseif(!$this->usuario_model->verify_password($this->session->userdata('login_id'),$_POST['senha_old'])){
+            $this->session->set_userdata('mensagem','Erro ao atualizar senha.');
+            $this->session->set_userdata('tipo_mensagem','error');
+            $this->session->set_userdata('subtitulo_mensagem','Senha Atual incorreta.');
+            redirect('usuario/change_password');
+        }
+        elseif($_POST['senha'] != $_POST['novasenha']){
+            $this->session->set_userdata('mensagem','Erro ao atualizar senha.');
+            $this->session->set_userdata('tipo_mensagem','error');
+            $this->session->set_userdata('subtitulo_mensagem','Novas senhas não são iguais.');
+            redirect('usuario/change_password');
+        }
+        elseif(strlen($_POST['senha']) < 6){
+            $this->session->set_userdata('mensagem','Erro ao atualizar senha.');
+            $this->session->set_userdata('tipo_mensagem','error');
+            $this->session->set_userdata('subtitulo_mensagem','Nova senha é muito pequena');
+            redirect('usuario/change_password');
+        }
+        else{
+            $dados['senha'] = $_POST['senha'];
+            $this->usuario_model->update_password($this->session->userdata('login_id'),$dados);
+            $this->session->set_userdata('mensagem','Senha atualizada com sucesso!');
+            $this->session->set_userdata('tipo_mensagem','success');
+            redirect('usuario/home');
+        }
+    }
     public function base_img_dir(){
         return getcwd().'\complemento\user_pictures';
     }

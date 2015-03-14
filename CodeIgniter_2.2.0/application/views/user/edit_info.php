@@ -74,9 +74,10 @@
 				</a>
 				<input type='submit' value="" class="button b-dark-accept">
 			</div>
-		</div>
 
+		</div>
 		<?php echo form_close();?>
 	</div>
+	<a style="position:absolute;display:block;left:50%;background-color:red" href="<?php echo base_url().'index.php/usuario/change_password' ?>"><img style="width:50px;height:50px;" src="<?php echo base_url().'assets/images/incon_change_password.png' ?>"></a>
 <?php echo $this->load->view('_inc/footer')?>
 
