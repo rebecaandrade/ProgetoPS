@@ -35,3 +35,22 @@ horario = function(mensagem,subtitulo,url,url_2){
 	   	}
 	});
 }
+candidato = function(url,url_2){
+	swal({   
+		title: 'Quais usuarios deseja visualizar?',
+		type: "info",
+		showCancelButton: true,
+		confirmButtonText: "inscritos no PS corrente",
+		cancelButtonText: "todos",
+		closeOnConfirm: false, 
+		allowOutsideClick : true
+	},
+	function(isConfirm){
+		if (isConfirm) {
+	   		window.location.href = url;
+	   	}
+	   	else{
+	   		window.location.href = url_2;
+	   	}
+	});
+}

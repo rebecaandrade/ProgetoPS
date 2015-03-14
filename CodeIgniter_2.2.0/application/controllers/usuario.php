@@ -48,6 +48,10 @@ class Usuario extends CI_Controller {
         $dados['users'] = $this->usuario_model->retrieve_users();
         $this->load->view('admin/user_list', $dados);
     }
+    public function list_all_users(){
+        $dados['users'] = $this->usuario_model->retrieve_all_users();
+        $this->load->view('admin/user_list', $dados);
+    }
     public function past_list_users(){
         $dados['users'] = $this->usuario_model->retrieve_users();
         $this->load->view('admin/past_user_list', $dados);

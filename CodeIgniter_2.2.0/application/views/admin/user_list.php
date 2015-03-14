@@ -15,7 +15,9 @@
                   <th>Email</th>
                   <th></th>
                   <th></th>
+                  <?php if(isset($users[0]->feedback)){ ?>
                   <th>FeedBack</th>
+                  <?php } ?>
                   <th>&nbsp</th>
              </tr>
           </thead>
@@ -36,7 +38,7 @@
                       <td> <?php echo $user->email ;?></td>
                       <td><a onclick="openDate();" class="open-date" href="#">Horário</a></td>
                       <td><a href="<?php echo base_url();?>index.php/admin/check_member?id=<?php echo $user->id_login?>">Informações</a></td>
-                      <?php 
+                      <?php if(isset($user->feedback))
                       if($user->feedback){ ?>
                         <td><a href="<?php echo base_url() ?>/index.php/feedback/show_feed?id=<?php echo $user->id_login?>"> <img src="<?php echo base_url();?>assets/images/button_light_accept.png" alt="" /></a></td>
                       <?php } else { ?>

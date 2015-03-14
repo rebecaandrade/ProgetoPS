@@ -27,6 +27,10 @@ class Usuario_model extends CI_Model {
 			return NULL;
 		}
 	}
+	public function retrieve_all_users(){
+		$this->db->where('perfil',1);
+		return $this->db->get('tb_login')->result();
+	}
 	public function get_user($login,$senha){
 		$this->db->where('usuario',$login);
 		$this->db->where('senha',$senha);
