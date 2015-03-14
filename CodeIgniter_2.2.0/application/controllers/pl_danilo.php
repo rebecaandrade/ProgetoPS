@@ -65,8 +65,8 @@ class PL_Danilo extends CI_Controller{
     $this->load->view('admin/avaliable_dates');
   }
 
-  public function jcrop(){
-    $this->load->view('access/jcrop');
+  public function boot(){
+    $this->load->view('boot');
   }
 }
 
