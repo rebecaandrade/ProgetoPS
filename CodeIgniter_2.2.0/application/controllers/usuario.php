@@ -50,6 +50,8 @@ class Usuario extends CI_Controller {
     }
     public function delete(){
     	$this->usuario_model->delete_user($_GET['id']);
+        $this->session->set_userdata('mensagem','Usuario excluido com sucesso');
+        $this->session->set_userdata('tipo_mensagem','success');
     	redirect('usuario/list_users');
     }
     public function delete_account(){

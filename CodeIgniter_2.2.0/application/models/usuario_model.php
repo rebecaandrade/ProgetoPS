@@ -26,7 +26,14 @@ class Usuario_model extends CI_Model {
 		$this->db->where('tb_login_id_login',$id);
 		$this->db->delete('ta_login_x_tb_PS');
 		$this->db->where('tb_login_id_login',$id);
+		$hoarios = $this->db->get('ta_login_x_tb_horario')->result();
+		$this->db->where('tb_login_id_login',$id);
 		$this->db->delete('ta_login_x_tb_horario');
+		foreach ($hoarios as $key => $horario) {
+			$time_id = $horario->tb_horario_id_horario;
+			$this->db->where('id_horario',$time_id);
+			$this->db->delete('tb_horario');
+		}
 		$this->db->where('id_login',$id);
 		return $this->db->delete('tb_login');
 	}
