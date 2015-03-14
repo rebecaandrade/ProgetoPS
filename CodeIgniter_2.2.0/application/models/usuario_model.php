@@ -8,7 +8,17 @@ class Usuario_model extends CI_Model {
 		$dados;
 		foreach($feeds as $feed){
 			$this->db->where('id_login',$feed->tb_login_id_login);
-			$dados[] = $this->db->get('tb_login')->row();
+			$user = $this->db->get('tb_login')->row();
+			$user = (array)$user;
+			if($feed->feedback == NULL){
+				$user['feedback'] = '0';
+			}
+			else{
+				$user['feedback'] = '1';
+			}
+			$user = (object)$user;
+			
+			$dados[] = $user; 
 		}
 		if(isset($dados)){
 			return $dados;

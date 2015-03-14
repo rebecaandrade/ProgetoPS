@@ -33,6 +33,11 @@ class Feedback extends CI_Controller {
 		$dados['user'] = $this->admin_model->get_user_information($_GET['id']);
 		$this->load->view('admin/admin_feedback',$dados);
 	}
+	public function past_show_feed(){
+		$dados['feed'] = $this->feedback_model->get_this_feed($_GET['id']);
+		$dados['user'] = $this->admin_model->get_user_information($_GET['id']);
+		$this->load->view('admin/past_admin_feedback',$dados);
+	}
 	public function set_feed($id){
 		if($this->feedback_model->insert_feed($id,$_POST)){
 			$this->session->set_userdata('mensagem','Feedback adicionado com sucesso');

@@ -49,7 +49,7 @@
 							<span>0</span><span>Não há PS ativo</span>
 						</span>
 					<?php } ?>
-			</div>
+				</div>
 			</div>
 			<div id="page-admin-nav">
 				<div class="page-admin-nav-button">
@@ -58,6 +58,7 @@
 						Candidatos
 					  </p>
 				</div>
+
 			</div>
 		</div>
 	</div>
