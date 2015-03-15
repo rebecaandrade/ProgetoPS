@@ -272,6 +272,6 @@ class Usuario extends CI_Controller {
         return getcwd().'\complemento\user_pictures';
     }
     public function teste_functions_2(){
-        die(var_dump($this->session->userdata));
+        $this->load->view('view_teste');
     }
 }
