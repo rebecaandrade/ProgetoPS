@@ -1,7 +1,8 @@
 <?php
 
 class Admin_model extends CI_Model {
-	public function get_user_information($id,$id_ps){
+	public function get_user_information($id){
+		$id_ps = $this->session->userdata('current_ps');
 		$this->db->where('id_login',$id);
 		$user = $this->db->get('tb_login')->row();
 		$this->db->where('tb_login_id_login',$id);
