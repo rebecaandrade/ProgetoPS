@@ -5,9 +5,11 @@ class Access_model extends CI_Model {
 		$this->db->where('email',$email);
 		return $this->db->get('tb_login')->row();
 	}
-	public function update_password($user,$password){
-		$this->db->where('usuario',$user);
-		$data = array('senha' => $password);
-		$this->db->update('tb_login', $data);
+	public function generate_encryption($user){
+		// $this->db->where('usuario',$user);
+		// $row = $this->db->get('tb_login')->row();
+		// $date = getdate();
+		// $encryption = 
+		// $this->db->update('tb_login', $data);
 	}
 }

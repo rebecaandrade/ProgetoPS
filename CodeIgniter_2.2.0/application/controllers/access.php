@@ -50,17 +50,16 @@ class Access extends CI_Controller {
 		$email = $this->input->post('email-recovery');
 		$user = $this->access_model->get_email($email);
 		if($user){
-			$password = random_string('alnum', 9);
-			$this->access_model->update_password($user->usuario,md5($password));
-			$to      =  $user->email;
-			$subject = '[Processo Seletivo CJR] Alteração de senha';
-			$message = "Olá, $user->nome! \r\n \r\nSeu acesso foi alterado para: \r\n \r\n $password \r\n";
-			$message = wordwrap($message, 70);
-			$headers = 'From: donotreply@cjr.org.br';/* Ver qual email que deve mandar */
-			mail($to,$subject,$message,$headers);
-			$this->session->set_userdata('mensagem','Email enviado com sucesso!');
-			$this->session->set_userdata('subtitulo_mensagem','');
-			$this->session->set_userdata('tipo_mensagem','success');		
+			// $encrypt = $this->access_model->generate_encryption($user->usuario);
+			// $to      =  $user->email;
+			// $subject = '[Processo Seletivo CJR] Link de recuperação de senha';
+			// $message = "Olá, $user->nome! \r\n \r\nSeu acesso foi alterado para: \r\n \r\n $password \r\n";
+			// $message = wordwrap($message, 70);
+			// $headers = 'From: donotreply@cjr.org.br';
+			// mail($to,$subject,$message,$headers);
+			// $this->session->set_userdata('mensagem','Email enviado com sucesso!');
+			// $this->session->set_userdata('subtitulo_mensagem','');
+			// $this->session->set_userdata('tipo_mensagem','success');		
 			redirect('access/login');
 		}
 		else{

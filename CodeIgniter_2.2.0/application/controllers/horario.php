@@ -54,7 +54,7 @@ class Horario extends CI_Controller {
   	$this->horario_model->save_hours($interviews);
     $this->session->set_userdata('mensagem','Horário salvo com sucesso!');
     $this->session->set_userdata('tipo_mensagem','success');
-  	redirect('horario/load_user_interview');
+  	redirect('usuario/home');
   }
   public function load_user_activity(){
     $data['palestra'] = $this->horario_model->dates_palestras()[0];
@@ -74,7 +74,7 @@ class Horario extends CI_Controller {
   	$this->horario_model->save_hours_palestra_dinamica($palestra,$dinamica);
   	$this->session->set_userdata('mensagem','Horário salvo com sucesso!');
   	$this->session->set_userdata('tipo_mensagem','success');
-  	redirect('horario/load_user_activity');
+  	redirect('usuario/home');
   }
 
   //-------------------Funções auxiliares-----------------------//

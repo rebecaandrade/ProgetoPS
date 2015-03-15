@@ -29,8 +29,8 @@ class Admin_model extends CI_Model {
 	}
 	public function get_time_counters($id_ps){
 		$this->db->where('tb_ps_id',$id_ps);
-		$this->db->where('tipo','1');
-		$this->db->or_where('tipo','2');
+		$tipos = array('1','2');
+		$this->db->where_in('tipo',$tipos);
 		$results = $this->db->get('tb_datas_validas')->result();
 
 		$query = array();
