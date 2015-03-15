@@ -17,12 +17,12 @@
                             <label for="login-field-password"></label>
                             <input type="password" class="form-control" name="password" placeholder="SENHA" id="login-field-password">
                             <a href="<?php echo base_url(); ?>index.php/access/password_recovery">Esqueci minha senha</a>
-                            <input type="submit" class="btn btn-light-accept center-block" name="name" value="&nbsp">
+                            <input type="submit" class="btn btn-light-accept center-block" name="name" value="&nbsp" style="margin-top: 25px">
                         </div>
                     </div>
                     <a href="<?php echo base_url(); ?>index.php/usuario/create_user">
                     <div id="login-field-signup" class="col-xs-1 col-md-1">
-                            Primeira vez aqui?
+                            <p>Primeira vez aqui?</p>
                         <img src="<?php echo base_url(); ?>/assets/images/form_signup.png" alt="" />
                     </div>
                     </a>
