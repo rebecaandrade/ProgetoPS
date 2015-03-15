@@ -61,7 +61,8 @@
             <a style="
             position:absolute;
             display:block;
-            left:50%;
+            left:4%;
+            margin-top: 10px;
             background-color:white"
             href="<?php echo base_url().'index.php/usuario/change_password' ?>">
             <img style="width:50px;height:50px;" src="<?php echo base_url().'assets/images/incon_change_password.png' ?>">
@@ -70,7 +71,7 @@
     </div>
     <div class="row">
         <div class="col-xs-8 col-xs-offset-2 col-md-1 col-md-offset-6">
-            <input type='submit' value="" class="btn btn-dark-accept">
+            <input type='submit' value="" class="btn btn-dark-accept" style="margin-top:70px">
         </div>
     </div>
     <?php echo form_close();?>
