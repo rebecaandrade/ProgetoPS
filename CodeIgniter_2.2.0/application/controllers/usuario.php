@@ -140,8 +140,6 @@ class Usuario extends CI_Controller {
 				$ok = $this->upload->do_upload('foto');
 				$picture = $this->upload->data();
 				if($ok){
-					$old_picture_name = end(explode('/',$this->session->userdata('foto')));
-					unlink($this->base_img_dir().'\\'.$old_picture_name);
 					$dados['foto'] = base_url().'complemento/user_pictures/'.$picture['file_name'];
 					$this->usuario_model->update_user($id,$dados);
 					$_POST['foto'] = $dados['foto'];
@@ -208,7 +206,7 @@ class Usuario extends CI_Controller {
 				$picture = $this->upload->data();
 				if($ok){
 					$old_picture_name = end(explode('/',$this->session->userdata('foto')));
-					unlink($this->base_img_dir().'\\'.$old_picture_name);
+					unlink($this->base_img_dir().'/'.$old_picture_name);
 					$_POST['foto'] = base_url().'complemento/user_pictures/'.$picture['file_name'];
 				}
 			}
@@ -256,6 +254,6 @@ class Usuario extends CI_Controller {
 		}
 	}
 	public function base_img_dir(){
-		return getcwd().'\complemento\user_pictures';
+		return './complemento/user_pictures';
 	}
 }

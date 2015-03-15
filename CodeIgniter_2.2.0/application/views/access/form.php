@@ -8,7 +8,7 @@
         </div>
     </div>
 </div>
-    <?php echo form_open('usuario/insert_new_user');?>
+    <?php echo form_open_multipart('usuario/insert_new_user');?>
     <div class="row">
         <div id="form" class="col-xs-12 col-md-3 col-md-offset-2 form-group form-column">
             <label>Nome<br /><input type="text" class="form-control" name="nome" value=""></label>
