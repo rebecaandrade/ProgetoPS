@@ -149,4 +149,7 @@ class Admin_model extends CI_Model {
   			return 'Sáb';
   		}
   }
+  public function base_img_dir(){
+		return './complemento/user_pictures';
+	}
 }

@@ -75,6 +75,8 @@ class Usuario_model extends CI_Model {
 			$this->db->where('id_horario',$time_id);
 			$this->db->delete('tb_horario');
 		}
+		$picture_name = end(explode('/',$this->db->where('id_login',$id)->get('tb_login')->row()->foto));
+		unlink($this->base_img_dir().'/'.$picture_name);
 		$this->db->where('id_login',$id);
 		return $this->db->delete('tb_login');
 	}
@@ -133,5 +135,8 @@ class Usuario_model extends CI_Model {
 		$dados['senha'] = md5($dados['senha']);
 		$this->db->where('id_login',$id);
 		return $this->db->update('tb_login',$dados);
+	}
+	public function base_img_dir(){
+		return './complemento/user_pictures';
 	}
 }
