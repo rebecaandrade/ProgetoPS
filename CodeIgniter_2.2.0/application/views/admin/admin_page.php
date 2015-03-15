@@ -57,12 +57,21 @@
 					Candidatos
 				  </p>
 				</div>
+				<?php if($this->session->userdata('login_perfil') == 3){ ?>
 				<div class="page-admin-nav-button">
 				  <a href="<?php echo base_url();?>/index.php/admin/list_admins"><img src="<?php echo base_url();?>assets/images/list_admin.png" alt="" /></a>
 				  <p>
 					Administradores
 				  </p>
 				</div>
+				<?php } else{ ?>
+				<div class="page-admin-nav-button">
+				  <a onclick="swal({title:'Você não tem acesso a esta pagina',type:'error'})"><img src="<?php echo base_url();?>assets/images/list_admin.png" alt="" /></a>
+				  <p>
+					Administradores
+				  </p>
+				</div>
+				<?php } ?>
 				<div class="page-admin-nav-button">
 					<a href="<?php echo base_url();?>index.php/ps/listar">
 				  <img src="<?php echo base_url();?>assets/images/ps-admin.png" alt="" />
