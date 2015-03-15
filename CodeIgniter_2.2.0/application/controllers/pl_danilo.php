@@ -65,8 +65,8 @@ class PL_Danilo extends CI_Controller{
     $this->load->view('admin/avaliable_dates');
   }
 
-  public function boot(){
-    $this->load->view('boot');
+  public function change(){
+    $this->load->view('user/user_change_password');
   }
 }
 

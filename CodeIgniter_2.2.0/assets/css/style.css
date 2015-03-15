@@ -200,6 +200,57 @@
     background-image: url("../images/button_light_accept.png");
 }
 
+.btn-dark-accept{
+  background-image: url("../images/button_dark_accept.png");
+}
+
+.btn-light-cancel{
+    background-image: url("../images/button_light_cancel.png");
+}
+
+.btn-dark-cancel{
+  background-image: url("../images/button_dark_cancel.png");
+}
+
+.btn-light-update{
+    background-image: url("../images/button_light_update.png");
+}
+
+.btn-dark-update{
+  background-image: url("../images/button_dark_update.png");
+}
+
+/*Customização Radio Button*/
+input[type=radio]{
+  display: none;
+}
+
+.label-radio{
+  display: block;
+  height: 1.5em;
+  width: 8em;
+  background-color: #73c04a;
+  font-size: 1.6em;
+  text-align: center;
+  margin: 0% auto;
+  color: #ffffff;
+}
+
+.label-radio:before{
+    display: block;
+    content: "";
+    width: 1.5em;
+    height: 1.5em;
+    float: left;
+    margin-left: -0.7em;
+    background-image: url("http://localhost/sistemaps/CodeIgniter_2.2.0/assets/images/checkbox_clean.png");
+    background-size: contain;
+}
+
+input[type=radio]:checked + .label-radio:before{
+    background-image: url("http://localhost/sistemaps/CodeIgniter_2.2.0/assets/images/checkbox_clicked.png");
+}
+
 
 #login-field{
     padding-left: 1em;
@@ -516,7 +567,7 @@
       max-height: 100%;
       display: block;
       margin: 0% auto;
-      padding: 1em;
+      padding: 0.6em;
       border-radius: 100em;
     }
 
@@ -649,7 +700,7 @@
 
     .profile-nav-body-button{
         display: inline-block;
-        width: 24.2%;
+        width: 24%;
         padding: 2% 0% 4% 0%;
         height: 100%;
     }
@@ -684,4 +735,213 @@
     .profile-nav-body-button:nth-child(4):hover{
       border-radius: 0px 0px 10px 0px;
     }
+}
+
+.form-column{
+    color: #fff;
+}
+
+#edit-info-photo{
+  width: 100%;
+  height: 80%;
+  float: left;
+}
+
+#edit-info-photo-frame{
+  width: 80%;
+  height: 90%;
+  position: relative;
+  top: 0%;
+  left: 0%;
+  background-color: #fff;
+}
+
+#edit-info-photo-name{
+  width: 100%;
+  height: 10%;
+  color: #ffffff;
+  text-align: center;
+  font-weight: bold;
+}
+
+#edit-info-photo-frame img{
+  max-width: 100%;
+  max-height: 50%;
+  display: block;
+  margin: 0% auto;
+  border-radius: 100em;
+}
+
+#email-field{
+  height: 80%;
+  width: 100%;
+  padding: 1em;
+  background-color: #ffffff;
+  margin: 0% auto;
+  border-radius: 10px;
+}
+
+#email-field-message{
+  height: 80%;
+  width: 100%;
+}
+
+#email-field-message textarea{
+  height: 80%;
+  width: 100%;
+  padding: 0.5em;
+  margin-top: 2%;
+  border: 1px solid #1c1c1c;
+  border-radius: 10px;
+  resize: none;
+  font-family: 'Open Sans';
+  font-size: 10pt;
+}
+
+#email-field-footer{
+  height: 20%;
+  width: 100%;
+}
+
+#feedback{
+  height: 90%;
+}
+
+#feedback-text{
+    width: 80%;
+}
+
+#feedback-nav{
+    width: 20%;
+    min-height: 25em;
+    float: right;
+    border-left: 1px solid #000;
+}
+
+#feedback-text-message{
+    width: 100%;
+    min-height: 25em;
+    padding: 1em;
+    background-color: #fff;
+    border-radius: 1em 0em 0em 0em;
+}
+
+#feedback-text-footer{
+    width: 100%;
+    height: 20%;
+    background-color: #fff;
+    border-radius: 0em 0em 0em 1em;
+    border-top: 1px solid #000;
+    text-align: center;
+    padding: 1em;
+}
+
+#feedback-nav-top{
+    width: 100%;
+    min-height: 3em;
+    background-color: #73c14a;
+    border-radius: 0em 1em 0em 0em;
+    border-bottom: 1px solid #000;
+    padding-top: 10%;
+    color: #fff;
+    text-align: center;
+    font-size: 1.6em;
+}
+
+#feedback-nav-body{
+    width: 100%;
+    min-height: 25.85em;
+    background-color: #fff;
+    border-radius: 0em 0em 1em 0em;
+    text-align: center;
+    padding: 0.5em 0em;
+}
+
+.feedback-nav-before, .feedback-nav-after{
+    display: none;
+}
+
+#feedback-nav-body a{
+   margin: 0em 0em 1em 0em;
+   font-size: 2em;
+}
+
+#feedback-nav-body a:hover{
+   background-color: #73c14a;
+   color: #fff;
+}
+
+#postlogin-field{
+  height: 100%;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+.postlogin-field-button{
+  height: 100%;
+  width: 50%;
+  padding: 2% 0% 2% 0%;
+  float: left;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2em;
+  color: #1c1c1c;
+}
+
+.postlogin-field-button a{
+  color: #1c1c1c;
+}
+
+.postlogin-field-button img{
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.postlogin-field-button:last-child{
+  border-left: 3px solid #1c1c1c;
+}
+
+.postlogin-field-button:hover, .postlogin-field-button:hover a{
+  background-color: #73c04a;
+  color: #ffffff;
+}
+
+.postlogin-field-button:hover:first-child{
+  border-radius: 10px 0px 0px 10px;
+}
+
+.postlogin-field-button:hover:last-child{
+  border-radius: 0px 10px 10px 0px;
+}
+
+#form-photo{
+  width: 100%;
+  height: 80%;
+  float: left;
+}
+
+#form-photo-frame{
+  width: 80%;
+  height: 90%;
+  position: relative;
+  top: 0%;
+  left: 0%;
+  background-color: #fff;
+}
+
+#form-photo-name{
+  width: 100%;
+  height: 10%;
+  color: #ffffff;
+  text-align: center;
+  font-weight: bold;
+}
+
+#form-photo-frame img{
+  max-width: 100%;
+  max-height: 50%;
+  display: block;
+  margin: 0% auto;
+  border-radius: 100em;
 }
