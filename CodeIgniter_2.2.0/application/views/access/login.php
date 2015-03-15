@@ -16,7 +16,7 @@
                             <input type="text" class="form-control" name="login" placeholder="USUÁRIO" id="login-field-user">
                             <label for="login-field-user"></label>
                             <input type="password" class="form-control" name="password" placeholder="SENHA" id="login-field-user">
-                            <a href="#">Esqueci minha senha</a>
+                            <a href="<?php echo base_url(); ?>index.php/access/password_recovery">Esqueci minha senha</a>
                             <input type="submit" class="btn btn-light-accept center-block" name="name" value="&nbsp">
                         </div>
                     </div>

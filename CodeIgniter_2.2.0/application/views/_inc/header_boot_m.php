@@ -6,7 +6,6 @@
     <title>Processo Seletivo</title>
     <script src="<?php echo base_url();?>assets/javascript/sweetalert/lib/sweet-alert.min.js"></script>
     <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/javascript/sweetalert/lib/sweet-alert.css">
-    <script src="<?php echo base_url();?>assets/javascript/SystemActions.js"></script>
     <!-- Bootstrap -->
     <link href="<?php echo base_url();?>assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800,700,600,600italic,400italic,300' rel='stylesheet' type='text/css'>
@@ -28,18 +27,18 @@
   <body>
       <div class="container">
       <div class="row">
-          <div class="col-xs-12 col-md-10 col-md-offset-1">
-              <div id="header" class="row" >
-                  <div id="header-logo" class="col-xs-offset-2 col-xs-7  col-md-4 col-md-offset-0"  >
+          <div class="col-xs-12 col-md-6">
+              <div id="header-m" class="row" >
+                  <div id="header-m-logo" class="col-xs-offset-2 col-xs-7  col-md-4 col-md-offset-0 hlm"  >
                       <img src="<?php echo base_url()?>assets/images/logo.png" alt="" />
                   </div>
-                  <div id="header-text" class="col-xs-12 col-md-8" >
-                          <div class="header-text-aside">
+                  <div id="header-m-text" class="col-xs-12 col-md-8" >
+                          <div class="header-m-text-aside">
                               <p>
                                 &nbsp
                               </p>
                           </div>
-                          <div class="header-text-middle">
+                          <div class="header-m-text-middle">
                               <p>
                                   PROCESSO SELETIVO
                               </p>

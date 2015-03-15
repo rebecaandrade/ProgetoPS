@@ -711,6 +711,10 @@
     border-radius: 10px;
   }
 
+  #recovery-field h3{
+      color: #1c1c1c;
+  }
+
   #recovery-field input[type="text"]{
     width: 80%;
     height: auto;
@@ -1252,6 +1256,8 @@
       margin-top: 1%;
       background-color: #ffffff;
       border-radius: 10px;
+      overflow-x: scroll;
+      overflow-y: hidden;
   }
 
   #infouser-table-interview th{
