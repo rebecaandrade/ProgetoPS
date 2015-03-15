@@ -70,7 +70,7 @@
         <div class="col-md-12">
             <input type="submit" class="btn btn-dark-accept center-block" value="">
             <?php if($this->session->userdata('after_sign_up')){ ?>
-              <a href="<?php echo base_url();?>index.php/usuario/home">
+              <a id="button-prefiro-responder-depois" href="<?php echo base_url();?>index.php/usuario/home">
                 Prefiro responder depois.</a>
             <?php } ?>
         <?php echo form_close() ?>

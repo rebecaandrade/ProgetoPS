@@ -196,7 +196,7 @@
             <?php if($this->session->userdata('after_sign_up')){
             $this->session->unset_userdata('after_sign_up');
             ?>
-            <a href="<?php echo base_url();?>index.php/usuario/home"><p>
+            <a id="button-prefiro-responder-depois" href="<?php echo base_url();?>index.php/usuario/home"><p>
             Prefiro responder depois.
             </p></a>
             <?php } ?>
