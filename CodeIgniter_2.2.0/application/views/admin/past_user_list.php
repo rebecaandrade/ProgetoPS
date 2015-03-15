@@ -14,27 +14,16 @@
                   <th>Nome</th>
                   <th>Email</th>
                   <th></th>
-                  <th></th>
                   <th>FeedBack</th>
                   <th>&nbsp</th>
              </tr>
           </thead>
           <tbody>
-			<script charset="utf-8">
-				function closeDate(){
-					document.getElementById("case").style.display = "none";
-				}
-
-				function openDate(){
-					document.getElementById("case").style.display = "block";
-				}
-			</script>
           <?php if(isset($users)){
               foreach ($users as $user) { ?>
                   <tr>
                       <td><?php echo $user->nome ;?> </td>
                       <td> <?php echo $user->email ;?></td>
-                      <td><a onclick="openDate();" class="open-date" href="#">Horário</a></td>
                       <td><a href="<?php echo base_url();?>index.php/admin/past_check_member?id=<?php echo $user->id_login?>">Informações</a></td>
                       
                       <?php if($user->feedback){ ?>

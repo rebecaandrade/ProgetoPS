@@ -10,6 +10,7 @@ class Usuario_model extends CI_Model {
 			$this->db->where('id_login',$feed->tb_login_id_login);
 			$user = $this->db->get('tb_login')->row();
 			$user = (array)$user;
+			$user['count'] = $this->available_hours($user['id_login']);
 			if($feed->feedback == NULL){
 				$user['feedback'] = '0';
 			}
@@ -26,6 +27,32 @@ class Usuario_model extends CI_Model {
 		else{
 			return NULL;
 		}
+	}
+	public function available_hours($id){
+		$id_ps = $this->session->userdata('current_ps');
+		$count = 0;
+		if($id_ps){
+			$this->db->where('tb_ps_id',$id_ps);
+			$tipos = array('1','2');
+			$this->db->where_in('tipo',$tipos);
+			$query = $this->db->get('tb_datas_validas')->result();
+
+			$activity1 = $query[0]->id_data;
+			$activity2 = $query[1]->id_data;
+
+			$this->db->where('tb_login_id_login',$id);
+			$results = $this->db->get('ta_login_x_tb_horario')->result();
+			if($results){
+				foreach ($results as $result) {
+					$this->db->where('id_horario',$result->tb_horario_id_horario);
+					$valid_date = $this->db->get('tb_horario')->row()->tb_datas_validas_id_data;
+					if($valid_date != $activity1 && $valid_date != $activity2 ){
+						$count++;
+					}
+				}
+			}
+		}
+		return $count;
 	}
 	public function retrieve_all_users(){
 		$this->db->where('perfil',1);

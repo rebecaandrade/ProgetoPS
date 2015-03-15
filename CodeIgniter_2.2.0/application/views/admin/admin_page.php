@@ -52,14 +52,14 @@
 			</div>
 			<div id="page-admin-nav">
 				<div class="page-admin-nav-button">
-				  <a onclick="candidato('<?php echo base_url();?>/index.php/usuario/list_users','<?php echo base_url();?>/index.php/usuario/list_all_users')" ><img src="<?php echo base_url();?>assets/images/person_admin.png" alt="" /></a>
+				  <a onclick="candidato('<?php echo base_url();?>index.php/usuario/list_users','<?php echo base_url();?>index.php/usuario/list_all_users')" ><img src="<?php echo base_url();?>assets/images/person_admin.png" alt="" /></a>
 				  <p>
 					Candidatos
 				  </p>
 				</div>
 				<?php if($this->session->userdata('login_perfil') == 3){ ?>
 				<div class="page-admin-nav-button">
-				  <a href="<?php echo base_url();?>/index.php/admin/list_admins"><img src="<?php echo base_url();?>assets/images/list_admin.png" alt="" /></a>
+				  <a href="<?php echo base_url();?>index.php/admin/list_admins"><img src="<?php echo base_url();?>assets/images/list_admin.png" alt="" /></a>
 				  <p>
 					Administradores
 				  </p>

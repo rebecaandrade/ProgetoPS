@@ -53,7 +53,7 @@
 			</div>
 			<div id="page-admin-nav">
 				<div class="page-admin-nav-button">
-					<a href="<?php echo base_url();?>/index.php/usuario/past_list_users"><img src="<?php echo base_url();?>assets/images/person_admin.png" alt="" /></a>
+					<a href="<?php echo base_url();?>index.php/usuario/past_list_users"><img src="<?php echo base_url();?>assets/images/person_admin.png" alt="" /></a>
 					  <p>
 						Candidatos
 					  </p>

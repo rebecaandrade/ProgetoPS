@@ -14,8 +14,6 @@ class Usuario extends CI_Controller {
 		else{
 			redirect('access/login');
 		}
-		//redirect('usuario/lista');//só enquanto as paradas de login ainda nao estao prontas
-		//$this->load->view('user/user_page'); //ignora esses bagaço aki, to testando umas paradas
 	}
 	public function home(){
 		if($this->session->userdata('login_perfil') == 1){

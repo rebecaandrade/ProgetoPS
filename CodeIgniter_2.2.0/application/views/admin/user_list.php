@@ -13,7 +13,7 @@
               <tr>
                   <th>Nome</th>
                   <th>Email</th>
-                  <th></th>
+                  <th>Horários livres</th>
                   <th></th>
                   <?php if(isset($users[0]->feedback)){ ?>
                   <th>FeedBack</th>
@@ -37,7 +37,7 @@
                       <td><?php echo $user->nome ;?> </td>
                       <td> <?php echo $user->email ;?></td>
                       <?php if(isset($users[0]->feedback)){ ?>
-                      <td><a onclick="openDate();" class="open-date" href="#">Horário</a></td>
+                      <td><?php echo $user->count ?></td>
                       <?php } ?>
                       <td><a href="<?php echo base_url();?>index.php/admin/check_member?id=<?php echo $user->id_login?>">Informações</a></td>
                       <?php if(isset($user->feedback))
