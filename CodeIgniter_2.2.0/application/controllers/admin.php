@@ -46,12 +46,14 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/admin_page',$dados);
 	}
 	public function check_member(){
-		$dados['user'] = $this->admin_model->get_user_information($_GET['id']);
+		$id_ps = $this->session->userdata('current_ps');
+		$dados['user'] = $this->admin_model->get_user_information($_GET['id'],$id_ps);
 		$dados['hours'] = $this->admin_model->get_user_hours($_GET['id']);
 		$this->load->view('admin/user_info',$dados);
 	}
 	public function past_check_member(){
-		$dados['user'] = $this->admin_model->get_user_information($_GET['id']);
+		$id_ps = $this->session->userdata('current_ps');
+		$dados['user'] = $this->admin_model->get_user_information($_GET['id'],$id_ps);
 		$this->load->view('admin/past_user_info',$dados);
 	}
 	public function load_home_superadmin(){

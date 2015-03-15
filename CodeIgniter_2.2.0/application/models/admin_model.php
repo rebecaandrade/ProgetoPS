@@ -1,9 +1,18 @@
 <?php
 
 class Admin_model extends CI_Model {
-	public function get_user_information($id){
+	public function get_user_information($id,$id_ps){
 		$this->db->where('id_login',$id);
-		return $this->db->get('tb_login')->row();
+		$user = $this->db->get('tb_login')->row();
+		$this->db->where('tb_login_id_login',$id);
+		$this->db->where('tb_ps_id',$id_ps);
+		$ta = $this->db->get('ta_login_x_tb_ps')->row();
+		if($ta){
+			$user = (array)$user;
+			$user['status_feed'] = $ta->status_feed;
+			$user = (object)$user;
+		}
+		return $user;	
 	}
 	public function get_admins(){
 		$this->db->where('perfil','2');
@@ -124,7 +133,7 @@ class Admin_model extends CI_Model {
   			return 'Seg';
   		}
   		if($day_name == '2'){
-  			return 'Terç';
+  			return 'Ter';
   		}
   		if($day_name == '3'){
   			return 'Qua';

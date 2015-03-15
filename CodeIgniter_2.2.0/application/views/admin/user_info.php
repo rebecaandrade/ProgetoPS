@@ -7,7 +7,19 @@
 </div>
 <div id="content" class="content-thin">
 	<div id="infouser-nav">
-		<div id="infouser-nav-top" class="aproved">
+        <?php	
+        if(isset($user->status_feed)){
+		 			$status_feed = $user->status_feed;
+        			if($status_feed == '1') { ?>
+        				<div id="profile-nav-top" class="denied">
+        			<?php } elseif($status_feed == '2') { ?>
+        				<div id="profile-nav-top" class="avaliation">
+        			<?php } elseif($status_feed == '3') { ?>
+        				<div id="profile-nav-top" class="aproved">
+        			<?php }
+        		} else { ?>
+        				<div id="profile-nav-top" class="none">
+        		<?php } ?>
 			<span><!--Icone de aprovado--></span>
 		</div>
 		<div id="infouser-nav-body">

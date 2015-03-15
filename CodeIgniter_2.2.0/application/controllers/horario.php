@@ -174,7 +174,7 @@ class Horario extends CI_Controller {
 				return 'Seg';
 			}
 			if($day_name == '2'){
-				return 'Terç';
+				return 'Ter';
 			}
 			if($day_name == '3'){
 				return 'Qua';
