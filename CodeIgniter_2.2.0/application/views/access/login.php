@@ -14,18 +14,15 @@
                         <div class="form-group">
                             <label for="login-field-user"></label>
                             <input type="text" class="form-control" name="login" placeholder="USUÁRIO" id="login-field-user">
-                            <label for="login-field-user"></label>
-                            <input type="password" class="form-control" name="password" placeholder="SENHA" id="login-field-user">
+                            <label for="login-field-password"></label>
+                            <input type="password" class="form-control" name="password" placeholder="SENHA" id="login-field-password">
                             <a href="<?php echo base_url(); ?>index.php/access/password_recovery">Esqueci minha senha</a>
                             <input type="submit" class="btn btn-light-accept center-block" name="name" value="&nbsp">
                         </div>
                     </div>
                     <a href="<?php echo base_url(); ?>index.php/usuario/create_user">
                     <div id="login-field-signup" class="col-xs-1 col-md-1">
-
                             Primeira vez aqui?
-
-
                         <img src="<?php echo base_url(); ?>/assets/images/form_signup.png" alt="" />
                     </div>
                     </a>

@@ -17,6 +17,16 @@ img{
     display: block;
 }
 
+h3{
+    text-align: center;
+    color: #fff;
+}
+
+.table-hover > tbody > tr:hover {
+  background-color: #92f25e;
+  color: #1c1c1c;
+}
+
 .btn{
     display: block;
     background-size:contain;
