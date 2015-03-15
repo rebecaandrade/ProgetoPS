@@ -935,6 +935,7 @@ input[type=radio]:checked + .label-radio:before{
   color: #ffffff;
   text-align: center;
   font-weight: bold;
+  margin-top: 10px;
 }
 
 #form-photo-frame img{
