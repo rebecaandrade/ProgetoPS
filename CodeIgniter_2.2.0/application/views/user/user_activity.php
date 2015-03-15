@@ -37,9 +37,11 @@
         echo $palestra_2[0].'h'.$palestra_2[1].'min';
         ?>
         </label>
-        <p>
-      	Não poderá comparecer em<br /> nenhum destes horários?
-        </p>
+        <?php if($this->session->userdata('after_sign_up')){ ?>
+          <a href="<?php echo base_url();?>index.php/usuario/home"><p>
+        	Prefiro responder depois.
+          </p></a>
+        <?php } ?>
       </div>
 
       <div class="activity-column-2">

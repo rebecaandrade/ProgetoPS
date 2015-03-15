@@ -222,8 +222,10 @@ class PS extends CI_Controller {
                 'entrevistado' => '0');
         $this->ps_model->inscribe_user_in_current_ps($dados);
         $this->session->set_userdata('mensagem','Você foi inscrito com sucesso');
+        $this->session->set_userdata('subtitulo_mensagem','Agora marque seus horários');
         $this->session->set_userdata('tipo_mensagem','success');
-        redirect('usuario/home');
+        $this->session->set_userdata('after_sign_up','1');
+        redirect('horario/load_user_activity');
     }
     public function open_ps(){
         $date = getdate();

@@ -192,6 +192,13 @@
           <div class="button-box">
               <input class="button b-dark-accept" type="submit" value="">
           </div>
+          <?php if($this->session->userdata('after_sign_up')){ 
+            $this->session->unset_userdata('after_sign_up');
+            ?>
+            <a href="<?php echo base_url();?>index.php/usuario/home"><p>
+            Prefiro responder depois.
+            </p></a>
+          <?php } ?>
           <?php echo form_close() ?>
         </div>
     </div

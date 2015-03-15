@@ -1,4 +1,4 @@
-<?php
+apa<?php
 
 class Access extends CI_Controller {
 	public function __construct() {
@@ -15,7 +15,6 @@ class Access extends CI_Controller {
 		$password = md5($this->input->post('password'));
 		$user = $this->usuario_model->get_user($login,$password);
 		if(!$user){
-			/* setar msg do jeito certo*/
 			$mensagem = array(
 							'mensagem' =>'Usuário ou senha inválidos.',
 							'tipo_mensagem' => 'error'
