@@ -192,12 +192,10 @@ class Usuario extends CI_Controller {
         $this->load->library('upload', $config);
         $this->upload->initialize($config);
     	if($_POST['nome'] == NULL || $_POST['email'] == NULL || $_POST['semestre'] == NULL ||
-    		$_POST['curso'] == NULL || $_POST['telefone'] == NULL || $_POST['password'] == NULL){
+    		$_POST['curso'] == NULL || $_POST['telefone'] == NULL){
     		$this->session->set_userdata('mensagem','Erro ao atualizar cadastro, tente novamente.');
             $this->session->set_userdata('tipo_mensagem','error');
-            if($_POST['password'] == NULL){
-                $this->session->set_userdata('subtitulo_mensagem','Verifique a confirmação de senha.');
-            }
+            $this->session->set_userdata('subtitulo_mensagem','Campos obrigatórios não preenchidos.');
             redirect('usuario/edit_account');
     	}
         elseif(!filter_var($_POST['email'],FILTER_VALIDATE_EMAIL)){
@@ -205,7 +203,7 @@ class Usuario extends CI_Controller {
             $this->session->set_userdata('tipo_mensagem','error');
             redirect('usuario/edit_account');
         }
-    	else if($this->usuario_model->verify_password($id,$_POST['password'])){
+    	else{
             if(isset($_FILES['foto'])){
                 $extensao = strrchr($_FILES['foto']['name'],'.');
                 $_FILES['foto']['name'] = md5(microtime()).'_'.$id.$extensao;
@@ -223,14 +221,6 @@ class Usuario extends CI_Controller {
             $this->session->set_userdata('tipo_mensagem','success');
     		redirect('usuario/home');
     	}
-        else{
-            $this->session->set_userdata('mensagem','Erro ao atualizar cadastro, tente novamente.');
-            $this->session->set_userdata('tipo_mensagem','error');
-            if($_POST['password'] == NULL){
-                $this->session->set_userdata('subtitulo_mensagem','Verifique a confirmação de senha.');
-            }
-            redirect('usuario/edit_account');
-        }
     }
     public function change_password(){
         $this->load->view('user/user_change_password');
