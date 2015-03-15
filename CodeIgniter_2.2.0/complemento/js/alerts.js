@@ -4,7 +4,7 @@ confirmar = function(mensagem,url){
 		text: '',
 		type: "warning",
 		showCancelButton: true,
-		confirmButtonText: "sim!",
+		confirmButtonText: "Sim!",
 		cancelButtonText: "Não!",
 		closeOnConfirm: false,
 		allowOutsideClick : true 
