@@ -1,6 +1,6 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Controle_access {
+class Controle_acesso {
 
 	function init() {
 
@@ -104,7 +104,7 @@ class Controle_access {
 			$ci->load->model('usuario_model');
 			if($ci->usuario_model->search_user($ci->session->userdata('login_id'))==false){
 				$ci->session->sess_destroy();
-				redirect('access/login');
+				redirect('usuario');
 			}
 		}
 
@@ -116,7 +116,7 @@ class Controle_access {
 			}
 		}
 		if (!$v) {
-			redirect('access/login');
+			redirect('usuario');
 		}
 
 	}

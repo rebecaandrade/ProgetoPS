@@ -66,11 +66,6 @@ class Usuario extends CI_Controller {
 		$this->session->set_userdata('tipo_mensagem','success');
 		redirect('usuario/list_users');
 	}
-	public function delete_account(){
-		$this->usuario_model->delete_user($_GET['id']);
-		$this->session->sess_destroy();
-		redirect('access/login');
-	}
 	public function create_user(){
 		$this->load->view('access/form');
 
@@ -264,8 +259,5 @@ class Usuario extends CI_Controller {
 	}
 	public function base_img_dir(){
 		return getcwd().'\complemento\user_pictures';
-	}
-	public function teste_functions_2(){
-		$this->load->view('view_teste');
 	}
 }

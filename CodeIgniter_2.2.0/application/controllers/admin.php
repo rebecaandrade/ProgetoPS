@@ -122,11 +122,6 @@ class Admin extends CI_Controller {
             $this->session->set_userdata('tipo_mensagem','error');
             $this->update_admin($_POST['id']);
         }
-		elseif(strlen($_POST['senha']) < 6){
-            $this->session->set_userdata('mensagem','A senha deve ter no mínimo 6 caracteres!');
-            $this->session->set_userdata('tipo_mensagem','error');
-            $this->update_admin($_POST['id']);
-        }
 		else {
 			$this->admin_model->update_admin($_POST);
 			$this->session->set_userdata('mensagem','Atualização realizada com sucesso');
