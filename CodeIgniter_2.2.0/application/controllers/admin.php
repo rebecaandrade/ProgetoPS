@@ -1,4 +1,4 @@
-<?php
+<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class Admin extends CI_Controller {
 	public function __construct() {
@@ -131,7 +131,8 @@ class Admin extends CI_Controller {
         }
 		else {
 			$this->admin_model->update_admin($_POST);
-			$this->session->set_userdata('mesnsagem','Atualização realizada com sucesso');
+			$this->session->set_userdata('mensagem','Atualização realizada com sucesso');
+			$this->session->set_userdata('tipo_mensagem','success');
 			redirect('usuario/home');
 		}
 	}
