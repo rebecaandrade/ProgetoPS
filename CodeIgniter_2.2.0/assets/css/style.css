@@ -63,13 +63,23 @@
   }
 }
 
-@media screen and (min-width: 720px){
+@media screen and (min-width: 720px) and (max-width: 1189px){
   .header-text-middle{
     font-size: 3em;
     text-align: center;
 }
   .header-text-aside{
     font-size: 2em;
+  }
+}
+
+@media screen and (min-width: 1200px){
+  .header-text-middle{
+    font-size: 3.5em;
+    text-align: center;
+}
+  .header-text-aside{
+    font-size: 2.5em;
   }
 }
 
@@ -1231,4 +1241,74 @@ input[type=radio]:checked + .label-radio:before{
     margin-bottom: 5%;
     font-size: 22px;
     color: white;
+  }
+
+#reset-password{
+  color: #fff;
+  text-align: center;
+}
+
+#postlogin-field{
+    min-height: 16em;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 0px !important;
+  }
+
+  .postlogin-field-button{
+    height: 100%;
+    width: 50%;
+    padding: 2%;
+    display: inline-block;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 24pt;
+    color: #1c1c1c;
+  }
+
+  @media screen and (max-width: 480px){
+    #postlogin-field{
+    min-height: 15em;
+  }
+  .postlogin-field-button{
+    font-size: 1em;
+  }
+  }
+
+  @media screen and (min-width: 481px) and (max-width: 720px){
+  #postlogin-field{
+    min-height: 24em;
+  }
+.postlogin-field-button{
+    font-size: 3em;
+  }
+}
+
+  .postlogin-field-button a{
+    color: #1c1c1c;
+  }
+
+  .postlogin-field-button img{
+    max-height: 80%;
+    max-width: 80%;
+    display: block;
+    margin: 0% auto;
+  }
+
+  .postlogin-field-button:last-child{
+    border-left: 3px solid #1c1c1c;
+  }
+
+  .postlogin-field-button:hover, .postlogin-field-button:hover a{
+    background-color: #73c04a;
+    color: #ffffff;
+  }
+
+  .postlogin-field-button:hover:first-child{
+    border-radius: 10px 0px 0px 10px;
+  }
+
+  .postlogin-field-button:hover:last-child{
+    border-radius: 0px 10px 10px 0px;
   }
