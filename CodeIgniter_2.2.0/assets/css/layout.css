@@ -70,34 +70,109 @@ a{
     cursor: pointer;
 }
 
-#navbar{
-    position: absolute;
-    top: 10%;
-    right: 10%;
-    background-color: #ffffff;
-    color: #1c1c1c;
+@media screen and (max-width: 991px){
+    #navbar{
+        background-color: #ffffff;
+        height: 4em;
+        width: 4em;
+        position: absolute;
+        top: 2%;
+        left: 2%;
+        padding: 0.5em;
+        border-radius: 10px;
+        opacity: 1;
+        color: #1c1c1c;
+        transition: all 1s ease 0s;
+    }
+
+    #navbar li{
+        margin: 0.5em;
+        display: block;
+        opacity: 0;
+        visibility: none;
+        transition: opacity 0.6s ease 0s;
+    }
+
+    #navbar:before{
+        display: block;
+        content:"";
+        background-image: url('../images/options_nav.png');
+        height: 4em;
+        width: 4em;
+        margin: -0.5em 0em 0em -0.5em;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    #navbar:hover{
+        height: 6em;
+        width: 6em;
+        opacity: 0.9;
+    }
+
+    #navbar:hover:before{
+        display: none;
+    }
+
+    #navbar:hover li{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    #navbar li:hover{
+        background-color: #83d955;
+    }
+
 }
 
-#navbar-name{
-    padding: 1em;
-    font-weight: bold;
-}
+@media screen and (min-width: 992px){
+    #navbar{
+        background-color: #ffffff;
+        height: 2.5em;
+        width: 5em;
+        position: absolute;
+        top: 10%;
+        right: 10%;
+        padding: 0.5em;
+        opacity: 1;
+        color: #1c1c1c;
+        transition: all 1s ease 0s;
+    }
 
-#navbar-option{
-    display: none;
-    font-weight: normal;
-}
+    #navbar li{
+        margin: 0.5em;
+        display: block;
+        opacity: 0;
+        visibility: none;
+        transition: opacity 0.6s ease 0s;
+    }
 
-#navbar-option li{
-    margin-top: 0.5em;
-}
+    #navbar:before{
+        display: block;
+        content:"MENU";
+        height: 4em;
+        width: 4em;
+        font-weight: bold;
+        text-align: center;
+    }
 
-#navbar-name:hover #navbar-option{
-    display: block;
-}
+    #navbar:hover{
+        height: 6em;
+        width: 6em;
+    }
 
-#navbar-option li:hover{
-    background-color: #34DDDD;
+    #navbar:hover:before{
+        display: none;
+    }
+
+    #navbar:hover li{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    #navbar li:hover{
+        background-color: #83d955;
+    }
 }
 
 .header-text-uppercase p{
