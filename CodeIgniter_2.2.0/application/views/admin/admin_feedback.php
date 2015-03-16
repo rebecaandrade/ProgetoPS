@@ -7,7 +7,7 @@
 	<?php echo $this->load->view('_inc/nav_bar')?>
 	<div id="content" class="content-thin">
 	<?php $id = $user->id_login ?>
-	<?php echo form_open('feedback/set_feed/'.$id) ?>
+	<form method="post" accept-charset="utf-8" id="feed-form" action="<?php echo base_url().'index.php/feedback/set_feed/'.$id  ?>">
 		<div id="admin-feedback">
 			<div id="admin-feedback-top">
 				<img src="<?php if($user->foto){echo $user->foto;} else { echo base_url().'assets/images/photo_feedback.png';};?>" alt="" />
@@ -15,8 +15,8 @@
 			</div>
 			<div id="admin-feedback-body">
 				<div id="admin-feedback-body-text">
-				<input type="text" name="feedback" value="<?php if(sizeof($feed) > 0) echo $feed->feedback ?>">
-		</div>
+					<textarea style="width:90%;height:90%" name="feedback" form="feed-form"><?php if(sizeof($feed) > 0) echo $feed->feedback ?></textarea>
+				</div>
 				<div id="admin-feedback-body-interviewers">
 					<div id="admin-feedback-body-interviewers-button">
 						<img src="<?php echo base_url();?>assets/images/profile_post.png" alt="" />
@@ -28,10 +28,11 @@
 						<p>
 							Status de aprovação:
 						</p><br>
-						<input type="radio" id="r1" name="status_feed" value="3">
+						<?php $checked = 'checked=""'; ?>
+						<input type="radio" id="r1" name="status_feed" value="3" <?php if($feed->status_feed == 3) {echo $checked;} ?>>
 						<label class="label-radio" for="r1">Aprovado</label>
 						<br>
-						<input type="radio" id="r2" name="status_feed" value="1">
+						<input type="radio" id="r2" name="status_feed" value="1" <?php if($feed->status_feed == 1) {echo $checked;} ?>>
 						<label class="label-radio" for="r2">Reprovado</label>
 						<br>
 					</div>
