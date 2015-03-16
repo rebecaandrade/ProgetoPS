@@ -53,13 +53,23 @@
   }
 }
 
-@media screen and (max-width: 480px){
+@media screen and (max-width: 719px){
   .header-text-middle{
     font-size: 2em;
     text-align: center;
 }
   .header-text-aside{
     font-size: 1.5em;
+  }
+}
+
+@media screen and (min-width: 720px){
+  .header-text-middle{
+    font-size: 3em;
+    text-align: center;
+}
+  .header-text-aside{
+    font-size: 2em;
   }
 }
 
@@ -81,7 +91,7 @@
 .header-m-text-middle{
     display: block;
     height: 43.589743589743589743589743589744%;
-    width: 80%;
+    width: 100%;
     font-weight: bold;
     font-size: 2em;
     line-height: 1.2;
@@ -104,6 +114,15 @@
 
 .header-m-aside a{
     color: #fff;
+}
+
+@media screen and (max-width: 720px){
+  .header-m-text-middle{
+    text-align: center;
+}
+  .header-m-text-aside{
+    text-align: center;
+  }
 }
 
 .header-uppercase{
@@ -322,7 +341,7 @@ input[type=radio]:checked + .label-radio:before{
     width: 6em;
 }
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 1200px){
     #profile-id{
       width: 100%;
       min-height: 350px;
@@ -544,7 +563,228 @@ input[type=radio]:checked + .label-radio:before{
     }
 }
 
-@media screen and (max-width: 767px){
+@media screen and (min-width: 721px) and (max-height: 1199px){
+    #profile-id{
+      width: 100%;
+      min-height: 350px;
+      padding: 1em;
+      background-color: #ffffff;
+      border-radius: 10px;
+    }
+
+    #profile-id-photo{
+      width: 39%;
+      height: 100%;
+      float: left;
+      margin-right: 3%;:
+    }
+
+    #profile-id-photo-frame{
+      width: 100%;
+      height: 88%;
+      position: relative;
+      top: 0%;
+      left: 0%;
+      border: 5px solid #000000;
+    }
+
+    #profile-id-photo-name{
+      width: 100%;
+      height: 12%;
+      background-color: #000000;
+      color: #ffffff;
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.4em;
+    }
+
+    #profile-id-photo-frame img{
+      max-width: 100%;
+      max-height: 100%;
+      display: block;
+      margin: 0% auto;
+      padding: 1em;
+      border-radius: 100em;
+    }
+
+    #profile-id-info{
+      width: 50%;
+      max-height: 80%;
+      padding: 0.5em;
+      position: relative;
+      top: 0%;
+      left: 0%;
+      display: inline-block;
+      line-height: 1.2;
+      font-size: 1em;
+    }
+
+    #profile-id-info p:nth-child(odd){
+      font-weight: bold;
+    }
+
+    #profile-nav{
+      width: 100%;
+      min-height: 350px;
+      margin: 0%;
+      text-align: center;
+    }
+
+    #profile-nav-top{
+      width: 100%;
+      height: 20%;
+      padding: 0.5em;
+      border-radius: 10px 10px 0px 0px;
+      font-weight: bold;
+      color: #ffffff;
+    }
+
+    #profile-nav-top p{
+      max-width: 70%;
+      display: inline-block;
+      font-size: 18pt;
+    }
+
+    #profile-nav-top span{
+      height: 100%;
+      width: 15%;
+      display: inline-block;
+      background-size: contain;
+      background-repeat: no-repeat;
+      float: right;
+      position: relative;
+      top: 8%;
+      right: 5%;
+    }
+
+    /*profile-nav-top*/.aproved{
+      background-color: #83d955;
+    }
+
+    /*profile-nav-top*/.aproved span{
+      background-image: url("../images/icon_aproved.png");
+    }
+
+    /*profile-nav-top*/.aproved:before{
+        content: "aprovado";
+        text-transform: uppercase;
+        font-size: 21pt;
+        position: relative;
+        top: 30%;
+        left: 5%;
+    }
+
+    /*profile-nav-top*/.avaliation{
+      background-color: #b3b3b3;
+    }
+
+    /*profile-nav-top*/.avaliation span{
+      display: none;
+    }
+
+    /*profile-nav-top*/.avaliation:before{
+        content: "em avaliação";
+        text-transform: uppercase;
+        font-size: 21pt;
+        position: relative;
+        top: 30%;
+        left: 0%;
+    }
+
+    /*profile-nav-top*/.denied{
+      background-color: #ed1c24;
+    }
+
+    /*profile-nav-top*/.denied span{
+      background-image: url("../images/icon_denied.png");
+    }
+
+    /*profile-nav-top*/ .denied:before{
+        content: "tente novamente";
+        text-transform: uppercase;
+        font-size: 21pt;
+        position: relative;
+        top: 30%;
+        left: -3%;
+    }
+
+    /*profile-nav-top*/.signin{
+      background-color: #83d955;
+    }
+
+    /*profile-nav-top*/.signin span{
+      display: none;
+    }
+
+    /*profile-nav-top*/.signin:before{
+        content: "inscreva-se";
+        text-transform: uppercase;
+        font-size: 1.6em;
+        position: relative;
+        top: 10%;
+        left: 7%;
+    }
+
+    /*profile-nav-top*/.none{
+      background-color: #1c1c1c;
+    }
+
+    /*#profile-nav-top*/ .none p{
+      display: none;
+    }
+
+    /*profile-nav-top*/.none span{
+      display: none;
+    }
+
+    #profile-nav-body{
+        background-color: #ffffff;
+        border-radius: 0px 0px 10px 10px;
+        width: 100%;
+        height: 80%;
+    }
+
+    .profile-nav-body-button{
+        display: inline-block;
+        height: 50%;
+        width: 49.3%;
+        padding: 4% 0%;
+    }
+
+    .profile-nav-body-button img{
+      max-width: 40%;
+      max-height: 40%;
+      display: block;
+      margin: 0% auto;
+    }
+
+    .profile-nav-body-button p{
+      font-size: 12pt;
+      margin-top: 5%;
+    }
+
+    .profile-nav-body-button a{
+      color: #1c1c1c;
+    }
+
+    .profile-nav-body-button a:hover{
+      color: #ffffff;
+    }
+
+    .profile-nav-body-button:hover{
+      background-color: #73c04a;
+    }
+
+    .profile-nav-body-button:nth-child(3):hover{
+      border-radius: 0px 0px 0px 10px;
+    }
+
+    .profile-nav-body-button:nth-child(4):hover{
+      border-radius: 0px 0px 10px 0px;
+    }
+}
+
+@media screen and (max-width: 720px){
     #profile-id{
       width: 80%;
       height: 100%;
@@ -722,6 +962,7 @@ input[type=radio]:checked + .label-radio:before{
         width: 24%;
         padding: 2% 0% 4% 0%;
         height: 100%;
+        font-size: 0.9em;
     }
 
     .profile-nav-body-button img{
