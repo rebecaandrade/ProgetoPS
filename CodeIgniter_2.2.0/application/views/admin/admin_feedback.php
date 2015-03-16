@@ -28,8 +28,12 @@
 						<p>
 							Status de aprovação:
 						</p><br>
-						<label>Aprovado<input type="radio" name="status_feed" value="3"></label><br>
-						<label>Reprovado<input type="radio" name="status_feed" value="1"></label><br>
+						<input type="radio" id="r1" name="status_feed" value="3">
+						<label class="label-radio" for="r1">Aprovado</label>
+						<br>
+						<input type="radio" id="r2" name="status_feed" value="1">
+						<label class="label-radio" for="r2">Reprovado</label>
+						<br>
 					</div>
 					<div id="admin-feedback-body-interviewers-list">
 						<!--<p>

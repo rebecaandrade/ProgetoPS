@@ -906,10 +906,6 @@
     max-height: 70%;
   }
 
-  #admin-feedback-body-interviewers-button:hover{
-    background-color: #83d955;
-  }
-
   #admin-feedback-body-interviewers-list p{
     margin: 0.5em 0em;
   }

@@ -8,7 +8,9 @@
 	<?php echo form_open('ps/update_hours') ?>
 	<div id="form-ps-dates">
         <h3>Atividades</h3>
-        <h2>Alterar qualquer horário ou data das atividades ou do periodo de entrevista ira desmarcar todos candidatos daquela modalidade! </h2>	
+        <br />
+        <h2>Alterar qualquer horário ou data das atividades ou do periodo de entrevista ira desmarcar todos candidatos daquela modalidade! </h2>
+        <br />	
         	<label>Data da Apresentação Institucional<br /><input type="date" name="date-ps-palestra" value=""></label><br />
             <label>Primeira hora da Apresentação Institucional<br /><input type="time" name="ps-palestra-hour-1" value=""></label><br />
             <label>Segunda hora da Apresentação Institucional<br /><input type="time" name="ps-palestra-hour-2" value=""></label><br /><br />

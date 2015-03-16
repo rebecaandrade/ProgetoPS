@@ -257,6 +257,11 @@ input[type=radio]{
   display: none;
 }
 
+/*Customização Radio Button*/
+input[type=radio]{
+  display: none;
+}
+
 .label-radio{
   display: block;
   height: 1.5em;
@@ -266,6 +271,7 @@ input[type=radio]{
   text-align: center;
   margin: 0% auto;
   color: #ffffff;
+  font-weight: normal;
 }
 
 .label-radio:before{
@@ -275,12 +281,12 @@ input[type=radio]{
     height: 1.5em;
     float: left;
     margin-left: -0.7em;
-    background-image: url("http://localhost/sistemaps/CodeIgniter_2.2.0/assets/images/checkbox_clean.png");
+    background-image: url("http://localhost/sistemaps/CodeIgniter_2.2.0/assets/images/radio_clean.png");
     background-size: contain;
 }
 
 input[type=radio]:checked + .label-radio:before{
-    background-image: url("http://localhost/sistemaps/CodeIgniter_2.2.0/assets/images/checkbox_clicked.png");
+    background-image: url("http://localhost/sistemaps/CodeIgniter_2.2.0/assets/images/radio_clicked.png");
 }
 
 @media screen and (min-width: 320px) and (max-width: 480px){
