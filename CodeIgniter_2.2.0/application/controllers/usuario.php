@@ -140,6 +140,14 @@ class Usuario extends CI_Controller {
 				$ok = $this->upload->do_upload('foto');
 				$picture = $this->upload->data();
 				if($ok){
+					$config_image['image_library'] = 'gd2';
+					$config_image['source_image']	= './complemento/user_pictures/'.$picture['file_name'];
+					$config_image['create_thumb'] = false;
+					$config_image['maintain_ratio'] = FALSE;
+					$config_image['width']	= 500;
+					$config_image['height']	= 500;
+					$this->load->library('image_lib', $config_image);
+					$this->image_lib->resize();
 					$dados['foto'] = base_url().'complemento/user_pictures/'.$picture['file_name'];
 					$this->usuario_model->update_user($id,$dados);
 					$_POST['foto'] = $dados['foto'];
@@ -205,6 +213,14 @@ class Usuario extends CI_Controller {
 				$ok = $this->upload->do_upload('foto');
 				$picture = $this->upload->data();
 				if($ok){
+					$config_image['image_library'] = 'gd2';
+					$config_image['source_image']	= './complemento/user_pictures/'.$picture['file_name'];
+					$config_image['create_thumb'] = false;
+					$config_image['maintain_ratio'] = FALSE;
+					$config_image['width']	= 500;
+					$config_image['height']	= 500;
+					$this->load->library('image_lib', $config_image);
+					$this->image_lib->resize();
 					$old_picture_name = end(explode('/',$this->session->userdata('foto')));
 					unlink($this->base_img_dir().'/'.$old_picture_name);
 					$_POST['foto'] = base_url().'complemento/user_pictures/'.$picture['file_name'];
